@@ -208,8 +208,17 @@ def main() -> None:
     )
     qacr_compute, qacr_task_loss, qacr_latency = parse_budget_row(qacr_out, args.budget)
     rows.append(("QACR-QueryAdaptive", qacr_compute, qacr_task_loss, qacr_latency))
-    qacr_attn_compute, qacr_attn_task_loss, qacr_attn_latency = parse_budget_row(qacr_attn_out, args.budget)
-    rows.append(("QACR-AttentionLevel", qacr_attn_compute, qacr_attn_task_loss, qacr_attn_latency))
+    qacr_attn_compute, qacr_attn_task_loss, qacr_attn_latency = parse_budget_row(
+        qacr_attn_out, args.budget
+    )
+    rows.append(
+        (
+            "QACR-AttentionLevel",
+            qacr_attn_compute,
+            qacr_attn_task_loss,
+            qacr_attn_latency,
+        )
+    )
 
     print("===== Efficiency-Performance Comparison (Task 2.3) =====")
     print(f"model: {args.model}")
@@ -246,4 +255,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

@@ -55,7 +55,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--coarse-grid", type=int, default=14)
     parser.add_argument("--warmup-runs", type=int, default=3)
     parser.add_argument("--benchmark-runs", type=int, default=20)
-    parser.add_argument("--router-type", choices=["depth", "attention"], default="depth")
+    parser.add_argument(
+        "--router-type", choices=["depth", "attention"], default="depth"
+    )
     return parser.parse_args()
 
 
@@ -207,7 +209,9 @@ def main() -> None:
                 route_costs=route_costs,
                 budget_ratio=budget,
             )
-            entropy = -(soft_probs * soft_probs.clamp_min(1e-8).log()).sum(dim=-1).mean()
+            entropy = (
+                -(soft_probs * soft_probs.clamp_min(1e-8).log()).sum(dim=-1).mean()
+            )
             total_loss = (
                 task_loss
                 + args.lambda_compute * compute_loss
@@ -265,7 +269,9 @@ def main() -> None:
             f"{soft_deep:.6f} | "
             f"{hard_deep:.6f} | {latency_ms:.6f}"
         )
-        print(f"finite_gradients_all_steps_budget_{budget:.2f}: {finite_gradients_all_steps}")
+        print(
+            f"finite_gradients_all_steps_budget_{budget:.2f}: {finite_gradients_all_steps}"
+        )
 
     print("status: query-adaptive multi-budget sweep succeeded")
 
