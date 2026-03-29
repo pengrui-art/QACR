@@ -20,6 +20,7 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from qacr.routing import (
+    AttentionLevelRouter,
     DepthOnlyRouter,
     compute_regularization_loss,
     hard_routing_from_logits,
@@ -54,6 +55,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--coarse-grid", type=int, default=14)
     parser.add_argument("--warmup-runs", type=int, default=3)
     parser.add_argument("--benchmark-runs", type=int, default=20)
+    parser.add_argument("--router-type", choices=["depth", "attention"], default="depth")
     return parser.parse_args()
 
 
@@ -81,7 +83,7 @@ def sync_if_needed() -> None:
 
 
 def benchmark_latency_ms(
-    router: DepthOnlyRouter,
+    router: torch.nn.Module,
     executor: DepthMultiPathExecutor,
     query_tokens: torch.Tensor,
     image_tokens: torch.Tensor,
@@ -157,11 +159,18 @@ def main() -> None:
     )
 
     for budget in budgets:
-        router = DepthOnlyRouter(
-            query_dim=query_cache[eval_query].size(-1),
-            image_dim=image_tokens.size(-1),
-            hidden_dim=args.router_hidden,
-        )
+        if args.router_type == "attention":
+            router = AttentionLevelRouter(
+                query_dim=query_cache[eval_query].size(-1),
+                image_dim=image_tokens.size(-1),
+                hidden_dim=args.router_hidden,
+            )
+        else:
+            router = DepthOnlyRouter(
+                query_dim=query_cache[eval_query].size(-1),
+                image_dim=image_tokens.size(-1),
+                hidden_dim=args.router_hidden,
+            )
         executor = DepthMultiPathExecutor(
             token_dim=image_tokens.size(-1),
             hidden_dim=args.executor_hidden,
