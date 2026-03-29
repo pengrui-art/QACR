@@ -1,0 +1,130 @@
+{
+  "model": "Model/Qwen35-08B",
+  "image": "outputs/demo_phase01.png",
+  "proxy_samples": 12,
+  "per_dataset": {
+    "DocVQA": {
+      "correct": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "GQA": {
+      "correct": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "MMBench": {
+      "correct": 1,
+      "total": 1,
+      "accuracy": 1.0
+    },
+    "MMMU": {
+      "correct": 1,
+      "total": 1,
+      "accuracy": 1.0
+    },
+    "POPE": {
+      "correct": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "TextVQA": {
+      "correct": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "VQAv2": {
+      "correct": 2,
+      "total": 2,
+      "accuracy": 1.0
+    }
+  },
+  "macro_accuracy": 1.0,
+  "micro_accuracy": 1.0,
+  "details": [
+    {
+      "dataset": "VQAv2",
+      "question": "图中主要包含哪两种几何形状？",
+      "response": "图中主要包含两种几何形状：\n\n1. **矩形**（蓝色）—— 位于图像左侧，是一个长方形。\n2. **圆形**（黄色）—— 位于图像右侧，是一个圆。\n\n因此，图中主要包含的两种几何形状是：**矩形**和**圆形**。\n",
+      "correct": true,
+      "judge_kind": "keywords_all"
+    },
+    {
+      "dataset": "VQAv2",
+      "question": "图中蓝色区域是什么形状？",
+      "response": "图中蓝色区域是一个**长方形**。\n\n从图中可以观察到：\n- 蓝色区域有四条边，且对边平行（上下边水平，左右边垂直）；\n- 四个角都是直角；\n- 没有圆形的曲线，也没有三角形或其他多边形特征。\n\n因此，根据几何",
+      "correct": true,
+      "judge_kind": "keywords_any"
+    },
+    {
+      "dataset": "GQA",
+      "question": "黄色圆形在蓝色矩形的左边还是右边？",
+      "response": "从图中可以清楚地看到：\n\n- 蓝色矩形在左上方；\n- 黄色圆形在右上方。\n\n因此，**黄色圆形在蓝色矩形的右边**。\n\n✅ 正确答案：**右边**\n",
+      "correct": true,
+      "judge_kind": "keywords_any"
+    },
+    {
+      "dataset": "GQA",
+      "question": "文字 QACR 在几何图形的上方还是下方？",
+      "response": "根据图像分析，文字“QACR”位于蓝色矩形的正下方，而圆形位于其右侧。\n\n因此，文字“QACR”在几何图形的**上方**。\n",
+      "correct": true,
+      "judge_kind": "keywords_any"
+    },
+    {
+      "dataset": "POPE",
+      "question": "图里有绿色三角形吗？请只回答是或否。",
+      "response": "否\n",
+      "correct": true,
+      "judge_kind": "yesno"
+    },
+    {
+      "dataset": "POPE",
+      "question": "图里有蓝色矩形吗？请只回答是或否。",
+      "response": "是\n",
+      "correct": true,
+      "judge_kind": "yesno"
+    },
+    {
+      "dataset": "TextVQA",
+      "question": "图中的英文文本是什么？",
+      "response": "QACR\n",
+      "correct": true,
+      "judge_kind": "keywords_any"
+    },
+    {
+      "dataset": "TextVQA",
+      "question": "请读取图中可见文字内容。",
+      "response": "QACR\n",
+      "correct": true,
+      "judge_kind": "keywords_any"
+    },
+    {
+      "dataset": "DocVQA",
+      "question": "如果把这张图当作文档页面，页面上唯一明显的词是什么？",
+      "response": "QACR\n",
+      "correct": true,
+      "judge_kind": "keywords_any"
+    },
+    {
+      "dataset": "DocVQA",
+      "question": "文档中是否出现 QACR 这个词？请回答是或否。",
+      "response": "是\n",
+      "correct": true,
+      "judge_kind": "yesno"
+    },
+    {
+      "dataset": "MMBench",
+      "question": "图中有几个主要几何图形（不含文字）？",
+      "response": "图中有两个主要几何图形：一个蓝色的矩形和一个黄色的圆形。\n",
+      "correct": true,
+      "judge_kind": "keywords_any"
+    },
+    {
+      "dataset": "MMMU",
+      "question": "若将蓝色矩形记为A、黄色圆形记为B，哪个目标更靠右？",
+      "response": "从图中可以清楚地看到，蓝色矩形（A）位于黄色圆形（B）的左侧，而黄色圆形（B）位于蓝色矩形（A）的右侧。\n\n因此，**黄色圆形（B）更靠右**。\n\n✅ 正确答案：**B**\n",
+      "correct": true,
+      "judge_kind": "keywords_any"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "task": "3.6_highres_reencoding_gate",
+  "model": "Model/Qwen35-08B",
+  "image": "outputs/demo_phase01.png",
+  "device": "cuda",
+  "budget": 0.45,
+  "coarse_grid": 14,
+  "highres_grid": 28,
+  "low_grid": 9,
+  "depth_only": {
+    "proxy_task_loss": 0.2204325795173645,
+    "proxy_accuracy": 0.8461538461538461,
+    "expected_compute": 0.4220649003982544,
+    "latency_ms": 1.432301290333271,
+    "finite_gradients_all_steps": true
+  },
+  "highres_reencode": {
+    "proxy_task_loss": 0.22294407586256662,
+    "proxy_accuracy": 0.8461538461538461,
+    "expected_compute": 0.46900609135627747,
+    "extra_compute_ratio": 0.059183675050735476,
+    "total_compute_ratio": 0.5281897783279419,
+    "latency_ms": 2.2861829958856106,
+    "finite_gradients_all_steps": true
+  },
+  "lowres_baseline": {
+    "proxy_task_loss": 0.2187197357416153,
+    "proxy_accuracy": 0.3076923076923077,
+    "expected_compute": 0.413265306122449,
+    "latency_ms": 1.2039887253195047,
+    "finite_gradients_all_steps": true
+  },
+  "relative_loss_drop_vs_depth_only": -0.011393489794934222,
+  "accuracy_gain_vs_depth_only": 0.0,
+  "extra_compute_within_20_percent": true,
+  "pass_gate": false
+}

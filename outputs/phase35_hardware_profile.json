@@ -1,0 +1,51 @@
+{
+  "model": "Model/Qwen35-08B",
+  "image": "outputs/demo_phase01.png",
+  "device": "cuda",
+  "dtype": "torch.bfloat16",
+  "batch_size": 1,
+  "coarse_grid": 14,
+  "num_tokens": 196,
+  "benchmark_runs": 120,
+  "warmup_runs": 10,
+  "flash_or_fla_installed": false,
+  "profiles": {
+    "all_deep": {
+      "skip_ratio": 0.0,
+      "shallow_ratio": 0.0,
+      "deep_ratio": 1.0,
+      "dense_latency_ms": 0.9521832689642906,
+      "sparse_emulated_latency_ms": 0.7622458351155122,
+      "dense_peak_mem_mb": 16.13623046875,
+      "sparse_emulated_peak_mem_mb": 15.173828125
+    },
+    "balanced": {
+      "skip_ratio": 0.3316326439380646,
+      "shallow_ratio": 0.3316326439380646,
+      "deep_ratio": 0.33673468232154846,
+      "dense_latency_ms": 0.9392051103835305,
+      "sparse_emulated_latency_ms": 1.1819502571597695,
+      "dense_peak_mem_mb": 16.138671875,
+      "sparse_emulated_peak_mem_mb": 13.46044921875
+    },
+    "mostly_skip": {
+      "skip_ratio": 0.75,
+      "shallow_ratio": 0.19897958636283875,
+      "deep_ratio": 0.05102040618658066,
+      "dense_latency_ms": 0.9461658773943782,
+      "sparse_emulated_latency_ms": 1.1696284171193838,
+      "dense_peak_mem_mb": 16.138671875,
+      "sparse_emulated_peak_mem_mb": 12.45849609375
+    },
+    "query_hard": {
+      "skip_ratio": 0.0,
+      "shallow_ratio": 0.0,
+      "deep_ratio": 1.0,
+      "dense_latency_ms": 0.968597992323339,
+      "sparse_emulated_latency_ms": 0.7547354015211264,
+      "dense_peak_mem_mb": 16.138671875,
+      "sparse_emulated_peak_mem_mb": 15.17626953125
+    }
+  },
+  "note": "dense_latency基于当前执行器(三分支全算后融合)；sparse_emulated_latency用于近似变长token的真实动态执行趋势。"
+}

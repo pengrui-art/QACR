@@ -1,0 +1,46 @@
+{
+  "task": "3.13_hard_routing_stabilization",
+  "image": "outputs/demo_phase01.png",
+  "coarse_grid": 14,
+  "steps": 180,
+  "budget": 0.45,
+  "strategies": [
+    "route entropy + load balancing regularization",
+    "key-token auxiliary supervision",
+    "soft-hard consistency loss (distillation style)",
+    "budget annealing curriculum"
+  ],
+  "baseline": {
+    "mean_hard_minus_soft_gap": 1.269882507889027e-06,
+    "max_hard_minus_soft_gap": 2.4407518139923923e-06,
+    "hard_collapse_ratio": 1.0,
+    "final_hard_ratio_skip": 0.0,
+    "final_hard_ratio_shallow": 1.0,
+    "final_hard_ratio_deep": 0.0,
+    "key_token_recall": 0.0,
+    "miss_rate_key_tokens": 1.0,
+    "proxy_benchmark_macro_accuracy": 0.0,
+    "num_eval_cases": 6,
+    "finite_gradients_all_steps": true
+  },
+  "stabilized": {
+    "mean_hard_minus_soft_gap": 0.0033133594940106073,
+    "max_hard_minus_soft_gap": 0.006651417817920446,
+    "hard_collapse_ratio": 0.7049319744110107,
+    "final_hard_ratio_skip": 0.0,
+    "final_hard_ratio_shallow": 0.7049319744110107,
+    "final_hard_ratio_deep": 0.29506802558898926,
+    "key_token_recall": 0.3758297339081764,
+    "miss_rate_key_tokens": 0.6061958993474642,
+    "proxy_benchmark_macro_accuracy": 0.16666666666666666,
+    "num_eval_cases": 6,
+    "finite_gradients_all_steps": true
+  },
+  "deltas": {
+    "delta_mean_hard_minus_soft_gap": 0.003312089611502718,
+    "delta_hard_collapse_ratio": -0.29506802558898926,
+    "delta_key_token_recall": 0.3758297339081764,
+    "delta_proxy_benchmark_macro_accuracy": 0.16666666666666666
+  },
+  "pass_gate": true
+}

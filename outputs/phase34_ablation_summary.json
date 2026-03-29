@@ -1,0 +1,124 @@
+{
+  "model": "Model/Qwen35-08B",
+  "image": "outputs/demo_phase01.png",
+  "steps": 20,
+  "budget": 0.45,
+  "router_structure_ablation": {
+    "mlp": {
+      "task_loss": 0.12333867698907852,
+      "total_loss": 0.11519288271665573,
+      "expected_compute": 0.4199608266353607,
+      "budget_gap": 0.030039173364639293,
+      "soft_skip": 0.29927754402160645,
+      "soft_shallow": 0.43194085359573364,
+      "soft_deep": 0.26878154277801514,
+      "hard_skip": 0.0,
+      "hard_shallow": 1.0,
+      "hard_deep": 0.0,
+      "hard_collapse_ratio": 1.0,
+      "finite_gradients_all_steps": true
+    },
+    "linear": {
+      "task_loss": 0.11728979647159576,
+      "total_loss": 0.11345864832401276,
+      "expected_compute": 0.5177852511405945,
+      "budget_gap": 0.06778525114059447,
+      "soft_skip": 0.18136025965213776,
+      "soft_shallow": 0.46285301446914673,
+      "soft_deep": 0.3557867705821991,
+      "hard_skip": 0.0,
+      "hard_shallow": 1.0,
+      "hard_deep": 0.0,
+      "hard_collapse_ratio": 1.0,
+      "finite_gradients_all_steps": true
+    }
+  },
+  "temperature_ablation": {
+    "anneal": {
+      "task_loss": 0.0883650928735733,
+      "total_loss": 0.08046776801347733,
+      "expected_compute": 0.4544420838356018,
+      "budget_gap": 0.0044420838356017955,
+      "soft_skip": 0.3429844081401825,
+      "soft_shallow": 0.3116515278816223,
+      "soft_deep": 0.3453640937805176,
+      "hard_skip": 0.23979592323303223,
+      "hard_shallow": 0.0,
+      "hard_deep": 0.7602040767669678,
+      "hard_collapse_ratio": 0.7602040767669678,
+      "finite_gradients_all_steps": true
+    },
+    "fixed_high": {
+      "task_loss": 0.06139281019568443,
+      "total_loss": 0.043564967811107635,
+      "expected_compute": 0.4684571325778961,
+      "budget_gap": 0.018457132577896107,
+      "soft_skip": 0.3055133521556854,
+      "soft_shallow": 0.34773778915405273,
+      "soft_deep": 0.34674888849258423,
+      "hard_skip": 0.0,
+      "hard_shallow": 0.8163265585899353,
+      "hard_deep": 0.18367347121238708,
+      "hard_collapse_ratio": 0.8163265585899353,
+      "finite_gradients_all_steps": true
+    },
+    "fixed_low": {
+      "task_loss": 0.11692951619625092,
+      "total_loss": 0.11273236572742462,
+      "expected_compute": 0.5199559926986694,
+      "budget_gap": 0.06995599269866942,
+      "soft_skip": 0.17641806602478027,
+      "soft_shallow": 0.4671168327331543,
+      "soft_deep": 0.35646504163742065,
+      "hard_skip": 0.0,
+      "hard_shallow": 1.0,
+      "hard_deep": 0.0,
+      "hard_collapse_ratio": 1.0,
+      "finite_gradients_all_steps": true
+    }
+  },
+  "compute_lambda_ablation": {
+    "0.3": {
+      "task_loss": 0.0771697461605072,
+      "total_loss": 0.06865312159061432,
+      "expected_compute": 0.44514158368110657,
+      "budget_gap": 0.004858416318893444,
+      "soft_skip": 0.23260226845741272,
+      "soft_shallow": 0.4957786500453949,
+      "soft_deep": 0.2716190814971924,
+      "hard_skip": 0.0,
+      "hard_shallow": 1.0,
+      "hard_deep": 0.0,
+      "hard_collapse_ratio": 1.0,
+      "finite_gradients_all_steps": true
+    },
+    "0.8": {
+      "task_loss": 0.133331298828125,
+      "total_loss": 0.1269952803850174,
+      "expected_compute": 0.5044322609901428,
+      "budget_gap": 0.05443226099014281,
+      "soft_skip": 0.267473965883255,
+      "soft_shallow": 0.35091352462768555,
+      "soft_deep": 0.38161253929138184,
+      "hard_skip": 0.0,
+      "hard_shallow": 0.0,
+      "hard_deep": 1.0,
+      "hard_collapse_ratio": 1.0,
+      "finite_gradients_all_steps": true
+    },
+    "1.5": {
+      "task_loss": 0.1399475783109665,
+      "total_loss": 0.131541907787323,
+      "expected_compute": 0.4585258662700653,
+      "budget_gap": 0.008525866270065297,
+      "soft_skip": 0.28034231066703796,
+      "soft_shallow": 0.4017413258552551,
+      "soft_deep": 0.3179163932800293,
+      "hard_skip": 0.0,
+      "hard_shallow": 1.0,
+      "hard_deep": 0.0,
+      "hard_collapse_ratio": 1.0,
+      "finite_gradients_all_steps": true
+    }
+  }
+}

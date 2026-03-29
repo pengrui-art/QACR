@@ -1,0 +1,321 @@
+{
+  "task": "3.12_same_image_multi_query_key_token_control",
+  "image": "outputs/demo_phase01.png",
+  "coarse_grid": 14,
+  "steps": 160,
+  "budget": 0.45,
+  "metrics_definition": {
+    "key_token_recall": "fraction of key tokens routed to deep",
+    "deep_route_precision": "fraction of deep-routed tokens that are key",
+    "deep_route_recall": "same as key_token_recall",
+    "miss_rate_key_tokens": "fraction of key tokens whose deep prob < threshold",
+    "same_image_different_query_consistency_corr": "correlation between route-shift and target mask shift"
+  },
+  "methods": {
+    "QACR-Attention": {
+      "aggregate": {
+        "num_cases": 6,
+        "num_flagged_errors": 2,
+        "key_token_recall": 0.8383117069800695,
+        "deep_route_precision": 0.6160967548688253,
+        "deep_route_recall": 0.8383117069800695,
+        "miss_rate_key_tokens": 0.16168831645821533,
+        "separation_key_minus_nonkey": 0.49939515876273316,
+        "same_image_different_query_shift_l1_mean": 0.20399096608161926,
+        "same_image_different_query_shift_l1_max": 0.45855724811553955,
+        "same_image_different_query_consistency_corr": 0.8851746916770935
+      },
+      "cases": [
+        {
+          "key_token_recall": 0.9642857313156128,
+          "deep_route_precision": 0.931034505367279,
+          "deep_route_recall": 0.9642857313156128,
+          "miss_rate_key_tokens": 0.0357142873108387,
+          "early_skip_rate_key_tokens": 0.0357142873108387,
+          "separation_key_minus_nonkey": 0.8928583711385727,
+          "flagged_as_error": false,
+          "query": "left_focus"
+        },
+        {
+          "key_token_recall": 1.0,
+          "deep_route_precision": 0.4285714328289032,
+          "deep_route_recall": 1.0,
+          "miss_rate_key_tokens": 0.0,
+          "early_skip_rate_key_tokens": 0.0,
+          "separation_key_minus_nonkey": -0.06560522317886353,
+          "flagged_as_error": true,
+          "query": "right_focus"
+        },
+        {
+          "key_token_recall": 0.8285714387893677,
+          "deep_route_precision": 0.3670886158943176,
+          "deep_route_recall": 0.8285714387893677,
+          "miss_rate_key_tokens": 0.17142857611179352,
+          "early_skip_rate_key_tokens": 0.22857142984867096,
+          "separation_key_minus_nonkey": 0.4623990058898926,
+          "flagged_as_error": false,
+          "query": "bottom_text"
+        },
+        {
+          "key_token_recall": 0.9880952835083008,
+          "deep_route_precision": 0.8736842274665833,
+          "deep_route_recall": 0.9880952835083008,
+          "miss_rate_key_tokens": 0.011904762126505375,
+          "early_skip_rate_key_tokens": 0.02380952425301075,
+          "separation_key_minus_nonkey": 0.900532491505146,
+          "flagged_as_error": false,
+          "query": "count_query"
+        },
+        {
+          "key_token_recall": 0.9761905074119568,
+          "deep_route_precision": 0.9318181872367859,
+          "deep_route_recall": 0.9761905074119568,
+          "miss_rate_key_tokens": 0.02380952425301075,
+          "early_skip_rate_key_tokens": 0.02380952425301075,
+          "separation_key_minus_nonkey": 0.9080134220421314,
+          "flagged_as_error": false,
+          "query": "relation_query"
+        },
+        {
+          "key_token_recall": 0.27272728085517883,
+          "deep_route_precision": 0.16438356041908264,
+          "deep_route_recall": 0.27272728085517883,
+          "miss_rate_key_tokens": 0.7272727489471436,
+          "early_skip_rate_key_tokens": 0.7272727489471436,
+          "separation_key_minus_nonkey": -0.10182711482048035,
+          "flagged_as_error": true,
+          "query": "center_focus"
+        }
+      ]
+    },
+    "TokenPruning": {
+      "aggregate": {
+        "num_cases": 6,
+        "num_flagged_errors": 5,
+        "key_token_recall": 0.49696969985961914,
+        "deep_route_precision": 0.37310607234636944,
+        "deep_route_recall": 0.49696969985961914,
+        "miss_rate_key_tokens": 0.5030303106953701,
+        "separation_key_minus_nonkey": 0.060647899905840554,
+        "same_image_different_query_shift_l1_mean": 0.0,
+        "same_image_different_query_shift_l1_max": 0.0,
+        "same_image_different_query_consistency_corr": 0.0
+      },
+      "cases": [
+        {
+          "key_token_recall": 0.5,
+          "deep_route_precision": 0.47727274894714355,
+          "deep_route_recall": 0.5,
+          "miss_rate_key_tokens": 0.5,
+          "early_skip_rate_key_tokens": 0.5,
+          "separation_key_minus_nonkey": 0.0892857015132904,
+          "flagged_as_error": true,
+          "query": "left_focus"
+        },
+        {
+          "key_token_recall": 0.3571428656578064,
+          "deep_route_precision": 0.34090909361839294,
+          "deep_route_recall": 0.3571428656578064,
+          "miss_rate_key_tokens": 0.6428571343421936,
+          "early_skip_rate_key_tokens": 0.6428571343421936,
+          "separation_key_minus_nonkey": -0.16071432828903198,
+          "flagged_as_error": true,
+          "query": "right_focus"
+        },
+        {
+          "key_token_recall": 0.9428571462631226,
+          "deep_route_precision": 0.375,
+          "deep_route_recall": 0.9428571462631226,
+          "miss_rate_key_tokens": 0.05714285746216774,
+          "early_skip_rate_key_tokens": 0.05714285746216774,
+          "separation_key_minus_nonkey": 0.6012422442436218,
+          "flagged_as_error": false,
+          "query": "bottom_text"
+        },
+        {
+          "key_token_recall": 0.5,
+          "deep_route_precision": 0.47727274894714355,
+          "deep_route_recall": 0.5,
+          "miss_rate_key_tokens": 0.5,
+          "early_skip_rate_key_tokens": 0.5,
+          "separation_key_minus_nonkey": 0.0892857015132904,
+          "flagged_as_error": true,
+          "query": "count_query"
+        },
+        {
+          "key_token_recall": 0.5,
+          "deep_route_precision": 0.47727274894714355,
+          "deep_route_recall": 0.5,
+          "miss_rate_key_tokens": 0.5,
+          "early_skip_rate_key_tokens": 0.5,
+          "separation_key_minus_nonkey": 0.0892857015132904,
+          "flagged_as_error": true,
+          "query": "relation_query"
+        },
+        {
+          "key_token_recall": 0.1818181872367859,
+          "deep_route_precision": 0.09090909361839294,
+          "deep_route_recall": 0.1818181872367859,
+          "miss_rate_key_tokens": 0.8181818723678589,
+          "early_skip_rate_key_tokens": 0.8181818723678589,
+          "separation_key_minus_nonkey": -0.3444976210594177,
+          "flagged_as_error": true,
+          "query": "center_focus"
+        }
+      ]
+    },
+    "LVPruning-like": {
+      "aggregate": {
+        "num_cases": 6,
+        "num_flagged_errors": 3,
+        "key_token_recall": 0.8160173296928406,
+        "deep_route_precision": 0.6155303120613098,
+        "deep_route_recall": 0.8160173296928406,
+        "miss_rate_key_tokens": 0.18398269141713777,
+        "separation_key_minus_nonkey": 0.5563430041074753,
+        "same_image_different_query_shift_l1_mean": 0.36734694242477417,
+        "same_image_different_query_shift_l1_max": 0.6428571343421936,
+        "same_image_different_query_consistency_corr": 0.9618306159973145
+      },
+      "cases": [
+        {
+          "key_token_recall": 0.7142857313156128,
+          "deep_route_precision": 0.6818181872367859,
+          "deep_route_recall": 0.7142857313156128,
+          "miss_rate_key_tokens": 0.2857142984867096,
+          "early_skip_rate_key_tokens": 0.2857142984867096,
+          "separation_key_minus_nonkey": 0.4642857313156128,
+          "flagged_as_error": true,
+          "query": "left_focus"
+        },
+        {
+          "key_token_recall": 0.8214285969734192,
+          "deep_route_precision": 0.7840909361839294,
+          "deep_route_recall": 0.8214285969734192,
+          "miss_rate_key_tokens": 0.1785714328289032,
+          "early_skip_rate_key_tokens": 0.1785714328289032,
+          "separation_key_minus_nonkey": 0.6517857313156128,
+          "flagged_as_error": false,
+          "query": "right_focus"
+        },
+        {
+          "key_token_recall": 1.0,
+          "deep_route_precision": 0.39772728085517883,
+          "deep_route_recall": 1.0,
+          "miss_rate_key_tokens": 0.0,
+          "early_skip_rate_key_tokens": 0.0,
+          "separation_key_minus_nonkey": 0.6708074510097504,
+          "flagged_as_error": false,
+          "query": "bottom_text"
+        },
+        {
+          "key_token_recall": 0.7142857313156128,
+          "deep_route_precision": 0.6818181872367859,
+          "deep_route_recall": 0.7142857313156128,
+          "miss_rate_key_tokens": 0.2857142984867096,
+          "early_skip_rate_key_tokens": 0.2857142984867096,
+          "separation_key_minus_nonkey": 0.4642857313156128,
+          "flagged_as_error": true,
+          "query": "count_query"
+        },
+        {
+          "key_token_recall": 0.7142857313156128,
+          "deep_route_precision": 0.6818181872367859,
+          "deep_route_recall": 0.7142857313156128,
+          "miss_rate_key_tokens": 0.2857142984867096,
+          "early_skip_rate_key_tokens": 0.2857142984867096,
+          "separation_key_minus_nonkey": 0.4642857313156128,
+          "flagged_as_error": true,
+          "query": "relation_query"
+        },
+        {
+          "key_token_recall": 0.9318181872367859,
+          "deep_route_precision": 0.46590909361839294,
+          "deep_route_recall": 0.9318181872367859,
+          "miss_rate_key_tokens": 0.06818182021379471,
+          "early_skip_rate_key_tokens": 0.06818182021379471,
+          "separation_key_minus_nonkey": 0.6226076483726501,
+          "flagged_as_error": false,
+          "query": "center_focus"
+        }
+      ]
+    },
+    "CROP-like": {
+      "aggregate": {
+        "num_cases": 6,
+        "num_flagged_errors": 0,
+        "key_token_recall": 0.9307359357674917,
+        "deep_route_precision": 1.0,
+        "deep_route_recall": 0.9307359357674917,
+        "miss_rate_key_tokens": 0.06926407168308894,
+        "separation_key_minus_nonkey": 0.9307359357674917,
+        "same_image_different_query_shift_l1_mean": 0.4353741705417633,
+        "same_image_different_query_shift_l1_max": 0.8571428656578064,
+        "same_image_different_query_consistency_corr": 0.9970791339874268
+      },
+      "cases": [
+        {
+          "key_token_recall": 1.0,
+          "deep_route_precision": 1.0,
+          "deep_route_recall": 1.0,
+          "miss_rate_key_tokens": 0.0,
+          "early_skip_rate_key_tokens": 0.0,
+          "separation_key_minus_nonkey": 1.0,
+          "flagged_as_error": false,
+          "query": "left_focus"
+        },
+        {
+          "key_token_recall": 1.0,
+          "deep_route_precision": 1.0,
+          "deep_route_recall": 1.0,
+          "miss_rate_key_tokens": 0.0,
+          "early_skip_rate_key_tokens": 0.0,
+          "separation_key_minus_nonkey": 1.0,
+          "flagged_as_error": false,
+          "query": "right_focus"
+        },
+        {
+          "key_token_recall": 0.8571428656578064,
+          "deep_route_precision": 1.0,
+          "deep_route_recall": 0.8571428656578064,
+          "miss_rate_key_tokens": 0.1428571492433548,
+          "early_skip_rate_key_tokens": 0.1428571492433548,
+          "separation_key_minus_nonkey": 0.8571428656578064,
+          "flagged_as_error": false,
+          "query": "bottom_text"
+        },
+        {
+          "key_token_recall": 1.0,
+          "deep_route_precision": 1.0,
+          "deep_route_recall": 1.0,
+          "miss_rate_key_tokens": 0.0,
+          "early_skip_rate_key_tokens": 0.0,
+          "separation_key_minus_nonkey": 1.0,
+          "flagged_as_error": false,
+          "query": "count_query"
+        },
+        {
+          "key_token_recall": 1.0,
+          "deep_route_precision": 1.0,
+          "deep_route_recall": 1.0,
+          "miss_rate_key_tokens": 0.0,
+          "early_skip_rate_key_tokens": 0.0,
+          "separation_key_minus_nonkey": 1.0,
+          "flagged_as_error": false,
+          "query": "relation_query"
+        },
+        {
+          "key_token_recall": 0.7272727489471436,
+          "deep_route_precision": 1.0,
+          "deep_route_recall": 0.7272727489471436,
+          "miss_rate_key_tokens": 0.27272728085517883,
+          "early_skip_rate_key_tokens": 0.0,
+          "separation_key_minus_nonkey": 0.7272727489471436,
+          "flagged_as_error": false,
+          "query": "center_focus"
+        }
+      ]
+    }
+  },
+  "pass_gate": true
+}

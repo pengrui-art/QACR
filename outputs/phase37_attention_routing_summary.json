@@ -1,0 +1,133 @@
+{
+  "task": "3.7_attention_level_routing_gate",
+  "model": "Model/Qwen35-08B",
+  "image": "outputs/demo_phase01.png",
+  "device": "cuda",
+  "depth_only": {
+    "num_cases": 6,
+    "num_flagged_errors": 6,
+    "mean_miss_rate_key_tokens": 0.0,
+    "mean_corner_score": 0.0,
+    "mean_hard_minus_soft_gap": 0.0,
+    "eval_proxy_route_loss": 0.2987357924381892,
+    "details": [
+      {
+        "name": "left_easy",
+        "miss_rate_key_tokens": 0.0,
+        "early_skip_rate_key_tokens": 0.0,
+        "separation_key_minus_nonkey": 0.0,
+        "corner_score": 0.0,
+        "flagged_as_error": true
+      },
+      {
+        "name": "right_easy",
+        "miss_rate_key_tokens": 0.0,
+        "early_skip_rate_key_tokens": 0.0,
+        "separation_key_minus_nonkey": 0.0,
+        "corner_score": 0.0,
+        "flagged_as_error": true
+      },
+      {
+        "name": "text_hard",
+        "miss_rate_key_tokens": 0.0,
+        "early_skip_rate_key_tokens": 0.0,
+        "separation_key_minus_nonkey": 0.0,
+        "corner_score": 0.0,
+        "flagged_as_error": true
+      },
+      {
+        "name": "ignore_text",
+        "miss_rate_key_tokens": 0.0,
+        "early_skip_rate_key_tokens": 0.0,
+        "separation_key_minus_nonkey": 0.0,
+        "corner_score": 0.0,
+        "flagged_as_error": true
+      },
+      {
+        "name": "dual_object",
+        "miss_rate_key_tokens": 0.0,
+        "early_skip_rate_key_tokens": 0.0,
+        "separation_key_minus_nonkey": 0.0,
+        "corner_score": 0.0,
+        "flagged_as_error": true
+      },
+      {
+        "name": "center_conflict",
+        "miss_rate_key_tokens": 0.0,
+        "early_skip_rate_key_tokens": 0.0,
+        "separation_key_minus_nonkey": 0.0,
+        "corner_score": 0.0,
+        "flagged_as_error": true
+      }
+    ],
+    "finite_gradients_all_steps": true,
+    "latency_ms": 1.1786990178128083
+  },
+  "attention_level": {
+    "num_cases": 6,
+    "num_flagged_errors": 2,
+    "mean_miss_rate_key_tokens": 0.0,
+    "mean_corner_score": 9.934107462565105e-08,
+    "mean_hard_minus_soft_gap": 2.8523306051890056e-05,
+    "eval_proxy_route_loss": 0.29863495628039044,
+    "details": [
+      {
+        "name": "left_easy",
+        "miss_rate_key_tokens": 0.0,
+        "early_skip_rate_key_tokens": 0.0,
+        "separation_key_minus_nonkey": 2.980232238769531e-07,
+        "corner_score": 0.0,
+        "flagged_as_error": false
+      },
+      {
+        "name": "right_easy",
+        "miss_rate_key_tokens": 0.0,
+        "early_skip_rate_key_tokens": 0.0,
+        "separation_key_minus_nonkey": -3.5762786865234375e-07,
+        "corner_score": 3.5762786865234375e-07,
+        "flagged_as_error": true
+      },
+      {
+        "name": "text_hard",
+        "miss_rate_key_tokens": 0.0,
+        "early_skip_rate_key_tokens": 0.0,
+        "separation_key_minus_nonkey": 0.00021058320999145508,
+        "corner_score": 0.0,
+        "flagged_as_error": false
+      },
+      {
+        "name": "ignore_text",
+        "miss_rate_key_tokens": 0.0,
+        "early_skip_rate_key_tokens": 0.0,
+        "separation_key_minus_nonkey": 1.430511474609375e-06,
+        "corner_score": 0.0,
+        "flagged_as_error": false
+      },
+      {
+        "name": "dual_object",
+        "miss_rate_key_tokens": 0.0,
+        "early_skip_rate_key_tokens": 0.0,
+        "separation_key_minus_nonkey": -2.384185791015625e-07,
+        "corner_score": 2.384185791015625e-07,
+        "flagged_as_error": true
+      },
+      {
+        "name": "center_conflict",
+        "miss_rate_key_tokens": 0.0,
+        "early_skip_rate_key_tokens": 0.0,
+        "separation_key_minus_nonkey": 5.841255187988281e-06,
+        "corner_score": 0.0,
+        "flagged_as_error": false
+      }
+    ],
+    "finite_gradients_all_steps": true,
+    "latency_ms": 1.9212288316339254
+  },
+  "reference_corner_case": {
+    "path": "outputs/phase33_corner_case_summary.json",
+    "num_flagged_errors": 6,
+    "mean_miss_rate_key_tokens": 1.0
+  },
+  "miss_rate_reduction": 1.0,
+  "pass_gate": true
+}

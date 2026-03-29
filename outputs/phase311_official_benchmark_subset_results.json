@@ -1,0 +1,1883 @@
+{
+  "task": "3.11_official_benchmark_subsets",
+  "model": "Model/Qwen35-08B",
+  "datasets_requested": [
+    "VQAv2",
+    "GQA",
+    "POPE",
+    "TextVQA",
+    "DocVQA",
+    "MMBench",
+    "MMMU"
+  ],
+  "datasets_loaded": [
+    "DocVQA",
+    "GQA",
+    "MMBench",
+    "MMMU",
+    "POPE",
+    "TextVQA",
+    "VQAv2"
+  ],
+  "subset_size_per_dataset": 1,
+  "budgets": [
+    0.35,
+    0.45,
+    0.6
+  ],
+  "methods": [
+    "LowRes",
+    "TokenPruning",
+    "QACR-DepthOnly"
+  ],
+  "failures": {},
+  "aggregate": {
+    "macro_summary": [
+      {
+        "method": "LowRes",
+        "budget": 0.35,
+        "num_samples": 7,
+        "avg_accuracy": 0.2857142857142857,
+        "avg_compute_ratio": 0.32653061224489793,
+        "avg_latency_ms": 852.5320837008102,
+        "avg_peak_memory_mb": 14.785714285714286
+      },
+      {
+        "method": "LowRes",
+        "budget": 0.45,
+        "num_samples": 7,
+        "avg_accuracy": 0.2857142857142857,
+        "avg_compute_ratio": 0.41326530612244905,
+        "avg_latency_ms": 745.173867658845,
+        "avg_peak_memory_mb": 17.25
+      },
+      {
+        "method": "LowRes",
+        "budget": 0.6,
+        "num_samples": 7,
+        "avg_accuracy": 0.2857142857142857,
+        "avg_compute_ratio": 0.6173469387755102,
+        "avg_latency_ms": 747.8570767811367,
+        "avg_peak_memory_mb": 17.25
+      },
+      {
+        "method": "QACR-DepthOnly",
+        "budget": 0.35,
+        "num_samples": 7,
+        "avg_accuracy": 0.2857142857142857,
+        "avg_compute_ratio": 0.34927113141332355,
+        "avg_latency_ms": 842.0564892834851,
+        "avg_peak_memory_mb": 31.592354910714285
+      },
+      {
+        "method": "QACR-DepthOnly",
+        "budget": 0.45,
+        "num_samples": 7,
+        "avg_accuracy": 0.2857142857142857,
+        "avg_compute_ratio": 0.44923466444015503,
+        "avg_latency_ms": 845.9269997796843,
+        "avg_peak_memory_mb": 31.592354910714285
+      },
+      {
+        "method": "QACR-DepthOnly",
+        "budget": 0.6,
+        "num_samples": 7,
+        "avg_accuracy": 0.2857142857142857,
+        "avg_compute_ratio": 0.5993804505893162,
+        "avg_latency_ms": 840.8151402005127,
+        "avg_peak_memory_mb": 31.592354910714285
+      },
+      {
+        "method": "TokenPruning",
+        "budget": 0.35,
+        "num_samples": 7,
+        "avg_accuracy": 0.2857142857142857,
+        "avg_compute_ratio": 0.3520407974720001,
+        "avg_latency_ms": 795.798283336418,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "method": "TokenPruning",
+        "budget": 0.45,
+        "num_samples": 7,
+        "avg_accuracy": 0.42857142857142855,
+        "avg_compute_ratio": 0.44897958636283875,
+        "avg_latency_ms": 762.5058181583881,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "method": "TokenPruning",
+        "budget": 0.6,
+        "num_samples": 7,
+        "avg_accuracy": 0.2857142857142857,
+        "avg_compute_ratio": 0.6020408272743225,
+        "avg_latency_ms": 780.6026041507721,
+        "avg_peak_memory_mb": 29.55322265625
+      }
+    ],
+    "per_dataset_summary": [
+      {
+        "dataset": "DocVQA",
+        "method": "LowRes",
+        "budget": 0.35,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.32653061224489793,
+        "avg_latency_ms": 950.8766876533628,
+        "avg_peak_memory_mb": 17.25
+      },
+      {
+        "dataset": "DocVQA",
+        "method": "LowRes",
+        "budget": 0.45,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.413265306122449,
+        "avg_latency_ms": 950.6005924195051,
+        "avg_peak_memory_mb": 17.25
+      },
+      {
+        "dataset": "DocVQA",
+        "method": "LowRes",
+        "budget": 0.6,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.6173469387755102,
+        "avg_latency_ms": 949.6070733293891,
+        "avg_peak_memory_mb": 17.25
+      },
+      {
+        "dataset": "DocVQA",
+        "method": "QACR-DepthOnly",
+        "budget": 0.35,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.34846940636634827,
+        "avg_latency_ms": 1049.465880729258,
+        "avg_peak_memory_mb": 31.603515625
+      },
+      {
+        "dataset": "DocVQA",
+        "method": "QACR-DepthOnly",
+        "budget": 0.45,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.44974485039711,
+        "avg_latency_ms": 1078.9400627836585,
+        "avg_peak_memory_mb": 31.603515625
+      },
+      {
+        "dataset": "DocVQA",
+        "method": "QACR-DepthOnly",
+        "budget": 0.6,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.5994898080825806,
+        "avg_latency_ms": 1050.3604989498854,
+        "avg_peak_memory_mb": 31.603515625
+      },
+      {
+        "dataset": "DocVQA",
+        "method": "TokenPruning",
+        "budget": 0.35,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.3520407974720001,
+        "avg_latency_ms": 978.5181637853384,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "dataset": "DocVQA",
+        "method": "TokenPruning",
+        "budget": 0.45,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.44897958636283875,
+        "avg_latency_ms": 990.890690125525,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "dataset": "DocVQA",
+        "method": "TokenPruning",
+        "budget": 0.6,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.6020408272743225,
+        "avg_latency_ms": 997.7858448401093,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "dataset": "GQA",
+        "method": "LowRes",
+        "budget": 0.35,
+        "num_samples": 1,
+        "avg_accuracy": 1.0,
+        "avg_compute_ratio": 0.32653061224489793,
+        "avg_latency_ms": 941.2668747827411,
+        "avg_peak_memory_mb": 17.25
+      },
+      {
+        "dataset": "GQA",
+        "method": "LowRes",
+        "budget": 0.45,
+        "num_samples": 1,
+        "avg_accuracy": 1.0,
+        "avg_compute_ratio": 0.413265306122449,
+        "avg_latency_ms": 947.7835120633245,
+        "avg_peak_memory_mb": 17.25
+      },
+      {
+        "dataset": "GQA",
+        "method": "LowRes",
+        "budget": 0.6,
+        "num_samples": 1,
+        "avg_accuracy": 1.0,
+        "avg_compute_ratio": 0.6173469387755102,
+        "avg_latency_ms": 945.7172686234117,
+        "avg_peak_memory_mb": 17.25
+      },
+      {
+        "dataset": "GQA",
+        "method": "QACR-DepthOnly",
+        "budget": 0.35,
+        "num_samples": 1,
+        "avg_accuracy": 1.0,
+        "avg_compute_ratio": 0.3494897782802582,
+        "avg_latency_ms": 1004.5825047418475,
+        "avg_peak_memory_mb": 31.533203125
+      },
+      {
+        "dataset": "GQA",
+        "method": "QACR-DepthOnly",
+        "budget": 0.45,
+        "num_samples": 1,
+        "avg_accuracy": 1.0,
+        "avg_compute_ratio": 0.4494897723197937,
+        "avg_latency_ms": 1043.478556908667,
+        "avg_peak_memory_mb": 31.533203125
+      },
+      {
+        "dataset": "GQA",
+        "method": "QACR-DepthOnly",
+        "budget": 0.6,
+        "num_samples": 1,
+        "avg_accuracy": 1.0,
+        "avg_compute_ratio": 0.5989795923233032,
+        "avg_latency_ms": 1035.7509339228272,
+        "avg_peak_memory_mb": 31.533203125
+      },
+      {
+        "dataset": "GQA",
+        "method": "TokenPruning",
+        "budget": 0.35,
+        "num_samples": 1,
+        "avg_accuracy": 1.0,
+        "avg_compute_ratio": 0.3520407974720001,
+        "avg_latency_ms": 955.9409273788333,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "dataset": "GQA",
+        "method": "TokenPruning",
+        "budget": 0.45,
+        "num_samples": 1,
+        "avg_accuracy": 1.0,
+        "avg_compute_ratio": 0.44897958636283875,
+        "avg_latency_ms": 967.7774030715227,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "dataset": "GQA",
+        "method": "TokenPruning",
+        "budget": 0.6,
+        "num_samples": 1,
+        "avg_accuracy": 1.0,
+        "avg_compute_ratio": 0.6020408272743225,
+        "avg_latency_ms": 966.9404635205865,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "dataset": "MMBench",
+        "method": "LowRes",
+        "budget": 0.35,
+        "num_samples": 1,
+        "avg_accuracy": 1.0,
+        "avg_compute_ratio": 0.32653061224489793,
+        "avg_latency_ms": 437.2053574770689,
+        "avg_peak_memory_mb": 17.25
+      },
+      {
+        "dataset": "MMBench",
+        "method": "LowRes",
+        "budget": 0.45,
+        "num_samples": 1,
+        "avg_accuracy": 1.0,
+        "avg_compute_ratio": 0.413265306122449,
+        "avg_latency_ms": 431.9855757057667,
+        "avg_peak_memory_mb": 17.25
+      },
+      {
+        "dataset": "MMBench",
+        "method": "LowRes",
+        "budget": 0.6,
+        "num_samples": 1,
+        "avg_accuracy": 1.0,
+        "avg_compute_ratio": 0.6173469387755102,
+        "avg_latency_ms": 427.080363035202,
+        "avg_peak_memory_mb": 17.25
+      },
+      {
+        "dataset": "MMBench",
+        "method": "QACR-DepthOnly",
+        "budget": 0.35,
+        "num_samples": 1,
+        "avg_accuracy": 1.0,
+        "avg_compute_ratio": 0.3494897782802582,
+        "avg_latency_ms": 528.0204964801669,
+        "avg_peak_memory_mb": 31.572265625
+      },
+      {
+        "dataset": "MMBench",
+        "method": "QACR-DepthOnly",
+        "budget": 0.45,
+        "num_samples": 1,
+        "avg_accuracy": 1.0,
+        "avg_compute_ratio": 0.44923466444015503,
+        "avg_latency_ms": 517.7933517843485,
+        "avg_peak_memory_mb": 31.572265625
+      },
+      {
+        "dataset": "MMBench",
+        "method": "QACR-DepthOnly",
+        "budget": 0.6,
+        "num_samples": 1,
+        "avg_accuracy": 1.0,
+        "avg_compute_ratio": 0.5987244844436646,
+        "avg_latency_ms": 527.084220200777,
+        "avg_peak_memory_mb": 31.572265625
+      },
+      {
+        "dataset": "MMBench",
+        "method": "TokenPruning",
+        "budget": 0.35,
+        "num_samples": 1,
+        "avg_accuracy": 1.0,
+        "avg_compute_ratio": 0.3520407974720001,
+        "avg_latency_ms": 461.8002278730273,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "dataset": "MMBench",
+        "method": "TokenPruning",
+        "budget": 0.45,
+        "num_samples": 1,
+        "avg_accuracy": 1.0,
+        "avg_compute_ratio": 0.44897958636283875,
+        "avg_latency_ms": 455.23290894925594,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "dataset": "MMBench",
+        "method": "TokenPruning",
+        "budget": 0.6,
+        "num_samples": 1,
+        "avg_accuracy": 1.0,
+        "avg_compute_ratio": 0.6020408272743225,
+        "avg_latency_ms": 453.19461449980736,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "dataset": "MMMU",
+        "method": "LowRes",
+        "budget": 0.35,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.32653061224489793,
+        "avg_latency_ms": 529.8249227926135,
+        "avg_peak_memory_mb": 17.25
+      },
+      {
+        "dataset": "MMMU",
+        "method": "LowRes",
+        "budget": 0.45,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.413265306122449,
+        "avg_latency_ms": 529.8417173326015,
+        "avg_peak_memory_mb": 17.25
+      },
+      {
+        "dataset": "MMMU",
+        "method": "LowRes",
+        "budget": 0.6,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.6173469387755102,
+        "avg_latency_ms": 530.2143292501569,
+        "avg_peak_memory_mb": 17.25
+      },
+      {
+        "dataset": "MMMU",
+        "method": "QACR-DepthOnly",
+        "budget": 0.35,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.34846940636634827,
+        "avg_latency_ms": 633.0205323174596,
+        "avg_peak_memory_mb": 31.806640625
+      },
+      {
+        "dataset": "MMMU",
+        "method": "QACR-DepthOnly",
+        "budget": 0.45,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.448469340801239,
+        "avg_latency_ms": 634.8136207088828,
+        "avg_peak_memory_mb": 31.806640625
+      },
+      {
+        "dataset": "MMMU",
+        "method": "QACR-DepthOnly",
+        "budget": 0.6,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.5992346405982971,
+        "avg_latency_ms": 650.1389006152749,
+        "avg_peak_memory_mb": 31.806640625
+      },
+      {
+        "dataset": "MMMU",
+        "method": "TokenPruning",
+        "budget": 0.35,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.3520407974720001,
+        "avg_latency_ms": 581.4662436023355,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "dataset": "MMMU",
+        "method": "TokenPruning",
+        "budget": 0.45,
+        "num_samples": 1,
+        "avg_accuracy": 1.0,
+        "avg_compute_ratio": 0.44897958636283875,
+        "avg_latency_ms": 458.42060539871454,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "dataset": "MMMU",
+        "method": "TokenPruning",
+        "budget": 0.6,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.6020408272743225,
+        "avg_latency_ms": 579.1898714378476,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "dataset": "POPE",
+        "method": "LowRes",
+        "budget": 0.35,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.32653061224489793,
+        "avg_latency_ms": 394.13715712726116,
+        "avg_peak_memory_mb": 17.25
+      },
+      {
+        "dataset": "POPE",
+        "method": "LowRes",
+        "budget": 0.45,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.413265306122449,
+        "avg_latency_ms": 388.71033769100904,
+        "avg_peak_memory_mb": 17.25
+      },
+      {
+        "dataset": "POPE",
+        "method": "LowRes",
+        "budget": 0.6,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.6173469387755102,
+        "avg_latency_ms": 396.60772029310465,
+        "avg_peak_memory_mb": 17.25
+      },
+      {
+        "dataset": "POPE",
+        "method": "QACR-DepthOnly",
+        "budget": 0.35,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.3499999940395355,
+        "avg_latency_ms": 504.25369292497635,
+        "avg_peak_memory_mb": 31.548828125
+      },
+      {
+        "dataset": "POPE",
+        "method": "QACR-DepthOnly",
+        "budget": 0.45,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.448469340801239,
+        "avg_latency_ms": 526.108929887414,
+        "avg_peak_memory_mb": 31.548828125
+      },
+      {
+        "dataset": "POPE",
+        "method": "QACR-DepthOnly",
+        "budget": 0.6,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.5994898080825806,
+        "avg_latency_ms": 514.3295601010323,
+        "avg_peak_memory_mb": 31.548828125
+      },
+      {
+        "dataset": "POPE",
+        "method": "TokenPruning",
+        "budget": 0.35,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.3520407974720001,
+        "avg_latency_ms": 429.5387528836727,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "dataset": "POPE",
+        "method": "TokenPruning",
+        "budget": 0.45,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.44897958636283875,
+        "avg_latency_ms": 436.8774676695466,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "dataset": "POPE",
+        "method": "TokenPruning",
+        "budget": 0.6,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.6020408272743225,
+        "avg_latency_ms": 447.9848900809884,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "dataset": "TextVQA",
+        "method": "LowRes",
+        "budget": 0.35,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.32653061224489793,
+        "avg_latency_ms": 991.0836163908243,
+        "avg_peak_memory_mb": 17.25
+      },
+      {
+        "dataset": "TextVQA",
+        "method": "LowRes",
+        "budget": 0.45,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.413265306122449,
+        "avg_latency_ms": 988.2515827193856,
+        "avg_peak_memory_mb": 17.25
+      },
+      {
+        "dataset": "TextVQA",
+        "method": "LowRes",
+        "budget": 0.6,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.6173469387755102,
+        "avg_latency_ms": 995.4897547140718,
+        "avg_peak_memory_mb": 17.25
+      },
+      {
+        "dataset": "TextVQA",
+        "method": "QACR-DepthOnly",
+        "budget": 0.35,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.34897956252098083,
+        "avg_latency_ms": 1053.5490568727255,
+        "avg_peak_memory_mb": 31.544921875
+      },
+      {
+        "dataset": "TextVQA",
+        "method": "QACR-DepthOnly",
+        "budget": 0.45,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.44999998807907104,
+        "avg_latency_ms": 1072.2054364159703,
+        "avg_peak_memory_mb": 31.544921875
+      },
+      {
+        "dataset": "TextVQA",
+        "method": "QACR-DepthOnly",
+        "budget": 0.6,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.5997448563575745,
+        "avg_latency_ms": 1046.7865196987987,
+        "avg_peak_memory_mb": 31.544921875
+      },
+      {
+        "dataset": "TextVQA",
+        "method": "TokenPruning",
+        "budget": 0.35,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.3520407974720001,
+        "avg_latency_ms": 987.5743165612221,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "dataset": "TextVQA",
+        "method": "TokenPruning",
+        "budget": 0.45,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.44897958636283875,
+        "avg_latency_ms": 1021.9708187505603,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "dataset": "TextVQA",
+        "method": "TokenPruning",
+        "budget": 0.6,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.6020408272743225,
+        "avg_latency_ms": 1003.6662919446826,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "dataset": "VQAv2",
+        "method": "LowRes",
+        "budget": 0.35,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.32653061224489793,
+        "avg_latency_ms": 1723.3299696817994,
+        "avg_peak_memory_mb": 0.0
+      },
+      {
+        "dataset": "VQAv2",
+        "method": "LowRes",
+        "budget": 0.45,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.413265306122449,
+        "avg_latency_ms": 979.0437556803226,
+        "avg_peak_memory_mb": 17.25
+      },
+      {
+        "dataset": "VQAv2",
+        "method": "LowRes",
+        "budget": 0.6,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.6173469387755102,
+        "avg_latency_ms": 990.2830282226205,
+        "avg_peak_memory_mb": 17.25
+      },
+      {
+        "dataset": "VQAv2",
+        "method": "QACR-DepthOnly",
+        "budget": 0.35,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.3499999940395355,
+        "avg_latency_ms": 1121.5032609179616,
+        "avg_peak_memory_mb": 31.537109375
+      },
+      {
+        "dataset": "VQAv2",
+        "method": "QACR-DepthOnly",
+        "budget": 0.45,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.4492346942424774,
+        "avg_latency_ms": 1048.1490399688482,
+        "avg_peak_memory_mb": 31.537109375
+      },
+      {
+        "dataset": "VQAv2",
+        "method": "QACR-DepthOnly",
+        "budget": 0.6,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.5999999642372131,
+        "avg_latency_ms": 1061.2553479149938,
+        "avg_peak_memory_mb": 31.537109375
+      },
+      {
+        "dataset": "VQAv2",
+        "method": "TokenPruning",
+        "budget": 0.35,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.3520407974720001,
+        "avg_latency_ms": 1175.7493512704968,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "dataset": "VQAv2",
+        "method": "TokenPruning",
+        "budget": 0.45,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.44897958636283875,
+        "avg_latency_ms": 1006.3708331435919,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "dataset": "VQAv2",
+        "method": "TokenPruning",
+        "budget": 0.6,
+        "num_samples": 1,
+        "avg_accuracy": 0.0,
+        "avg_compute_ratio": 0.6020408272743225,
+        "avg_latency_ms": 1015.4562527313828,
+        "avg_peak_memory_mb": 29.55322265625
+      }
+    ],
+    "matched_compute_table": [
+      {
+        "method": "TokenPruning",
+        "budget": 0.35,
+        "num_samples": 7,
+        "avg_accuracy": 0.2857142857142857,
+        "avg_compute_ratio": 0.3520407974720001,
+        "avg_latency_ms": 795.798283336418,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "method": "QACR-DepthOnly",
+        "budget": 0.35,
+        "num_samples": 7,
+        "avg_accuracy": 0.2857142857142857,
+        "avg_compute_ratio": 0.34927113141332355,
+        "avg_latency_ms": 842.0564892834851,
+        "avg_peak_memory_mb": 31.592354910714285
+      },
+      {
+        "method": "LowRes",
+        "budget": 0.35,
+        "num_samples": 7,
+        "avg_accuracy": 0.2857142857142857,
+        "avg_compute_ratio": 0.32653061224489793,
+        "avg_latency_ms": 852.5320837008102,
+        "avg_peak_memory_mb": 14.785714285714286
+      },
+      {
+        "method": "TokenPruning",
+        "budget": 0.45,
+        "num_samples": 7,
+        "avg_accuracy": 0.42857142857142855,
+        "avg_compute_ratio": 0.44897958636283875,
+        "avg_latency_ms": 762.5058181583881,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "method": "LowRes",
+        "budget": 0.45,
+        "num_samples": 7,
+        "avg_accuracy": 0.2857142857142857,
+        "avg_compute_ratio": 0.41326530612244905,
+        "avg_latency_ms": 745.173867658845,
+        "avg_peak_memory_mb": 17.25
+      },
+      {
+        "method": "QACR-DepthOnly",
+        "budget": 0.45,
+        "num_samples": 7,
+        "avg_accuracy": 0.2857142857142857,
+        "avg_compute_ratio": 0.44923466444015503,
+        "avg_latency_ms": 845.9269997796843,
+        "avg_peak_memory_mb": 31.592354910714285
+      },
+      {
+        "method": "LowRes",
+        "budget": 0.6,
+        "num_samples": 7,
+        "avg_accuracy": 0.2857142857142857,
+        "avg_compute_ratio": 0.6173469387755102,
+        "avg_latency_ms": 747.8570767811367,
+        "avg_peak_memory_mb": 17.25
+      },
+      {
+        "method": "TokenPruning",
+        "budget": 0.6,
+        "num_samples": 7,
+        "avg_accuracy": 0.2857142857142857,
+        "avg_compute_ratio": 0.6020408272743225,
+        "avg_latency_ms": 780.6026041507721,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "method": "QACR-DepthOnly",
+        "budget": 0.6,
+        "num_samples": 7,
+        "avg_accuracy": 0.2857142857142857,
+        "avg_compute_ratio": 0.5993804505893162,
+        "avg_latency_ms": 840.8151402005127,
+        "avg_peak_memory_mb": 31.592354910714285
+      }
+    ],
+    "matched_latency_table": [
+      {
+        "method": "LowRes",
+        "budget": 0.45,
+        "num_samples": 7,
+        "avg_accuracy": 0.2857142857142857,
+        "avg_compute_ratio": 0.41326530612244905,
+        "avg_latency_ms": 745.173867658845,
+        "avg_peak_memory_mb": 17.25
+      },
+      {
+        "method": "LowRes",
+        "budget": 0.6,
+        "num_samples": 7,
+        "avg_accuracy": 0.2857142857142857,
+        "avg_compute_ratio": 0.6173469387755102,
+        "avg_latency_ms": 747.8570767811367,
+        "avg_peak_memory_mb": 17.25
+      },
+      {
+        "method": "TokenPruning",
+        "budget": 0.45,
+        "num_samples": 7,
+        "avg_accuracy": 0.42857142857142855,
+        "avg_compute_ratio": 0.44897958636283875,
+        "avg_latency_ms": 762.5058181583881,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "method": "TokenPruning",
+        "budget": 0.6,
+        "num_samples": 7,
+        "avg_accuracy": 0.2857142857142857,
+        "avg_compute_ratio": 0.6020408272743225,
+        "avg_latency_ms": 780.6026041507721,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "method": "TokenPruning",
+        "budget": 0.35,
+        "num_samples": 7,
+        "avg_accuracy": 0.2857142857142857,
+        "avg_compute_ratio": 0.3520407974720001,
+        "avg_latency_ms": 795.798283336418,
+        "avg_peak_memory_mb": 29.55322265625
+      },
+      {
+        "method": "QACR-DepthOnly",
+        "budget": 0.6,
+        "num_samples": 7,
+        "avg_accuracy": 0.2857142857142857,
+        "avg_compute_ratio": 0.5993804505893162,
+        "avg_latency_ms": 840.8151402005127,
+        "avg_peak_memory_mb": 31.592354910714285
+      },
+      {
+        "method": "QACR-DepthOnly",
+        "budget": 0.35,
+        "num_samples": 7,
+        "avg_accuracy": 0.2857142857142857,
+        "avg_compute_ratio": 0.34927113141332355,
+        "avg_latency_ms": 842.0564892834851,
+        "avg_peak_memory_mb": 31.592354910714285
+      },
+      {
+        "method": "QACR-DepthOnly",
+        "budget": 0.45,
+        "num_samples": 7,
+        "avg_accuracy": 0.2857142857142857,
+        "avg_compute_ratio": 0.44923466444015503,
+        "avg_latency_ms": 845.9269997796843,
+        "avg_peak_memory_mb": 31.592354910714285
+      },
+      {
+        "method": "LowRes",
+        "budget": 0.35,
+        "num_samples": 7,
+        "avg_accuracy": 0.2857142857142857,
+        "avg_compute_ratio": 0.32653061224489793,
+        "avg_latency_ms": 852.5320837008102,
+        "avg_peak_memory_mb": 14.785714285714286
+      }
+    ]
+  },
+  "raw_results": [
+    {
+      "dataset": "VQAv2",
+      "sample_id": "vqav2_0",
+      "method": "LowRes",
+      "budget": 0.35,
+      "accuracy": 0.0,
+      "compute_ratio": 0.32653061224489793,
+      "latency_ms": 1723.3299696817994,
+      "peak_memory_mb": 0.0,
+      "response": "The kids are riding in a blurred, indistinct scene that appears to be",
+      "answers": [
+        "carnival ride"
+      ]
+    },
+    {
+      "dataset": "VQAv2",
+      "sample_id": "vqav2_0",
+      "method": "TokenPruning",
+      "budget": 0.35,
+      "accuracy": 0.0,
+      "compute_ratio": 0.3520407974720001,
+      "latency_ms": 1175.7493512704968,
+      "peak_memory_mb": 29.55322265625,
+      "response": "The kids are riding on a green and white striped bus.\n",
+      "answers": [
+        "carnival ride"
+      ]
+    },
+    {
+      "dataset": "VQAv2",
+      "sample_id": "vqav2_0",
+      "method": "QACR-DepthOnly",
+      "budget": 0.35,
+      "accuracy": 0.0,
+      "compute_ratio": 0.3499999940395355,
+      "latency_ms": 1121.5032609179616,
+      "peak_memory_mb": 31.537109375,
+      "response": "The kids are riding on a red surface, possibly a skateboard or a skateboarder",
+      "answers": [
+        "carnival ride"
+      ]
+    },
+    {
+      "dataset": "VQAv2",
+      "sample_id": "vqav2_0",
+      "method": "LowRes",
+      "budget": 0.45,
+      "accuracy": 0.0,
+      "compute_ratio": 0.413265306122449,
+      "latency_ms": 979.0437556803226,
+      "peak_memory_mb": 17.25,
+      "response": "The kids are riding in a blurry, indistinct scene that appears to be",
+      "answers": [
+        "carnival ride"
+      ]
+    },
+    {
+      "dataset": "VQAv2",
+      "sample_id": "vqav2_0",
+      "method": "TokenPruning",
+      "budget": 0.45,
+      "accuracy": 0.0,
+      "compute_ratio": 0.44897958636283875,
+      "latency_ms": 1006.3708331435919,
+      "peak_memory_mb": 29.55322265625,
+      "response": "The kids are riding on a green and pink striped surface, which appears to be",
+      "answers": [
+        "carnival ride"
+      ]
+    },
+    {
+      "dataset": "VQAv2",
+      "sample_id": "vqav2_0",
+      "method": "QACR-DepthOnly",
+      "budget": 0.45,
+      "accuracy": 0.0,
+      "compute_ratio": 0.4492346942424774,
+      "latency_ms": 1048.1490399688482,
+      "peak_memory_mb": 31.537109375,
+      "response": "The kids are riding on a green and pink patterned surface — likely a playground",
+      "answers": [
+        "carnival ride"
+      ]
+    },
+    {
+      "dataset": "VQAv2",
+      "sample_id": "vqav2_0",
+      "method": "LowRes",
+      "budget": 0.6,
+      "accuracy": 0.0,
+      "compute_ratio": 0.6173469387755102,
+      "latency_ms": 990.2830282226205,
+      "peak_memory_mb": 17.25,
+      "response": "The kids are riding in a red and orange vehicle, which appears to be a",
+      "answers": [
+        "carnival ride"
+      ]
+    },
+    {
+      "dataset": "VQAv2",
+      "sample_id": "vqav2_0",
+      "method": "TokenPruning",
+      "budget": 0.6,
+      "accuracy": 0.0,
+      "compute_ratio": 0.6020408272743225,
+      "latency_ms": 1015.4562527313828,
+      "peak_memory_mb": 29.55322265625,
+      "response": "The kids are riding on a green and pink patterned surface — likely a playground",
+      "answers": [
+        "carnival ride"
+      ]
+    },
+    {
+      "dataset": "VQAv2",
+      "sample_id": "vqav2_0",
+      "method": "QACR-DepthOnly",
+      "budget": 0.6,
+      "accuracy": 0.0,
+      "compute_ratio": 0.5999999642372131,
+      "latency_ms": 1061.2553479149938,
+      "peak_memory_mb": 31.537109375,
+      "response": "The kids are riding on a colorful, pixelated surface that looks like a digital",
+      "answers": [
+        "carnival ride"
+      ]
+    },
+    {
+      "dataset": "GQA",
+      "sample_id": "gqa_0",
+      "method": "LowRes",
+      "budget": 0.35,
+      "accuracy": 1.0,
+      "compute_ratio": 0.32653061224489793,
+      "latency_ms": 941.2668747827411,
+      "peak_memory_mb": 17.25,
+      "response": "No, it’s not overcast.\n\nThe image shows a soft, blurred",
+      "answers": [
+        "no"
+      ]
+    },
+    {
+      "dataset": "GQA",
+      "sample_id": "gqa_0",
+      "method": "TokenPruning",
+      "budget": 0.35,
+      "accuracy": 1.0,
+      "compute_ratio": 0.3520407974720001,
+      "latency_ms": 955.9409273788333,
+      "peak_memory_mb": 29.55322265625,
+      "response": "No, it’s not overcast.\n\nThe image shows a dark, almost",
+      "answers": [
+        "no"
+      ]
+    },
+    {
+      "dataset": "GQA",
+      "sample_id": "gqa_0",
+      "method": "QACR-DepthOnly",
+      "budget": 0.35,
+      "accuracy": 1.0,
+      "compute_ratio": 0.3494897782802582,
+      "latency_ms": 1004.5825047418475,
+      "peak_memory_mb": 31.533203125,
+      "response": "No, it's not overcast.\n\nThe image shows a dark, mostly",
+      "answers": [
+        "no"
+      ]
+    },
+    {
+      "dataset": "GQA",
+      "sample_id": "gqa_0",
+      "method": "LowRes",
+      "budget": 0.45,
+      "accuracy": 1.0,
+      "compute_ratio": 0.413265306122449,
+      "latency_ms": 947.7835120633245,
+      "peak_memory_mb": 17.25,
+      "response": "No, it’s not overcast.\n\nThe image shows a soft, blurred",
+      "answers": [
+        "no"
+      ]
+    },
+    {
+      "dataset": "GQA",
+      "sample_id": "gqa_0",
+      "method": "TokenPruning",
+      "budget": 0.45,
+      "accuracy": 1.0,
+      "compute_ratio": 0.44897958636283875,
+      "latency_ms": 967.7774030715227,
+      "peak_memory_mb": 29.55322265625,
+      "response": "No, it’s not overcast.\n\nThe image shows a gradient background with",
+      "answers": [
+        "no"
+      ]
+    },
+    {
+      "dataset": "GQA",
+      "sample_id": "gqa_0",
+      "method": "QACR-DepthOnly",
+      "budget": 0.45,
+      "accuracy": 1.0,
+      "compute_ratio": 0.4494897723197937,
+      "latency_ms": 1043.478556908667,
+      "peak_memory_mb": 31.533203125,
+      "response": "No, it’s not overcast.\n\nThe image is blurry and abstract,",
+      "answers": [
+        "no"
+      ]
+    },
+    {
+      "dataset": "GQA",
+      "sample_id": "gqa_0",
+      "method": "LowRes",
+      "budget": 0.6,
+      "accuracy": 1.0,
+      "compute_ratio": 0.6173469387755102,
+      "latency_ms": 945.7172686234117,
+      "peak_memory_mb": 17.25,
+      "response": "No, it’s not overcast.\n\nThe image shows a clear blue sky",
+      "answers": [
+        "no"
+      ]
+    },
+    {
+      "dataset": "GQA",
+      "sample_id": "gqa_0",
+      "method": "TokenPruning",
+      "budget": 0.6,
+      "accuracy": 1.0,
+      "compute_ratio": 0.6020408272743225,
+      "latency_ms": 966.9404635205865,
+      "peak_memory_mb": 29.55322265625,
+      "response": "No, it’s not overcast.\n\nThe image shows a sky that is",
+      "answers": [
+        "no"
+      ]
+    },
+    {
+      "dataset": "GQA",
+      "sample_id": "gqa_0",
+      "method": "QACR-DepthOnly",
+      "budget": 0.6,
+      "accuracy": 1.0,
+      "compute_ratio": 0.5989795923233032,
+      "latency_ms": 1035.7509339228272,
+      "peak_memory_mb": 31.533203125,
+      "response": "No, it’s not overcast.\n\nThe image shows a dark blue background",
+      "answers": [
+        "no"
+      ]
+    },
+    {
+      "dataset": "POPE",
+      "sample_id": "pope_0",
+      "method": "LowRes",
+      "budget": 0.35,
+      "accuracy": 0.0,
+      "compute_ratio": 0.32653061224489793,
+      "latency_ms": 394.13715712726116,
+      "peak_memory_mb": 17.25,
+      "response": "否\n",
+      "answers": [
+        "yes"
+      ]
+    },
+    {
+      "dataset": "POPE",
+      "sample_id": "pope_0",
+      "method": "TokenPruning",
+      "budget": 0.35,
+      "accuracy": 0.0,
+      "compute_ratio": 0.3520407974720001,
+      "latency_ms": 429.5387528836727,
+      "peak_memory_mb": 29.55322265625,
+      "response": "否\n",
+      "answers": [
+        "yes"
+      ]
+    },
+    {
+      "dataset": "POPE",
+      "sample_id": "pope_0",
+      "method": "QACR-DepthOnly",
+      "budget": 0.35,
+      "accuracy": 0.0,
+      "compute_ratio": 0.3499999940395355,
+      "latency_ms": 504.25369292497635,
+      "peak_memory_mb": 31.548828125,
+      "response": "否\n",
+      "answers": [
+        "yes"
+      ]
+    },
+    {
+      "dataset": "POPE",
+      "sample_id": "pope_0",
+      "method": "LowRes",
+      "budget": 0.45,
+      "accuracy": 0.0,
+      "compute_ratio": 0.413265306122449,
+      "latency_ms": 388.71033769100904,
+      "peak_memory_mb": 17.25,
+      "response": "否\n",
+      "answers": [
+        "yes"
+      ]
+    },
+    {
+      "dataset": "POPE",
+      "sample_id": "pope_0",
+      "method": "TokenPruning",
+      "budget": 0.45,
+      "accuracy": 0.0,
+      "compute_ratio": 0.44897958636283875,
+      "latency_ms": 436.8774676695466,
+      "peak_memory_mb": 29.55322265625,
+      "response": "否\n",
+      "answers": [
+        "yes"
+      ]
+    },
+    {
+      "dataset": "POPE",
+      "sample_id": "pope_0",
+      "method": "QACR-DepthOnly",
+      "budget": 0.45,
+      "accuracy": 0.0,
+      "compute_ratio": 0.448469340801239,
+      "latency_ms": 526.108929887414,
+      "peak_memory_mb": 31.548828125,
+      "response": "否\n",
+      "answers": [
+        "yes"
+      ]
+    },
+    {
+      "dataset": "POPE",
+      "sample_id": "pope_0",
+      "method": "LowRes",
+      "budget": 0.6,
+      "accuracy": 0.0,
+      "compute_ratio": 0.6173469387755102,
+      "latency_ms": 396.60772029310465,
+      "peak_memory_mb": 17.25,
+      "response": "否\n",
+      "answers": [
+        "yes"
+      ]
+    },
+    {
+      "dataset": "POPE",
+      "sample_id": "pope_0",
+      "method": "TokenPruning",
+      "budget": 0.6,
+      "accuracy": 0.0,
+      "compute_ratio": 0.6020408272743225,
+      "latency_ms": 447.9848900809884,
+      "peak_memory_mb": 29.55322265625,
+      "response": "否\n",
+      "answers": [
+        "yes"
+      ]
+    },
+    {
+      "dataset": "POPE",
+      "sample_id": "pope_0",
+      "method": "QACR-DepthOnly",
+      "budget": 0.6,
+      "accuracy": 0.0,
+      "compute_ratio": 0.5994898080825806,
+      "latency_ms": 514.3295601010323,
+      "peak_memory_mb": 31.548828125,
+      "response": "否\n",
+      "answers": [
+        "yes"
+      ]
+    },
+    {
+      "dataset": "TextVQA",
+      "sample_id": "textvqa_0",
+      "method": "LowRes",
+      "budget": 0.35,
+      "accuracy": 0.0,
+      "compute_ratio": 0.32653061224489793,
+      "latency_ms": 991.0836163908243,
+      "peak_memory_mb": 17.25,
+      "response": "The image you’ve provided is extremely blurry and lacks any discernible details — no",
+      "answers": [
+        "nous les gosses",
+        "dakota",
+        "clos culombu",
+        "dakota digital",
+        "dakota",
+        "dakota",
+        "dakota digital",
+        "dakota digital",
+        "dakota",
+        "dakota"
+      ]
+    },
+    {
+      "dataset": "TextVQA",
+      "sample_id": "textvqa_0",
+      "method": "TokenPruning",
+      "budget": 0.35,
+      "accuracy": 0.0,
+      "compute_ratio": 0.3520407974720001,
+      "latency_ms": 987.5743165612221,
+      "peak_memory_mb": 29.55322265625,
+      "response": "The brand of this camera is **Canon**.\n\nThis is a classic **Canon",
+      "answers": [
+        "nous les gosses",
+        "dakota",
+        "clos culombu",
+        "dakota digital",
+        "dakota",
+        "dakota",
+        "dakota digital",
+        "dakota digital",
+        "dakota",
+        "dakota"
+      ]
+    },
+    {
+      "dataset": "TextVQA",
+      "sample_id": "textvqa_0",
+      "method": "QACR-DepthOnly",
+      "budget": 0.35,
+      "accuracy": 0.0,
+      "compute_ratio": 0.34897956252098083,
+      "latency_ms": 1053.5490568727255,
+      "peak_memory_mb": 31.544921875,
+      "response": "The brand of this camera is **Canon**.\n\nThis image shows a close-up",
+      "answers": [
+        "nous les gosses",
+        "dakota",
+        "clos culombu",
+        "dakota digital",
+        "dakota",
+        "dakota",
+        "dakota digital",
+        "dakota digital",
+        "dakota",
+        "dakota"
+      ]
+    },
+    {
+      "dataset": "TextVQA",
+      "sample_id": "textvqa_0",
+      "method": "LowRes",
+      "budget": 0.45,
+      "accuracy": 0.0,
+      "compute_ratio": 0.413265306122449,
+      "latency_ms": 988.2515827193856,
+      "peak_memory_mb": 17.25,
+      "response": "The image you’ve provided is extremely blurry and lacks any discernible details — no",
+      "answers": [
+        "nous les gosses",
+        "dakota",
+        "clos culombu",
+        "dakota digital",
+        "dakota",
+        "dakota",
+        "dakota digital",
+        "dakota digital",
+        "dakota",
+        "dakota"
+      ]
+    },
+    {
+      "dataset": "TextVQA",
+      "sample_id": "textvqa_0",
+      "method": "TokenPruning",
+      "budget": 0.45,
+      "accuracy": 0.0,
+      "compute_ratio": 0.44897958636283875,
+      "latency_ms": 1021.9708187505603,
+      "peak_memory_mb": 29.55322265625,
+      "response": "The camera brand is **Canon**.\n\nThis is the **Canon EOS M5",
+      "answers": [
+        "nous les gosses",
+        "dakota",
+        "clos culombu",
+        "dakota digital",
+        "dakota",
+        "dakota",
+        "dakota digital",
+        "dakota digital",
+        "dakota",
+        "dakota"
+      ]
+    },
+    {
+      "dataset": "TextVQA",
+      "sample_id": "textvqa_0",
+      "method": "QACR-DepthOnly",
+      "budget": 0.45,
+      "accuracy": 0.0,
+      "compute_ratio": 0.44999998807907104,
+      "latency_ms": 1072.2054364159703,
+      "peak_memory_mb": 31.544921875,
+      "response": "The image you’ve provided is a highly pixelated, abstract pattern — likely a",
+      "answers": [
+        "nous les gosses",
+        "dakota",
+        "clos culombu",
+        "dakota digital",
+        "dakota",
+        "dakota",
+        "dakota digital",
+        "dakota digital",
+        "dakota",
+        "dakota"
+      ]
+    },
+    {
+      "dataset": "TextVQA",
+      "sample_id": "textvqa_0",
+      "method": "LowRes",
+      "budget": 0.6,
+      "accuracy": 0.0,
+      "compute_ratio": 0.6173469387755102,
+      "latency_ms": 995.4897547140718,
+      "peak_memory_mb": 17.25,
+      "response": "The image appears to be a blurred, abstract representation of a camera, likely a",
+      "answers": [
+        "nous les gosses",
+        "dakota",
+        "clos culombu",
+        "dakota digital",
+        "dakota",
+        "dakota",
+        "dakota digital",
+        "dakota digital",
+        "dakota",
+        "dakota"
+      ]
+    },
+    {
+      "dataset": "TextVQA",
+      "sample_id": "textvqa_0",
+      "method": "TokenPruning",
+      "budget": 0.6,
+      "accuracy": 0.0,
+      "compute_ratio": 0.6020408272743225,
+      "latency_ms": 1003.6662919446826,
+      "peak_memory_mb": 29.55322265625,
+      "response": "The brand of this camera is **Canon**.\n\nThis is the iconic **Canon",
+      "answers": [
+        "nous les gosses",
+        "dakota",
+        "clos culombu",
+        "dakota digital",
+        "dakota",
+        "dakota",
+        "dakota digital",
+        "dakota digital",
+        "dakota",
+        "dakota"
+      ]
+    },
+    {
+      "dataset": "TextVQA",
+      "sample_id": "textvqa_0",
+      "method": "QACR-DepthOnly",
+      "budget": 0.6,
+      "accuracy": 0.0,
+      "compute_ratio": 0.5997448563575745,
+      "latency_ms": 1046.7865196987987,
+      "peak_memory_mb": 31.544921875,
+      "response": "This is a blurry, pixelated image that doesn’t clearly show any identifiable brand",
+      "answers": [
+        "nous les gosses",
+        "dakota",
+        "clos culombu",
+        "dakota digital",
+        "dakota",
+        "dakota",
+        "dakota digital",
+        "dakota digital",
+        "dakota",
+        "dakota"
+      ]
+    },
+    {
+      "dataset": "DocVQA",
+      "sample_id": "docvqa_0",
+      "method": "LowRes",
+      "budget": 0.35,
+      "accuracy": 0.0,
+      "compute_ratio": 0.32653061224489793,
+      "latency_ms": 950.8766876533628,
+      "peak_memory_mb": 17.25,
+      "response": "The image you’ve provided is completely blank — it’s just a uniform, feature",
+      "answers": [
+        "0.28"
+      ]
+    },
+    {
+      "dataset": "DocVQA",
+      "sample_id": "docvqa_0",
+      "method": "TokenPruning",
+      "budget": 0.35,
+      "accuracy": 0.0,
+      "compute_ratio": 0.3520407974720001,
+      "latency_ms": 978.5181637853384,
+      "peak_memory_mb": 29.55322265625,
+      "response": "The image you’ve provided is a stylized, pixelated icon — it resembles",
+      "answers": [
+        "0.28"
+      ]
+    },
+    {
+      "dataset": "DocVQA",
+      "sample_id": "docvqa_0",
+      "method": "QACR-DepthOnly",
+      "budget": 0.35,
+      "accuracy": 0.0,
+      "compute_ratio": 0.34846940636634827,
+      "latency_ms": 1049.465880729258,
+      "peak_memory_mb": 31.603515625,
+      "response": "The image you’ve provided is a low-resolution, pixelated, and blurry representation",
+      "answers": [
+        "0.28"
+      ]
+    },
+    {
+      "dataset": "DocVQA",
+      "sample_id": "docvqa_0",
+      "method": "LowRes",
+      "budget": 0.45,
+      "accuracy": 0.0,
+      "compute_ratio": 0.413265306122449,
+      "latency_ms": 950.6005924195051,
+      "peak_memory_mb": 17.25,
+      "response": "The image you’ve provided is a **blank, grayscale, blurry image** with",
+      "answers": [
+        "0.28"
+      ]
+    },
+    {
+      "dataset": "DocVQA",
+      "sample_id": "docvqa_0",
+      "method": "TokenPruning",
+      "budget": 0.45,
+      "accuracy": 0.0,
+      "compute_ratio": 0.44897958636283875,
+      "latency_ms": 990.890690125525,
+      "peak_memory_mb": 29.55322265625,
+      "response": "The image you’ve provided is a stylized, pixelated icon — it appears",
+      "answers": [
+        "0.28"
+      ]
+    },
+    {
+      "dataset": "DocVQA",
+      "sample_id": "docvqa_0",
+      "method": "QACR-DepthOnly",
+      "budget": 0.45,
+      "accuracy": 0.0,
+      "compute_ratio": 0.44974485039711,
+      "latency_ms": 1078.9400627836585,
+      "peak_memory_mb": 31.603515625,
+      "response": "The image you’ve provided is extremely blurry and lacks any discernible text, numbers",
+      "answers": [
+        "0.28"
+      ]
+    },
+    {
+      "dataset": "DocVQA",
+      "sample_id": "docvqa_0",
+      "method": "LowRes",
+      "budget": 0.6,
+      "accuracy": 0.0,
+      "compute_ratio": 0.6173469387755102,
+      "latency_ms": 949.6070733293891,
+      "peak_memory_mb": 17.25,
+      "response": "The image you provided is completely blurred and lacks any discernible content, text,",
+      "answers": [
+        "0.28"
+      ]
+    },
+    {
+      "dataset": "DocVQA",
+      "sample_id": "docvqa_0",
+      "method": "TokenPruning",
+      "budget": 0.6,
+      "accuracy": 0.0,
+      "compute_ratio": 0.6020408272743225,
+      "latency_ms": 997.7858448401093,
+      "peak_memory_mb": 29.55322265625,
+      "response": "The image you’ve provided is a stylized, abstract icon — it resembles a",
+      "answers": [
+        "0.28"
+      ]
+    },
+    {
+      "dataset": "DocVQA",
+      "sample_id": "docvqa_0",
+      "method": "QACR-DepthOnly",
+      "budget": 0.6,
+      "accuracy": 0.0,
+      "compute_ratio": 0.5994898080825806,
+      "latency_ms": 1050.3604989498854,
+      "peak_memory_mb": 31.603515625,
+      "response": "The image you’ve provided is a blurry, pixelated, and indistinct",
+      "answers": [
+        "0.28"
+      ]
+    },
+    {
+      "dataset": "MMBench",
+      "sample_id": "mmbench_0",
+      "method": "LowRes",
+      "budget": 0.35,
+      "accuracy": 1.0,
+      "compute_ratio": 0.32653061224489793,
+      "latency_ms": 437.2053574770689,
+      "peak_memory_mb": 17.25,
+      "response": "B\n",
+      "answers": [
+        "B"
+      ]
+    },
+    {
+      "dataset": "MMBench",
+      "sample_id": "mmbench_0",
+      "method": "TokenPruning",
+      "budget": 0.35,
+      "accuracy": 1.0,
+      "compute_ratio": 0.3520407974720001,
+      "latency_ms": 461.8002278730273,
+      "peak_memory_mb": 29.55322265625,
+      "response": "B\n",
+      "answers": [
+        "B"
+      ]
+    },
+    {
+      "dataset": "MMBench",
+      "sample_id": "mmbench_0",
+      "method": "QACR-DepthOnly",
+      "budget": 0.35,
+      "accuracy": 1.0,
+      "compute_ratio": 0.3494897782802582,
+      "latency_ms": 528.0204964801669,
+      "peak_memory_mb": 31.572265625,
+      "response": "B\n",
+      "answers": [
+        "B"
+      ]
+    },
+    {
+      "dataset": "MMBench",
+      "sample_id": "mmbench_0",
+      "method": "LowRes",
+      "budget": 0.45,
+      "accuracy": 1.0,
+      "compute_ratio": 0.413265306122449,
+      "latency_ms": 431.9855757057667,
+      "peak_memory_mb": 17.25,
+      "response": "B\n",
+      "answers": [
+        "B"
+      ]
+    },
+    {
+      "dataset": "MMBench",
+      "sample_id": "mmbench_0",
+      "method": "TokenPruning",
+      "budget": 0.45,
+      "accuracy": 1.0,
+      "compute_ratio": 0.44897958636283875,
+      "latency_ms": 455.23290894925594,
+      "peak_memory_mb": 29.55322265625,
+      "response": "B\n",
+      "answers": [
+        "B"
+      ]
+    },
+    {
+      "dataset": "MMBench",
+      "sample_id": "mmbench_0",
+      "method": "QACR-DepthOnly",
+      "budget": 0.45,
+      "accuracy": 1.0,
+      "compute_ratio": 0.44923466444015503,
+      "latency_ms": 517.7933517843485,
+      "peak_memory_mb": 31.572265625,
+      "response": "B\n",
+      "answers": [
+        "B"
+      ]
+    },
+    {
+      "dataset": "MMBench",
+      "sample_id": "mmbench_0",
+      "method": "LowRes",
+      "budget": 0.6,
+      "accuracy": 1.0,
+      "compute_ratio": 0.6173469387755102,
+      "latency_ms": 427.080363035202,
+      "peak_memory_mb": 17.25,
+      "response": "B\n",
+      "answers": [
+        "B"
+      ]
+    },
+    {
+      "dataset": "MMBench",
+      "sample_id": "mmbench_0",
+      "method": "TokenPruning",
+      "budget": 0.6,
+      "accuracy": 1.0,
+      "compute_ratio": 0.6020408272743225,
+      "latency_ms": 453.19461449980736,
+      "peak_memory_mb": 29.55322265625,
+      "response": "B\n",
+      "answers": [
+        "B"
+      ]
+    },
+    {
+      "dataset": "MMBench",
+      "sample_id": "mmbench_0",
+      "method": "QACR-DepthOnly",
+      "budget": 0.6,
+      "accuracy": 1.0,
+      "compute_ratio": 0.5987244844436646,
+      "latency_ms": 527.084220200777,
+      "peak_memory_mb": 31.572265625,
+      "response": "B\n",
+      "answers": [
+        "B"
+      ]
+    },
+    {
+      "dataset": "MMMU",
+      "sample_id": "mmmu_0",
+      "method": "LowRes",
+      "budget": 0.35,
+      "accuracy": 0.0,
+      "compute_ratio": 0.32653061224489793,
+      "latency_ms": 529.8249227926135,
+      "peak_memory_mb": 17.25,
+      "response": "D. $9\n",
+      "answers": [
+        "B"
+      ]
+    },
+    {
+      "dataset": "MMMU",
+      "sample_id": "mmmu_0",
+      "method": "TokenPruning",
+      "budget": 0.35,
+      "accuracy": 0.0,
+      "compute_ratio": 0.3520407974720001,
+      "latency_ms": 581.4662436023355,
+      "peak_memory_mb": 29.55322265625,
+      "response": "D. $9\n",
+      "answers": [
+        "B"
+      ]
+    },
+    {
+      "dataset": "MMMU",
+      "sample_id": "mmmu_0",
+      "method": "QACR-DepthOnly",
+      "budget": 0.35,
+      "accuracy": 0.0,
+      "compute_ratio": 0.34846940636634827,
+      "latency_ms": 633.0205323174596,
+      "peak_memory_mb": 31.806640625,
+      "response": "D. $9\n",
+      "answers": [
+        "B"
+      ]
+    },
+    {
+      "dataset": "MMMU",
+      "sample_id": "mmmu_0",
+      "method": "LowRes",
+      "budget": 0.45,
+      "accuracy": 0.0,
+      "compute_ratio": 0.413265306122449,
+      "latency_ms": 529.8417173326015,
+      "peak_memory_mb": 17.25,
+      "response": "D. $9\n",
+      "answers": [
+        "B"
+      ]
+    },
+    {
+      "dataset": "MMMU",
+      "sample_id": "mmmu_0",
+      "method": "TokenPruning",
+      "budget": 0.45,
+      "accuracy": 1.0,
+      "compute_ratio": 0.44897958636283875,
+      "latency_ms": 458.42060539871454,
+      "peak_memory_mb": 29.55322265625,
+      "response": "B\n",
+      "answers": [
+        "B"
+      ]
+    },
+    {
+      "dataset": "MMMU",
+      "sample_id": "mmmu_0",
+      "method": "QACR-DepthOnly",
+      "budget": 0.45,
+      "accuracy": 0.0,
+      "compute_ratio": 0.448469340801239,
+      "latency_ms": 634.8136207088828,
+      "peak_memory_mb": 31.806640625,
+      "response": "D. $9\n",
+      "answers": [
+        "B"
+      ]
+    },
+    {
+      "dataset": "MMMU",
+      "sample_id": "mmmu_0",
+      "method": "LowRes",
+      "budget": 0.6,
+      "accuracy": 0.0,
+      "compute_ratio": 0.6173469387755102,
+      "latency_ms": 530.2143292501569,
+      "peak_memory_mb": 17.25,
+      "response": "D. $9\n",
+      "answers": [
+        "B"
+      ]
+    },
+    {
+      "dataset": "MMMU",
+      "sample_id": "mmmu_0",
+      "method": "TokenPruning",
+      "budget": 0.6,
+      "accuracy": 0.0,
+      "compute_ratio": 0.6020408272743225,
+      "latency_ms": 579.1898714378476,
+      "peak_memory_mb": 29.55322265625,
+      "response": "D. $9\n",
+      "answers": [
+        "B"
+      ]
+    },
+    {
+      "dataset": "MMMU",
+      "sample_id": "mmmu_0",
+      "method": "QACR-DepthOnly",
+      "budget": 0.6,
+      "accuracy": 0.0,
+      "compute_ratio": 0.5992346405982971,
+      "latency_ms": 650.1389006152749,
+      "peak_memory_mb": 31.806640625,
+      "response": "D. $9\n",
+      "answers": [
+        "B"
+      ]
+    }
+  ],
+  "note": "Accuracy is measured on official benchmark subsets under the current RGB-token proxy executor; latency and peak memory use a unified end-to-end protocol including image transformation and Qwen generation."
+}

@@ -1,0 +1,67 @@
+{
+  "model": "Model/Qwen35-08B",
+  "image": "outputs/demo_phase01.png",
+  "device": "cuda",
+  "dtype": "torch.bfloat16",
+  "batch_size": 1,
+  "coarse_grid": 14,
+  "num_tokens": 196,
+  "benchmark_runs": 80,
+  "warmup_runs": 8,
+  "flash_or_fla_installed": false,
+  "profiles": {
+    "all_deep": {
+      "skip_ratio": 0.0,
+      "shallow_ratio": 0.0,
+      "deep_ratio": 1.0,
+      "dense_latency_ms": 0.9502355009317398,
+      "conditional_latency_ms": 0.9962768643163145,
+      "latency_delta_ms": 0.04604136338457465,
+      "conditional_over_dense_ratio": 1.0484525818488464,
+      "dense_peak_mem_mb": 16.13623046875,
+      "conditional_peak_mem_mb": 15.1767578125,
+      "memory_delta_mb": -0.95947265625,
+      "bottleneck_interpretation": "deep_path_dominates_compute_so_sparse_gain_is_limited"
+    },
+    "balanced": {
+      "skip_ratio": 0.3316326439380646,
+      "shallow_ratio": 0.3316326439380646,
+      "deep_ratio": 0.33673468232154846,
+      "dense_latency_ms": 0.9327261708676815,
+      "conditional_latency_ms": 1.2468904023990035,
+      "latency_delta_ms": 0.314164231531322,
+      "conditional_over_dense_ratio": 1.3368236480799787,
+      "dense_peak_mem_mb": 16.138671875,
+      "conditional_peak_mem_mb": 13.52783203125,
+      "memory_delta_mb": -2.61083984375,
+      "bottleneck_interpretation": "index_dispatch_and_kernel_launch_overhead_dominate"
+    },
+    "mostly_skip": {
+      "skip_ratio": 0.75,
+      "shallow_ratio": 0.19897958636283875,
+      "deep_ratio": 0.05102040618658066,
+      "dense_latency_ms": 0.9395799948833883,
+      "conditional_latency_ms": 1.229020464234054,
+      "latency_delta_ms": 0.2894404693506658,
+      "conditional_over_dense_ratio": 1.3080530353209452,
+      "dense_peak_mem_mb": 16.138671875,
+      "conditional_peak_mem_mb": 12.5576171875,
+      "memory_delta_mb": -3.5810546875,
+      "bottleneck_interpretation": "index_dispatch_and_kernel_launch_overhead_dominate"
+    },
+    "query_hard": {
+      "skip_ratio": 0.0,
+      "shallow_ratio": 0.0,
+      "deep_ratio": 1.0,
+      "dense_latency_ms": 0.9690377744846046,
+      "conditional_latency_ms": 0.9904207894578576,
+      "latency_delta_ms": 0.02138301497325301,
+      "conditional_over_dense_ratio": 1.0220662347085756,
+      "dense_peak_mem_mb": 16.138671875,
+      "conditional_peak_mem_mb": 15.17919921875,
+      "memory_delta_mb": -0.95947265625,
+      "bottleneck_interpretation": "deep_path_dominates_compute_so_sparse_gain_is_limited"
+    }
+  },
+  "note": "dense_latency基于旧式三分支全算再融合；conditional_latency基于当前执行器的真实 hard conditional execution。"
+}

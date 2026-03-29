@@ -1,0 +1,29 @@
+{
+  "model": "Model/Qwen35-08B",
+  "image": "outputs/demo_phase01.png",
+  "coarse_grid": 14,
+  "steps": 120,
+  "mean_deep_prob": {
+    "left_focus": 0.40535566210746765,
+    "right_focus": 0.3937567472457886,
+    "center_focus": 0.27086758613586426,
+    "bottom_text": 0.2117198407649994
+  },
+  "std_deep_prob": {
+    "left_focus": 0.03430819883942604,
+    "right_focus": 0.03180542588233948,
+    "center_focus": 0.010133861564099789,
+    "bottom_text": 0.009934480302035809
+  },
+  "pairwise_l1": {
+    "left_focus__vs__right_focus": 0.011598915793001652,
+    "left_focus__vs__center_focus": 0.1344880610704422,
+    "left_focus__vs__bottom_text": 0.1936357617378235,
+    "right_focus__vs__center_focus": 0.12288916856050491,
+    "right_focus__vs__bottom_text": 0.182036891579628,
+    "center_focus__vs__bottom_text": 0.059147708117961884
+  },
+  "pairwise_l1_mean": 0.11729941780989368,
+  "pairwise_l1_max": 0.1936357617378235,
+  "heatmap_panel": "outputs/phase31_heatmaps/heatmap_panel.png"
+}
