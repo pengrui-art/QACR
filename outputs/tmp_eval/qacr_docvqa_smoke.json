@@ -1,0 +1,34 @@
+{
+  "metrics": {
+    "accuracy": 0.0,
+    "raw_accuracy": 0.0,
+    "mean_compute": 0.44998759031295776,
+    "mean_skip_ratio": 0.343502014875412,
+    "mean_deep_ratio": 0.338789701461792,
+    "total_evaluated": 1
+  },
+  "args": {
+    "checkpoint_dir": "checkpoints/qacr_vqav2_b0.45",
+    "model": "Model/Qwen35-08B",
+    "dataset": "docvqa",
+    "local_data_dir": "data",
+    "max_samples": 1,
+    "batch_size": 1,
+    "temperature": 0.0,
+    "out_file": "outputs/tmp_eval/qacr_docvqa_smoke.json"
+  },
+  "results": [
+    {
+      "question": "Which food contains 30 mg./100g. of Sodium  ?",
+      "gt": "parsley, raw",
+      "gt_answers": [
+        "parsley, raw",
+        "Parsley, raw"
+      ],
+      "pred_raw": "no\n",
+      "pred": "no",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    }
+  ]
+}

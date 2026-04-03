@@ -1,0 +1,14 @@
+2026-04-03 14:29:40,393 INFO Loading VLM from Model/Qwen35-08B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:  27%|██▋       | 128/473 [00:00<00:00, 1197.25it/s]Loading weights:  52%|█████▏    | 248/473 [00:00<00:00, 1177.95it/s]Loading weights:  77%|███████▋  | 366/473 [00:00<00:00, 1174.74it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 1231.89it/s]
+2026-04-03 14:29:43,118 INFO Loading QACR components from checkpoints/qacr_vqav2_b0.45/best.pt ...
+2026-04-03 14:29:43,127 INFO Detected QACR Query-Adaptive model
+2026-04-03 14:29:43,127 INFO Loaded QACR with budget: 0.45
+2026-04-03 14:29:43,153 INFO Override executor_output_alpha = 0.300
+2026-04-03 14:29:43,154 INFO Loading evaluation dataset ...
+2026-04-03 14:29:43,598 INFO Raw dataset loaded: data/DocVQA/validation, total=5349
+2026-04-03 14:29:43,598 INFO Loaded 5349 samples from data/DocVQA/validation (split=eval).
+2026-04-03 14:29:43,598 INFO Starting Evaluation ...
+Eval:   0%|          | 0/669 [00:00<?, ?it/s]Eval:   0%|          | 1/669 [00:10<2:00:24, 10.82s/it]Eval:   0%|          | 2/669 [00:15<1:19:14,  7.13s/it]Eval:   0%|          | 3/669 [00:19<1:04:44,  5.83s/it]Eval:   1%|          | 4/669 [00:24<59:32,  5.37s/it]  Eval:   1%|          | 5/669 [00:28<56:16,  5.08s/it]Eval:   1%|          | 6/669 [00:33<55:42,  5.04s/it]Eval:   1%|          | 7/669 [00:38<52:39,  4.77s/it]Eval:   1%|          | 8/669 [00:43<53:13,  4.83s/it]Eval:   1%|▏         | 9/669 [00:47<52:34,  4.78s/it]Eval:   1%|▏         | 10/669 [00:52<53:02,  4.83s/it]Eval:   2%|▏         | 11/669 [00:59<1:00:52,  5.55s/it]Eval:   2%|▏         | 12/669 [01:06<1:03:29,  5.80s/it]Eval:   2%|▏         | 13/669 [01:11<1:00:54,  5.57s/it]/tmp/tmpph5awqno: line 3: 1557901 Killed                  python scripts/eval_qacr_benchmark.py --checkpoint-dir checkpoints/qacr_vqav2_b0.45 --model Model/Qwen35-08B --dataset docvqa --local-data-dir data --max-samples 10000 --batch-size 8 --num-workers 4 --prefetch-factor 1 --executor-output-alpha 0.30 --out-file outputs/tmp_eval/phase64_parallel_live/20260403_143200_b045_docvqa_a030.json
+ERROR conda.cli.main_run:execute(127): `conda run python scripts/eval_qacr_benchmark.py --checkpoint-dir checkpoints/qacr_vqav2_b0.45 --model Model/Qwen35-08B --dataset docvqa --local-data-dir data --max-samples 10000 --batch-size 8 --num-workers 4 --prefetch-factor 1 --executor-output-alpha 0.30 --out-file outputs/tmp_eval/phase64_parallel_live/20260403_143200_b045_docvqa_a030.json` failed. (See above for error)

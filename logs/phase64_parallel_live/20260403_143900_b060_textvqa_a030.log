@@ -1,0 +1,51 @@
+2026-04-03 14:39:39,523 INFO Loading VLM from Model/Qwen35-08B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:  11%|█         | 53/473 [00:00<00:00, 521.01it/s]Loading weights:  37%|███▋      | 173/473 [00:00<00:00, 914.84it/s]Loading weights:  62%|██████▏   | 292/473 [00:00<00:00, 1030.97it/s]Loading weights:  99%|█████████▊| 466/473 [00:00<00:00, 1279.31it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 1150.41it/s]
+2026-04-03 14:39:42,493 INFO Loading QACR components from checkpoints/qacr_vqav2_b0.60/best.pt ...
+2026-04-03 14:39:42,503 INFO Detected QACR Query-Adaptive model
+2026-04-03 14:39:42,503 INFO Loaded QACR with budget: 0.6
+2026-04-03 14:39:42,529 INFO Override executor_output_alpha = 0.300
+2026-04-03 14:39:42,529 INFO Loading evaluation dataset ...
+2026-04-03 14:39:43,020 INFO Raw dataset loaded: data/textvqa/validation, total=5000
+2026-04-03 14:39:43,020 INFO Loaded 5000 samples from data/textvqa/validation (split=eval).
+2026-04-03 14:39:43,021 INFO Starting Evaluation ...
+Eval:   0%|          | 0/625 [00:00<?, ?it/s]Eval:   0%|          | 0/625 [00:02<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1310, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/queue.py", line 180, in get
+    self.not_empty.wait(remaining)
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/threading.py", line 359, in wait
+    gotit = waiter.acquire(True, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/_utils/signal_handling.py", line 73, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 1570022) is killed by signal: Killed. 
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data1/pengrui/CCFA/QACR/scripts/eval_qacr_benchmark.py", line 396, in <module>
+    main()
+  File "/data1/pengrui/CCFA/QACR/scripts/eval_qacr_benchmark.py", line 296, in main
+    for i, batch in enumerate(tqdm(loader, desc="Eval")):
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+               ^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 741, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1524, in _next_data
+    idx, data = self._get_data()
+                ^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1473, in _get_data
+    success, data = self._try_get_data()
+                    ^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1323, in _try_get_data
+    raise RuntimeError(
+RuntimeError: DataLoader worker (pid(s) 1570022) exited unexpectedly
+/tmp/tmp5rra51a4: line 3: 1568983 Killed                  python scripts/eval_qacr_benchmark.py --checkpoint-dir checkpoints/qacr_vqav2_b0.60 --model Model/Qwen35-08B --dataset textvqa --local-data-dir data --max-samples 5000 --batch-size 8 --num-workers 12 --prefetch-factor 2 --executor-output-alpha 0.30 --out-file outputs/tmp_eval/phase64_parallel_live/20260403_143900_b060_textvqa_a030.json
+ERROR conda.cli.main_run:execute(127): `conda run python scripts/eval_qacr_benchmark.py --checkpoint-dir checkpoints/qacr_vqav2_b0.60 --model Model/Qwen35-08B --dataset textvqa --local-data-dir data --max-samples 5000 --batch-size 8 --num-workers 12 --prefetch-factor 2 --executor-output-alpha 0.30 --out-file outputs/tmp_eval/phase64_parallel_live/20260403_143900_b060_textvqa_a030.json` failed. (See above for error)

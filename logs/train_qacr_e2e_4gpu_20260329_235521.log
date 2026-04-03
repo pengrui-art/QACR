@@ -1,0 +1,116 @@
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+usage: train_qacr_e2e.py [-h] [--model MODEL] [--dataset {vqav2,textvqa,pope}]
+                         [--max-samples MAX_SAMPLES] [--streaming]
+                         [--local-data-dir LOCAL_DATA_DIR] [--epochs EPOCHS]
+                         [--batch-size BATCH_SIZE] [--grad-accum GRAD_ACCUM]
+                         [--lr LR] [--budget BUDGET]
+                         [--lambda-compute LAMBDA_COMPUTE]
+                         [--lambda-entropy LAMBDA_ENTROPY]
+                         [--temp-start TEMP_START] [--temp-end TEMP_END]
+                         [--router-hidden ROUTER_HIDDEN]
+                         [--executor-hidden EXECUTOR_HIDDEN]
+                         [--deep-layers DEEP_LAYERS] [--save-dir SAVE_DIR]
+                         [--log-every LOG_EVERY] [--save-every-epoch]
+                         [--num-workers NUM_WORKERS] [--disable-tqdm]
+usage: train_qacr_e2e.py [-h] [--model MODEL] [--dataset {vqav2,textvqa,pope}]
+                         [--max-samples MAX_SAMPLES] [--streaming]
+                         [--local-data-dir LOCAL_DATA_DIR] [--epochs EPOCHS]
+                         [--batch-size BATCH_SIZE] [--grad-accum GRAD_ACCUM]
+                         [--lr LR] [--budget BUDGET]
+                         [--lambda-compute LAMBDA_COMPUTE]
+                         [--lambda-entropy LAMBDA_ENTROPY]
+                         [--temp-start TEMP_START] [--temp-end TEMP_END]
+                         [--router-hidden ROUTER_HIDDEN]
+                         [--executor-hidden EXECUTOR_HIDDEN]
+                         [--deep-layers DEEP_LAYERS] [--save-dir SAVE_DIR]
+                         [--log-every LOG_EVERY] [--save-every-epoch]
+                         [--num-workers NUM_WORKERS] [--disable-tqdm]
+usage: train_qacr_e2e.py [-h] [--model MODEL] [--dataset {vqav2,textvqa,pope}]
+                         [--max-samples MAX_SAMPLES] [--streaming]
+                         [--local-data-dir LOCAL_DATA_DIR] [--epochs EPOCHS]
+                         [--batch-size BATCH_SIZE] [--grad-accum GRAD_ACCUM]
+                         [--lr LR] [--budget BUDGET]
+                         [--lambda-compute LAMBDA_COMPUTE]
+                         [--lambda-entropy LAMBDA_ENTROPY]
+                         [--temp-start TEMP_START] [--temp-end TEMP_END]
+                         [--router-hidden ROUTER_HIDDEN]
+                         [--executor-hidden EXECUTOR_HIDDEN]
+                         [--deep-layers DEEP_LAYERS] [--save-dir SAVE_DIR]
+                         [--log-every LOG_EVERY] [--save-every-epoch]
+                         [--num-workers NUM_WORKERS] [--disable-tqdm]
+train_qacr_e2e.py: error: unrecognized arguments: --pin-memory
+usage: train_qacr_e2e.py [-h] [--model MODEL] [--dataset {vqav2,textvqa,pope}]
+                         [--max-samples MAX_SAMPLES] [--streaming]
+                         [--local-data-dir LOCAL_DATA_DIR] [--epochs EPOCHS]
+                         [--batch-size BATCH_SIZE] [--grad-accum GRAD_ACCUM]
+                         [--lr LR] [--budget BUDGET]
+                         [--lambda-compute LAMBDA_COMPUTE]
+                         [--lambda-entropy LAMBDA_ENTROPY]
+                         [--temp-start TEMP_START] [--temp-end TEMP_END]
+                         [--router-hidden ROUTER_HIDDEN]
+                         [--executor-hidden EXECUTOR_HIDDEN]
+                         [--deep-layers DEEP_LAYERS] [--save-dir SAVE_DIR]
+                         [--log-every LOG_EVERY] [--save-every-epoch]
+                         [--num-workers NUM_WORKERS] [--disable-tqdm]
+train_qacr_e2e.py: error: unrecognized arguments: --pin-memory
+train_qacr_e2e.py: error: unrecognized arguments: --pin-memory
+train_qacr_e2e.py: error: unrecognized arguments: --pin-memory
+W0329 23:55:27.402000 3635575 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 3635658 closing signal SIGTERM
+E0329 23:55:27.436000 3635575 site-packages/torch/distributed/elastic/multiprocessing/api.py:986] failed (exitcode: 2) local_rank: 0 (pid: 3635656) of binary: /home/pengr/.conda/envs/qacr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 994, in <module>
+    main()
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 362, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 990, in main
+    run(args)
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 981, in run
+    elastic_launch(
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 170, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 317, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+scripts/train_qacr_e2e.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-03-29_23:55:27
+  host      : ubuntu2404
+  rank      : 1 (local_rank: 1)
+  exitcode  : 2 (pid: 3635657)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2026-03-29_23:55:27
+  host      : ubuntu2404
+  rank      : 2 (local_rank: 2)
+  exitcode  : 2 (pid: 3635658)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2026-03-29_23:55:27
+  host      : ubuntu2404
+  rank      : 3 (local_rank: 3)
+  exitcode  : 2 (pid: 3635659)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-03-29_23:55:27
+  host      : ubuntu2404
+  rank      : 0 (local_rank: 0)
+  exitcode  : 2 (pid: 3635656)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+ERROR conda.cli.main_run:execute(127): `conda run python -m torch.distributed.run --standalone --nnodes=1 --nproc_per_node=4 scripts/train_qacr_e2e.py --model Model/Qwen35-08B --dataset vqav2 --local-data-dir data/VQAv2 --max-samples 20000 --epochs 3 --num-workers 4 --pin-memory --budget 0.45` failed. (See above for error)

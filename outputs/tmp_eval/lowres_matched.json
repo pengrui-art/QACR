@@ -1,0 +1,662 @@
+{
+  "metrics": {
+    "accuracy": 0.3125,
+    "raw_accuracy": 0.3125,
+    "mean_compute": 0.41326530612244905,
+    "mean_skip_ratio": 0.0,
+    "mean_deep_ratio": 1.0,
+    "total_evaluated": 32
+  },
+  "args": {
+    "checkpoint_dir": "checkpoints/low_res_g9_vqav2",
+    "model": "Model/Qwen35-08B",
+    "dataset": "vqav2",
+    "local_data_dir": "/data1/pengrui/CCFA/QACR/data",
+    "max_samples": 32,
+    "batch_size": 4,
+    "temperature": 0.0,
+    "out_file": "outputs/tmp_eval/lowres_matched.json"
+  },
+  "results": [
+    {
+      "question": "How many people are in the boat?",
+      "gt": "1",
+      "gt_answers": [
+        "1",
+        "2",
+        "1",
+        "1",
+        "2",
+        "2",
+        "2",
+        "1",
+        "1",
+        "1"
+      ],
+      "pred_raw": "10\n",
+      "pred": "10",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What material is the fork made of?",
+      "gt": "metal",
+      "gt_answers": [
+        "steel",
+        "metal",
+        "silver",
+        "metal",
+        "silver",
+        "metal",
+        "metal",
+        "silver",
+        "silver",
+        "steel"
+      ],
+      "pred_raw": "wood\n",
+      "pred": "wood",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is hanging off the bike handlebar?",
+      "gt": "helmet",
+      "gt_answers": [
+        "helmet",
+        "helmet",
+        "helmet",
+        "helmet",
+        "helmet",
+        "helmet",
+        "helmet",
+        "helmet",
+        "helmet",
+        "helmet"
+      ],
+      "pred_raw": "phone\n",
+      "pred": "phone",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "How many motorcycles are there?",
+      "gt": "1",
+      "gt_answers": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "pred_raw": "1\n",
+      "pred": "1",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "How many raspberries are here?",
+      "gt": "many",
+      "gt_answers": [
+        "70",
+        "40",
+        "60",
+        "30",
+        "several",
+        "40",
+        "34",
+        "many",
+        "many",
+        "50"
+      ],
+      "pred_raw": "1\n",
+      "pred": "1",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Can the lamb be sheared?",
+      "gt": "no",
+      "gt_answers": [
+        "yes",
+        "yes",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no"
+      ],
+      "pred_raw": "yes\n",
+      "pred": "yes",
+      "acc": 0.6666666666666666,
+      "raw_acc": 0.6666666666666666
+    },
+    {
+      "question": "Are they facing the same direction?",
+      "gt": "no",
+      "gt_answers": [
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no"
+      ],
+      "pred_raw": "yes\n",
+      "pred": "yes",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Are there curtains on the windows?",
+      "gt": "no",
+      "gt_answers": [
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no"
+      ],
+      "pred_raw": "yes\n",
+      "pred": "yes",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What fruit is being peeled?",
+      "gt": "apple",
+      "gt_answers": [
+        "apple",
+        "apple",
+        "apple",
+        "apple",
+        "apple",
+        "apple",
+        "apple",
+        "apple",
+        "apple",
+        "apple"
+      ],
+      "pred_raw": "banana\n",
+      "pred": "banana",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is riding the horse?",
+      "gt": "bird",
+      "gt_answers": [
+        "bird",
+        "bird",
+        "bird",
+        "bird",
+        "egret",
+        "bird",
+        "crane",
+        "bird",
+        "bird",
+        "bird"
+      ],
+      "pred_raw": "horse\n",
+      "pred": "horse",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What sport are they playing?",
+      "gt": "tennis",
+      "gt_answers": [
+        "tennis",
+        "tennis",
+        "tennis",
+        "tennis",
+        "tennis",
+        "tennis",
+        "tennis",
+        "tennis",
+        "tennis",
+        "tennis"
+      ],
+      "pred_raw": "tennis\n",
+      "pred": "tennis",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "What shape are the plates?",
+      "gt": "round",
+      "gt_answers": [
+        "oval",
+        "round",
+        "round",
+        "oval",
+        "oval",
+        "circular",
+        "round",
+        "round",
+        "oval",
+        "round"
+      ],
+      "pred_raw": "square\n",
+      "pred": "square",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Is the giraffe in front of or behind the tree?",
+      "gt": "behind",
+      "gt_answers": [
+        "behind",
+        "in front",
+        "behind",
+        "front",
+        "behind",
+        "behind",
+        "behind",
+        "behind",
+        "between",
+        "behind"
+      ],
+      "pred_raw": "behind\n",
+      "pred": "behind",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "What time of day is it?",
+      "gt": "afternoon",
+      "gt_answers": [
+        "afternoon",
+        "daytime",
+        "day time",
+        "noon",
+        "afternoon",
+        "afternoon",
+        "noon",
+        "1 pm",
+        "afternoon",
+        "2 pm"
+      ],
+      "pred_raw": "afternoon\n",
+      "pred": "afternoon",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "What color is his shirt?",
+      "gt": "blue",
+      "gt_answers": [
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue",
+        "blue"
+      ],
+      "pred_raw": "blue\n",
+      "pred": "blue",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "What fabric do the shoes in the picture appear to be made of?",
+      "gt": "denim",
+      "gt_answers": [
+        "denim",
+        "denim",
+        "denim",
+        "canvas",
+        "cloth",
+        "denim",
+        "denim",
+        "canvas",
+        "cotton",
+        "denim"
+      ],
+      "pred_raw": "leather\n",
+      "pred": "leather",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Which direction is the girl looking?",
+      "gt": "left",
+      "gt_answers": [
+        "left",
+        "fridge",
+        "up",
+        "left",
+        "backwards",
+        "left",
+        "left",
+        "left",
+        "left",
+        "forward"
+      ],
+      "pred_raw": "right\n",
+      "pred": "right",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is on the wall above the toilet?",
+      "gt": "shelf",
+      "gt_answers": [
+        "shelf",
+        "shelf",
+        "painting",
+        "picture",
+        "shelf,picture,plaque",
+        "shelf",
+        "shelf",
+        "picture",
+        "shelf",
+        "wall picture"
+      ],
+      "pred_raw": "mirror\n",
+      "pred": "mirror",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What are the two words on top of the station?",
+      "gt": "donation station",
+      "gt_answers": [
+        "donation station",
+        "donation station",
+        "donation station",
+        "donation station",
+        "donation station",
+        "donation station",
+        "donation station",
+        "donation station",
+        "donation station",
+        "donation station"
+      ],
+      "pred_raw": "station\n",
+      "pred": "station",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What time of the day it is?",
+      "gt": "evening",
+      "gt_answers": [
+        "evening",
+        "afternoon",
+        "morning",
+        "afternoon",
+        "evening",
+        "evening",
+        "afternoon",
+        "morning",
+        "2",
+        "dusk"
+      ],
+      "pred_raw": "noon\n",
+      "pred": "noon",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Does a child live in this home?",
+      "gt": "yes",
+      "gt_answers": [
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "no",
+        "no",
+        "yes",
+        "no",
+        "yes"
+      ],
+      "pred_raw": "yes\n",
+      "pred": "yes",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "What is the wall made of?",
+      "gt": "wood",
+      "gt_answers": [
+        "wood",
+        "wood",
+        "wood",
+        "wood",
+        "wood",
+        "wood",
+        "wood",
+        "wood",
+        "wood",
+        "wood"
+      ],
+      "pred_raw": "stone\n",
+      "pred": "stone",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What number is the hour hand on?",
+      "gt": "11",
+      "gt_answers": [
+        "11",
+        "11",
+        "11",
+        "5",
+        "11",
+        "11",
+        "11",
+        "11",
+        "5",
+        "11"
+      ],
+      "pred_raw": "12\n",
+      "pred": "12",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What color is the bridge?",
+      "gt": "gray",
+      "gt_answers": [
+        "gray",
+        "gray",
+        "gray",
+        "gray",
+        "gray",
+        "gray",
+        "brown",
+        "white",
+        "black",
+        "gray"
+      ],
+      "pred_raw": "white\n",
+      "pred": "white",
+      "acc": 0.3333333333333333,
+      "raw_acc": 0.3333333333333333
+    },
+    {
+      "question": "What is the clock attached to?",
+      "gt": "pole",
+      "gt_answers": [
+        "pole",
+        "column",
+        "pole",
+        "pole",
+        "pole",
+        "pole",
+        "pole",
+        "pole",
+        "pole",
+        "pole"
+      ],
+      "pred_raw": "wall\n",
+      "pred": "wall",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Is the train heading away?",
+      "gt": "no",
+      "gt_answers": [
+        "no",
+        "yes",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no"
+      ],
+      "pred_raw": "yes\n",
+      "pred": "yes",
+      "acc": 0.3333333333333333,
+      "raw_acc": 0.3333333333333333
+    },
+    {
+      "question": "Is there a towel in the kitchen?",
+      "gt": "no",
+      "gt_answers": [
+        "no",
+        "no",
+        "no",
+        "no",
+        "yes",
+        "no",
+        "yes",
+        "no",
+        "no",
+        "no"
+      ],
+      "pred_raw": "yes\n",
+      "pred": "yes",
+      "acc": 0.6666666666666666,
+      "raw_acc": 0.6666666666666666
+    },
+    {
+      "question": "What is the number on the man's Jersey?",
+      "gt": "18",
+      "gt_answers": [
+        "18",
+        "18",
+        "18",
+        "18",
+        "18",
+        "18",
+        "18",
+        "18",
+        "18",
+        "18"
+      ],
+      "pred_raw": "1\n",
+      "pred": "1",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What animal is painted on the motorcycle?",
+      "gt": "tiger",
+      "gt_answers": [
+        "tiger",
+        "tiger",
+        "tiger",
+        "tiger",
+        "tiger",
+        "tiger",
+        "tiger",
+        "tiger",
+        "tiger",
+        "tiger"
+      ],
+      "pred_raw": "horse\n",
+      "pred": "horse",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Is he going to fall?",
+      "gt": "no",
+      "gt_answers": [
+        "no",
+        "yes",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "yes",
+        "yes"
+      ],
+      "pred_raw": "no\n",
+      "pred": "no",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "Is the woman focused on her kitchen work?",
+      "gt": "no",
+      "gt_answers": [
+        "no",
+        "no",
+        "no",
+        "no",
+        "yes",
+        "yes",
+        "no",
+        "yes",
+        "no",
+        "no"
+      ],
+      "pred_raw": "yes\n",
+      "pred": "yes",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "What kind of dog are these people walking?",
+      "gt": "dalmatian",
+      "gt_answers": [
+        "dalmatian",
+        "dalmatian",
+        "great dane",
+        "dalmatian",
+        "don't know",
+        "dalmatian",
+        "great dane",
+        "great dane",
+        "great dane",
+        "dalmatian"
+      ],
+      "pred_raw": "poodle\n",
+      "pred": "poodle",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    }
+  ]
+}

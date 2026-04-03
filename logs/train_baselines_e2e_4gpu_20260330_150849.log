@@ -1,0 +1,372 @@
+==================================
+Starting Token Pruning (keep_ratio=0.45)
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+2026-03-30 15:08:55,595 INFO Runtime: distributed=True world_size=4 rank=0 local_rank=0 device=cuda:0
+2026-03-30 15:08:55,595 INFO Loading VLM from Model/Qwen35-08B ...
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]
+Loading weights:  86%|████████▌ | 406/473 [00:00<00:00, 4047.81it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 4020.00it/s]
+
+Loading weights:  73%|███████▎  | 345/473 [00:00<00:00, 3443.77it/s]
+Loading weights:  78%|███████▊  | 369/473 [00:00<00:00, 3686.13it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3629.54it/s]
+
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3338.84it/s]
+
+Loading weights:  70%|███████   | 332/473 [00:00<00:00, 3317.80it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3368.31it/s]
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 726, in <module>
+[rank3]:     main()
+[rank3]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 319, in main
+[rank3]:     router = DDP(router, device_ids=[local_rank], output_device=local_rank)
+[rank3]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/parallel/distributed.py", line 734, in __init__
+[rank3]:     for n, p in module.named_parameters()
+[rank3]:                 ^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]: AttributeError: 'NoneType' object has no attribute 'named_parameters'
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 726, in <module>
+[rank1]:     main()
+[rank1]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 319, in main
+[rank1]:     router = DDP(router, device_ids=[local_rank], output_device=local_rank)
+[rank1]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/parallel/distributed.py", line 734, in __init__
+[rank1]:     for n, p in module.named_parameters()
+[rank1]:                 ^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]: AttributeError: 'NoneType' object has no attribute 'named_parameters'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 726, in <module>
+[rank0]:     main()
+[rank0]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 319, in main
+[rank0]:     router = DDP(router, device_ids=[local_rank], output_device=local_rank)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/parallel/distributed.py", line 734, in __init__
+[rank0]:     for n, p in module.named_parameters()
+[rank0]:                 ^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: AttributeError: 'NoneType' object has no attribute 'named_parameters'
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 726, in <module>
+[rank2]:     main()
+[rank2]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 319, in main
+[rank2]:     router = DDP(router, device_ids=[local_rank], output_device=local_rank)
+[rank2]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/parallel/distributed.py", line 734, in __init__
+[rank2]:     for n, p in module.named_parameters()
+[rank2]:                 ^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]: AttributeError: 'NoneType' object has no attribute 'named_parameters'
+[rank0]:[W330 15:09:00.092388361 ProcessGroupNCCL.cpp:1575] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W0330 15:09:01.142000 4087719 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4087802 closing signal SIGTERM
+W0330 15:09:01.143000 4087719 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4087804 closing signal SIGTERM
+W0330 15:09:01.144000 4087719 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4087805 closing signal SIGTERM
+E0330 15:09:01.372000 4087719 site-packages/torch/distributed/elastic/multiprocessing/api.py:986] failed (exitcode: 1) local_rank: 1 (pid: 4087803) of binary: /home/pengr/.conda/envs/qacr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 994, in <module>
+    main()
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 362, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 990, in main
+    run(args)
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 981, in run
+    elastic_launch(
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 170, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 317, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+scripts/train_baselines_e2e.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-03-30_15:09:01
+  host      : ubuntu2404
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 4087802)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2026-03-30_15:09:01
+  host      : ubuntu2404
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 4087804)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2026-03-30_15:09:01
+  host      : ubuntu2404
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 4087805)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-03-30_15:09:01
+  host      : ubuntu2404
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 4087803)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+
+ERROR conda.cli.main_run:execute(127): `conda run python -m torch.distributed.run --standalone --nproc_per_node=4 scripts/train_baselines_e2e.py --baseline token_pruning --keep-ratio 0.45 --model Model/Qwen35-08B --dataset vqav2 --max-samples 20000 --epochs 3` failed. (See above for error)
+==================================
+Starting Image Only (budget=0.45)
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+2026-03-30 15:09:07,465 INFO Runtime: distributed=True world_size=4 rank=0 local_rank=0 device=cuda:0
+2026-03-30 15:09:07,465 INFO Loading VLM from Model/Qwen35-08B ...
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]
+Loading weights:  79%|███████▉  | 373/473 [00:00<00:00, 3719.34it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3638.20it/s]
+
+Loading weights:  78%|███████▊  | 368/473 [00:00<00:00, 3642.94it/s]
+Loading weights:  67%|██████▋   | 317/473 [00:00<00:00, 3116.74it/s]
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3609.23it/s]
+
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3117.21it/s]
+
+Loading weights:  81%|████████  | 382/473 [00:00<00:00, 3806.12it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3733.46it/s]
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 726, in <module>
+[rank3]:     main()
+[rank3]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 314, in main
+[rank3]:     router = ImageOnlyRouter(
+[rank3]:              ^^^^^^^^^^^^^^^^
+[rank3]: TypeError: ImageOnlyRouter.__init__() got an unexpected keyword argument 'token_dim'
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 726, in <module>
+[rank1]:     main()
+[rank1]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 314, in main
+[rank1]:     router = ImageOnlyRouter(
+[rank1]:              ^^^^^^^^^^^^^^^^
+[rank1]: TypeError: ImageOnlyRouter.__init__() got an unexpected keyword argument 'token_dim'
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 726, in <module>
+[rank2]:     main()
+[rank2]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 314, in main
+[rank2]:     router = ImageOnlyRouter(
+[rank2]:              ^^^^^^^^^^^^^^^^
+[rank2]: TypeError: ImageOnlyRouter.__init__() got an unexpected keyword argument 'token_dim'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 726, in <module>
+[rank0]:     main()
+[rank0]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 314, in main
+[rank0]:     router = ImageOnlyRouter(
+[rank0]:              ^^^^^^^^^^^^^^^^
+[rank0]: TypeError: ImageOnlyRouter.__init__() got an unexpected keyword argument 'token_dim'
+[rank0]:[W330 15:09:12.975627869 ProcessGroupNCCL.cpp:1575] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W0330 15:09:12.835000 4087920 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4088006 closing signal SIGTERM
+W0330 15:09:12.837000 4087920 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4088007 closing signal SIGTERM
+W0330 15:09:12.837000 4087920 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4088008 closing signal SIGTERM
+E0330 15:09:13.002000 4087920 site-packages/torch/distributed/elastic/multiprocessing/api.py:986] failed (exitcode: 1) local_rank: 3 (pid: 4088009) of binary: /home/pengr/.conda/envs/qacr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 994, in <module>
+    main()
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 362, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 990, in main
+    run(args)
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 981, in run
+    elastic_launch(
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 170, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 317, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+scripts/train_baselines_e2e.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-03-30_15:09:13
+  host      : ubuntu2404
+  rank      : 0 (local_rank: 0)
+  exitcode  : -15 (pid: 4088006)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 4088006
+[2]:
+  time      : 2026-03-30_15:09:13
+  host      : ubuntu2404
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 4088007)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2026-03-30_15:09:13
+  host      : ubuntu2404
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 4088008)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-03-30_15:09:12
+  host      : ubuntu2404
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 4088009)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+
+ERROR conda.cli.main_run:execute(127): `conda run python -m torch.distributed.run --standalone --nproc_per_node=4 scripts/train_baselines_e2e.py --baseline image_only --budget 0.45 --model Model/Qwen35-08B --dataset vqav2 --max-samples 20000 --epochs 3` failed. (See above for error)
+==================================
+Starting Low Res (grid=9)
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+2026-03-30 15:09:19,022 INFO Runtime: distributed=True world_size=4 rank=0 local_rank=0 device=cuda:0
+2026-03-30 15:09:19,022 INFO Loading VLM from Model/Qwen35-08B ...
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+
+Loading weights:  79%|███████▉  | 373/473 [00:00<00:00, 3718.74it/s]The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3669.82it/s]
+
+Loading weights:  73%|███████▎  | 345/473 [00:00<00:00, 3448.92it/s]
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3414.70it/s]
+
+Loading weights:  79%|███████▊  | 372/473 [00:00<00:00, 3711.24it/s]
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3659.43it/s]
+
+Loading weights:  78%|███████▊  | 370/473 [00:00<00:00, 3692.77it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3647.66it/s]
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 726, in <module>
+[rank3]:     main()
+[rank3]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 319, in main
+[rank3]:     router = DDP(router, device_ids=[local_rank], output_device=local_rank)
+[rank3]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/parallel/distributed.py", line 734, in __init__
+[rank3]:     for n, p in module.named_parameters()
+[rank3]:                 ^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]: AttributeError: 'NoneType' object has no attribute 'named_parameters'
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 726, in <module>
+[rank1]:     main()
+[rank1]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 319, in main
+[rank1]:     router = DDP(router, device_ids=[local_rank], output_device=local_rank)
+[rank1]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/parallel/distributed.py", line 734, in __init__
+[rank1]:     for n, p in module.named_parameters()
+[rank1]:                 ^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]: AttributeError: 'NoneType' object has no attribute 'named_parameters'
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 726, in <module>
+[rank2]:     main()
+[rank2]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 319, in main
+[rank2]:     router = DDP(router, device_ids=[local_rank], output_device=local_rank)
+[rank2]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/parallel/distributed.py", line 734, in __init__
+[rank2]:     for n, p in module.named_parameters()
+[rank2]:                 ^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]: AttributeError: 'NoneType' object has no attribute 'named_parameters'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 726, in <module>
+[rank0]:     main()
+[rank0]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 319, in main
+[rank0]:     router = DDP(router, device_ids=[local_rank], output_device=local_rank)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/parallel/distributed.py", line 734, in __init__
+[rank0]:     for n, p in module.named_parameters()
+[rank0]:                 ^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: AttributeError: 'NoneType' object has no attribute 'named_parameters'
+W0330 15:09:24.318000 4088144 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4088217 closing signal SIGTERM
+W0330 15:09:24.320000 4088144 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4088218 closing signal SIGTERM
+W0330 15:09:24.320000 4088144 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4088219 closing signal SIGTERM
+E0330 15:09:24.535000 4088144 site-packages/torch/distributed/elastic/multiprocessing/api.py:986] failed (exitcode: 1) local_rank: 3 (pid: 4088220) of binary: /home/pengr/.conda/envs/qacr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 994, in <module>
+    main()
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 362, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 990, in main
+    run(args)
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 981, in run
+    elastic_launch(
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 170, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 317, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+scripts/train_baselines_e2e.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-03-30_15:09:24
+  host      : ubuntu2404
+  rank      : 0 (local_rank: 0)
+  exitcode  : -15 (pid: 4088217)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 4088217
+[2]:
+  time      : 2026-03-30_15:09:24
+  host      : ubuntu2404
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 4088218)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2026-03-30_15:09:24
+  host      : ubuntu2404
+  rank      : 2 (local_rank: 2)
+  exitcode  : -15 (pid: 4088219)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 4088219
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-03-30_15:09:24
+  host      : ubuntu2404
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 4088220)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+
+ERROR conda.cli.main_run:execute(127): `conda run python -m torch.distributed.run --standalone --nproc_per_node=4 scripts/train_baselines_e2e.py --baseline low_res --low-res-grid 9 --model Model/Qwen35-08B --dataset vqav2 --max-samples 20000 --epochs 3` failed. (See above for error)
+All baseline training finished!

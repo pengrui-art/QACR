@@ -1,0 +1,44 @@
+{
+  "metrics": {
+    "accuracy": 0.0,
+    "raw_accuracy": 0.0,
+    "mean_compute": 1.0,
+    "total_evaluated": 2
+  },
+  "args": {
+    "model": "Model/Qwen35-08B",
+    "dataset": "mmmu",
+    "local_data_dir": "data",
+    "max_samples": 2,
+    "batch_size": 1,
+    "temperature": 0.0,
+    "method": "original",
+    "keep_ratio": 0.45,
+    "k_layer": 3,
+    "out_dir": "outputs/tmp_eval"
+  },
+  "results": [
+    {
+      "question": "<image 1>A transistor, which may be approximated as a hemispherical heat source of radius ro = 0.1 mm, is embedded in a large silicon substrate (k = 125 W/m$\\cdot$  K) and dissipates heat at a rate q. All boundaries of the silicon are maintained at an ambient temperature of T$\\infty$= 27C,except for the top surface, which is well insulated.evaluate the surface temperature of the heat source for q =4 W.",
+      "gt": "B",
+      "gt_answers": [
+        "B"
+      ],
+      "pred_raw": "A\n",
+      "pred": "A",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "See the following phase diagram below, where there are 5 points labeled as (A), (B), (C), (D), and (E), respectively. <image 1> At which point will the substancemce represented by the phase diagram be solely in the solid phase at equilibrium?",
+      "gt": "B",
+      "gt_answers": [
+        "B"
+      ],
+      "pred_raw": "D. (D)\n",
+      "pred": "D",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    }
+  ]
+}

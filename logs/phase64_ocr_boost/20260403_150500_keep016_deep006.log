@@ -1,0 +1,2 @@
+[2026-04-03 16:08:12] START gpu=3 tag=keep016_deep006 keep=0.16 deep=0.06
+[2026-04-03 16:08:12] dataset=textvqa out=outputs/phase64_ocr_boost/20260403_150500/keep016_deep006_textvqa.json

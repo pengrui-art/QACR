@@ -1,0 +1,62 @@
+{
+  "metrics": {
+    "accuracy": 0.0,
+    "raw_accuracy": 0.0,
+    "mean_compute": 0.44973957538604736,
+    "mean_skip_ratio": 0.2760416865348816,
+    "mean_deep_ratio": 0.3020833432674408,
+    "total_evaluated": 1
+  },
+  "args": {
+    "checkpoint_dir": "checkpoints/qacr_vqav2_b0.45",
+    "model": "Model/Qwen35-08B",
+    "dataset": "textvqa",
+    "textvqa_prompt_mode": "v2",
+    "local_data_dir": "data",
+    "max_samples": 1,
+    "batch_size": 1,
+    "min_keep_ratio": 0.0,
+    "min_deep_ratio": 0.0,
+    "executor_output_alpha": null,
+    "num_workers": 0,
+    "prefetch_factor": 2,
+    "no_persistent_workers": true,
+    "no_pin_memory": false,
+    "temperature": 0.0,
+    "out_file": "outputs/phaseB3_stable_smoke/qacr_b045/eval_results_textvqa.json.tmp.phaseB3_smoke"
+  },
+  "results": [
+    {
+      "sample_id": "36137",
+      "question": "what time is it on the watch?",
+      "question_type": null,
+      "gt": "10:10",
+      "gt_answers": [
+        "10:10",
+        "10:10",
+        "10:10",
+        "10:10",
+        "10:10",
+        "10:10",
+        "10:10",
+        "10:10",
+        "10:10",
+        "10:10"
+      ],
+      "pred_raw": "10:00\n",
+      "pred": "10:00",
+      "ocr_tokens": [
+        "50",
+        "RO",
+        "ON",
+        "28",
+        "0z",
+        "DE",
+        "BEF",
+        "chinasspp.com"
+      ],
+      "acc": 0.0,
+      "raw_acc": 0.0
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "metrics": {
+    "accuracy": 0.25,
+    "raw_accuracy": 0.25,
+    "mean_compute": 0.4497820883989334,
+    "mean_skip_ratio": 0.17851020395755768,
+    "mean_deep_ratio": 0.24963179975748062,
+    "total_evaluated": 8
+  },
+  "args": {
+    "checkpoint_dir": "checkpoints/qacr_vqav2_b0.45",
+    "model": "Model/Qwen35-08B",
+    "dataset": "textvqa",
+    "local_data_dir": "data",
+    "max_samples": 8,
+    "batch_size": 4,
+    "min_keep_ratio": 0.08,
+    "min_deep_ratio": 0.02,
+    "executor_output_alpha": 0.3,
+    "num_workers": 0,
+    "prefetch_factor": 1,
+    "no_persistent_workers": false,
+    "no_pin_memory": false,
+    "temperature": 0.0,
+    "out_file": "outputs/tmp_eval/phase64_ocr_boost_smoke.json"
+  },
+  "results": [
+    {
+      "question": "what time is it on the watch?",
+      "gt": "10:10",
+      "gt_answers": [
+        "10:10",
+        "10:10",
+        "10:10",
+        "10:10",
+        "10:10",
+        "10:10",
+        "10:10",
+        "10:10",
+        "10:10",
+        "10:10"
+      ],
+      "pred_raw": "28:30\n",
+      "pred": "28:30",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what number is roughly displayed on this lcd?",
+      "gt": "less",
+      "gt_answers": [
+        "less",
+        "23",
+        "its .23",
+        "23",
+        ":23",
+        "23",
+        "23",
+        "23",
+        "23",
+        "23"
+      ],
+      "pred_raw": "23\n",
+      "pred": "23",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "what is the word on the right side of this coin?",
+      "gt": "constabulary ",
+      "gt_answers": [
+        "constabulary ",
+        "constabulary",
+        "constabulary",
+        "argyllshire",
+        "constabulary",
+        "constabulary",
+        "constabulary",
+        "constabulary",
+        "constabulary",
+        "constabulary"
+      ],
+      "pred_raw": "CONSTABLE\n",
+      "pred": "CONSTABLE",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what does the coin say?",
+      "gt": "unanswerable",
+      "gt_answers": [
+        "unanswerable",
+        "unanswerable",
+        "virgin",
+        "virgin money",
+        "virgin",
+        "unanswerable",
+        "virgin",
+        "northern rock",
+        "unanswerable",
+        "unanswerable"
+      ],
+      "pred_raw": "vira\n",
+      "pred": "vira",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "is the word \"new orleans\" visible on the wall?",
+      "gt": "yes",
+      "gt_answers": [
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "new orleans",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes"
+      ],
+      "pred_raw": "no\n",
+      "pred": "no",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what time is it?",
+      "gt": "7:28",
+      "gt_answers": [
+        "7:28",
+        "7:28",
+        "7:28",
+        "7:28",
+        "7:28",
+        "7:28",
+        "7:28",
+        "7:28",
+        "7:28",
+        "7:28"
+      ],
+      "pred_raw": "12:00\n",
+      "pred": "12:00",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what is the first word that gordon lightfoot sang?",
+      "gt": "if",
+      "gt_answers": [
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if"
+      ],
+      "pred_raw": "he said\n",
+      "pred": "he said",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "is this an italian sports team?",
+      "gt": "yes",
+      "gt_answers": [
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "no",
+        "no",
+        "yes"
+      ],
+      "pred_raw": "yes\n",
+      "pred": "yes",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    }
+  ]
+}

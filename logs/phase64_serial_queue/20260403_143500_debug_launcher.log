@@ -1,0 +1,4 @@
+[2026-04-03 14:35:50] queue launcher start
+wait_pattern=eval_qacr_benchmark.py --checkpoint-dir checkpoints/qacr_vqav2_b0.45 --model Model/Qwen35-08B --dataset docvqa
+batch_size=8 num_workers=12 prefetch_factor=2 alpha=0.30
+[2026-04-03 14:35:51] waiting current DocVQA to finish ...

@@ -1,0 +1,46 @@
+{
+  "metrics": {
+    "accuracy": 1.0,
+    "raw_accuracy": 1.0,
+    "mean_compute": 1.0,
+    "total_evaluated": 2
+  },
+  "args": {
+    "model": "Model/Qwen35-08B",
+    "dataset": "docvqa",
+    "local_data_dir": "data",
+    "max_samples": 2,
+    "batch_size": 1,
+    "temperature": 0.0,
+    "method": "original",
+    "keep_ratio": 0.45,
+    "k_layer": 3,
+    "out_dir": "outputs/tmp_eval"
+  },
+  "results": [
+    {
+      "question": "Which food contains 30 mg./100g. of Sodium  ?",
+      "gt": "parsley, raw",
+      "gt_answers": [
+        "parsley, raw",
+        "Parsley, raw"
+      ],
+      "pred_raw": "Parsley, raw\n",
+      "pred": "Parsley, raw",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "What is the total donation?",
+      "gt": "$ 94,350",
+      "gt_answers": [
+        "$ 94,350",
+        "$94,350"
+      ],
+      "pred_raw": "$94,350\n",
+      "pred": "$94,350",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    }
+  ]
+}

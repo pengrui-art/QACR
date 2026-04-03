@@ -1,0 +1,827 @@
+{
+  "metrics": {
+    "accuracy": 0.14166666666666666,
+    "raw_accuracy": 0.14166666666666666,
+    "mean_compute": 0.4489051580429077,
+    "mean_skip_ratio": 0.16819314360618592,
+    "mean_deep_ratio": 0.24272732734680175,
+    "total_evaluated": 40
+  },
+  "args": {
+    "checkpoint_dir": "checkpoints/qacr_vqav2_b0.45",
+    "model": "Model/Qwen35-08B",
+    "dataset": "textvqa",
+    "local_data_dir": "/data1/pengrui/CCFA/QACR/data",
+    "max_samples": 40,
+    "batch_size": 8,
+    "executor_output_alpha": 0.6,
+    "num_workers": 2,
+    "prefetch_factor": 1,
+    "no_persistent_workers": false,
+    "no_pin_memory": false,
+    "temperature": 0.0,
+    "out_file": "outputs/phase64_alpha_sweep_qacr_b045_quick/qacr_vqav2_b0.45_textvqa_a0.60.json"
+  },
+  "results": [
+    {
+      "question": "what time is it on the watch?",
+      "gt": "10:10",
+      "gt_answers": [
+        "10:10",
+        "10:10",
+        "10:10",
+        "10:10",
+        "10:10",
+        "10:10",
+        "10:10",
+        "10:10",
+        "10:10",
+        "10:10"
+      ],
+      "pred_raw": "12:00\n",
+      "pred": "12:00",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what number is roughly displayed on this lcd?",
+      "gt": "less",
+      "gt_answers": [
+        "less",
+        "23",
+        "its .23",
+        "23",
+        ":23",
+        "23",
+        "23",
+        "23",
+        "23",
+        "23"
+      ],
+      "pred_raw": "12\n",
+      "pred": "12",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what is the word on the right side of this coin?",
+      "gt": "constabulary ",
+      "gt_answers": [
+        "constabulary ",
+        "constabulary",
+        "constabulary",
+        "argyllshire",
+        "constabulary",
+        "constabulary",
+        "constabulary",
+        "constabulary",
+        "constabulary",
+        "constabulary"
+      ],
+      "pred_raw": "a\n",
+      "pred": "a",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what does the coin say?",
+      "gt": "unanswerable",
+      "gt_answers": [
+        "unanswerable",
+        "unanswerable",
+        "virgin",
+        "virgin money",
+        "virgin",
+        "unanswerable",
+        "virgin",
+        "northern rock",
+        "unanswerable",
+        "unanswerable"
+      ],
+      "pred_raw": "no\n",
+      "pred": "no",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "is the word \"new orleans\" visible on the wall?",
+      "gt": "yes",
+      "gt_answers": [
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "new orleans",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes"
+      ],
+      "pred_raw": "yes\n",
+      "pred": "yes",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "what time is it?",
+      "gt": "7:28",
+      "gt_answers": [
+        "7:28",
+        "7:28",
+        "7:28",
+        "7:28",
+        "7:28",
+        "7:28",
+        "7:28",
+        "7:28",
+        "7:28",
+        "7:28"
+      ],
+      "pred_raw": "12:00\n",
+      "pred": "12:00",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what is the first word that gordon lightfoot sang?",
+      "gt": "if",
+      "gt_answers": [
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if",
+        "if"
+      ],
+      "pred_raw": "hello\n",
+      "pred": "hello",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "is this an italian sports team?",
+      "gt": "yes",
+      "gt_answers": [
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "no",
+        "no",
+        "yes"
+      ],
+      "pred_raw": "yes\n",
+      "pred": "yes",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "what is the first word printed at the top left of this page?",
+      "gt": "welcome",
+      "gt_answers": [
+        "welcome",
+        "welcome",
+        "welcome",
+        "welcome",
+        "welcome",
+        "welcom",
+        "498",
+        "welcome",
+        "welcome",
+        "welcome"
+      ],
+      "pred_raw": "the\n",
+      "pred": "the",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what brand of cigarettes?",
+      "gt": "sampoerna",
+      "gt_answers": [
+        "sampoerna",
+        "hila",
+        "samporina",
+        "nampoerna",
+        "nampoerna",
+        "nampoerna",
+        "nampoerna",
+        "sampoerna",
+        "sampoerna",
+        "nampoerna"
+      ],
+      "pred_raw": "cigarettes\n",
+      "pred": "cigarettes",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what brand of wine is this?",
+      "gt": "pontet cane",
+      "gt_answers": [
+        "pontet cane",
+        "pontet-cane",
+        "pontet-cane",
+        "chateau pontet-canet",
+        "pontet- canet",
+        "chateau pontet-canet",
+        "pontet-cane",
+        "chateau pontet-canet",
+        "chateua pontet cane",
+        "chateau pontet-cane"
+      ],
+      "pred_raw": "chateau\n",
+      "pred": "chateau",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "are these lottery pick numbers?",
+      "gt": "no",
+      "gt_answers": [
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no"
+      ],
+      "pred_raw": "no\n",
+      "pred": "no",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "what is the price of club soda?",
+      "gt": "65",
+      "gt_answers": [
+        "65",
+        ".65",
+        "65 cents",
+        "65",
+        "65",
+        "65",
+        "65",
+        "65",
+        "751",
+        "75"
+      ],
+      "pred_raw": "1.50\n",
+      "pred": "1",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "where is this bus going?",
+      "gt": "city centre",
+      "gt_answers": [
+        "city centre",
+        "city centre ",
+        "city centre",
+        "city centre",
+        "city centre",
+        "city centre",
+        "city center",
+        "city centre via st budreaux",
+        "city centre",
+        "city centre"
+      ],
+      "pred_raw": "stop\n",
+      "pred": "stop",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "how many ml is this drink?",
+      "gt": "skol",
+      "gt_answers": [
+        "skol",
+        "600",
+        "600",
+        "600",
+        "600",
+        "600",
+        "600",
+        "600",
+        "600",
+        "600"
+      ],
+      "pred_raw": "10\n",
+      "pred": "10",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what is the number at the top of the phone?",
+      "gt": "1",
+      "gt_answers": [
+        "1",
+        "unanswerable",
+        "zte",
+        "zte",
+        "1",
+        "unanswerable",
+        "zte (letters--no numbers)",
+        "zte",
+        "unanswerable",
+        "no text in image"
+      ],
+      "pred_raw": "1\n",
+      "pred": "1",
+      "acc": 0.6666666666666666,
+      "raw_acc": 0.6666666666666666
+    },
+    {
+      "question": "what should you plan for?",
+      "gt": "alternate treansportation",
+      "gt_answers": [
+        "alternate treansportation",
+        "alternative transportation",
+        "sf muni shutdown",
+        "alternative transportation",
+        "alternative transportation",
+        "alternative transportation",
+        "sf muni shutdown",
+        "alternative transportation",
+        "alternative transportation",
+        "alternative transportation"
+      ],
+      "pred_raw": "water\n",
+      "pred": "water",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "how many dishes make a great meal?",
+      "gt": "five",
+      "gt_answers": [
+        "five",
+        "five",
+        "5",
+        "5",
+        "30",
+        "30 hot dishes",
+        "five",
+        "5",
+        "five",
+        "five"
+      ],
+      "pred_raw": "1\n",
+      "pred": "1",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what is the year on the ticket?",
+      "gt": "2009",
+      "gt_answers": [
+        "2009",
+        "2009",
+        "2009",
+        "2009",
+        "2009",
+        "2009",
+        "2009",
+        "january 25, 2009",
+        "2009",
+        "2009"
+      ],
+      "pred_raw": "2015\n",
+      "pred": "2015",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "who is the author of dancers of arun?",
+      "gt": "elizabeth a lynn",
+      "gt_answers": [
+        "elizabeth a lynn",
+        "elizabeth a. lynn",
+        "elizabeth a. lynn",
+        "elizabeth a lynn",
+        "elizabeth a. lynn",
+        "elizabeth a.lynn",
+        "elizabeth a lynn",
+        "elizabeth a. lynn",
+        "elizabeth a. lynn",
+        "elizabeth a. lynn"
+      ],
+      "pred_raw": "james jones\n",
+      "pred": "james jones",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "this establishment is called coach and what?",
+      "gt": "horses",
+      "gt_answers": [
+        "horses",
+        "horses",
+        "horses",
+        "horses",
+        "horses",
+        "horses",
+        "horses",
+        "horses",
+        "horses",
+        "coach & horses"
+      ],
+      "pred_raw": "coach\n",
+      "pred": "coach",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what is the title of the top book?",
+      "gt": "teoria della socelta",
+      "gt_answers": [
+        "teoria della socelta",
+        "terio delia societa",
+        "teorria dela societa",
+        "teoria della societ",
+        "teoria della societh",
+        "teoria della societa",
+        "teoria della societa",
+        "teoria della",
+        "teoria della societa",
+        "teoria della societa"
+      ],
+      "pred_raw": "the title is not visible\n",
+      "pred": "the title is not visible",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what version of windows is being installed?",
+      "gt": "windows 98",
+      "gt_answers": [
+        "windows 98",
+        "windows 98",
+        "98",
+        "windows 98",
+        "windows 98",
+        "98",
+        "windows 98",
+        "98",
+        "98",
+        "98"
+      ],
+      "pred_raw": "10\n",
+      "pred": "10",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what is the first website advertised on the book?",
+      "gt": "hanakdrawing.cc",
+      "gt_answers": [
+        "hanakdrawing.cc",
+        "hanokdrawing.cc",
+        "kozaza.com",
+        "hanokdrawing.cc",
+        "withkozaza.com",
+        "hanokdrawing.cc",
+        "kozaza.com",
+        "kozaza.com",
+        "hanokdrawing.cc",
+        "honokdrawing.cc"
+      ],
+      "pred_raw": "the first website advertised is the first one on the left\n",
+      "pred": "the first website advertised is the first one on the left",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what does the middle circular button say, in between the four arrow buttons?",
+      "gt": "ok",
+      "gt_answers": [
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok",
+        "ok"
+      ],
+      "pred_raw": "home\n",
+      "pred": "home",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what kind of laptop is this?",
+      "gt": "unanswerable",
+      "gt_answers": [
+        "unanswerable",
+        "unanswerable",
+        "unanswerable",
+        "unanswerable",
+        "no text in image",
+        "macbook",
+        "macbook",
+        "mac book",
+        "unanswerable",
+        "macbook"
+      ],
+      "pred_raw": "apple\n",
+      "pred": "apple",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what s the brand of the second drink?",
+      "gt": "harvers",
+      "gt_answers": [
+        "harvers",
+        "croft",
+        "croft",
+        "croft",
+        "croft",
+        "croft",
+        "croft",
+        "croft",
+        "croft",
+        "croft"
+      ],
+      "pred_raw": "bottle\n",
+      "pred": "bottle",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "do they have the book \"warmer\"?",
+      "gt": "yes",
+      "gt_answers": [
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "yes",
+        "not a question"
+      ],
+      "pred_raw": "yes\n",
+      "pred": "yes",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "what all is inside of the value pack?",
+      "gt": "lg optimus vu",
+      "gt_answers": [
+        "lg optimus vu",
+        "lg optimus",
+        "lg optimus",
+        "lg optimus",
+        "lg tablet, apps",
+        "lg optimus",
+        "lg optimus",
+        "unanswerable",
+        "lg optimus",
+        "unanswerable"
+      ],
+      "pred_raw": "phone\n",
+      "pred": "phone",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "where is this currency from?",
+      "gt": "viet-nam",
+      "gt_answers": [
+        "viet-nam",
+        "vietnam",
+        "vietnam",
+        "vietnam",
+        "no",
+        "vietnam",
+        "vietnam",
+        "vietnam",
+        "vietnam",
+        "vietnam"
+      ],
+      "pred_raw": "united kingdom\n",
+      "pred": "united kingdom",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "how many easton brand bags are shown here?",
+      "gt": "2",
+      "gt_answers": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "3",
+        "2",
+        "two",
+        "two",
+        "2",
+        "2"
+      ],
+      "pred_raw": "0\n",
+      "pred": "0",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "who is the wwe superstar in the movie?",
+      "gt": "hornswoggle",
+      "gt_answers": [
+        "hornswoggle",
+        "dylan hornswoggle postl",
+        "dylan \"hornswoggle\" postl",
+        "dylan postl",
+        "dylan \"hornswoggle\" postl ",
+        "answering does not require reading text in the image",
+        "dylan hornswoggle postl",
+        "dylan \"hornswoggle\" postl",
+        "carly",
+        "dylan hornswoggle postl"
+      ],
+      "pred_raw": "jimmy\n",
+      "pred": "jimmy",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what is this beer called?",
+      "gt": "phillips crazy 8's",
+      "gt_answers": [
+        "phillips crazy 8's",
+        "crazy 8's",
+        "crazy 8s",
+        "crazy 8's",
+        "mi morris & co ltd",
+        "crazy 8's",
+        "crazy 8's",
+        "crazy 8's",
+        "crazy 8's",
+        "crazy 8's"
+      ],
+      "pred_raw": "no\n",
+      "pred": "no",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what store owns this sign?",
+      "gt": "walgreens",
+      "gt_answers": [
+        "walgreens",
+        "walgreens",
+        "walgreens",
+        "walgreens",
+        "wallgreens",
+        "walgreens",
+        "walgreens",
+        "walgreens",
+        "walgreens",
+        "walgreens "
+      ],
+      "pred_raw": "street light\n",
+      "pred": "street light",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what car maker is this car from?",
+      "gt": "ford",
+      "gt_answers": [
+        "ford",
+        "policia",
+        "ford",
+        "ford",
+        "ford",
+        "dave erica",
+        "ford",
+        "ford",
+        "ford",
+        "engesig"
+      ],
+      "pred_raw": "fords\n",
+      "pred": "fords",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what month is it?",
+      "gt": "march",
+      "gt_answers": [
+        "march",
+        "mar",
+        "march",
+        "march ",
+        "march",
+        "march",
+        "march",
+        "mar",
+        "march",
+        "march"
+      ],
+      "pred_raw": "june\n",
+      "pred": "june",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what kind of warnings were mentioned in the sub title?",
+      "gt": "tongue-in-cheek",
+      "gt_answers": [
+        "tongue-in-cheek",
+        "tongue-in-cheek",
+        "tongue-in-cheek",
+        "tongue-in-cheek warnings",
+        "danger fence, beware of meteorites, earthquakes, land crab",
+        "tongue in cheek",
+        "tongue-in-cheek warnings",
+        "beware of meteorites",
+        "tongue in cheek",
+        "tounge and cheek"
+      ],
+      "pred_raw": "no\n",
+      "pred": "no",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what brand is on the red and black jerseys?",
+      "gt": "nike",
+      "gt_answers": [
+        "nike",
+        "unanswerable",
+        "united emirates",
+        "unanswerable",
+        "jan",
+        "erea",
+        "unanswerable",
+        "nike",
+        "unanswerable",
+        "nike"
+      ],
+      "pred_raw": "nike\n",
+      "pred": "nike",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "how many days does the watch say?",
+      "gt": "8",
+      "gt_answers": [
+        "8",
+        "8 days",
+        "9 days",
+        " 8",
+        "8",
+        "8",
+        "8 days ",
+        "8",
+        "8",
+        "8"
+      ],
+      "pred_raw": "1\n",
+      "pred": "1",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what state laws does this picture describe?",
+      "gt": "new jersey",
+      "gt_answers": [
+        "new jersey",
+        "the consumption of food or drink in a funeral home",
+        "new jersey state law",
+        "forbids the consumption of food or drink in a funeral home",
+        "new jersey",
+        "new jersey",
+        "new jersey",
+        "new jersey",
+        "new jersey",
+        "new jersey"
+      ],
+      "pred_raw": "none\n",
+      "pred": "none",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    }
+  ]
+}

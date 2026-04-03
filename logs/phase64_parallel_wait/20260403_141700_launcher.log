@@ -1,0 +1,9 @@
+[2026-04-03 14:15:53] started pid=1543730 gpu=0 tag=b035_textvqa_a030
+  log: logs/phase64_parallel_wait/20260403_141700_b035_textvqa_a030.log
+  out: outputs/tmp_eval/phase64_parallel_wait/20260403_141700_b035_textvqa_a030.json
+[2026-04-03 14:15:53] started pid=1543738 gpu=2 tag=b060_textvqa_a030
+  log: logs/phase64_parallel_wait/20260403_141700_b060_textvqa_a030.log
+  out: outputs/tmp_eval/phase64_parallel_wait/20260403_141700_b060_textvqa_a030.json
+[2026-04-03 14:15:53] started pid=1543746 gpu=3 tag=b035_mmmu_a030
+  log: logs/phase64_parallel_wait/20260403_141700_b035_mmmu_a030.log
+  out: outputs/tmp_eval/phase64_parallel_wait/20260403_141700_b035_mmmu_a030.json

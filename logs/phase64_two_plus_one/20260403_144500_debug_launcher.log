@@ -1,0 +1,2 @@
+[2026-04-03 14:44:18] launch two workers first (gpu0+gpu2)
+[2026-04-03 14:44:18] START pid=1581433 gpu=0 tag=b035_textvqa_a030 log=logs/phase64_two_plus_one/20260403_144500_debug_b035_textvqa_a030.log

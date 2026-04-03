@@ -1,0 +1,68 @@
+{
+  "snapshot": "before_alpha030_rerun",
+  "rows": [
+    {
+      "method": "qacr_b035",
+      "dataset": "textvqa",
+      "accuracy": 0.07633333333333331,
+      "mean_compute": 0.3498106994152069,
+      "file": "checkpoints/qacr_vqav2_b0.35/eval_results_textvqa.json"
+    },
+    {
+      "method": "qacr_b035",
+      "dataset": "docvqa",
+      "accuracy": 0.020190689848569827,
+      "mean_compute": 0.34995700866624696,
+      "file": "checkpoints/qacr_vqav2_b0.35/eval_results_docvqa.json"
+    },
+    {
+      "method": "qacr_b035",
+      "dataset": "mmmu",
+      "accuracy": 0.3233333333333333,
+      "mean_compute": 0.34948464340633817,
+      "file": "checkpoints/qacr_vqav2_b0.35/eval_results_mmmu.json"
+    },
+    {
+      "method": "qacr_b045",
+      "dataset": "textvqa",
+      "accuracy": 0.07633333333333331,
+      "mean_compute": 0.4479295537948608,
+      "file": "checkpoints/qacr_vqav2_b0.45/eval_results_textvqa.json"
+    },
+    {
+      "method": "qacr_b045",
+      "dataset": "docvqa",
+      "accuracy": 0.020003739016638624,
+      "mean_compute": 0.440951007490939,
+      "file": "checkpoints/qacr_vqav2_b0.45/eval_results_docvqa.json"
+    },
+    {
+      "method": "qacr_b045",
+      "dataset": "mmmu",
+      "accuracy": 0.33666666666666667,
+      "mean_compute": 0.40417693667941623,
+      "file": "checkpoints/qacr_vqav2_b0.45/eval_results_mmmu.json"
+    },
+    {
+      "method": "qacr_b060",
+      "dataset": "textvqa",
+      "accuracy": 0.06926666666666667,
+      "mean_compute": 0.5990379532814026,
+      "file": "checkpoints/qacr_vqav2_b0.60/eval_results_textvqa.json"
+    },
+    {
+      "method": "qacr_b060",
+      "dataset": "docvqa",
+      "accuracy": 0.020003739016638624,
+      "mean_compute": 0.5928349815299297,
+      "file": "checkpoints/qacr_vqav2_b0.60/eval_results_docvqa.json"
+    },
+    {
+      "method": "qacr_b060",
+      "dataset": "mmmu",
+      "accuracy": 0.3422222222222222,
+      "mean_compute": 0.5491406522856819,
+      "file": "checkpoints/qacr_vqav2_b0.60/eval_results_mmmu.json"
+    }
+  ]
+}

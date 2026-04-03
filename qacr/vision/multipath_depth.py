@@ -29,15 +29,24 @@ class DepthMultiPathExecutor(nn.Module):
     """
 
     def __init__(
-        self, token_dim: int, hidden_dim: int = 128, deep_layers: int = 3
+        self,
+        token_dim: int,
+        hidden_dim: int = 128,
+        deep_layers: int = 3,
+        output_alpha: float = 1.0,
     ) -> None:
         super().__init__()
         if deep_layers < 1:
             raise ValueError("deep_layers must be >= 1")
+        if not (0.0 <= output_alpha <= 1.0):
+            raise ValueError("output_alpha must be in [0, 1]")
 
         self.token_dim = token_dim
         self.hidden_dim = hidden_dim
         self.deep_layers = deep_layers
+        # Blend routed output with original visual token to preserve base semantics.
+        # 1.0 means full routed output (legacy behavior); lower values are more conservative.
+        self.output_alpha = float(output_alpha)
 
         self.input_proj = nn.Linear(token_dim, hidden_dim)
         self.skip_proj = nn.Identity()
@@ -70,6 +79,8 @@ class DepthMultiPathExecutor(nn.Module):
                 route_indices = torch.argmax(route_probs, dim=-1)
             hidden = self._conditional_hidden_forward(x, route_indices.long())
             out = self.output_proj(hidden)
+            if self.output_alpha < 1.0:
+                out = image_tokens + self.output_alpha * (out - image_tokens)
             w = torch.nn.functional.one_hot(route_indices, num_classes=3).to(
                 route_probs.dtype
             )
@@ -98,6 +109,8 @@ class DepthMultiPathExecutor(nn.Module):
         )
 
         out = self.output_proj(fused)
+        if self.output_alpha < 1.0:
+            out = image_tokens + self.output_alpha * (out - image_tokens)
 
         route_stats = {
             "skip_ratio": float(w[..., 0].mean().detach()),

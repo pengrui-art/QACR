@@ -1,0 +1,17 @@
+[
+  {
+    "repo_name": "QACR-Qwen35-08B-B0.35",
+    "local_dir": "checkpoints/QACR-Qwen35-08B-B0.35",
+    "private": false
+  },
+  {
+    "repo_name": "QACR-Qwen35-08B-B0.45",
+    "local_dir": "checkpoints/QACR-Qwen35-08B-B0.45",
+    "private": false
+  },
+  {
+    "repo_name": "QACR-Qwen35-08B-Attn-B0.60",
+    "local_dir": "checkpoints/QACR-Qwen35-08B-Attn-B0.60",
+    "private": false
+  }
+]

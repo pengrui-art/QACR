@@ -1,0 +1,656 @@
+===========================================
+Evaluating: checkpoints/qacr_vqav2_b0.35
+2026-03-30 19:37:05,534 INFO Loading VLM from Model/Qwen35-08B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:  17%|█▋        | 80/473 [00:00<00:00, 799.41it/s]Loading weights:  40%|███▉      | 187/473 [00:00<00:00, 953.26it/s]Loading weights:  62%|██████▏   | 293/473 [00:00<00:00, 991.63it/s]Loading weights:  94%|█████████▍| 446/473 [00:00<00:00, 1199.58it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 1114.60it/s]
+2026-03-30 19:37:08,035 INFO Loading QACR components from checkpoints/qacr_vqav2_b0.35/best.pt ...
+2026-03-30 19:37:08,144 INFO Detected QACR Query-Adaptive model
+2026-03-30 19:37:08,144 INFO Loaded QACR with budget: 0.35
+2026-03-30 19:37:08,183 INFO Loading evaluation dataset ...
+2026-03-30 19:37:09,852 INFO Loaded 21435 samples from /data1/pengrui/CCFA/QACR/data/VQAv2/testdev.
+2026-03-30 19:37:09,852 INFO Starting Evaluation ...
+Eval:   0%|          | 0/2680 [00:00<?, ?it/s]Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+A decoder-only architecture is being used, but right-padding was detected! For correct generation results, please set `padding_side='left'` when initializing the tokenizer.
+Eval:   0%|          | 0/2680 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "/data1/pengrui/CCFA/QACR/scripts/eval_qacr_benchmark.py", line 301, in <module>
+    main()
+  File "/data1/pengrui/CCFA/QACR/scripts/eval_qacr_benchmark.py", line 245, in main
+    outputs = model.generate(
+              ^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/generation/utils.py", line 2521, in generate
+    result = decoding_method(
+             ^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/generation/utils.py", line 2714, in _sample
+    outputs = self._prefill(
+              ^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/generation/utils.py", line 3747, in _prefill
+    return self(**model_inputs, return_dict=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/generic.py", line 857, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 2003, in forward
+    outputs = self.model(
+              ^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/generic.py", line 857, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1727, in forward
+    image_outputs: BaseModelOutputWithPooling = self.get_image_features(
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/generic.py", line 857, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1598, in get_image_features
+    vision_output: BaseModelOutputWithPooling = self.visual(
+                                                ^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/generic.py", line 931, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/output_capturing.py", line 248, in wrapper
+    outputs = func(self, *args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1264, in forward
+    merged_hidden_states = self.merger(hidden_states)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1885, in _call_impl
+    return inner()
+           ^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1846, in inner
+    hook_result = hook(self, args, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/pengrui/CCFA/QACR/qacr/qacr_model.py", line 140, in __call__
+    route_out = self.router(query_tokens=q, image_tokens=img_tokens)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/pengrui/CCFA/QACR/qacr/routing/depth_router.py", line 74, in forward
+    query_feat = self.query_proj(query_state).unsqueeze(1)  # [B, 1, H]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 134, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: expected mat1 and mat2 to have the same dtype, but got: float != c10::Half
+===========================================
+Evaluating: checkpoints/qacr_vqav2_b0.45
+2026-03-30 19:37:16,166 INFO Loading VLM from Model/Qwen35-08B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:  13%|█▎        | 62/473 [00:00<00:00, 616.48it/s]Loading weights:  38%|███▊      | 182/473 [00:00<00:00, 954.82it/s]Loading weights:  62%|██████▏   | 293/473 [00:00<00:00, 1025.30it/s]Loading weights:  96%|█████████▌| 453/473 [00:00<00:00, 1246.64it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 1123.77it/s]
+2026-03-30 19:37:18,561 INFO Loading QACR components from checkpoints/qacr_vqav2_b0.45/best.pt ...
+2026-03-30 19:37:18,653 INFO Detected QACR Query-Adaptive model
+2026-03-30 19:37:18,653 INFO Loaded QACR with budget: 0.45
+2026-03-30 19:37:18,685 INFO Loading evaluation dataset ...
+2026-03-30 19:37:19,514 INFO Loaded 21435 samples from /data1/pengrui/CCFA/QACR/data/VQAv2/testdev.
+2026-03-30 19:37:19,515 INFO Starting Evaluation ...
+Eval:   0%|          | 0/2680 [00:00<?, ?it/s]Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+A decoder-only architecture is being used, but right-padding was detected! For correct generation results, please set `padding_side='left'` when initializing the tokenizer.
+Eval:   0%|          | 0/2680 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "/data1/pengrui/CCFA/QACR/scripts/eval_qacr_benchmark.py", line 301, in <module>
+    main()
+  File "/data1/pengrui/CCFA/QACR/scripts/eval_qacr_benchmark.py", line 245, in main
+    outputs = model.generate(
+              ^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/generation/utils.py", line 2521, in generate
+    result = decoding_method(
+             ^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/generation/utils.py", line 2714, in _sample
+    outputs = self._prefill(
+              ^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/generation/utils.py", line 3747, in _prefill
+    return self(**model_inputs, return_dict=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/generic.py", line 857, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 2003, in forward
+    outputs = self.model(
+              ^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/generic.py", line 857, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1727, in forward
+    image_outputs: BaseModelOutputWithPooling = self.get_image_features(
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/generic.py", line 857, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1598, in get_image_features
+    vision_output: BaseModelOutputWithPooling = self.visual(
+                                                ^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/generic.py", line 931, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/output_capturing.py", line 248, in wrapper
+    outputs = func(self, *args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1264, in forward
+    merged_hidden_states = self.merger(hidden_states)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1885, in _call_impl
+    return inner()
+           ^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1846, in inner
+    hook_result = hook(self, args, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/pengrui/CCFA/QACR/qacr/qacr_model.py", line 140, in __call__
+    route_out = self.router(query_tokens=q, image_tokens=img_tokens)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/pengrui/CCFA/QACR/qacr/routing/depth_router.py", line 74, in forward
+    query_feat = self.query_proj(query_state).unsqueeze(1)  # [B, 1, H]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 134, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: expected mat1 and mat2 to have the same dtype, but got: float != c10::Half
+===========================================
+Evaluating: checkpoints/qacr_vqav2_b0.60
+2026-03-30 19:37:25,693 INFO Loading VLM from Model/Qwen35-08B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   8%|▊         | 36/473 [00:00<00:01, 343.06it/s]Loading weights:  34%|███▎      | 159/473 [00:00<00:00, 851.84it/s]Loading weights:  58%|█████▊    | 273/473 [00:00<00:00, 951.70it/s]Loading weights:  93%|█████████▎| 442/473 [00:00<00:00, 1234.87it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 1088.82it/s]
+2026-03-30 19:37:28,055 INFO Loading QACR components from checkpoints/qacr_vqav2_b0.60/best.pt ...
+2026-03-30 19:37:28,152 INFO Detected QACR Query-Adaptive model
+2026-03-30 19:37:28,152 INFO Loaded QACR with budget: 0.6
+2026-03-30 19:37:28,183 INFO Loading evaluation dataset ...
+2026-03-30 19:37:29,015 INFO Loaded 21435 samples from /data1/pengrui/CCFA/QACR/data/VQAv2/testdev.
+2026-03-30 19:37:29,016 INFO Starting Evaluation ...
+Eval:   0%|          | 0/2680 [00:00<?, ?it/s]Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+A decoder-only architecture is being used, but right-padding was detected! For correct generation results, please set `padding_side='left'` when initializing the tokenizer.
+Eval:   0%|          | 0/2680 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "/data1/pengrui/CCFA/QACR/scripts/eval_qacr_benchmark.py", line 301, in <module>
+    main()
+  File "/data1/pengrui/CCFA/QACR/scripts/eval_qacr_benchmark.py", line 245, in main
+    outputs = model.generate(
+              ^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/generation/utils.py", line 2521, in generate
+    result = decoding_method(
+             ^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/generation/utils.py", line 2714, in _sample
+    outputs = self._prefill(
+              ^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/generation/utils.py", line 3747, in _prefill
+    return self(**model_inputs, return_dict=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/generic.py", line 857, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 2003, in forward
+    outputs = self.model(
+              ^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/generic.py", line 857, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1727, in forward
+    image_outputs: BaseModelOutputWithPooling = self.get_image_features(
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/generic.py", line 857, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1598, in get_image_features
+    vision_output: BaseModelOutputWithPooling = self.visual(
+                                                ^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/generic.py", line 931, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/output_capturing.py", line 248, in wrapper
+    outputs = func(self, *args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1264, in forward
+    merged_hidden_states = self.merger(hidden_states)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1885, in _call_impl
+    return inner()
+           ^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1846, in inner
+    hook_result = hook(self, args, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/pengrui/CCFA/QACR/qacr/qacr_model.py", line 140, in __call__
+    route_out = self.router(query_tokens=q, image_tokens=img_tokens)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/pengrui/CCFA/QACR/qacr/routing/depth_router.py", line 74, in forward
+    query_feat = self.query_proj(query_state).unsqueeze(1)  # [B, 1, H]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 134, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: expected mat1 and mat2 to have the same dtype, but got: float != c10::Half
+===========================================
+Evaluating: checkpoints/token_pruning_kr0.45_vqav2
+2026-03-30 19:37:35,084 INFO Loading VLM from Model/Qwen35-08B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 1/473 [00:00<00:58,  8.09it/s]Loading weights:  28%|██▊       | 133/473 [00:00<00:00, 710.40it/s]Loading weights:  53%|█████▎    | 249/473 [00:00<00:00, 901.96it/s]Loading weights:  84%|████████▎ | 396/473 [00:00<00:00, 1118.38it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 995.09it/s] 
+2026-03-30 19:37:37,504 INFO Loading QACR components from checkpoints/token_pruning_kr0.45_vqav2/best.pt ...
+2026-03-30 19:37:37,532 INFO Detected Baseline model: token_pruning
+2026-03-30 19:37:37,579 INFO Parsed keep_ratio = 0.45
+2026-03-30 19:37:37,579 INFO Loading evaluation dataset ...
+2026-03-30 19:37:38,375 INFO Loaded 21435 samples from /data1/pengrui/CCFA/QACR/data/VQAv2/testdev.
+2026-03-30 19:37:38,375 INFO Starting Evaluation ...
+Eval:   0%|          | 0/2680 [00:00<?, ?it/s]Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+A decoder-only architecture is being used, but right-padding was detected! For correct generation results, please set `padding_side='left'` when initializing the tokenizer.
+Eval:   0%|          | 0/2680 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "/data1/pengrui/CCFA/QACR/scripts/eval_qacr_benchmark.py", line 301, in <module>
+    main()
+  File "/data1/pengrui/CCFA/QACR/scripts/eval_qacr_benchmark.py", line 245, in main
+    outputs = model.generate(
+              ^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/generation/utils.py", line 2521, in generate
+    result = decoding_method(
+             ^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/generation/utils.py", line 2714, in _sample
+    outputs = self._prefill(
+              ^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/generation/utils.py", line 3747, in _prefill
+    return self(**model_inputs, return_dict=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/generic.py", line 857, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 2003, in forward
+    outputs = self.model(
+              ^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/generic.py", line 857, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1727, in forward
+    image_outputs: BaseModelOutputWithPooling = self.get_image_features(
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/generic.py", line 857, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1598, in get_image_features
+    vision_output: BaseModelOutputWithPooling = self.visual(
+                                                ^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/generic.py", line 931, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/output_capturing.py", line 248, in wrapper
+    outputs = func(self, *args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1264, in forward
+    merged_hidden_states = self.merger(hidden_states)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1885, in _call_impl
+    return inner()
+           ^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1846, in inner
+    hook_result = hook(self, args, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 180, in __call__
+    out, _ = self.executor(image_tokens=x, route_probs=route_probs, mode="soft")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/pengrui/CCFA/QACR/qacr/vision/multipath_depth.py", line 66, in forward
+    x = self.input_proj(image_tokens)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 134, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 must have the same dtype, but got Float and Half
+===========================================
+Evaluating: checkpoints/image_only_b0.45_vqav2
+2026-03-30 19:37:44,561 INFO Loading VLM from Model/Qwen35-08B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:  14%|█▍        | 66/473 [00:00<00:00, 652.01it/s]Loading weights:  39%|███▉      | 186/473 [00:00<00:00, 969.69it/s]Loading weights:  66%|██████▌   | 310/473 [00:00<00:00, 1091.02it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 1214.62it/s]
+2026-03-30 19:37:46,895 INFO Loading QACR components from checkpoints/image_only_b0.45_vqav2/best.pt ...
+2026-03-30 19:37:46,905 INFO Detected Baseline model: image_only
+2026-03-30 19:37:46,941 INFO Parsed budget = 0.45
+2026-03-30 19:37:46,941 INFO Loading evaluation dataset ...
+2026-03-30 19:37:47,749 INFO Loaded 21435 samples from /data1/pengrui/CCFA/QACR/data/VQAv2/testdev.
+2026-03-30 19:37:47,750 INFO Starting Evaluation ...
+Eval:   0%|          | 0/2680 [00:00<?, ?it/s]Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+A decoder-only architecture is being used, but right-padding was detected! For correct generation results, please set `padding_side='left'` when initializing the tokenizer.
+Eval:   0%|          | 0/2680 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "/data1/pengrui/CCFA/QACR/scripts/eval_qacr_benchmark.py", line 301, in <module>
+    main()
+  File "/data1/pengrui/CCFA/QACR/scripts/eval_qacr_benchmark.py", line 245, in main
+    outputs = model.generate(
+              ^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/generation/utils.py", line 2521, in generate
+    result = decoding_method(
+             ^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/generation/utils.py", line 2714, in _sample
+    outputs = self._prefill(
+              ^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/generation/utils.py", line 3747, in _prefill
+    return self(**model_inputs, return_dict=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/generic.py", line 857, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 2003, in forward
+    outputs = self.model(
+              ^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/generic.py", line 857, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1727, in forward
+    image_outputs: BaseModelOutputWithPooling = self.get_image_features(
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/generic.py", line 857, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1598, in get_image_features
+    vision_output: BaseModelOutputWithPooling = self.visual(
+                                                ^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/generic.py", line 931, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/output_capturing.py", line 248, in wrapper
+    outputs = func(self, *args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1264, in forward
+    merged_hidden_states = self.merger(hidden_states)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1885, in _call_impl
+    return inner()
+           ^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1846, in inner
+    hook_result = hook(self, args, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 163, in __call__
+    logits = self.router(image_tokens=x).logits # [B, N, 3]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/pengrui/CCFA/QACR/qacr/routing/image_only_router.py", line 53, in forward
+    image_feat = self.image_proj(image_tokens)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 134, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: expected mat1 and mat2 to have the same dtype, but got: float != c10::Half
+===========================================
+Evaluating: checkpoints/low_res_g9_vqav2
+2026-03-30 19:37:53,880 INFO Loading VLM from Model/Qwen35-08B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:  19%|█▉        | 89/473 [00:00<00:00, 886.25it/s]Loading weights:  43%|████▎     | 203/473 [00:00<00:00, 1031.98it/s]Loading weights:  65%|██████▍   | 307/473 [00:00<00:00, 1031.09it/s]Loading weights:  99%|█████████▊| 466/473 [00:00<00:00, 1210.18it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 1148.30it/s]
+2026-03-30 19:37:56,286 INFO Loading QACR components from checkpoints/low_res_g9_vqav2/best.pt ...
+2026-03-30 19:37:56,295 INFO Detected Baseline model: low_res
+2026-03-30 19:37:56,327 INFO Parsed grid = 9
+2026-03-30 19:37:56,327 INFO Loading evaluation dataset ...
+2026-03-30 19:37:57,119 INFO Loaded 21435 samples from /data1/pengrui/CCFA/QACR/data/VQAv2/testdev.
+2026-03-30 19:37:57,120 INFO Starting Evaluation ...
+Eval:   0%|          | 0/2680 [00:00<?, ?it/s]Setting `pad_token_id` to `eos_token_id`:248044 for open-end generation.
+A decoder-only architecture is being used, but right-padding was detected! For correct generation results, please set `padding_side='left'` when initializing the tokenizer.
+Eval:   0%|          | 0/2680 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "/data1/pengrui/CCFA/QACR/scripts/eval_qacr_benchmark.py", line 301, in <module>
+    main()
+  File "/data1/pengrui/CCFA/QACR/scripts/eval_qacr_benchmark.py", line 245, in main
+    outputs = model.generate(
+              ^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/generation/utils.py", line 2521, in generate
+    result = decoding_method(
+             ^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/generation/utils.py", line 2714, in _sample
+    outputs = self._prefill(
+              ^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/generation/utils.py", line 3747, in _prefill
+    return self(**model_inputs, return_dict=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/generic.py", line 857, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 2003, in forward
+    outputs = self.model(
+              ^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/generic.py", line 857, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1727, in forward
+    image_outputs: BaseModelOutputWithPooling = self.get_image_features(
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/generic.py", line 857, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1598, in get_image_features
+    vision_output: BaseModelOutputWithPooling = self.visual(
+                                                ^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/generic.py", line 931, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/utils/output_capturing.py", line 248, in wrapper
+    outputs = func(self, *args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 1264, in forward
+    merged_hidden_states = self.merger(hidden_states)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1885, in _call_impl
+    return inner()
+           ^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1846, in inner
+    hook_result = hook(self, args, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 180, in __call__
+    out, _ = self.executor(image_tokens=x, route_probs=route_probs, mode="soft")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data1/pengrui/CCFA/QACR/qacr/vision/multipath_depth.py", line 66, in forward
+    x = self.input_proj(image_tokens)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 134, in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 must have the same dtype, but got Float and Half
+===========================================
+All done! Results saved inside each checkpoint folder as eval_results.json

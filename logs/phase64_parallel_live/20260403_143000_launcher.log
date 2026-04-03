@@ -1,0 +1,11 @@
+[2026-04-03 14:27:57] launching safe multi-gpu evals ...
+[2026-04-03 14:27:57] START pid=1555776 gpu=1 tag=b045_docvqa_a030
+  ckpt=checkpoints/qacr_vqav2_b0.45 dataset=docvqa max_samples=10000
+  batch_size=4 num_workers=2 prefetch_factor=1 alpha=0.30
+  log=logs/phase64_parallel_live/20260403_143000_b045_docvqa_a030.log
+  out=outputs/tmp_eval/phase64_parallel_live/20260403_143000_b045_docvqa_a030.json
+[2026-04-03 14:28:42] START pid=1556779 gpu=0 tag=b035_textvqa_a030
+  ckpt=checkpoints/qacr_vqav2_b0.35 dataset=textvqa max_samples=5000
+  batch_size=4 num_workers=2 prefetch_factor=1 alpha=0.30
+  log=logs/phase64_parallel_live/20260403_143000_b035_textvqa_a030.log
+  out=outputs/tmp_eval/phase64_parallel_live/20260403_143000_b035_textvqa_a030.json

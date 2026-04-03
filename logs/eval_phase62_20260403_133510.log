@@ -1,0 +1,298 @@
+===== Phase 6.2 evaluation started at Fri Apr  3 13:35:10 CST 2026 =====
+DATASETS=textvqa  MAX_SAMPLES=1  BATCH_SIZE=1  NUM_WORKERS=1  DOCVQA_NUM_WORKERS=1  EXECUTOR_OUTPUT_ALPHA=0.30
+==========================================
+=== Dataset: textvqa ===
+==========================================
+--- Batch 1 (textvqa): QACR 0.35 / 0.45 / 0.60 / TokenPruning ---
+[GPU 0] dataset=textvqa ckpt=checkpoints/qacr_vqav2_b0.35
+[GPU 1] dataset=textvqa ckpt=checkpoints/qacr_vqav2_b0.45
+[GPU 2] dataset=textvqa ckpt=checkpoints/qacr_vqav2_b0.60
+[GPU 3] dataset=textvqa ckpt=checkpoints/token_pruning_kr0.45_vqav2
+2026-04-03 13:35:15,917 INFO Loading VLM from Model/Qwen35-08B ...
+2026-04-03 13:35:15,961 INFO Loading VLM from Model/Qwen35-08B ...
+2026-04-03 13:35:15,982 INFO Loading VLM from Model/Qwen35-08B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+2026-04-03 13:35:16,042 INFO Loading VLM from Model/Qwen35-08B ...
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+`torch_dtype` is deprecated! Use `dtype` instead!
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 1/473 [00:00<01:39,  4.74it/s]Loading weights:  36%|███▌      | 171/473 [00:00<00:00, 687.12it/s]Loading weights:  59%|█████▉    | 278/473 [00:00<00:00, 824.78it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:  99%|█████████▊| 466/473 [00:00<00:00, 1177.92it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 917.71it/s] 
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 1/473 [00:00<00:48,  9.83it/s]Loading weights:  10%|▉         | 47/473 [00:00<00:00, 460.80it/s]Loading weights:  14%|█▎        | 65/473 [00:00<00:00, 649.68it/s]Loading weights:  27%|██▋       | 126/473 [00:00<00:00, 731.03it/s]Loading weights:  32%|███▏      | 153/473 [00:00<00:00, 805.10it/s]Loading weights:  35%|███▌      | 167/473 [00:00<00:00, 856.03it/s]Loading weights:  49%|████▉     | 231/473 [00:00<00:00, 875.33it/s]Loading weights:  55%|█████▍    | 259/473 [00:00<00:00, 916.88it/s]Loading weights:  71%|███████▏  | 338/473 [00:00<00:00, 946.42it/s]Loading weights:  57%|█████▋    | 269/473 [00:00<00:00, 893.56it/s]Loading weights:  84%|████████▎ | 395/473 [00:00<00:00, 1090.05it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 965.69it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 1046.88it/s]
+Loading weights:  85%|████████▌ | 404/473 [00:00<00:00, 1068.39it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 1051.37it/s]
+2026-04-03 13:35:18,528 INFO Loading QACR components from checkpoints/qacr_vqav2_b0.35/best.pt ...
+2026-04-03 13:35:18,538 INFO Detected QACR Query-Adaptive model
+2026-04-03 13:35:18,538 INFO Loaded QACR with budget: 0.35
+2026-04-03 13:35:18,564 INFO Override executor_output_alpha = 0.300
+2026-04-03 13:35:18,565 INFO Loading evaluation dataset ...
+2026-04-03 13:35:19,036 INFO Raw dataset loaded: /data1/pengrui/CCFA/QACR/data/textvqa/validation, total=5000
+2026-04-03 13:35:19,042 INFO Loaded 1 samples from /data1/pengrui/CCFA/QACR/data/textvqa/validation (split=eval).
+2026-04-03 13:35:19,042 INFO Starting Evaluation ...
+Eval:   0%|          | 0/1 [00:00<?, ?it/s]2026-04-03 13:35:19,063 INFO Loading QACR components from checkpoints/qacr_vqav2_b0.45/best.pt ...
+2026-04-03 13:35:19,065 INFO Loading QACR components from checkpoints/token_pruning_kr0.45_vqav2/best.pt ...
+2026-04-03 13:35:19,073 INFO Detected QACR Query-Adaptive model
+2026-04-03 13:35:19,073 INFO Loaded QACR with budget: 0.45
+2026-04-03 13:35:19,074 INFO Detected Baseline model: token_pruning
+2026-04-03 13:35:19,098 INFO Loading QACR components from checkpoints/qacr_vqav2_b0.60/best.pt ...
+2026-04-03 13:35:19,108 INFO Detected QACR Query-Adaptive model
+2026-04-03 13:35:19,108 INFO Loaded QACR with budget: 0.6
+2026-04-03 13:35:19,243 INFO Override executor_output_alpha = 0.300
+2026-04-03 13:35:19,246 INFO Override executor_output_alpha = 0.300
+2026-04-03 13:35:19,247 INFO Override executor_output_alpha = 0.300
+2026-04-03 13:35:19,248 INFO Loading evaluation dataset ...
+2026-04-03 13:35:19,249 INFO Loading evaluation dataset ...
+2026-04-03 13:35:19,263 INFO Parsed keep_ratio = 0.45
+2026-04-03 13:35:19,264 INFO Loading evaluation dataset ...
+2026-04-03 13:35:19,741 INFO Raw dataset loaded: /data1/pengrui/CCFA/QACR/data/textvqa/validation, total=5000
+2026-04-03 13:35:19,741 INFO Raw dataset loaded: /data1/pengrui/CCFA/QACR/data/textvqa/validation, total=5000
+2026-04-03 13:35:19,750 INFO Raw dataset loaded: /data1/pengrui/CCFA/QACR/data/textvqa/validation, total=5000
+2026-04-03 13:35:19,751 INFO Loaded 1 samples from /data1/pengrui/CCFA/QACR/data/textvqa/validation (split=eval).
+2026-04-03 13:35:19,752 INFO Starting Evaluation ...
+2026-04-03 13:35:19,752 INFO Loaded 1 samples from /data1/pengrui/CCFA/QACR/data/textvqa/validation (split=eval).
+Eval:   0%|          | 0/1 [00:00<?, ?it/s]2026-04-03 13:35:19,753 INFO Starting Evaluation ...
+Eval:   0%|          | 0/1 [00:00<?, ?it/s]2026-04-03 13:35:19,761 INFO Loaded 1 samples from /data1/pengrui/CCFA/QACR/data/textvqa/validation (split=eval).
+2026-04-03 13:35:19,761 INFO Starting Evaluation ...
+Eval:   0%|          | 0/1 [00:00<?, ?it/s]Eval: 100%|██████████| 1/1 [00:02<00:00,  2.26s/it]Eval: 100%|██████████| 1/1 [00:02<00:00,  2.26s/it]
+2026-04-03 13:35:21,304 INFO 
+========== Benchmark Results ==========
+accuracy: 0.0000
+raw_accuracy: 0.0000
+mean_compute: 0.3497
+mean_skip_ratio: 0.5521
+mean_deep_ratio: 0.2969
+total_evaluated: 1.0000
+=======================================
+2026-04-03 13:35:21,305 INFO Saved detailed results to checkpoints/qacr_vqav2_b0.35/eval_results_textvqa.json
+Eval: 100%|██████████| 1/1 [00:02<00:00,  2.69s/it]Eval: 100%|██████████| 1/1 [00:02<00:00,  2.69s/it]
+2026-04-03 13:35:22,444 INFO 
+========== Benchmark Results ==========
+accuracy: 0.0000
+raw_accuracy: 0.0000
+mean_compute: 0.6000
+mean_skip_ratio: 0.1732
+mean_deep_ratio: 0.4779
+total_evaluated: 1.0000
+=======================================
+2026-04-03 13:35:22,445 INFO Saved detailed results to checkpoints/qacr_vqav2_b0.60/eval_results_textvqa.json
+Eval: 100%|██████████| 1/1 [00:02<00:00,  2.69s/it]Eval: 100%|██████████| 1/1 [00:02<00:00,  2.69s/it]
+2026-04-03 13:35:22,447 INFO 
+========== Benchmark Results ==========
+accuracy: 0.0000
+raw_accuracy: 0.0000
+mean_compute: 0.4498
+mean_skip_ratio: 0.2904
+mean_deep_ratio: 0.3099
+total_evaluated: 1.0000
+=======================================
+2026-04-03 13:35:22,448 INFO Saved detailed results to checkpoints/qacr_vqav2_b0.45/eval_results_textvqa.json
+Eval: 100%|██████████| 1/1 [00:02<00:00,  2.73s/it]Eval: 100%|██████████| 1/1 [00:02<00:00,  2.73s/it]
+2026-04-03 13:35:22,488 INFO 
+========== Benchmark Results ==========
+accuracy: 0.0000
+raw_accuracy: 0.0000
+mean_compute: 0.4500
+mean_skip_ratio: 0.5495
+mean_deep_ratio: 0.4505
+total_evaluated: 1.0000
+=======================================
+2026-04-03 13:35:22,489 INFO Saved detailed results to checkpoints/token_pruning_kr0.45_vqav2/eval_results_textvqa.json
+--- Batch 1 complete (textvqa) ---
+--- Batch 2 (textvqa): ImageOnly / LowRes / FastV / LVPruning ---
+[GPU 0] dataset=textvqa ckpt=checkpoints/image_only_b0.45_vqav2
+[GPU 1] dataset=textvqa ckpt=checkpoints/low_res_g9_vqav2
+[GPU 2] dataset=textvqa sota=fastv
+[GPU 3] dataset=textvqa sota=lvpruning
+2026-04-03 13:35:29,824 INFO Loading VLM from Model/Qwen35-08B ...
+2026-04-03 13:35:29,847 INFO Loading VLM from Model/Qwen35-08B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+2026-04-03 13:35:30,014 INFO Loading VLM from Model/Qwen35-08B ...
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+2026-04-03 13:35:30,025 INFO Loading VLM from Model/Qwen35-08B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+`torch_dtype` is deprecated! Use `dtype` instead!
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 1/473 [00:00<01:06,  7.09it/s]Loading weights:   6%|▌         | 28/473 [00:00<00:01, 274.55it/s]Loading weights:   5%|▍         | 22/473 [00:00<00:02, 215.94it/s]Loading weights:  11%|█         | 51/473 [00:00<00:00, 499.68it/s]Loading weights:  11%|█▏        | 54/473 [00:00<00:01, 246.84it/s]Loading weights:  18%|█▊        | 83/473 [00:00<00:00, 433.30it/s]Loading weights:  20%|█▉        | 94/473 [00:00<00:00, 504.47it/s]Loading weights:  22%|██▏       | 106/473 [00:00<00:00, 494.29it/s]Loading weights:  27%|██▋       | 128/473 [00:00<00:00, 441.34it/s]Loading weights:  33%|███▎      | 156/473 [00:00<00:00, 546.03it/s]Loading weights:  34%|███▍      | 163/473 [00:00<00:00, 582.25it/s]Loading weights:  41%|████      | 195/473 [00:00<00:00, 666.85it/s]Loading weights:  44%|████▎     | 206/473 [00:00<00:00, 543.03it/s]Loading weights:  49%|████▉     | 234/473 [00:00<00:00, 634.46it/s]Loading weights:  52%|█████▏    | 248/473 [00:00<00:00, 682.66it/s]Loading weights:  58%|█████▊    | 273/473 [00:00<00:00, 686.23it/s]Loading weights:  64%|██████▍   | 305/473 [00:00<00:00, 689.58it/s]Loading weights:  71%|███████▏  | 338/473 [00:00<00:00, 777.01it/s]Loading weights:  77%|███████▋  | 362/473 [00:00<00:00, 843.67it/s]Loading weights:  86%|████████▌ | 406/473 [00:00<00:00, 909.10it/s]Loading weights:  94%|█████████▍| 445/473 [00:00<00:00, 917.05it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 808.66it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 828.47it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 781.25it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 679.29it/s]
+2026-04-03 13:35:32,741 INFO Applying FastV patch at layer 3 with keep_ratio 0.45
+2026-04-03 13:35:32,742 INFO Loading evaluation dataset ...
+2026-04-03 13:35:32,751 INFO Applying LVPruning patch with default multi-layer settings
+2026-04-03 13:35:32,751 INFO Loading evaluation dataset ...
+2026-04-03 13:35:32,776 INFO Loading QACR components from checkpoints/image_only_b0.45_vqav2/best.pt ...
+2026-04-03 13:35:32,786 INFO Detected Baseline model: image_only
+2026-04-03 13:35:32,807 INFO Override executor_output_alpha = 0.300
+2026-04-03 13:35:32,813 INFO Parsed budget = 0.45
+2026-04-03 13:35:32,813 INFO Loading evaluation dataset ...
+2026-04-03 13:35:32,834 INFO Loading QACR components from checkpoints/low_res_g9_vqav2/best.pt ...
+2026-04-03 13:35:32,867 INFO Detected Baseline model: low_res
+2026-04-03 13:35:32,889 INFO Override executor_output_alpha = 0.300
+2026-04-03 13:35:32,894 INFO Parsed grid = 9
+2026-04-03 13:35:32,894 INFO Loading evaluation dataset ...
+2026-04-03 13:35:33,195 INFO Raw dataset loaded: /data1/pengrui/CCFA/QACR/data/textvqa/validation, total=5000
+2026-04-03 13:35:33,203 INFO Loaded 1 samples from /data1/pengrui/CCFA/QACR/data/textvqa/validation (split=eval).
+2026-04-03 13:35:33,203 INFO Starting Evaluation ...
+2026-04-03 13:35:33,203 INFO Raw dataset loaded: /data1/pengrui/CCFA/QACR/data/textvqa/validation, total=5000
+PATCHING LLM of type: Qwen3_5TextModel
+Eval fastv:   0%|          | 0/1 [00:00<?, ?it/s]2026-04-03 13:35:33,209 INFO Loaded 1 samples from /data1/pengrui/CCFA/QACR/data/textvqa/validation (split=eval).
+2026-04-03 13:35:33,209 INFO Starting Evaluation ...
+PATCHING LLM of type: Qwen3_5TextModel
+Eval lvpruning:   0%|          | 0/1 [00:00<?, ?it/s]2026-04-03 13:35:33,265 INFO Raw dataset loaded: /data1/pengrui/CCFA/QACR/data/textvqa/validation, total=5000
+2026-04-03 13:35:33,272 INFO Loaded 1 samples from /data1/pengrui/CCFA/QACR/data/textvqa/validation (split=eval).
+2026-04-03 13:35:33,272 INFO Starting Evaluation ...
+Eval:   0%|          | 0/1 [00:00<?, ?it/s]2026-04-03 13:35:33,371 INFO Raw dataset loaded: /data1/pengrui/CCFA/QACR/data/textvqa/validation, total=5000
+2026-04-03 13:35:33,379 INFO Loaded 1 samples from /data1/pengrui/CCFA/QACR/data/textvqa/validation (split=eval).
+2026-04-03 13:35:33,379 INFO Starting Evaluation ...
+Eval:   0%|          | 0/1 [00:00<?, ?it/s]Eval lvpruning: 100%|██████████| 1/1 [00:02<00:00,  2.41s/it]Eval lvpruning: 100%|██████████| 1/1 [00:02<00:00,  2.41s/it]
+2026-04-03 13:35:35,616 INFO 
+========== Benchmark Results ==========
+accuracy: 0.0000
+raw_accuracy: 0.0000
+mean_compute: 0.4500
+total_evaluated: 1.0000
+=======================================
+2026-04-03 13:35:35,617 INFO Saved detailed results to checkpoints/sota_eval/lvpruning_textvqa_results.json
+Eval: 100%|██████████| 1/1 [00:02<00:00,  2.38s/it]Eval: 100%|██████████| 1/1 [00:02<00:00,  2.38s/it]
+2026-04-03 13:35:35,652 INFO 
+========== Benchmark Results ==========
+accuracy: 0.0000
+raw_accuracy: 0.0000
+mean_compute: 0.5424
+mean_skip_ratio: 0.2096
+mean_deep_ratio: 0.4089
+total_evaluated: 1.0000
+=======================================
+2026-04-03 13:35:35,653 INFO Saved detailed results to checkpoints/image_only_b0.45_vqav2/eval_results_textvqa.json
+Eval: 100%|██████████| 1/1 [00:02<00:00,  2.29s/it]Eval: 100%|██████████| 1/1 [00:02<00:00,  2.29s/it]
+2026-04-03 13:35:35,667 INFO 
+========== Benchmark Results ==========
+accuracy: 0.0000
+raw_accuracy: 0.0000
+mean_compute: 0.4133
+mean_skip_ratio: 0.0000
+mean_deep_ratio: 1.0000
+total_evaluated: 1.0000
+=======================================
+2026-04-03 13:35:35,668 INFO Saved detailed results to checkpoints/low_res_g9_vqav2/eval_results_textvqa.json
+Eval fastv: 100%|██████████| 1/1 [00:02<00:00,  2.49s/it]Eval fastv: 100%|██████████| 1/1 [00:02<00:00,  2.49s/it]
+2026-04-03 13:35:35,695 INFO 
+========== Benchmark Results ==========
+accuracy: 0.0000
+raw_accuracy: 0.0000
+mean_compute: 0.4500
+total_evaluated: 1.0000
+=======================================
+2026-04-03 13:35:35,696 INFO Saved detailed results to checkpoints/sota_eval/fastv_textvqa_results.json
+Layer 0 forward: seq_len=815
+Layer 1 forward: seq_len=815
+Layer 2 forward: seq_len=815
+Layer 3 forward: seq_len=815
+Layer 4 forward: seq_len=815
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=815
+Layer 1 forward: seq_len=815
+Layer 2 forward: seq_len=815
+Layer 3 forward: seq_len=815
+Layer 4 forward: seq_len=815
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+--- Batch 2 complete (textvqa) ---
+--- Batch 3 (textvqa): Original baseline ---
+[GPU 0] dataset=textvqa sota=original
+2026-04-03 13:35:43,066 INFO Loading VLM from Model/Qwen35-08B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   9%|▉         | 42/473 [00:00<00:01, 412.24it/s]Loading weights:  33%|███▎      | 156/473 [00:00<00:00, 831.42it/s]Loading weights:  54%|█████▎    | 254/473 [00:00<00:00, 897.39it/s]Loading weights:  73%|███████▎  | 344/473 [00:00<00:00, 496.63it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 690.42it/s]
+2026-04-03 13:35:45,575 INFO No patch applied, running original model.
+2026-04-03 13:35:45,575 INFO Loading evaluation dataset ...
+2026-04-03 13:35:46,040 INFO Raw dataset loaded: /data1/pengrui/CCFA/QACR/data/textvqa/validation, total=5000
+2026-04-03 13:35:46,051 INFO Loaded 1 samples from /data1/pengrui/CCFA/QACR/data/textvqa/validation (split=eval).
+2026-04-03 13:35:46,052 INFO Starting Evaluation ...
+Eval original:   0%|          | 0/1 [00:00<?, ?it/s]Eval original: 100%|██████████| 1/1 [00:02<00:00,  2.56s/it]Eval original: 100%|██████████| 1/1 [00:02<00:00,  2.56s/it]
+2026-04-03 13:35:48,612 INFO 
+========== Benchmark Results ==========
+accuracy: 0.0000
+raw_accuracy: 0.0000
+mean_compute: 1.0000
+total_evaluated: 1.0000
+=======================================
+2026-04-03 13:35:48,613 INFO Saved detailed results to checkpoints/sota_eval/original_textvqa_results.json
+--- Batch 3 complete (textvqa) ---
+==========================================
+Phase 6.2 evaluation done at Fri Apr  3 13:35:49 CST 2026!
+Log file: logs/eval_phase62_20260403_133510.log
+==========================================

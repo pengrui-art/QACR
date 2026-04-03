@@ -1,0 +1,28 @@
+method,method_key,dataset,accuracy,raw_accuracy,mean_compute,total_evaluated,source_path
+FastV,fastv,docvqa,0.6758272574312956,0.8351093662366798,0.44999999999999435,5349,checkpoints/sota_eval/fastv_docvqa_results.json
+ImageOnly@0.45,image_only,docvqa,0.01962983735277622,0.01962983735277622,0.3905776855120549,5349,checkpoints/image_only_b0.45_vqav2/eval_results_docvqa.json
+LVPruning,lvpruning,docvqa,0.6758272574312956,0.8351093662366798,0.44999999999999435,5349,checkpoints/sota_eval/lvpruning_docvqa_results.json
+LowRes-9x9,low_res,docvqa,0.01962983735277622,0.01944288652084502,0.4132653061224474,5349,checkpoints/low_res_g9_vqav2/eval_results_docvqa.json
+Original,original,docvqa,0.6758272574312956,0.8351093662366798,1.0,5349,checkpoints/sota_eval/original_docvqa_results.json
+QACR b0.35,qacr_b035,docvqa,0.020190689848569827,0.020190689848569827,0.34995700866624696,5349,checkpoints/qacr_vqav2_b0.35/eval_results_docvqa.json
+QACR b0.45,qacr_b045,docvqa,0.11983548326790054,0.12226584408300617,0.44102075449171013,5349,checkpoints/qacr_vqav2_b0.45/eval_results_docvqa.json
+QACR b0.60,qacr_b060,docvqa,0.020003739016638624,0.020003739016638624,0.5928349815299297,5349,checkpoints/qacr_vqav2_b0.60/eval_results_docvqa.json
+TokenPruning@0.45,token_pruning,docvqa,0.01607777154608338,0.01607777154608338,0.44999999999999435,5349,checkpoints/token_pruning_kr0.45_vqav2/eval_results_docvqa.json
+FastV,fastv,mmmu,0.3422222222222222,0.3422222222222222,0.4500000000000007,900,checkpoints/sota_eval/fastv_mmmu_results.json
+ImageOnly@0.45,image_only,mmmu,0.3511111111111111,0.3511111111111111,0.5288856999079387,900,checkpoints/image_only_b0.45_vqav2/eval_results_mmmu.json
+LVPruning,lvpruning,mmmu,0.3422222222222222,0.3422222222222222,0.4500000000000007,900,checkpoints/sota_eval/lvpruning_mmmu_results.json
+LowRes-9x9,low_res,mmmu,0.35444444444444445,0.35444444444444445,0.41326530612244805,900,checkpoints/low_res_g9_vqav2/eval_results_mmmu.json
+Original,original,mmmu,0.3422222222222222,0.3422222222222222,1.0,900,checkpoints/sota_eval/original_mmmu_results.json
+QACR b0.35,qacr_b035,mmmu,0.3233333333333333,0.3233333333333333,0.34948464340633817,900,checkpoints/qacr_vqav2_b0.35/eval_results_mmmu.json
+QACR b0.45,qacr_b045,mmmu,0.30444444444444446,0.30444444444444446,0.40417693667941623,900,checkpoints/qacr_vqav2_b0.45/eval_results_mmmu.json
+QACR b0.60,qacr_b060,mmmu,0.3422222222222222,0.3422222222222222,0.5491406522856819,900,checkpoints/qacr_vqav2_b0.60/eval_results_mmmu.json
+TokenPruning@0.45,token_pruning,mmmu,0.31777777777777777,0.31777777777777777,0.4500000000000007,900,checkpoints/token_pruning_kr0.45_vqav2/eval_results_mmmu.json
+FastV,fastv,textvqa,0.6688666666666669,0.693066666666667,0.44999999999999474,5000,checkpoints/sota_eval/fastv_textvqa_results.json [from existing summary] [from existing summary]
+ImageOnly@0.45,image_only,textvqa,0.059533333333333396,0.059733333333333395,0.40709128389358523,5000,checkpoints/image_only_b0.45_vqav2/eval_results_textvqa.json [from existing summary] [from existing summary]
+LVPruning,lvpruning,textvqa,0.6688666666666669,0.693066666666667,0.44999999999999474,5000,checkpoints/sota_eval/lvpruning_textvqa_results.json [from existing summary] [from existing summary]
+LowRes-9x9,low_res,textvqa,0.07293333333333334,0.07313333333333334,0.41326530612244594,5000,checkpoints/low_res_g9_vqav2/eval_results_textvqa.json [from existing summary] [from existing summary]
+Original,original,textvqa,0.6688666666666669,0.693066666666667,1.0,5000,checkpoints/sota_eval/original_textvqa_results.json [from existing summary] [from existing summary]
+QACR b0.35,qacr_b035,textvqa,0.07633333333333331,0.07633333333333331,0.3498106994152069,5000,checkpoints/qacr_vqav2_b0.35/eval_results_textvqa.json [from existing summary] [from existing summary]
+QACR b0.45,qacr_b045,textvqa,0.2646666666666667,0.25639999999999996,0.4481513639450073,5000,checkpoints/qacr_vqav2_b0.45/eval_results_textvqa.json
+QACR b0.60,qacr_b060,textvqa,0.06926666666666667,0.06946666666666668,0.5990379532814026,5000,checkpoints/qacr_vqav2_b0.60/eval_results_textvqa.json [from existing summary] [from existing summary]
+TokenPruning@0.45,token_pruning,textvqa,0.07139999999999998,0.07159999999999998,0.44999999999999474,5000,checkpoints/token_pruning_kr0.45_vqav2/eval_results_textvqa.json [from existing summary] [from existing summary]

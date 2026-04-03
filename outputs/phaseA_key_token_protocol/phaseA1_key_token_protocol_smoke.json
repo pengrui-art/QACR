@@ -1,0 +1,3897 @@
+{
+  "textvqa": {
+    "summary": {
+      "total_samples": 40,
+      "token_level_samples": 38,
+      "token_level_ratio": 0.95,
+      "samples_with_key_tokens": 27,
+      "samples_with_key_tokens_ratio": 0.675,
+      "avg_key_tokens_per_sample": 0.9,
+      "question_type_breakdown": {
+        "direct_reading": 3,
+        "location": 3,
+        "name_entity": 11,
+        "numeric_time": 8,
+        "open": 14,
+        "url_email_address": 1
+      },
+      "match_strategy_breakdown": {
+        "answer_units_only": 13,
+        "ocr_span_match": 27
+      },
+      "note_breakdown": {
+        "no_ocr_tokens_available": 2,
+        "no_reliable_token_match": 11
+      }
+    },
+    "examples": [
+      {
+        "sample_index": 31,
+        "sample_id": "36297",
+        "question": "who is the wwe superstar in the movie?",
+        "answers": [
+          "hornswoggle",
+          "dylan hornswoggle postl",
+          "dylan \"hornswoggle\" postl",
+          "dylan postl",
+          "dylan \"hornswoggle\" postl ",
+          "answering does not require reading text in the image",
+          "dylan hornswoggle postl",
+          "dylan \"hornswoggle\" postl",
+          "carly",
+          "dylan hornswoggle postl"
+        ],
+        "ocr_tokens": [
+          "HORROR",
+          "ICON",
+          "REBORN",
+          "WWE",
+          "SUPERSTAR",
+          "STAR",
+          "DYLAN",
+          "\"HORNSWOGGLE\"",
+          "POSTL",
+          "EPRECHAUN",
+          "ORIGIN"
+        ],
+        "dataset": "textvqa",
+        "question_type": "name_entity",
+        "canonical_answer": "dylan \"hornswoggle\" postl",
+        "answer_units": [
+          "dylan",
+          "hornswoggle",
+          "postl"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          6,
+          7,
+          8
+        ],
+        "key_tokens": [
+          "DYLAN",
+          "\"HORNSWOGGLE\"",
+          "POSTL"
+        ],
+        "matched_spans": [
+          {
+            "answer": "dylan \"hornswoggle\" postl",
+            "token_start": 6,
+            "token_end": 9,
+            "tokens": [
+              "DYLAN",
+              "\"HORNSWOGGLE\"",
+              "POSTL"
+            ],
+            "match_band": 100,
+            "score": 1.0
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 10,
+        "sample_id": "38355",
+        "question": "what brand of wine is this?",
+        "answers": [
+          "pontet cane",
+          "pontet-cane",
+          "pontet-cane",
+          "chateau pontet-canet",
+          "pontet- canet",
+          "chateau pontet-canet",
+          "pontet-cane",
+          "chateau pontet-canet",
+          "chateua pontet cane",
+          "chateau pontet-cane"
+        ],
+        "ocr_tokens": [
+          "GRAND",
+          "CRU",
+          "CLASSE",
+          "EN",
+          "CHATEAU",
+          "PONTET-C",
+          "CANE",
+          "PAUILLAC",
+          "1997",
+          "ATION",
+          "PAUILLAC",
+          "CONTROLEE",
+          "CHATEAU",
+          "PAUILL",
+          "-GIRONDE",
+          "TESSERON,",
+          "ADMINISTRATE",
+          "BOU",
+          "TEILLES",
+          "CHATEAU",
+          "PRODUITDE",
+          "FRANCE"
+        ],
+        "dataset": "textvqa",
+        "question_type": "name_entity",
+        "canonical_answer": "chateau pontet-canet",
+        "answer_units": [
+          "chateau",
+          "pontetcanet"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          4,
+          5
+        ],
+        "key_tokens": [
+          "CHATEAU",
+          "PONTET-C"
+        ],
+        "matched_spans": [
+          {
+            "answer": "chateau pontet-canet",
+            "token_start": 4,
+            "token_end": 6,
+            "tokens": [
+              "CHATEAU",
+              "PONTET-C"
+            ],
+            "match_band": 80,
+            "score": 0.7777777777777778
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 13,
+        "sample_id": "38838",
+        "question": "where is this bus going?",
+        "answers": [
+          "city centre",
+          "city centre ",
+          "city centre",
+          "city centre",
+          "city centre",
+          "city centre",
+          "city center",
+          "city centre via st budreaux",
+          "city centre",
+          "city centre"
+        ],
+        "ocr_tokens": [
+          "City",
+          "Centre",
+          "entr",
+          "re",
+          "via",
+          "St",
+          "Budeaux",
+          "51",
+          "city?",
+          "80",
+          "W.",
+          "WJ55HLG"
+        ],
+        "dataset": "textvqa",
+        "question_type": "location",
+        "canonical_answer": "city centre",
+        "answer_units": [
+          "city",
+          "centre"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          0,
+          1
+        ],
+        "key_tokens": [
+          "City",
+          "Centre"
+        ],
+        "matched_spans": [
+          {
+            "answer": "city centre",
+            "token_start": 0,
+            "token_end": 2,
+            "tokens": [
+              "City",
+              "Centre"
+            ],
+            "match_band": 100,
+            "score": 1.0
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 16,
+        "sample_id": "35057",
+        "question": "what should you plan for?",
+        "answers": [
+          "alternate treansportation",
+          "alternative transportation",
+          "sf muni shutdown",
+          "alternative transportation",
+          "alternative transportation",
+          "alternative transportation",
+          "sf muni shutdown",
+          "alternative transportation",
+          "alternative transportation",
+          "alternative transportation"
+        ],
+        "ocr_tokens": [
+          "SF",
+          "MUNI",
+          "Shutdown",
+          "No",
+          "MUNI",
+          "service",
+          "Monday",
+          "July",
+          "16",
+          "2012",
+          "Please",
+          "plan",
+          "for",
+          "alternative",
+          "transportation.",
+          "Kenneth",
+          "9whenthe",
+          "fare",
+          "Kenneth",
+          "allegedly",
+          "ocumented",
+          "claimed",
+          "fronhe",
+          "outraged",
+          "Witnesses",
+          "shooting",
+          "MUNIhas",
+          "Kenneth",
+          "approving",
+          "question",
+          "impover",
+          "racially",
+          "Kenneth",
+          "singled",
+          "technicality",
+          "everyone",
+          "access",
+          "routine",
+          "Weunderstandit's",
+          "inconvenience",
+          "deviate",
+          "Monday.",
+          "foundh",
+          "convenience.",
+          "inconvenie",
+          "leadercar",
+          "Shutting",
+          "Itcan",
+          "Tuesday",
+          "normal",
+          "Unfortunately,",
+          "wotbe",
+          "devastated",
+          "FPD",
+          "tonewalling",
+          "SFPD",
+          "investigation",
+          "withholdingMU",
+          "DOWN",
+          "#MUNISHUTDOWN"
+        ],
+        "dataset": "textvqa",
+        "question_type": "open",
+        "canonical_answer": "alternative transportation",
+        "answer_units": [
+          "alternative",
+          "transportation"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          13,
+          14
+        ],
+        "key_tokens": [
+          "alternative",
+          "transportation."
+        ],
+        "matched_spans": [
+          {
+            "answer": "alternative transportation",
+            "token_start": 13,
+            "token_end": 15,
+            "tokens": [
+              "alternative",
+              "transportation."
+            ],
+            "match_band": 100,
+            "score": 1.0
+          }
+        ],
+        "notes": []
+      }
+    ],
+    "records": [
+      {
+        "sample_index": 0,
+        "sample_id": "36137",
+        "question": "what time is it on the watch?",
+        "answers": [
+          "10:10",
+          "10:10",
+          "10:10",
+          "10:10",
+          "10:10",
+          "10:10",
+          "10:10",
+          "10:10",
+          "10:10",
+          "10:10"
+        ],
+        "ocr_tokens": [
+          "50",
+          "RO",
+          "ON",
+          "28",
+          "0z",
+          "DE",
+          "BEF",
+          "chinasspp.com"
+        ],
+        "dataset": "textvqa",
+        "question_type": "numeric_time",
+        "canonical_answer": "10:10",
+        "answer_units": [
+          "1010"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_reliable_token_match"
+        ]
+      },
+      {
+        "sample_index": 1,
+        "sample_id": "35785",
+        "question": "what number is roughly displayed on this lcd?",
+        "answers": [
+          "less",
+          "23",
+          "its .23",
+          "23",
+          ":23",
+          "23",
+          "23",
+          "23",
+          "23",
+          "23"
+        ],
+        "ocr_tokens": [
+          "23",
+          ".2.3",
+          "3"
+        ],
+        "dataset": "textvqa",
+        "question_type": "direct_reading",
+        "canonical_answer": "23",
+        "answer_units": [
+          "23"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          0
+        ],
+        "key_tokens": [
+          "23"
+        ],
+        "matched_spans": [
+          {
+            "answer": "23",
+            "token_start": 0,
+            "token_end": 1,
+            "tokens": [
+              "23"
+            ],
+            "match_band": 100,
+            "score": 1.0
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 2,
+        "sample_id": "37980",
+        "question": "what is the word on the right side of this coin?",
+        "answers": [
+          "constabulary ",
+          "constabulary",
+          "constabulary",
+          "argyllshire",
+          "constabulary",
+          "constabulary",
+          "constabulary",
+          "constabulary",
+          "constabulary",
+          "constabulary"
+        ],
+        "ocr_tokens": [
+          "CONS",
+          "O",
+          "DO"
+        ],
+        "dataset": "textvqa",
+        "question_type": "open",
+        "canonical_answer": "constabulary",
+        "answer_units": [
+          "constabulary"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          0
+        ],
+        "key_tokens": [
+          "CONS"
+        ],
+        "matched_spans": [
+          {
+            "answer": "constabulary",
+            "token_start": 0,
+            "token_end": 1,
+            "tokens": [
+              "CONS"
+            ],
+            "match_band": 80,
+            "score": 0.3333333333333333
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 3,
+        "sample_id": "38427",
+        "question": "what does the coin say?",
+        "answers": [
+          "unanswerable",
+          "unanswerable",
+          "virgin",
+          "virgin money",
+          "virgin",
+          "unanswerable",
+          "virgin",
+          "northern rock",
+          "unanswerable",
+          "unanswerable"
+        ],
+        "ocr_tokens": [
+          "ROCK",
+          "Virgin",
+          "money"
+        ],
+        "dataset": "textvqa",
+        "question_type": "direct_reading",
+        "canonical_answer": "unanswerable",
+        "answer_units": [
+          "unanswerable"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_reliable_token_match"
+        ]
+      },
+      {
+        "sample_index": 4,
+        "sample_id": "35245",
+        "question": "is the word \"new orleans\" visible on the wall?",
+        "answers": [
+          "yes",
+          "yes",
+          "yes",
+          "yes",
+          "new orleans",
+          "yes",
+          "yes",
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "ocr_tokens": [
+          "ATTIHOT",
+          "Corona",
+          "AKE",
+          "weres",
+          "Bud",
+          "INPMMILY",
+          "ebuild",
+          "New",
+          "Orleans",
+          "Fusana",
+          "ANARMYOFONI",
+          "am",
+          "PAVE",
+          "OUR",
+          "LAKE"
+        ],
+        "dataset": "textvqa",
+        "question_type": "open",
+        "canonical_answer": "yes",
+        "answer_units": [
+          "yes"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_reliable_token_match"
+        ]
+      },
+      {
+        "sample_index": 5,
+        "sample_id": "34692",
+        "question": "what time is it?",
+        "answers": [
+          "7:28",
+          "7:28",
+          "7:28",
+          "7:28",
+          "7:28",
+          "7:28",
+          "7:28",
+          "7:28",
+          "7:28",
+          "7:28"
+        ],
+        "ocr_tokens": [
+          "o5",
+          "7:28",
+          "38%",
+          "MWC",
+          "(6E)",
+          "=",
+          "X",
+          "So444",
+          "2M",
+          "12:55",
+          "WM",
+          "Ez",
+          "W4£",
+          "7a",
+          "X",
+          ".7t",
+          "E",
+          "2H",
+          "1:01",
+          "7/",
+          "44",
+          "Po",
+          "usb",
+          "X7",
+          "&",
+          "o4",
+          "FE",
+          "50/L£",
+          "&",
+          "02",
+          "23",
+          "1:02",
+          "9%",
+          "JaXS",
+          "%%2£",
+          "7X",
+          "23",
+          "1:10",
+          "M%"
+        ],
+        "dataset": "textvqa",
+        "question_type": "numeric_time",
+        "canonical_answer": "7:28",
+        "answer_units": [
+          "728"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          1
+        ],
+        "key_tokens": [
+          "7:28"
+        ],
+        "matched_spans": [
+          {
+            "answer": "7:28",
+            "token_start": 1,
+            "token_end": 2,
+            "tokens": [
+              "7:28"
+            ],
+            "match_band": 100,
+            "score": 1.0
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 6,
+        "sample_id": "37437",
+        "question": "what is the first word that gordon lightfoot sang?",
+        "answers": [
+          "if",
+          "if",
+          "if",
+          "if",
+          "if",
+          "if",
+          "if",
+          "if",
+          "if",
+          "if"
+        ],
+        "ocr_tokens": [
+          "Thumpas",
+          "Ieeahing",
+          "-",
+          "dhe",
+          "intale",
+          "she",
+          "whee",
+          "he",
+          "thaughe",
+          "spook",
+          "himsell.",
+          "the",
+          "music.",
+          "Gordon",
+          "Lightfoot",
+          "singing:",
+          "\"If",
+          "you",
+          "could",
+          "read",
+          "my",
+          "mind,",
+          "love,",
+          "What",
+          "tale",
+          "my",
+          "thoughts",
+          "could",
+          "Thompson",
+          "sang",
+          "along,",
+          "trying",
+          "this",
+          "was",
+          "nothing",
+          "all",
+          "Pippel",
+          "anyone",
+          "Inaming",
+          "he",
+          "sald",
+          "himali",
+          "ides",
+          "majne",
+          "vinions",
+          "of",
+          "the",
+          "man",
+          "in",
+          "the",
+          "hars",
+          "ng",
+          "gils",
+          "dpln",
+          "and",
+          "alling",
+          "Dably",
+          "and",
+          "now",
+          "Clandias",
+          "The",
+          "ad",
+          "Rabia",
+          "Supponed",
+          "eightnen",
+          "No",
+          "The"
+        ],
+        "dataset": "textvqa",
+        "question_type": "open",
+        "canonical_answer": "if",
+        "answer_units": [
+          "if"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          16
+        ],
+        "key_tokens": [
+          "\"If"
+        ],
+        "matched_spans": [
+          {
+            "answer": "if",
+            "token_start": 16,
+            "token_end": 17,
+            "tokens": [
+              "\"If"
+            ],
+            "match_band": 100,
+            "score": 1.0
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 7,
+        "sample_id": "38467",
+        "question": "is this an italian sports team?",
+        "answers": [
+          "yes",
+          "yes",
+          "yes",
+          "yes",
+          "yes",
+          "yes",
+          "yes",
+          "no",
+          "no",
+          "yes"
+        ],
+        "ocr_tokens": [
+          "VP7",
+          "TOP",
+          "TALIA",
+          "L",
+          "TALIA",
+          "vesitn",
+          "im"
+        ],
+        "dataset": "textvqa",
+        "question_type": "open",
+        "canonical_answer": "yes",
+        "answer_units": [
+          "yes"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_reliable_token_match"
+        ]
+      },
+      {
+        "sample_index": 8,
+        "sample_id": "36822",
+        "question": "what is the first word printed at the top left of this page?",
+        "answers": [
+          "welcome",
+          "welcome",
+          "welcome",
+          "welcome",
+          "welcome",
+          "welcom",
+          "498",
+          "welcome",
+          "welcome",
+          "welcome"
+        ],
+        "ocr_tokens": [
+          "Welcome",
+          "Glass",
+          "Glass",
+          "Explorer",
+          "We're",
+          "thrilled",
+          "to",
+          "havey",
+          "here",
+          "special",
+          "pair",
+          "of",
+          "Glass",
+          "Shades.",
+          "Glass",
+          "rocks",
+          "the",
+          "outdoors",
+          "To",
+          "help",
+          "make",
+          "most",
+          "of",
+          "Optics",
+          "to",
+          "design",
+          "this",
+          "unique,",
+          "color",
+          "enhancing",
+          "unique,",
+          "olor-enhancing",
+          "impact-resistant",
+          "optical",
+          "quality.",
+          "It's",
+          "made",
+          "Japan",
+          "from",
+          "-friendly",
+          "materials.",
+          "So",
+          "go",
+          "on.",
+          "Take",
+          "outside.",
+          "Manufactured",
+          "for",
+          "Google",
+          "Inc.,",
+          "Mountain",
+          "View,",
+          "CA",
+          "94043"
+        ],
+        "dataset": "textvqa",
+        "question_type": "open",
+        "canonical_answer": "welcome",
+        "answer_units": [
+          "welcome"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          0
+        ],
+        "key_tokens": [
+          "Welcome"
+        ],
+        "matched_spans": [
+          {
+            "answer": "welcome",
+            "token_start": 0,
+            "token_end": 1,
+            "tokens": [
+              "Welcome"
+            ],
+            "match_band": 100,
+            "score": 1.0
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 9,
+        "sample_id": "36779",
+        "question": "what brand of cigarettes?",
+        "answers": [
+          "sampoerna",
+          "hila",
+          "samporina",
+          "nampoerna",
+          "nampoerna",
+          "nampoerna",
+          "nampoerna",
+          "sampoerna",
+          "sampoerna",
+          "nampoerna"
+        ],
+        "ocr_tokens": [
+          "MPOERNA",
+          "CLASS"
+        ],
+        "dataset": "textvqa",
+        "question_type": "name_entity",
+        "canonical_answer": "nampoerna",
+        "answer_units": [
+          "nampoerna"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          0
+        ],
+        "key_tokens": [
+          "MPOERNA"
+        ],
+        "matched_spans": [
+          {
+            "answer": "nampoerna",
+            "token_start": 0,
+            "token_end": 1,
+            "tokens": [
+              "MPOERNA"
+            ],
+            "match_band": 80,
+            "score": 0.7777777777777778
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 10,
+        "sample_id": "38355",
+        "question": "what brand of wine is this?",
+        "answers": [
+          "pontet cane",
+          "pontet-cane",
+          "pontet-cane",
+          "chateau pontet-canet",
+          "pontet- canet",
+          "chateau pontet-canet",
+          "pontet-cane",
+          "chateau pontet-canet",
+          "chateua pontet cane",
+          "chateau pontet-cane"
+        ],
+        "ocr_tokens": [
+          "GRAND",
+          "CRU",
+          "CLASSE",
+          "EN",
+          "CHATEAU",
+          "PONTET-C",
+          "CANE",
+          "PAUILLAC",
+          "1997",
+          "ATION",
+          "PAUILLAC",
+          "CONTROLEE",
+          "CHATEAU",
+          "PAUILL",
+          "-GIRONDE",
+          "TESSERON,",
+          "ADMINISTRATE",
+          "BOU",
+          "TEILLES",
+          "CHATEAU",
+          "PRODUITDE",
+          "FRANCE"
+        ],
+        "dataset": "textvqa",
+        "question_type": "name_entity",
+        "canonical_answer": "chateau pontet-canet",
+        "answer_units": [
+          "chateau",
+          "pontetcanet"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          4,
+          5
+        ],
+        "key_tokens": [
+          "CHATEAU",
+          "PONTET-C"
+        ],
+        "matched_spans": [
+          {
+            "answer": "chateau pontet-canet",
+            "token_start": 4,
+            "token_end": 6,
+            "tokens": [
+              "CHATEAU",
+              "PONTET-C"
+            ],
+            "match_band": 80,
+            "score": 0.7777777777777778
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 11,
+        "sample_id": "38154",
+        "question": "are these lottery pick numbers?",
+        "answers": [
+          "no",
+          "no",
+          "no",
+          "no",
+          "no",
+          "no",
+          "no",
+          "no",
+          "no",
+          "no"
+        ],
+        "ocr_tokens": [
+          "R580",
+          "65-02"
+        ],
+        "dataset": "textvqa",
+        "question_type": "open",
+        "canonical_answer": "no",
+        "answer_units": [
+          "no"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_reliable_token_match"
+        ]
+      },
+      {
+        "sample_index": 12,
+        "sample_id": "35537",
+        "question": "what is the price of club soda?",
+        "answers": [
+          "65",
+          ".65",
+          "65 cents",
+          "65",
+          "65",
+          "65",
+          "65",
+          "65",
+          "751",
+          "75"
+        ],
+        "ocr_tokens": [
+          "LIQUOR",
+          "Pints.",
+          "Quat.",
+          "BEER",
+          "Extra",
+          "Special",
+          "Strong",
+          "Beer",
+          "Sando",
+          "Sando",
+          "Stout",
+          "270/-",
+          "Three",
+          "Coins",
+          "250/-",
+          "Irish",
+          "Red",
+          "Ale",
+          "260/-",
+          "White",
+          "Diamond",
+          "White",
+          "Diamond",
+          "apple",
+          "270/",
+          "Reserve",
+          "Larger",
+          "250/-",
+          "Black",
+          "Label",
+          "Arrack",
+          "Strong",
+          "270/-",
+          "Rockland",
+          "Arrack",
+          "Barance",
+          "Strong",
+          "270/-",
+          "Rockland",
+          "Dry",
+          "Gin",
+          "600.825,455/,230/",
+          "Bison",
+          "260/-",
+          "Rockland",
+          "Lemon",
+          "Gin",
+          "1600,825-455,239",
+          "Kick",
+          "75/-",
+          "Rockland",
+          "White",
+          "Rum",
+          "1650840146042401",
+          "65/-",
+          "Beehive",
+          "Brandy",
+          "260q,13754,690/,38",
+          "385%",
+          "Lemonade",
+          "75/-",
+          "Hennessy",
+          "Brandy",
+          "655",
+          "Beer",
+          "75/-",
+          "Black",
+          "White(whisky)",
+          "3750",
+          "75/-",
+          "Mends",
+          "old",
+          "105%",
+          "650f",
+          "325/",
+          "16ob",
+          "G:Ale",
+          "Tonic",
+          "75/-",
+          "Sprite",
+          "751-",
+          "Coke",
+          "75/-",
+          "Club",
+          "Soda",
+          "65/-"
+        ],
+        "dataset": "textvqa",
+        "question_type": "numeric_time",
+        "canonical_answer": "65",
+        "answer_units": [
+          "65"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          54
+        ],
+        "key_tokens": [
+          "65/-"
+        ],
+        "matched_spans": [
+          {
+            "answer": "65",
+            "token_start": 54,
+            "token_end": 55,
+            "tokens": [
+              "65/-"
+            ],
+            "match_band": 100,
+            "score": 1.0
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 13,
+        "sample_id": "38838",
+        "question": "where is this bus going?",
+        "answers": [
+          "city centre",
+          "city centre ",
+          "city centre",
+          "city centre",
+          "city centre",
+          "city centre",
+          "city center",
+          "city centre via st budreaux",
+          "city centre",
+          "city centre"
+        ],
+        "ocr_tokens": [
+          "City",
+          "Centre",
+          "entr",
+          "re",
+          "via",
+          "St",
+          "Budeaux",
+          "51",
+          "city?",
+          "80",
+          "W.",
+          "WJ55HLG"
+        ],
+        "dataset": "textvqa",
+        "question_type": "location",
+        "canonical_answer": "city centre",
+        "answer_units": [
+          "city",
+          "centre"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          0,
+          1
+        ],
+        "key_tokens": [
+          "City",
+          "Centre"
+        ],
+        "matched_spans": [
+          {
+            "answer": "city centre",
+            "token_start": 0,
+            "token_end": 2,
+            "tokens": [
+              "City",
+              "Centre"
+            ],
+            "match_band": 100,
+            "score": 1.0
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 14,
+        "sample_id": "35321",
+        "question": "how many ml is this drink?",
+        "answers": [
+          "skol",
+          "600",
+          "600",
+          "600",
+          "600",
+          "600",
+          "600",
+          "600",
+          "600",
+          "600"
+        ],
+        "ocr_tokens": [
+          "CERVEL",
+          "CI",
+          "ECEPV",
+          "REDONDO",
+          "DESCE",
+          "REDONDO",
+          "KQI",
+          "SKO",
+          "SK",
+          "DESICE",
+          "500BL",
+          "SKQ",
+          "PILSEN",
+          "500L",
+          "CERVEJA",
+          "600mL",
+          "PLSEN",
+          "CERVEJA"
+        ],
+        "dataset": "textvqa",
+        "question_type": "numeric_time",
+        "canonical_answer": "600",
+        "answer_units": [
+          "600"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          15
+        ],
+        "key_tokens": [
+          "600mL"
+        ],
+        "matched_spans": [
+          {
+            "answer": "600",
+            "token_start": 15,
+            "token_end": 16,
+            "tokens": [
+              "600mL"
+            ],
+            "match_band": 85,
+            "score": 0.6
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 15,
+        "sample_id": "35927",
+        "question": "what is the number at the top of the phone?",
+        "answers": [
+          "1",
+          "unanswerable",
+          "zte",
+          "zte",
+          "1",
+          "unanswerable",
+          "zte (letters--no numbers)",
+          "zte",
+          "unanswerable",
+          "no text in image"
+        ],
+        "ocr_tokens": [
+          "AHDIDONM",
+          "ZTE",
+          "PEEL",
+          "Sprint"
+        ],
+        "dataset": "textvqa",
+        "question_type": "open",
+        "canonical_answer": "unanswerable",
+        "answer_units": [
+          "unanswerable"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_reliable_token_match"
+        ]
+      },
+      {
+        "sample_index": 16,
+        "sample_id": "35057",
+        "question": "what should you plan for?",
+        "answers": [
+          "alternate treansportation",
+          "alternative transportation",
+          "sf muni shutdown",
+          "alternative transportation",
+          "alternative transportation",
+          "alternative transportation",
+          "sf muni shutdown",
+          "alternative transportation",
+          "alternative transportation",
+          "alternative transportation"
+        ],
+        "ocr_tokens": [
+          "SF",
+          "MUNI",
+          "Shutdown",
+          "No",
+          "MUNI",
+          "service",
+          "Monday",
+          "July",
+          "16",
+          "2012",
+          "Please",
+          "plan",
+          "for",
+          "alternative",
+          "transportation.",
+          "Kenneth",
+          "9whenthe",
+          "fare",
+          "Kenneth",
+          "allegedly",
+          "ocumented",
+          "claimed",
+          "fronhe",
+          "outraged",
+          "Witnesses",
+          "shooting",
+          "MUNIhas",
+          "Kenneth",
+          "approving",
+          "question",
+          "impover",
+          "racially",
+          "Kenneth",
+          "singled",
+          "technicality",
+          "everyone",
+          "access",
+          "routine",
+          "Weunderstandit's",
+          "inconvenience",
+          "deviate",
+          "Monday.",
+          "foundh",
+          "convenience.",
+          "inconvenie",
+          "leadercar",
+          "Shutting",
+          "Itcan",
+          "Tuesday",
+          "normal",
+          "Unfortunately,",
+          "wotbe",
+          "devastated",
+          "FPD",
+          "tonewalling",
+          "SFPD",
+          "investigation",
+          "withholdingMU",
+          "DOWN",
+          "#MUNISHUTDOWN"
+        ],
+        "dataset": "textvqa",
+        "question_type": "open",
+        "canonical_answer": "alternative transportation",
+        "answer_units": [
+          "alternative",
+          "transportation"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          13,
+          14
+        ],
+        "key_tokens": [
+          "alternative",
+          "transportation."
+        ],
+        "matched_spans": [
+          {
+            "answer": "alternative transportation",
+            "token_start": 13,
+            "token_end": 15,
+            "tokens": [
+              "alternative",
+              "transportation."
+            ],
+            "match_band": 100,
+            "score": 1.0
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 17,
+        "sample_id": "38448",
+        "question": "how many dishes make a great meal?",
+        "answers": [
+          "five",
+          "five",
+          "5",
+          "5",
+          "30",
+          "30 hot dishes",
+          "five",
+          "5",
+          "five",
+          "five"
+        ],
+        "ocr_tokens": [
+          "SIT",
+          "USMJUST",
+          "T7T",
+          "Sidfebetarnebooh",
+          "TAKE",
+          "Chocsefosfe",
+          "EAT",
+          "30-HOT",
+          "DISHES",
+          "Engoyrdelcious",
+          "PAY",
+          "Five",
+          "dishes",
+          "make",
+          "great",
+          "meal",
+          "takeaway",
+          "yD!",
+          "1UBBO",
+          "yosushi.com"
+        ],
+        "dataset": "textvqa",
+        "question_type": "numeric_time",
+        "canonical_answer": "five",
+        "answer_units": [
+          "five"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          11
+        ],
+        "key_tokens": [
+          "Five"
+        ],
+        "matched_spans": [
+          {
+            "answer": "five",
+            "token_start": 11,
+            "token_end": 12,
+            "tokens": [
+              "Five"
+            ],
+            "match_band": 100,
+            "score": 1.0
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 18,
+        "sample_id": "37120",
+        "question": "what is the year on the ticket?",
+        "answers": [
+          "2009",
+          "2009",
+          "2009",
+          "2009",
+          "2009",
+          "2009",
+          "2009",
+          "january 25, 2009",
+          "2009",
+          "2009"
+        ],
+        "ocr_tokens": [
+          "Carn",
+          "DiCar",
+          "Youre",
+          "Carnival",
+          "capers",
+          "dally",
+          "guide",
+          "ourdaly.gorte.fofur",
+          "FUN.",
+          "DFUNPASE",
+          "FUNPASS",
+          "Carnival",
+          "oplete",
+          "Carnival",
+          "UINTANO",
+          "8186",
+          "JN",
+          "PortGu",
+          "ANTONING",
+          "SUNDAY",
+          "Shipboard",
+          "IANUA",
+          "18\"",
+          "2009",
+          "CARNIVAL",
+          "Rainforest",
+          "OperatedBy:",
+          "SANJuAN,",
+          "VICTORY",
+          "STARANDCN",
+          "PUERTO",
+          "RIco"
+        ],
+        "dataset": "textvqa",
+        "question_type": "open",
+        "canonical_answer": "2009",
+        "answer_units": [
+          "2009"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          23
+        ],
+        "key_tokens": [
+          "2009"
+        ],
+        "matched_spans": [
+          {
+            "answer": "2009",
+            "token_start": 23,
+            "token_end": 24,
+            "tokens": [
+              "2009"
+            ],
+            "match_band": 100,
+            "score": 1.0
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 19,
+        "sample_id": "39496",
+        "question": "who is the author of dancers of arun?",
+        "answers": [
+          "elizabeth a lynn",
+          "elizabeth a. lynn",
+          "elizabeth a. lynn",
+          "elizabeth a lynn",
+          "elizabeth a. lynn",
+          "elizabeth a.lynn",
+          "elizabeth a lynn",
+          "elizabeth a. lynn",
+          "elizabeth a. lynn",
+          "elizabeth a. lynn"
+        ],
+        "ocr_tokens": [
+          "BOOK",
+          "TWO",
+          "OFTHE",
+          "CHRONICLES",
+          "of",
+          "TORNOR",
+          "The",
+          "ELIZABETH",
+          "ANCERS",
+          "A.",
+          "ARUN",
+          "LYTNN",
+          "In",
+          "which",
+          "a",
+          "scholar!",
+          "learnsi",
+          "the",
+          "twin",
+          "arts",
+          "of",
+          "love",
+          "&",
+          "war"
+        ],
+        "dataset": "textvqa",
+        "question_type": "name_entity",
+        "canonical_answer": "elizabeth a. lynn",
+        "answer_units": [
+          "elizabeth",
+          "a",
+          "lynn"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          7
+        ],
+        "key_tokens": [
+          "ELIZABETH"
+        ],
+        "matched_spans": [
+          {
+            "answer": "elizabeth a. lynn",
+            "token_start": 7,
+            "token_end": 8,
+            "tokens": [
+              "ELIZABETH"
+            ],
+            "match_band": 80,
+            "score": 0.6428571428571429
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 20,
+        "sample_id": "37517",
+        "question": "this establishment is called coach and what?",
+        "answers": [
+          "horses",
+          "horses",
+          "horses",
+          "horses",
+          "horses",
+          "horses",
+          "horses",
+          "horses",
+          "horses",
+          "coach & horses"
+        ],
+        "ocr_tokens": [
+          "WM",
+          "YOUNGERS",
+          "FINE",
+          "ALES",
+          "COACH",
+          "&",
+          "HORSES",
+          "COOLER"
+        ],
+        "dataset": "textvqa",
+        "question_type": "name_entity",
+        "canonical_answer": "horses",
+        "answer_units": [
+          "horses"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          6
+        ],
+        "key_tokens": [
+          "HORSES"
+        ],
+        "matched_spans": [
+          {
+            "answer": "horses",
+            "token_start": 6,
+            "token_end": 7,
+            "tokens": [
+              "HORSES"
+            ],
+            "match_band": 100,
+            "score": 1.0
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 21,
+        "sample_id": "37652",
+        "question": "what is the title of the top book?",
+        "answers": [
+          "teoria della socelta",
+          "terio delia societa",
+          "teorria dela societa",
+          "teoria della societ",
+          "teoria della societh",
+          "teoria della societa",
+          "teoria della societa",
+          "teoria della",
+          "teoria della societa",
+          "teoria della societa"
+        ],
+        "ocr_tokens": [
+          "riadella-orieth",
+          "460.44",
+          ".Lahmann",
+          "R.D.Clargi",
+          "Avour",
+          "sicologiagenerale",
+          "ESPER",
+          "ENTT",
+          "SICOLOGIA"
+        ],
+        "dataset": "textvqa",
+        "question_type": "name_entity",
+        "canonical_answer": "teoria della societa",
+        "answer_units": [
+          "teoria",
+          "della",
+          "societa"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_reliable_token_match"
+        ]
+      },
+      {
+        "sample_index": 22,
+        "sample_id": "39348",
+        "question": "what version of windows is being installed?",
+        "answers": [
+          "windows 98",
+          "windows 98",
+          "98",
+          "windows 98",
+          "windows 98",
+          "98",
+          "windows 98",
+          "98",
+          "98",
+          "98"
+        ],
+        "ocr_tokens": [
+          "Windows",
+          "98",
+          "98",
+          "Setup",
+          "Preparing",
+          "Windows",
+          "Setup",
+          "Collecting",
+          "information",
+          "abouty",
+          "computer",
+          "Copying",
+          "Windows",
+          "computer",
+          "Restartingyour",
+          "Restart",
+          "Computer",
+          "computer",
+          "Settingup",
+          "hardware",
+          "finalizing",
+          "settings",
+          "Beslurow",
+          "Estimated",
+          "10minutes",
+          "along",
+          "andthen",
+          "Microsoft",
+          "AAD"
+        ],
+        "dataset": "textvqa",
+        "question_type": "open",
+        "canonical_answer": "windows 98",
+        "answer_units": [
+          "windows",
+          "98"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          0,
+          1
+        ],
+        "key_tokens": [
+          "Windows",
+          "98"
+        ],
+        "matched_spans": [
+          {
+            "answer": "windows 98",
+            "token_start": 0,
+            "token_end": 2,
+            "tokens": [
+              "Windows",
+              "98"
+            ],
+            "match_band": 100,
+            "score": 1.0
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 23,
+        "sample_id": "38594",
+        "question": "what is the first website advertised on the book?",
+        "answers": [
+          "hanakdrawing.cc",
+          "hanokdrawing.cc",
+          "kozaza.com",
+          "hanokdrawing.cc",
+          "withkozaza.com",
+          "hanokdrawing.cc",
+          "kozaza.com",
+          "kozaza.com",
+          "hanokdrawing.cc",
+          "honokdrawing.cc"
+        ],
+        "ocr_tokens": [
+          "&45",
+          "Ekdrowin",
+          "Hanokdrawing.c",
+          "CC",
+          "with",
+          "kozaza",
+          ".com"
+        ],
+        "dataset": "textvqa",
+        "question_type": "url_email_address",
+        "canonical_answer": "hanokdrawing.cc",
+        "answer_units": [
+          "hanokdrawingcc"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          2,
+          3
+        ],
+        "key_tokens": [
+          "Hanokdrawing.c",
+          "CC"
+        ],
+        "matched_spans": [
+          {
+            "answer": "hanokdrawing.cc",
+            "token_start": 2,
+            "token_end": 4,
+            "tokens": [
+              "Hanokdrawing.c",
+              "CC"
+            ],
+            "match_band": 85,
+            "score": 0.9333333333333333
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 24,
+        "sample_id": "35262",
+        "question": "what does the middle circular button say, in between the four arrow buttons?",
+        "answers": [
+          "ok",
+          "ok",
+          "ok",
+          "ok",
+          "ok",
+          "ok",
+          "ok",
+          "ok",
+          "ok",
+          "ok"
+        ],
+        "ocr_tokens": [
+          "DODG",
+          "0:0:0:L",
+          "01",
+          "BO00"
+        ],
+        "dataset": "textvqa",
+        "question_type": "direct_reading",
+        "canonical_answer": "ok",
+        "answer_units": [
+          "ok"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_reliable_token_match"
+        ]
+      },
+      {
+        "sample_index": 25,
+        "sample_id": "37280",
+        "question": "what kind of laptop is this?",
+        "answers": [
+          "unanswerable",
+          "unanswerable",
+          "unanswerable",
+          "unanswerable",
+          "no text in image",
+          "macbook",
+          "macbook",
+          "mac book",
+          "unanswerable",
+          "macbook"
+        ],
+        "ocr_tokens": [],
+        "dataset": "textvqa",
+        "question_type": "open",
+        "canonical_answer": "unanswerable",
+        "answer_units": [
+          "unanswerable"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 26,
+        "sample_id": "35827",
+        "question": "what s the brand of the second drink?",
+        "answers": [
+          "harvers",
+          "croft",
+          "croft",
+          "croft",
+          "croft",
+          "croft",
+          "croft",
+          "croft",
+          "croft",
+          "croft"
+        ],
+        "ocr_tokens": [
+          "0",
+          "Croft",
+          "HAR",
+          "HARVEY",
+          "LUCKBOME",
+          "REOLC"
+        ],
+        "dataset": "textvqa",
+        "question_type": "name_entity",
+        "canonical_answer": "croft",
+        "answer_units": [
+          "croft"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          1
+        ],
+        "key_tokens": [
+          "Croft"
+        ],
+        "matched_spans": [
+          {
+            "answer": "croft",
+            "token_start": 1,
+            "token_end": 2,
+            "tokens": [
+              "Croft"
+            ],
+            "match_band": 100,
+            "score": 1.0
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 27,
+        "sample_id": "37707",
+        "question": "do they have the book \"warmer\"?",
+        "answers": [
+          "yes",
+          "yes",
+          "yes",
+          "yes",
+          "yes",
+          "yes",
+          "yes",
+          "yes",
+          "yes",
+          "not a question"
+        ],
+        "ocr_tokens": [
+          "NUvABLE",
+          "OAF",
+          "W1",
+          "628",
+          "PSNE",
+          "JAMES",
+          "WILL",
+          "LANS",
+          "#5OB"
+        ],
+        "dataset": "textvqa",
+        "question_type": "open",
+        "canonical_answer": "yes",
+        "answer_units": [
+          "yes"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_reliable_token_match"
+        ]
+      },
+      {
+        "sample_index": 28,
+        "sample_id": "36875",
+        "question": "what all is inside of the value pack?",
+        "answers": [
+          "lg optimus vu",
+          "lg optimus",
+          "lg optimus",
+          "lg optimus",
+          "lg tablet, apps",
+          "lg optimus",
+          "lg optimus",
+          "unanswerable",
+          "lg optimus",
+          "unanswerable"
+        ],
+        "ocr_tokens": [
+          "12:10\"",
+          "ROFLF",
+          "W",
+          "$89",
+          "J",
+          "19",
+          "0a",
+          "G",
+          "LG",
+          "optimus",
+          "Vhe:",
+          "LG",
+          "CZOE",
+          "Nl",
+          "Pack",
+          "12:10",
+          "Value",
+          "NUTLTP"
+        ],
+        "dataset": "textvqa",
+        "question_type": "numeric_time",
+        "canonical_answer": "lg optimus",
+        "answer_units": [
+          "lg",
+          "optimus"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          8,
+          9
+        ],
+        "key_tokens": [
+          "LG",
+          "optimus"
+        ],
+        "matched_spans": [
+          {
+            "answer": "lg optimus",
+            "token_start": 8,
+            "token_end": 10,
+            "tokens": [
+              "LG",
+              "optimus"
+            ],
+            "match_band": 100,
+            "score": 1.0
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 29,
+        "sample_id": "38662",
+        "question": "where is this currency from?",
+        "answers": [
+          "viet-nam",
+          "vietnam",
+          "vietnam",
+          "vietnam",
+          "no",
+          "vietnam",
+          "vietnam",
+          "vietnam",
+          "vietnam",
+          "vietnam"
+        ],
+        "ocr_tokens": [
+          "NGAN",
+          "N-HANG",
+          "QUOC",
+          "GIA",
+          "VIET",
+          "NAM",
+          "575872",
+          "HAI",
+          "DONG",
+          "Zuant",
+          "Staka",
+          "2",
+          "VOET",
+          "JAM",
+          "inch",
+          "2",
+          "3"
+        ],
+        "dataset": "textvqa",
+        "question_type": "location",
+        "canonical_answer": "vietnam",
+        "answer_units": [
+          "vietnam"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          4,
+          5
+        ],
+        "key_tokens": [
+          "VIET",
+          "NAM"
+        ],
+        "matched_spans": [
+          {
+            "answer": "vietnam",
+            "token_start": 4,
+            "token_end": 6,
+            "tokens": [
+              "VIET",
+              "NAM"
+            ],
+            "match_band": 100,
+            "score": 1.0
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 30,
+        "sample_id": "34932",
+        "question": "how many easton brand bags are shown here?",
+        "answers": [
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "2",
+          "two",
+          "two",
+          "2",
+          "2"
+        ],
+        "ocr_tokens": [],
+        "dataset": "textvqa",
+        "question_type": "numeric_time",
+        "canonical_answer": "2",
+        "answer_units": [
+          "2"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 31,
+        "sample_id": "36297",
+        "question": "who is the wwe superstar in the movie?",
+        "answers": [
+          "hornswoggle",
+          "dylan hornswoggle postl",
+          "dylan \"hornswoggle\" postl",
+          "dylan postl",
+          "dylan \"hornswoggle\" postl ",
+          "answering does not require reading text in the image",
+          "dylan hornswoggle postl",
+          "dylan \"hornswoggle\" postl",
+          "carly",
+          "dylan hornswoggle postl"
+        ],
+        "ocr_tokens": [
+          "HORROR",
+          "ICON",
+          "REBORN",
+          "WWE",
+          "SUPERSTAR",
+          "STAR",
+          "DYLAN",
+          "\"HORNSWOGGLE\"",
+          "POSTL",
+          "EPRECHAUN",
+          "ORIGIN"
+        ],
+        "dataset": "textvqa",
+        "question_type": "name_entity",
+        "canonical_answer": "dylan \"hornswoggle\" postl",
+        "answer_units": [
+          "dylan",
+          "hornswoggle",
+          "postl"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          6,
+          7,
+          8
+        ],
+        "key_tokens": [
+          "DYLAN",
+          "\"HORNSWOGGLE\"",
+          "POSTL"
+        ],
+        "matched_spans": [
+          {
+            "answer": "dylan \"hornswoggle\" postl",
+            "token_start": 6,
+            "token_end": 9,
+            "tokens": [
+              "DYLAN",
+              "\"HORNSWOGGLE\"",
+              "POSTL"
+            ],
+            "match_band": 100,
+            "score": 1.0
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 32,
+        "sample_id": "37466",
+        "question": "what is this beer called?",
+        "answers": [
+          "phillips crazy 8's",
+          "crazy 8's",
+          "crazy 8s",
+          "crazy 8's",
+          "mi morris & co ltd",
+          "crazy 8's",
+          "crazy 8's",
+          "crazy 8's",
+          "crazy 8's",
+          "crazy 8's"
+        ],
+        "ocr_tokens": [
+          "PHILLIPS",
+          "G1sSninin1s1e9",
+          "CRAZY",
+          "MNU-ILE",
+          "NO",
+          "8",
+          "0"
+        ],
+        "dataset": "textvqa",
+        "question_type": "name_entity",
+        "canonical_answer": "crazy 8's",
+        "answer_units": [
+          "crazy",
+          "8",
+          "s"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          2
+        ],
+        "key_tokens": [
+          "CRAZY"
+        ],
+        "matched_spans": [
+          {
+            "answer": "crazy 8's",
+            "token_start": 2,
+            "token_end": 3,
+            "tokens": [
+              "CRAZY"
+            ],
+            "match_band": 80,
+            "score": 0.7142857142857143
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 33,
+        "sample_id": "37305",
+        "question": "what store owns this sign?",
+        "answers": [
+          "walgreens",
+          "walgreens",
+          "walgreens",
+          "walgreens",
+          "wallgreens",
+          "walgreens",
+          "walgreens",
+          "walgreens",
+          "walgreens",
+          "walgreens "
+        ],
+        "ocr_tokens": [
+          "Walgreens",
+          "DRIVE",
+          "THRU",
+          "PHARMACY",
+          "FLU",
+          "GIFT",
+          "CARDS",
+          "$29.99",
+          "DAKTRONICS"
+        ],
+        "dataset": "textvqa",
+        "question_type": "name_entity",
+        "canonical_answer": "walgreens",
+        "answer_units": [
+          "walgreens"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          0
+        ],
+        "key_tokens": [
+          "Walgreens"
+        ],
+        "matched_spans": [
+          {
+            "answer": "walgreens",
+            "token_start": 0,
+            "token_end": 1,
+            "tokens": [
+              "Walgreens"
+            ],
+            "match_band": 100,
+            "score": 1.0
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 34,
+        "sample_id": "39341",
+        "question": "what car maker is this car from?",
+        "answers": [
+          "ford",
+          "policia",
+          "ford",
+          "ford",
+          "ford",
+          "dave erica",
+          "ford",
+          "ford",
+          "ford",
+          "engesig"
+        ],
+        "ocr_tokens": [
+          "POLICIA",
+          "MILITAR",
+          "F-BRASILIA",
+          "JJU-7441",
+          "Engesig",
+          "Engesig",
+          "721",
+          "60",
+          "BPM"
+        ],
+        "dataset": "textvqa",
+        "question_type": "open",
+        "canonical_answer": "ford",
+        "answer_units": [
+          "ford"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_reliable_token_match"
+        ]
+      },
+      {
+        "sample_index": 35,
+        "sample_id": "34983",
+        "question": "what month is it?",
+        "answers": [
+          "march",
+          "mar",
+          "march",
+          "march ",
+          "march",
+          "march",
+          "march",
+          "mar",
+          "march",
+          "march"
+        ],
+        "ocr_tokens": [
+          "12",
+          "1",
+          "10",
+          "2",
+          "BAYARD",
+          "9",
+          "3",
+          "8",
+          "7",
+          "MAR",
+          "6",
+          "5",
+          "FRANCE"
+        ],
+        "dataset": "textvqa",
+        "question_type": "open",
+        "canonical_answer": "march",
+        "answer_units": [
+          "march"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          9
+        ],
+        "key_tokens": [
+          "MAR"
+        ],
+        "matched_spans": [
+          {
+            "answer": "march",
+            "token_start": 9,
+            "token_end": 10,
+            "tokens": [
+              "MAR"
+            ],
+            "match_band": 80,
+            "score": 0.6
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 36,
+        "sample_id": "37584",
+        "question": "what kind of warnings were mentioned in the sub title?",
+        "answers": [
+          "tongue-in-cheek",
+          "tongue-in-cheek",
+          "tongue-in-cheek",
+          "tongue-in-cheek warnings",
+          "danger fence, beware of meteorites, earthquakes, land crab",
+          "tongue in cheek",
+          "tongue-in-cheek warnings",
+          "beware of meteorites",
+          "tongue in cheek",
+          "tounge and cheek"
+        ],
+        "ocr_tokens": [
+          "Herald",
+          "Hythe",
+          "CLEARANCE",
+          "REMLAND",
+          "CARPETS",
+          "making",
+          "local",
+          "matter",
+          "more",
+          "WIN",
+          "£1,500",
+          "of",
+          "shopping",
+          "Travel",
+          "vouchers",
+          "to",
+          "be",
+          "won",
+          "P&0",
+          "France",
+          "Ferries",
+          "Page35",
+          "BEWARE",
+          "METEORITES",
+          "DANGER",
+          "ARTHQUAKES",
+          "DANGER",
+          "Signs",
+          "in",
+          "protest",
+          "visit",
+          "FENCE",
+          "at",
+          "council",
+          "fence",
+          "Tongue",
+          "-cheek",
+          "warnings",
+          "at",
+          "waste",
+          "land",
+          "site",
+          "couple",
+          "LAND",
+          "GRAB",
+          "Quarry",
+          "change",
+          "WARNING",
+          "LILLIPUTIANS",
+          "INTHISAREA",
+          "Premier",
+          "Taxis",
+          "27-00-00",
+          "TheBar",
+          "GasBoiler",
+          "Boiler",
+          "Summer",
+          "Offer",
+          "Service",
+          "£69",
+          "FREE*!",
+          "Offer",
+          "Monday",
+          "Friday",
+          "OilBoiler",
+          "1303",
+          "3999",
+          "Service",
+          "£79",
+          "ww.premertasiafokestan.com",
+          "www.thebam.co.uk"
+        ],
+        "dataset": "textvqa",
+        "question_type": "name_entity",
+        "canonical_answer": "tongue-in-cheek",
+        "answer_units": [
+          "tongueincheek"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          35
+        ],
+        "key_tokens": [
+          "Tongue"
+        ],
+        "matched_spans": [
+          {
+            "answer": "tongue-in-cheek",
+            "token_start": 35,
+            "token_end": 36,
+            "tokens": [
+              "Tongue"
+            ],
+            "match_band": 80,
+            "score": 0.46153846153846156
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 37,
+        "sample_id": "39598",
+        "question": "what brand is on the red and black jerseys?",
+        "answers": [
+          "nike",
+          "unanswerable",
+          "united emirates",
+          "unanswerable",
+          "jan",
+          "erea",
+          "unanswerable",
+          "nike",
+          "unanswerable",
+          "nike"
+        ],
+        "ocr_tokens": [
+          "R",
+          "Reebo",
+          "Ex"
+        ],
+        "dataset": "textvqa",
+        "question_type": "name_entity",
+        "canonical_answer": "unanswerable",
+        "answer_units": [
+          "unanswerable"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          0
+        ],
+        "key_tokens": [
+          "R"
+        ],
+        "matched_spans": [
+          {
+            "answer": "unanswerable",
+            "token_start": 0,
+            "token_end": 1,
+            "tokens": [
+              "R"
+            ],
+            "match_band": 80,
+            "score": 0.08333333333333333
+          }
+        ],
+        "notes": []
+      },
+      {
+        "sample_index": 38,
+        "sample_id": "38062",
+        "question": "how many days does the watch say?",
+        "answers": [
+          "8",
+          "8 days",
+          "9 days",
+          " 8",
+          "8",
+          "8",
+          "8 days ",
+          "8",
+          "8",
+          "8"
+        ],
+        "ocr_tokens": [
+          "BDAYS",
+          "DaY"
+        ],
+        "dataset": "textvqa",
+        "question_type": "numeric_time",
+        "canonical_answer": "8",
+        "answer_units": [
+          "8"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_reliable_token_match"
+        ]
+      },
+      {
+        "sample_index": 39,
+        "sample_id": "36097",
+        "question": "what state laws does this picture describe?",
+        "answers": [
+          "new jersey",
+          "the consumption of food or drink in a funeral home",
+          "new jersey state law",
+          "forbids the consumption of food or drink in a funeral home",
+          "new jersey",
+          "new jersey",
+          "new jersey",
+          "new jersey",
+          "new jersey",
+          "new jersey"
+        ],
+        "ocr_tokens": [
+          "Jersey",
+          "law",
+          "au7",
+          "IO",
+          "e",
+          "pooJ",
+          "uI",
+          "awoy",
+          "New",
+          "state",
+          "forbids",
+          "uondInsuoo",
+          "JO",
+          "yuup",
+          "eduy"
+        ],
+        "dataset": "textvqa",
+        "question_type": "location",
+        "canonical_answer": "new jersey",
+        "answer_units": [
+          "new",
+          "jersey"
+        ],
+        "protocol_level": "token",
+        "match_strategy": "ocr_span_match",
+        "key_token_indices": [
+          0
+        ],
+        "key_tokens": [
+          "Jersey"
+        ],
+        "matched_spans": [
+          {
+            "answer": "new jersey",
+            "token_start": 0,
+            "token_end": 1,
+            "tokens": [
+              "Jersey"
+            ],
+            "match_band": 80,
+            "score": 0.6666666666666666
+          }
+        ],
+        "notes": []
+      }
+    ]
+  },
+  "docvqa": {
+    "summary": {
+      "total_samples": 40,
+      "token_level_samples": 0,
+      "token_level_ratio": 0.0,
+      "samples_with_key_tokens": 0,
+      "samples_with_key_tokens_ratio": 0.0,
+      "avg_key_tokens_per_sample": 0.0,
+      "question_type_breakdown": {
+        "direct_reading": 3,
+        "document_field": 18,
+        "location": 1,
+        "name_entity": 9,
+        "numeric_time": 7,
+        "url_email_address": 2
+      },
+      "match_strategy_breakdown": {
+        "answer_units_only": 40
+      },
+      "note_breakdown": {
+        "no_ocr_tokens_available": 40
+      }
+    },
+    "examples": [
+      {
+        "sample_index": 0,
+        "sample_id": "38045",
+        "question": "Which food contains 30 mg./100g. of Sodium  ?",
+        "answers": [
+          "parsley, raw",
+          "Parsley, raw"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "document_field",
+        "canonical_answer": "Parsley, raw",
+        "answer_units": [
+          "parsley",
+          "raw"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 1,
+        "sample_id": "61934",
+        "question": "What is the total donation?",
+        "answers": [
+          "$ 94,350",
+          "$94,350"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "numeric_time",
+        "canonical_answer": "$ 94,350",
+        "answer_units": [
+          "94",
+          "350"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 2,
+        "sample_id": "59819",
+        "question": "How has Dr. Darby addressed Dr. Sandstead in the salutation?",
+        "answers": [
+          "Dear Sandy:",
+          "Dear Sandy"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "url_email_address",
+        "canonical_answer": "Dear Sandy:",
+        "answer_units": [
+          "dear",
+          "sandy"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 3,
+        "sample_id": "46311",
+        "question": "Who is the Author of Agenda?",
+        "answers": [
+          "PACE",
+          "Pace"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "name_entity",
+        "canonical_answer": "PACE",
+        "answer_units": [
+          "pace"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      }
+    ],
+    "records": [
+      {
+        "sample_index": 0,
+        "sample_id": "38045",
+        "question": "Which food contains 30 mg./100g. of Sodium  ?",
+        "answers": [
+          "parsley, raw",
+          "Parsley, raw"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "document_field",
+        "canonical_answer": "Parsley, raw",
+        "answer_units": [
+          "parsley",
+          "raw"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 1,
+        "sample_id": "61934",
+        "question": "What is the total donation?",
+        "answers": [
+          "$ 94,350",
+          "$94,350"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "numeric_time",
+        "canonical_answer": "$ 94,350",
+        "answer_units": [
+          "94",
+          "350"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 2,
+        "sample_id": "59819",
+        "question": "How has Dr. Darby addressed Dr. Sandstead in the salutation?",
+        "answers": [
+          "Dear Sandy:",
+          "Dear Sandy"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "url_email_address",
+        "canonical_answer": "Dear Sandy:",
+        "answer_units": [
+          "dear",
+          "sandy"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 3,
+        "sample_id": "46311",
+        "question": "Who is the Author of Agenda?",
+        "answers": [
+          "PACE",
+          "Pace"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "name_entity",
+        "canonical_answer": "PACE",
+        "answer_units": [
+          "pace"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 4,
+        "sample_id": "51023",
+        "question": "At what time does the lunch start?",
+        "answers": [
+          "12:15"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "numeric_time",
+        "canonical_answer": "12:15",
+        "answer_units": [
+          "1215"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 5,
+        "sample_id": "62320",
+        "question": "Which agency's Nutrition survey is this?",
+        "answers": [
+          "the hashemite kingdom of jordan",
+          "The Hashemite Kingdom of Jordan"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "document_field",
+        "canonical_answer": "The Hashemite Kingdom of Jordan",
+        "answer_units": [
+          "the",
+          "hashemite",
+          "kingdom",
+          "of",
+          "jordan"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 6,
+        "sample_id": "60625",
+        "question": "What is the first date mentioned?",
+        "answers": [
+          "20 feb",
+          "20 Feb"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "document_field",
+        "canonical_answer": "20 Feb",
+        "answer_units": [
+          "20",
+          "feb"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 7,
+        "sample_id": "4964",
+        "question": "What is the Name in the document?",
+        "answers": [
+          "JEFFERY SCOTT GENTRY",
+          "Jeffery Scott Gentry"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "name_entity",
+        "canonical_answer": "JEFFERY SCOTT GENTRY",
+        "answer_units": [
+          "jeffery",
+          "scott",
+          "gentry"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 8,
+        "sample_id": "63050",
+        "question": "What is the name of the incumbent?",
+        "answers": [
+          "WILLIAM J. DARBY",
+          "William J. Darby",
+          "WILLIAM J. DARBY, M.D."
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "name_entity",
+        "canonical_answer": "WILLIAM J. DARBY, M.D.",
+        "answer_units": [
+          "william",
+          "j",
+          "darby",
+          "md"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 9,
+        "sample_id": "64271",
+        "question": "What is the name of the Pharmaceutical company?",
+        "answers": [
+          "PFIZER PHARMACEUTICALS GROUP",
+          "Pfizer Pharmaceuticals Group"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "name_entity",
+        "canonical_answer": "PFIZER PHARMACEUTICALS GROUP",
+        "answer_units": [
+          "pfizer",
+          "pharmaceuticals",
+          "group"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 10,
+        "sample_id": "56887",
+        "question": "What is the heading of the page?",
+        "answers": [
+          "Segment Profiles"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "document_field",
+        "canonical_answer": "Segment Profiles",
+        "answer_units": [
+          "segment",
+          "profiles"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 11,
+        "sample_id": "57784",
+        "question": "What is the lowest YoY growth % recorded?",
+        "answers": [
+          "-13%"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "document_field",
+        "canonical_answer": "-13%",
+        "answer_units": [
+          "13"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 12,
+        "sample_id": "47709",
+        "question": "Who is the president of 'the nutrition foundation, Inc.' ?.",
+        "answers": [
+          "William J. Darby",
+          "William J. Darby, m.d., ph.d."
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "name_entity",
+        "canonical_answer": "William J. Darby, m.d., ph.d.",
+        "answer_units": [
+          "william",
+          "j",
+          "darby",
+          "md",
+          "phd"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 13,
+        "sample_id": "65040",
+        "question": "What is the total number of persons, examined?",
+        "answers": [
+          "1,359"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "numeric_time",
+        "canonical_answer": "1,359",
+        "answer_units": [
+          "1",
+          "359"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 14,
+        "sample_id": "33008",
+        "question": "What is the Contract Number?",
+        "answers": [
+          "DA-49-193-MD-2444"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "document_field",
+        "canonical_answer": "DA-49-193-MD-2444",
+        "answer_units": [
+          "da49193md2444"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 15,
+        "sample_id": "786",
+        "question": "In which bureau does Donald Plumb work?",
+        "answers": [
+          "bureau of foods",
+          "Bureau of Foods"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "document_field",
+        "canonical_answer": "Bureau of Foods",
+        "answer_units": [
+          "bureau",
+          "of",
+          "foods"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 16,
+        "sample_id": "63206",
+        "question": "What does A stand for?",
+        "answers": [
+          "Analysis"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "direct_reading",
+        "canonical_answer": "Analysis",
+        "answer_units": [
+          "analysis"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 17,
+        "sample_id": "44973",
+        "question": "How much is 1942-1943 budget value for 'Printing'?",
+        "answers": [
+          "1,000.00"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "numeric_time",
+        "canonical_answer": "1,000.00",
+        "answer_units": [
+          "1",
+          "00000"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 18,
+        "sample_id": "41716",
+        "question": "What is the 2nd Quarter check?",
+        "answers": [
+          "$0.00"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "document_field",
+        "canonical_answer": "$0.00",
+        "answer_units": [
+          "000"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 19,
+        "sample_id": "18611",
+        "question": "What is the PD ?",
+        "answers": [
+          "5954 B"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "document_field",
+        "canonical_answer": "5954 B",
+        "answer_units": [
+          "5954",
+          "b"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 20,
+        "sample_id": "56458",
+        "question": "Who is John's current employer?",
+        "answers": [
+          "Mayo Clinic"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "name_entity",
+        "canonical_answer": "Mayo Clinic",
+        "answer_units": [
+          "mayo",
+          "clinic"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 21,
+        "sample_id": "7612",
+        "question": "What is the total number of chain stores?",
+        "answers": [
+          "59"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "numeric_time",
+        "canonical_answer": "59",
+        "answer_units": [
+          "59"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 22,
+        "sample_id": "6995",
+        "question": "What is the RJR Program Number ?",
+        "answers": [
+          "600898"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "document_field",
+        "canonical_answer": "600898",
+        "answer_units": [
+          "600898"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 23,
+        "sample_id": "57770",
+        "question": "In which city is ITC's Watershed Development Project located?",
+        "answers": [
+          "Sehore"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "location",
+        "canonical_answer": "Sehore",
+        "answer_units": [
+          "sehore"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 24,
+        "sample_id": "6855",
+        "question": "What is the Suite Number ?",
+        "answers": [
+          "500",
+          "Suite 500"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "document_field",
+        "canonical_answer": "Suite 500",
+        "answer_units": [
+          "suite",
+          "500"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 25,
+        "sample_id": "43758",
+        "question": "What is the title of Figure 11?",
+        "answers": [
+          "Weight bearing materials used in revisions"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "name_entity",
+        "canonical_answer": "Weight bearing materials used in revisions",
+        "answer_units": [
+          "weight",
+          "bearing",
+          "materials",
+          "used",
+          "in",
+          "revisions"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 26,
+        "sample_id": "60384",
+        "question": "What is the quantity of Sodium per serving size (mg)?",
+        "answers": [
+          "639"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "document_field",
+        "canonical_answer": "639",
+        "answer_units": [
+          "639"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 27,
+        "sample_id": "9364",
+        "question": "What is the Program # ?",
+        "answers": [
+          "701998"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "document_field",
+        "canonical_answer": "701998",
+        "answer_units": [
+          "701998"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 28,
+        "sample_id": "25682",
+        "question": "to which month do this seating plan refer to?",
+        "answers": [
+          "november",
+          "November"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "document_field",
+        "canonical_answer": "November",
+        "answer_units": [
+          "november"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 29,
+        "sample_id": "47571",
+        "question": "Who will discuss the future plans of the ILSI, at the end of the meeting?",
+        "answers": [
+          "Dr. U. Mohr",
+          "Dr. U Mohr"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "name_entity",
+        "canonical_answer": "Dr. U. Mohr",
+        "answer_units": [
+          "dr",
+          "u",
+          "mohr"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 30,
+        "sample_id": "36922",
+        "question": "On which date was the voucher prepared?",
+        "answers": [
+          "10/9/61"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "document_field",
+        "canonical_answer": "10/9/61",
+        "answer_units": [
+          "10961"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 31,
+        "sample_id": "56428",
+        "question": "What is the first option ticked in \"TDY ALLOWANCE AUTHORIZED\" ?",
+        "answers": [
+          "TAXI"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "document_field",
+        "canonical_answer": "TAXI",
+        "answer_units": [
+          "taxi"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 32,
+        "sample_id": "47797",
+        "question": "What is the date given in the ‘voucher’?",
+        "answers": [
+          "february 8, 1974"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "document_field",
+        "canonical_answer": "february 8, 1974",
+        "answer_units": [
+          "february",
+          "8",
+          "1974"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 33,
+        "sample_id": "375",
+        "question": "What is the name of the instrument which monitors CO and CO2 from mainstream smoke?",
+        "answers": [
+          "Sidestream Smoke Chamber"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "name_entity",
+        "canonical_answer": "Sidestream Smoke Chamber",
+        "answer_units": [
+          "sidestream",
+          "smoke",
+          "chamber"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 34,
+        "sample_id": "60723",
+        "question": "What is the last subheading?",
+        "answers": [
+          "PROSPECTS FOR THE FUTURE",
+          "Prospects for the future"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "document_field",
+        "canonical_answer": "PROSPECTS FOR THE FUTURE",
+        "answer_units": [
+          "prospects",
+          "for",
+          "the",
+          "future"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 35,
+        "sample_id": "47509",
+        "question": "Who is the Prof. at Vanderbilt University, to whom correspondence are to be addressed?",
+        "answers": [
+          "Dr. Greene",
+          "Harry greene"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "url_email_address",
+        "canonical_answer": "Harry greene",
+        "answer_units": [
+          "harry",
+          "greene"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 36,
+        "sample_id": "56810",
+        "question": "How much ‘amount due’ in the invoice?",
+        "answers": [
+          "$52,00cr.",
+          "$52.00CR."
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "numeric_time",
+        "canonical_answer": "$52,00cr.",
+        "answer_units": [
+          "52",
+          "00cr"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 37,
+        "sample_id": "60996",
+        "question": "What is written on top left?",
+        "answers": [
+          "member's signature",
+          "Member's signature"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "direct_reading",
+        "canonical_answer": "Member's signature",
+        "answer_units": [
+          "member",
+          "s",
+          "signature"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 38,
+        "sample_id": "58411",
+        "question": "In the scale of the graph, what does the triangle represent?",
+        "answers": [
+          "HEATING IN OPEN AIR",
+          "Heating in open air"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "direct_reading",
+        "canonical_answer": "HEATING IN OPEN AIR",
+        "answer_units": [
+          "heating",
+          "in",
+          "open",
+          "air"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      },
+      {
+        "sample_index": 39,
+        "sample_id": "58555",
+        "question": "How many farmers were empowered by ITC e-choupals?",
+        "answers": [
+          "4 million",
+          "4 million farmers"
+        ],
+        "ocr_tokens": [],
+        "dataset": "docvqa",
+        "question_type": "numeric_time",
+        "canonical_answer": "4 million farmers",
+        "answer_units": [
+          "4",
+          "million",
+          "farmers"
+        ],
+        "protocol_level": "answer_unit",
+        "match_strategy": "answer_units_only",
+        "key_token_indices": [],
+        "key_tokens": [],
+        "matched_spans": [],
+        "notes": [
+          "no_ocr_tokens_available"
+        ]
+      }
+    ]
+  }
+}

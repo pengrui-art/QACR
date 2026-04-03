@@ -1,0 +1,14 @@
+2026-04-04 00:29:51,591 INFO Loading VLM from Model/Qwen35-08B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   3%|▎         | 14/473 [00:00<00:03, 135.40it/s]Loading weights:  24%|██▍       | 114/473 [00:00<00:00, 619.19it/s]Loading weights:  46%|████▌     | 218/473 [00:00<00:00, 805.91it/s]Loading weights:  71%|███████   | 334/473 [00:00<00:00, 942.39it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 969.69it/s]
+2026-04-04 00:29:54,417 INFO Loading QACR components from checkpoints/qacr_vqav2_b0.45/best.pt ...
+2026-04-04 00:29:54,427 INFO Detected QACR Query-Adaptive model
+2026-04-04 00:29:54,427 INFO Loaded QACR with budget: 0.45
+2026-04-04 00:29:54,456 INFO Override executor_output_alpha = 0.300
+2026-04-04 00:29:54,456 INFO Loading evaluation dataset ...
+2026-04-04 00:29:54,930 INFO Raw dataset loaded: data/textvqa/validation, total=5000
+2026-04-04 00:29:54,937 INFO Loaded 200 samples from data/textvqa/validation (split=eval).
+2026-04-04 00:29:54,938 INFO Starting Evaluation ...
+Eval:   0%|          | 0/25 [00:00<?, ?it/s]/tmp/tmpgr1qtjmi: line 3: 1875476 Killed                  python scripts/eval_qacr_benchmark.py --checkpoint-dir checkpoints/qacr_vqav2_b0.45 --model Model/Qwen35-08B --dataset textvqa --local-data-dir data --max-samples 200 --batch-size 8 --num-workers 12 --prefetch-factor 2 --executor-output-alpha 0.30 --protection-mode prior_only --protection-topk-scale 1.2 --protection-keep-scale 1.25 --protection-deep-scale 1.25 --protection-logit-bias 1.15 --out-file outputs/phaseC_textvqa/prior_v2_200.json
+ERROR conda.cli.main_run:execute(127): `conda run python scripts/eval_qacr_benchmark.py --checkpoint-dir checkpoints/qacr_vqav2_b0.45 --model Model/Qwen35-08B --dataset textvqa --local-data-dir data --max-samples 200 --batch-size 8 --num-workers 12 --prefetch-factor 2 --executor-output-alpha 0.30 --protection-mode prior_only --protection-topk-scale 1.2 --protection-keep-scale 1.25 --protection-deep-scale 1.25 --protection-logit-bias 1.15 --out-file outputs/phaseC_textvqa/prior_v2_200.json` failed. (See above for error)

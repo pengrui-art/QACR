@@ -1,0 +1,759 @@
+{
+  "datasets": [
+    "textvqa",
+    "docvqa",
+    "mmmu"
+  ],
+  "expected_counts": {
+    "textvqa": 5000,
+    "docvqa": 5349,
+    "mmmu": 900
+  },
+  "min_coverage_ratio": 0.95,
+  "per_dataset_rows": [
+    {
+      "method": "QACR b0.35",
+      "method_key": "qacr_b035",
+      "dataset": "textvqa",
+      "accuracy": 0.07633333333333331,
+      "raw_accuracy": 0.07633333333333331,
+      "mean_compute": 0.3498106994152069,
+      "total_evaluated": 5000,
+      "source_path": "checkpoints/qacr_vqav2_b0.35/eval_results_textvqa.json [from existing summary] [from existing summary]"
+    },
+    {
+      "method": "QACR b0.35",
+      "method_key": "qacr_b035",
+      "dataset": "docvqa",
+      "accuracy": 0.020190689848569827,
+      "raw_accuracy": 0.020190689848569827,
+      "mean_compute": 0.34995700866624696,
+      "total_evaluated": 5349,
+      "source_path": "checkpoints/qacr_vqav2_b0.35/eval_results_docvqa.json"
+    },
+    {
+      "method": "QACR b0.35",
+      "method_key": "qacr_b035",
+      "dataset": "mmmu",
+      "accuracy": 0.3233333333333333,
+      "raw_accuracy": 0.3233333333333333,
+      "mean_compute": 0.34948464340633817,
+      "total_evaluated": 900,
+      "source_path": "checkpoints/qacr_vqav2_b0.35/eval_results_mmmu.json"
+    },
+    {
+      "method": "QACR b0.45",
+      "method_key": "qacr_b045",
+      "dataset": "textvqa",
+      "accuracy": 0.2646666666666667,
+      "raw_accuracy": 0.25639999999999996,
+      "mean_compute": 0.4481513639450073,
+      "total_evaluated": 5000,
+      "source_path": "checkpoints/qacr_vqav2_b0.45/eval_results_textvqa.json"
+    },
+    {
+      "method": "QACR b0.45",
+      "method_key": "qacr_b045",
+      "dataset": "docvqa",
+      "accuracy": 0.11983548326790054,
+      "raw_accuracy": 0.12226584408300617,
+      "mean_compute": 0.44102075449171013,
+      "total_evaluated": 5349,
+      "source_path": "checkpoints/qacr_vqav2_b0.45/eval_results_docvqa.json"
+    },
+    {
+      "method": "QACR b0.45",
+      "method_key": "qacr_b045",
+      "dataset": "mmmu",
+      "accuracy": 0.30444444444444446,
+      "raw_accuracy": 0.30444444444444446,
+      "mean_compute": 0.40417693667941623,
+      "total_evaluated": 900,
+      "source_path": "checkpoints/qacr_vqav2_b0.45/eval_results_mmmu.json"
+    },
+    {
+      "method": "QACR b0.60",
+      "method_key": "qacr_b060",
+      "dataset": "textvqa",
+      "accuracy": 0.06926666666666667,
+      "raw_accuracy": 0.06946666666666668,
+      "mean_compute": 0.5990379532814026,
+      "total_evaluated": 5000,
+      "source_path": "checkpoints/qacr_vqav2_b0.60/eval_results_textvqa.json [from existing summary] [from existing summary]"
+    },
+    {
+      "method": "QACR b0.60",
+      "method_key": "qacr_b060",
+      "dataset": "docvqa",
+      "accuracy": 0.020003739016638624,
+      "raw_accuracy": 0.020003739016638624,
+      "mean_compute": 0.5928349815299297,
+      "total_evaluated": 5349,
+      "source_path": "checkpoints/qacr_vqav2_b0.60/eval_results_docvqa.json"
+    },
+    {
+      "method": "QACR b0.60",
+      "method_key": "qacr_b060",
+      "dataset": "mmmu",
+      "accuracy": 0.3422222222222222,
+      "raw_accuracy": 0.3422222222222222,
+      "mean_compute": 0.5491406522856819,
+      "total_evaluated": 900,
+      "source_path": "checkpoints/qacr_vqav2_b0.60/eval_results_mmmu.json"
+    },
+    {
+      "method": "TokenPruning@0.45",
+      "method_key": "token_pruning",
+      "dataset": "textvqa",
+      "accuracy": 0.07139999999999998,
+      "raw_accuracy": 0.07159999999999998,
+      "mean_compute": 0.44999999999999474,
+      "total_evaluated": 5000,
+      "source_path": "checkpoints/token_pruning_kr0.45_vqav2/eval_results_textvqa.json [from existing summary] [from existing summary]"
+    },
+    {
+      "method": "TokenPruning@0.45",
+      "method_key": "token_pruning",
+      "dataset": "docvqa",
+      "accuracy": 0.01607777154608338,
+      "raw_accuracy": 0.01607777154608338,
+      "mean_compute": 0.44999999999999435,
+      "total_evaluated": 5349,
+      "source_path": "checkpoints/token_pruning_kr0.45_vqav2/eval_results_docvqa.json"
+    },
+    {
+      "method": "TokenPruning@0.45",
+      "method_key": "token_pruning",
+      "dataset": "mmmu",
+      "accuracy": 0.31777777777777777,
+      "raw_accuracy": 0.31777777777777777,
+      "mean_compute": 0.4500000000000007,
+      "total_evaluated": 900,
+      "source_path": "checkpoints/token_pruning_kr0.45_vqav2/eval_results_mmmu.json"
+    },
+    {
+      "method": "ImageOnly@0.45",
+      "method_key": "image_only",
+      "dataset": "textvqa",
+      "accuracy": 0.059533333333333396,
+      "raw_accuracy": 0.059733333333333395,
+      "mean_compute": 0.40709128389358523,
+      "total_evaluated": 5000,
+      "source_path": "checkpoints/image_only_b0.45_vqav2/eval_results_textvqa.json [from existing summary] [from existing summary]"
+    },
+    {
+      "method": "ImageOnly@0.45",
+      "method_key": "image_only",
+      "dataset": "docvqa",
+      "accuracy": 0.01962983735277622,
+      "raw_accuracy": 0.01962983735277622,
+      "mean_compute": 0.3905776855120549,
+      "total_evaluated": 5349,
+      "source_path": "checkpoints/image_only_b0.45_vqav2/eval_results_docvqa.json"
+    },
+    {
+      "method": "ImageOnly@0.45",
+      "method_key": "image_only",
+      "dataset": "mmmu",
+      "accuracy": 0.3511111111111111,
+      "raw_accuracy": 0.3511111111111111,
+      "mean_compute": 0.5288856999079387,
+      "total_evaluated": 900,
+      "source_path": "checkpoints/image_only_b0.45_vqav2/eval_results_mmmu.json"
+    },
+    {
+      "method": "LowRes-9x9",
+      "method_key": "low_res",
+      "dataset": "textvqa",
+      "accuracy": 0.07293333333333334,
+      "raw_accuracy": 0.07313333333333334,
+      "mean_compute": 0.41326530612244594,
+      "total_evaluated": 5000,
+      "source_path": "checkpoints/low_res_g9_vqav2/eval_results_textvqa.json [from existing summary] [from existing summary]"
+    },
+    {
+      "method": "LowRes-9x9",
+      "method_key": "low_res",
+      "dataset": "docvqa",
+      "accuracy": 0.01962983735277622,
+      "raw_accuracy": 0.01944288652084502,
+      "mean_compute": 0.4132653061224474,
+      "total_evaluated": 5349,
+      "source_path": "checkpoints/low_res_g9_vqav2/eval_results_docvqa.json"
+    },
+    {
+      "method": "LowRes-9x9",
+      "method_key": "low_res",
+      "dataset": "mmmu",
+      "accuracy": 0.35444444444444445,
+      "raw_accuracy": 0.35444444444444445,
+      "mean_compute": 0.41326530612244805,
+      "total_evaluated": 900,
+      "source_path": "checkpoints/low_res_g9_vqav2/eval_results_mmmu.json"
+    },
+    {
+      "method": "FastV",
+      "method_key": "fastv",
+      "dataset": "textvqa",
+      "accuracy": 0.6688666666666669,
+      "raw_accuracy": 0.693066666666667,
+      "mean_compute": 0.44999999999999474,
+      "total_evaluated": 5000,
+      "source_path": "checkpoints/sota_eval/fastv_textvqa_results.json [from existing summary] [from existing summary]"
+    },
+    {
+      "method": "FastV",
+      "method_key": "fastv",
+      "dataset": "docvqa",
+      "accuracy": 0.6758272574312956,
+      "raw_accuracy": 0.8351093662366798,
+      "mean_compute": 0.44999999999999435,
+      "total_evaluated": 5349,
+      "source_path": "checkpoints/sota_eval/fastv_docvqa_results.json"
+    },
+    {
+      "method": "FastV",
+      "method_key": "fastv",
+      "dataset": "mmmu",
+      "accuracy": 0.3422222222222222,
+      "raw_accuracy": 0.3422222222222222,
+      "mean_compute": 0.4500000000000007,
+      "total_evaluated": 900,
+      "source_path": "checkpoints/sota_eval/fastv_mmmu_results.json"
+    },
+    {
+      "method": "LVPruning",
+      "method_key": "lvpruning",
+      "dataset": "textvqa",
+      "accuracy": 0.6688666666666669,
+      "raw_accuracy": 0.693066666666667,
+      "mean_compute": 0.44999999999999474,
+      "total_evaluated": 5000,
+      "source_path": "checkpoints/sota_eval/lvpruning_textvqa_results.json [from existing summary] [from existing summary]"
+    },
+    {
+      "method": "LVPruning",
+      "method_key": "lvpruning",
+      "dataset": "docvqa",
+      "accuracy": 0.6758272574312956,
+      "raw_accuracy": 0.8351093662366798,
+      "mean_compute": 0.44999999999999435,
+      "total_evaluated": 5349,
+      "source_path": "checkpoints/sota_eval/lvpruning_docvqa_results.json"
+    },
+    {
+      "method": "LVPruning",
+      "method_key": "lvpruning",
+      "dataset": "mmmu",
+      "accuracy": 0.3422222222222222,
+      "raw_accuracy": 0.3422222222222222,
+      "mean_compute": 0.4500000000000007,
+      "total_evaluated": 900,
+      "source_path": "checkpoints/sota_eval/lvpruning_mmmu_results.json"
+    },
+    {
+      "method": "Original",
+      "method_key": "original",
+      "dataset": "textvqa",
+      "accuracy": 0.6688666666666669,
+      "raw_accuracy": 0.693066666666667,
+      "mean_compute": 1.0,
+      "total_evaluated": 5000,
+      "source_path": "checkpoints/sota_eval/original_textvqa_results.json [from existing summary] [from existing summary]"
+    },
+    {
+      "method": "Original",
+      "method_key": "original",
+      "dataset": "docvqa",
+      "accuracy": 0.6758272574312956,
+      "raw_accuracy": 0.8351093662366798,
+      "mean_compute": 1.0,
+      "total_evaluated": 5349,
+      "source_path": "checkpoints/sota_eval/original_docvqa_results.json"
+    },
+    {
+      "method": "Original",
+      "method_key": "original",
+      "dataset": "mmmu",
+      "accuracy": 0.3422222222222222,
+      "raw_accuracy": 0.3422222222222222,
+      "mean_compute": 1.0,
+      "total_evaluated": 900,
+      "source_path": "checkpoints/sota_eval/original_mmmu_results.json"
+    }
+  ],
+  "macro_rows_available": [
+    {
+      "method": "QACR b0.35",
+      "method_key": "qacr_b035",
+      "dataset_coverage": 3,
+      "accuracy": 0.13995245217174548,
+      "raw_accuracy": 0.13995245217174548,
+      "mean_compute": 0.349750783829264
+    },
+    {
+      "method": "QACR b0.45",
+      "method_key": "qacr_b045",
+      "dataset_coverage": 3,
+      "accuracy": 0.22964886479300392,
+      "raw_accuracy": 0.2277034295091502,
+      "mean_compute": 0.43111635170537793
+    },
+    {
+      "method": "QACR b0.60",
+      "method_key": "qacr_b060",
+      "dataset_coverage": 3,
+      "accuracy": 0.14383087596850916,
+      "raw_accuracy": 0.14389754263517582,
+      "mean_compute": 0.5803378623656714
+    },
+    {
+      "method": "TokenPruning@0.45",
+      "method_key": "token_pruning",
+      "dataset_coverage": 3,
+      "accuracy": 0.13508518310795373,
+      "raw_accuracy": 0.1351518497746204,
+      "mean_compute": 0.4499999999999966
+    },
+    {
+      "method": "ImageOnly@0.45",
+      "method_key": "image_only",
+      "dataset_coverage": 3,
+      "accuracy": 0.14342476059907358,
+      "raw_accuracy": 0.14349142726574024,
+      "mean_compute": 0.4421848897711929
+    },
+    {
+      "method": "LowRes-9x9",
+      "method_key": "low_res",
+      "dataset_coverage": 3,
+      "accuracy": 0.14900253837685132,
+      "raw_accuracy": 0.14900688809954094,
+      "mean_compute": 0.4132653061224471
+    },
+    {
+      "method": "FastV",
+      "method_key": "fastv",
+      "dataset_coverage": 3,
+      "accuracy": 0.5623053821067282,
+      "raw_accuracy": 0.6234660850418563,
+      "mean_compute": 0.4499999999999966
+    },
+    {
+      "method": "LVPruning",
+      "method_key": "lvpruning",
+      "dataset_coverage": 3,
+      "accuracy": 0.5623053821067282,
+      "raw_accuracy": 0.6234660850418563,
+      "mean_compute": 0.4499999999999966
+    },
+    {
+      "method": "Original",
+      "method_key": "original",
+      "dataset_coverage": 3,
+      "accuracy": 0.5623053821067282,
+      "raw_accuracy": 0.6234660850418563,
+      "mean_compute": 1.0
+    }
+  ],
+  "macro_rows_complete_only": [
+    {
+      "method": "QACR b0.35",
+      "method_key": "qacr_b035",
+      "dataset_coverage": 3,
+      "accuracy": 0.13995245217174548,
+      "raw_accuracy": 0.13995245217174548,
+      "mean_compute": 0.349750783829264
+    },
+    {
+      "method": "QACR b0.45",
+      "method_key": "qacr_b045",
+      "dataset_coverage": 3,
+      "accuracy": 0.22964886479300392,
+      "raw_accuracy": 0.2277034295091502,
+      "mean_compute": 0.43111635170537793
+    },
+    {
+      "method": "QACR b0.60",
+      "method_key": "qacr_b060",
+      "dataset_coverage": 3,
+      "accuracy": 0.14383087596850916,
+      "raw_accuracy": 0.14389754263517582,
+      "mean_compute": 0.5803378623656714
+    },
+    {
+      "method": "TokenPruning@0.45",
+      "method_key": "token_pruning",
+      "dataset_coverage": 3,
+      "accuracy": 0.13508518310795373,
+      "raw_accuracy": 0.1351518497746204,
+      "mean_compute": 0.4499999999999966
+    },
+    {
+      "method": "ImageOnly@0.45",
+      "method_key": "image_only",
+      "dataset_coverage": 3,
+      "accuracy": 0.14342476059907358,
+      "raw_accuracy": 0.14349142726574024,
+      "mean_compute": 0.4421848897711929
+    },
+    {
+      "method": "LowRes-9x9",
+      "method_key": "low_res",
+      "dataset_coverage": 3,
+      "accuracy": 0.14900253837685132,
+      "raw_accuracy": 0.14900688809954094,
+      "mean_compute": 0.4132653061224471
+    },
+    {
+      "method": "FastV",
+      "method_key": "fastv",
+      "dataset_coverage": 3,
+      "accuracy": 0.5623053821067282,
+      "raw_accuracy": 0.6234660850418563,
+      "mean_compute": 0.4499999999999966
+    },
+    {
+      "method": "LVPruning",
+      "method_key": "lvpruning",
+      "dataset_coverage": 3,
+      "accuracy": 0.5623053821067282,
+      "raw_accuracy": 0.6234660850418563,
+      "mean_compute": 0.4499999999999966
+    },
+    {
+      "method": "Original",
+      "method_key": "original",
+      "dataset_coverage": 3,
+      "accuracy": 0.5623053821067282,
+      "raw_accuracy": 0.6234660850418563,
+      "mean_compute": 1.0
+    }
+  ],
+  "filter_records": [
+    {
+      "method": "QACR b0.35",
+      "method_key": "qacr_b035",
+      "dataset": "textvqa",
+      "candidate_path": "checkpoints/qacr_vqav2_b0.35/eval_results_textvqa.json",
+      "candidate_status": "insufficient_coverage",
+      "candidate_reason": "coverage_below_0.95",
+      "candidate_total_evaluated": 1,
+      "expected_total": 5000,
+      "fallback_used": true,
+      "fallback_source_path": "checkpoints/qacr_vqav2_b0.35/eval_results_textvqa.json [from existing summary]"
+    },
+    {
+      "method": "QACR b0.35",
+      "method_key": "qacr_b035",
+      "dataset": "docvqa",
+      "candidate_path": "checkpoints/qacr_vqav2_b0.35/eval_results_docvqa.json",
+      "candidate_status": "accepted",
+      "candidate_reason": "accepted",
+      "candidate_total_evaluated": 5349,
+      "expected_total": 5349,
+      "fallback_used": false,
+      "fallback_source_path": ""
+    },
+    {
+      "method": "QACR b0.35",
+      "method_key": "qacr_b035",
+      "dataset": "mmmu",
+      "candidate_path": "checkpoints/qacr_vqav2_b0.35/eval_results_mmmu.json",
+      "candidate_status": "accepted",
+      "candidate_reason": "accepted",
+      "candidate_total_evaluated": 900,
+      "expected_total": 900,
+      "fallback_used": false,
+      "fallback_source_path": ""
+    },
+    {
+      "method": "QACR b0.45",
+      "method_key": "qacr_b045",
+      "dataset": "textvqa",
+      "candidate_path": "checkpoints/qacr_vqav2_b0.45/eval_results_textvqa.json",
+      "candidate_status": "accepted",
+      "candidate_reason": "accepted",
+      "candidate_total_evaluated": 5000,
+      "expected_total": 5000,
+      "fallback_used": false,
+      "fallback_source_path": ""
+    },
+    {
+      "method": "QACR b0.45",
+      "method_key": "qacr_b045",
+      "dataset": "docvqa",
+      "candidate_path": "checkpoints/qacr_vqav2_b0.45/eval_results_docvqa.json",
+      "candidate_status": "accepted",
+      "candidate_reason": "accepted",
+      "candidate_total_evaluated": 5349,
+      "expected_total": 5349,
+      "fallback_used": false,
+      "fallback_source_path": ""
+    },
+    {
+      "method": "QACR b0.45",
+      "method_key": "qacr_b045",
+      "dataset": "mmmu",
+      "candidate_path": "checkpoints/qacr_vqav2_b0.45/eval_results_mmmu.json",
+      "candidate_status": "accepted",
+      "candidate_reason": "accepted",
+      "candidate_total_evaluated": 900,
+      "expected_total": 900,
+      "fallback_used": false,
+      "fallback_source_path": ""
+    },
+    {
+      "method": "QACR b0.60",
+      "method_key": "qacr_b060",
+      "dataset": "textvqa",
+      "candidate_path": "checkpoints/qacr_vqav2_b0.60/eval_results_textvqa.json",
+      "candidate_status": "insufficient_coverage",
+      "candidate_reason": "coverage_below_0.95",
+      "candidate_total_evaluated": 1,
+      "expected_total": 5000,
+      "fallback_used": true,
+      "fallback_source_path": "checkpoints/qacr_vqav2_b0.60/eval_results_textvqa.json [from existing summary]"
+    },
+    {
+      "method": "QACR b0.60",
+      "method_key": "qacr_b060",
+      "dataset": "docvqa",
+      "candidate_path": "checkpoints/qacr_vqav2_b0.60/eval_results_docvqa.json",
+      "candidate_status": "accepted",
+      "candidate_reason": "accepted",
+      "candidate_total_evaluated": 5349,
+      "expected_total": 5349,
+      "fallback_used": false,
+      "fallback_source_path": ""
+    },
+    {
+      "method": "QACR b0.60",
+      "method_key": "qacr_b060",
+      "dataset": "mmmu",
+      "candidate_path": "checkpoints/qacr_vqav2_b0.60/eval_results_mmmu.json",
+      "candidate_status": "accepted",
+      "candidate_reason": "accepted",
+      "candidate_total_evaluated": 900,
+      "expected_total": 900,
+      "fallback_used": false,
+      "fallback_source_path": ""
+    },
+    {
+      "method": "TokenPruning@0.45",
+      "method_key": "token_pruning",
+      "dataset": "textvqa",
+      "candidate_path": "checkpoints/token_pruning_kr0.45_vqav2/eval_results_textvqa.json",
+      "candidate_status": "insufficient_coverage",
+      "candidate_reason": "coverage_below_0.95",
+      "candidate_total_evaluated": 1,
+      "expected_total": 5000,
+      "fallback_used": true,
+      "fallback_source_path": "checkpoints/token_pruning_kr0.45_vqav2/eval_results_textvqa.json [from existing summary]"
+    },
+    {
+      "method": "TokenPruning@0.45",
+      "method_key": "token_pruning",
+      "dataset": "docvqa",
+      "candidate_path": "checkpoints/token_pruning_kr0.45_vqav2/eval_results_docvqa.json",
+      "candidate_status": "accepted",
+      "candidate_reason": "accepted",
+      "candidate_total_evaluated": 5349,
+      "expected_total": 5349,
+      "fallback_used": false,
+      "fallback_source_path": ""
+    },
+    {
+      "method": "TokenPruning@0.45",
+      "method_key": "token_pruning",
+      "dataset": "mmmu",
+      "candidate_path": "checkpoints/token_pruning_kr0.45_vqav2/eval_results_mmmu.json",
+      "candidate_status": "accepted",
+      "candidate_reason": "accepted",
+      "candidate_total_evaluated": 900,
+      "expected_total": 900,
+      "fallback_used": false,
+      "fallback_source_path": ""
+    },
+    {
+      "method": "ImageOnly@0.45",
+      "method_key": "image_only",
+      "dataset": "textvqa",
+      "candidate_path": "checkpoints/image_only_b0.45_vqav2/eval_results_textvqa.json",
+      "candidate_status": "insufficient_coverage",
+      "candidate_reason": "coverage_below_0.95",
+      "candidate_total_evaluated": 1,
+      "expected_total": 5000,
+      "fallback_used": true,
+      "fallback_source_path": "checkpoints/image_only_b0.45_vqav2/eval_results_textvqa.json [from existing summary]"
+    },
+    {
+      "method": "ImageOnly@0.45",
+      "method_key": "image_only",
+      "dataset": "docvqa",
+      "candidate_path": "checkpoints/image_only_b0.45_vqav2/eval_results_docvqa.json",
+      "candidate_status": "accepted",
+      "candidate_reason": "accepted",
+      "candidate_total_evaluated": 5349,
+      "expected_total": 5349,
+      "fallback_used": false,
+      "fallback_source_path": ""
+    },
+    {
+      "method": "ImageOnly@0.45",
+      "method_key": "image_only",
+      "dataset": "mmmu",
+      "candidate_path": "checkpoints/image_only_b0.45_vqav2/eval_results_mmmu.json",
+      "candidate_status": "accepted",
+      "candidate_reason": "accepted",
+      "candidate_total_evaluated": 900,
+      "expected_total": 900,
+      "fallback_used": false,
+      "fallback_source_path": ""
+    },
+    {
+      "method": "LowRes-9x9",
+      "method_key": "low_res",
+      "dataset": "textvqa",
+      "candidate_path": "checkpoints/low_res_g9_vqav2/eval_results_textvqa.json",
+      "candidate_status": "insufficient_coverage",
+      "candidate_reason": "coverage_below_0.95",
+      "candidate_total_evaluated": 1,
+      "expected_total": 5000,
+      "fallback_used": true,
+      "fallback_source_path": "checkpoints/low_res_g9_vqav2/eval_results_textvqa.json [from existing summary]"
+    },
+    {
+      "method": "LowRes-9x9",
+      "method_key": "low_res",
+      "dataset": "docvqa",
+      "candidate_path": "checkpoints/low_res_g9_vqav2/eval_results_docvqa.json",
+      "candidate_status": "accepted",
+      "candidate_reason": "accepted",
+      "candidate_total_evaluated": 5349,
+      "expected_total": 5349,
+      "fallback_used": false,
+      "fallback_source_path": ""
+    },
+    {
+      "method": "LowRes-9x9",
+      "method_key": "low_res",
+      "dataset": "mmmu",
+      "candidate_path": "checkpoints/low_res_g9_vqav2/eval_results_mmmu.json",
+      "candidate_status": "accepted",
+      "candidate_reason": "accepted",
+      "candidate_total_evaluated": 900,
+      "expected_total": 900,
+      "fallback_used": false,
+      "fallback_source_path": ""
+    },
+    {
+      "method": "FastV",
+      "method_key": "fastv",
+      "dataset": "textvqa",
+      "candidate_path": "checkpoints/sota_eval/fastv_textvqa_results.json",
+      "candidate_status": "insufficient_coverage",
+      "candidate_reason": "coverage_below_0.95",
+      "candidate_total_evaluated": 1,
+      "expected_total": 5000,
+      "fallback_used": true,
+      "fallback_source_path": "checkpoints/sota_eval/fastv_textvqa_results.json [from existing summary]"
+    },
+    {
+      "method": "FastV",
+      "method_key": "fastv",
+      "dataset": "docvqa",
+      "candidate_path": "checkpoints/sota_eval/fastv_docvqa_results.json",
+      "candidate_status": "accepted",
+      "candidate_reason": "accepted",
+      "candidate_total_evaluated": 5349,
+      "expected_total": 5349,
+      "fallback_used": false,
+      "fallback_source_path": ""
+    },
+    {
+      "method": "FastV",
+      "method_key": "fastv",
+      "dataset": "mmmu",
+      "candidate_path": "checkpoints/sota_eval/fastv_mmmu_results.json",
+      "candidate_status": "accepted",
+      "candidate_reason": "accepted",
+      "candidate_total_evaluated": 900,
+      "expected_total": 900,
+      "fallback_used": false,
+      "fallback_source_path": ""
+    },
+    {
+      "method": "LVPruning",
+      "method_key": "lvpruning",
+      "dataset": "textvqa",
+      "candidate_path": "checkpoints/sota_eval/lvpruning_textvqa_results.json",
+      "candidate_status": "insufficient_coverage",
+      "candidate_reason": "coverage_below_0.95",
+      "candidate_total_evaluated": 1,
+      "expected_total": 5000,
+      "fallback_used": true,
+      "fallback_source_path": "checkpoints/sota_eval/lvpruning_textvqa_results.json [from existing summary]"
+    },
+    {
+      "method": "LVPruning",
+      "method_key": "lvpruning",
+      "dataset": "docvqa",
+      "candidate_path": "checkpoints/sota_eval/lvpruning_docvqa_results.json",
+      "candidate_status": "accepted",
+      "candidate_reason": "accepted",
+      "candidate_total_evaluated": 5349,
+      "expected_total": 5349,
+      "fallback_used": false,
+      "fallback_source_path": ""
+    },
+    {
+      "method": "LVPruning",
+      "method_key": "lvpruning",
+      "dataset": "mmmu",
+      "candidate_path": "checkpoints/sota_eval/lvpruning_mmmu_results.json",
+      "candidate_status": "accepted",
+      "candidate_reason": "accepted",
+      "candidate_total_evaluated": 900,
+      "expected_total": 900,
+      "fallback_used": false,
+      "fallback_source_path": ""
+    },
+    {
+      "method": "Original",
+      "method_key": "original",
+      "dataset": "textvqa",
+      "candidate_path": "checkpoints/sota_eval/original_textvqa_results.json",
+      "candidate_status": "insufficient_coverage",
+      "candidate_reason": "coverage_below_0.95",
+      "candidate_total_evaluated": 1,
+      "expected_total": 5000,
+      "fallback_used": true,
+      "fallback_source_path": "checkpoints/sota_eval/original_textvqa_results.json [from existing summary]"
+    },
+    {
+      "method": "Original",
+      "method_key": "original",
+      "dataset": "docvqa",
+      "candidate_path": "checkpoints/sota_eval/original_docvqa_results.json",
+      "candidate_status": "accepted",
+      "candidate_reason": "accepted",
+      "candidate_total_evaluated": 5349,
+      "expected_total": 5349,
+      "fallback_used": false,
+      "fallback_source_path": ""
+    },
+    {
+      "method": "Original",
+      "method_key": "original",
+      "dataset": "mmmu",
+      "candidate_path": "checkpoints/sota_eval/original_mmmu_results.json",
+      "candidate_status": "accepted",
+      "candidate_reason": "accepted",
+      "candidate_total_evaluated": 900,
+      "expected_total": 900,
+      "fallback_used": false,
+      "fallback_source_path": ""
+    }
+  ]
+}

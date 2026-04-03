@@ -1,0 +1,8 @@
+===== Phase 6.2 evaluation started at Fri Apr  3 13:29:47 CST 2026 =====
+DATASETS=textvqa,docvqa,mmmu  MAX_SAMPLES=10000  BATCH_SIZE=8  NUM_WORKERS=12  DOCVQA_NUM_WORKERS=4  EXECUTOR_OUTPUT_ALPHA=0.30
+==========================================
+=== Dataset: textvqa ===
+==========================================
+--- Batch 1 (textvqa): QACR 0.35 / 0.45 / 0.60 / TokenPruning ---
+[GPU 0] dataset=textvqa ckpt=checkpoints/qacr_vqav2_b0.35
+[GPU 1] dataset=textvqa ckpt=checkpoints/qacr_vqav2_b0.45

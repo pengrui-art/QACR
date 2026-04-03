@@ -1,0 +1,27 @@
+{
+  "stage": "500",
+  "baseline_name": "baseline",
+  "best_variant": "baseline",
+  "rows": [
+    {
+      "variant": "baseline",
+      "accuracy": 0.29,
+      "raw_accuracy": 0.2766666666666667,
+      "mean_compute": 0.4478121955394745,
+      "total_evaluated": 500,
+      "path": "outputs/phase64_textvqa_ocr_correction/v2_500_eval.json",
+      "delta_accuracy_vs_baseline": 0.0,
+      "delta_compute_vs_baseline": 0.0
+    },
+    {
+      "variant": "prior_v1",
+      "accuracy": 0.2899999999999999,
+      "raw_accuracy": 0.2753333333333334,
+      "mean_compute": 0.4469569752216339,
+      "total_evaluated": 500,
+      "path": "outputs/phaseC_textvqa/prior_v1_500.json",
+      "delta_accuracy_vs_baseline": -5.551115123125783e-17,
+      "delta_compute_vs_baseline": -0.0008552203178405771
+    }
+  ]
+}

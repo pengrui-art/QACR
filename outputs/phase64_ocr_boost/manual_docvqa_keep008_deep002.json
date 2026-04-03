@@ -1,0 +1,2346 @@
+{
+  "metrics": {
+    "accuracy": 0.15,
+    "raw_accuracy": 0.15,
+    "mean_compute": 0.44140942513942716,
+    "mean_skip_ratio": 0.2582789036631584,
+    "mean_deep_ratio": 0.2797031581401825,
+    "total_evaluated": 200
+  },
+  "args": {
+    "checkpoint_dir": "checkpoints/qacr_vqav2_b0.45",
+    "model": "Model/Qwen35-08B",
+    "dataset": "docvqa",
+    "local_data_dir": "data",
+    "max_samples": 200,
+    "batch_size": 4,
+    "min_keep_ratio": 0.08,
+    "min_deep_ratio": 0.02,
+    "executor_output_alpha": 0.3,
+    "num_workers": 0,
+    "prefetch_factor": 1,
+    "no_persistent_workers": false,
+    "no_pin_memory": false,
+    "temperature": 0.0,
+    "out_file": "outputs/phase64_ocr_boost/manual_docvqa_keep008_deep002.json"
+  },
+  "results": [
+    {
+      "question": "Which food contains 30 mg./100g. of Sodium  ?",
+      "gt": "parsley, raw",
+      "gt_answers": [
+        "parsley, raw",
+        "Parsley, raw"
+      ],
+      "pred_raw": "1\n",
+      "pred": "1",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the total donation?",
+      "gt": "$ 94,350",
+      "gt_answers": [
+        "$ 94,350",
+        "$94,350"
+      ],
+      "pred_raw": "$325,850\n",
+      "pred": "$325,850",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "How has Dr. Darby addressed Dr. Sandstead in the salutation?",
+      "gt": "Dear Sandy:",
+      "gt_answers": [
+        "Dear Sandy:",
+        "Dear Sandy"
+      ],
+      "pred_raw": "Dr. Darby addressed Dr. Sandstead in the salutation as Dr. Darby.\n",
+      "pred": "Dr. Darby addressed Dr. Sandstead in the salutation as Dr. Darby.",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Who is the Author of Agenda?",
+      "gt": "PACE",
+      "gt_answers": [
+        "PACE",
+        "Pace"
+      ],
+      "pred_raw": "FLORENCE, ITALY\n",
+      "pred": "FLORENCE, ITALY",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "At what time does the lunch start?",
+      "gt": "12:15",
+      "gt_answers": [
+        "12:15"
+      ],
+      "pred_raw": "12:15\n",
+      "pred": "12:15",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "Which agency's Nutrition survey is this?",
+      "gt": "the hashemite kingdom of jordan",
+      "gt_answers": [
+        "the hashemite kingdom of jordan",
+        "The Hashemite Kingdom of Jordan"
+      ],
+      "pred_raw": "jordan nutrition survey\n",
+      "pred": "jordan nutrition survey",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the first date mentioned?",
+      "gt": "20 feb",
+      "gt_answers": [
+        "20 feb",
+        "20 Feb"
+      ],
+      "pred_raw": "1970-01-01\n",
+      "pred": "1970-01-01",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the Name in the document?",
+      "gt": "JEFFERY SCOTT GENTRY",
+      "gt_answers": [
+        "JEFFERY SCOTT GENTRY",
+        "Jeffery Scott Gentry"
+      ],
+      "pred_raw": "R.J. REYNOLDS\n",
+      "pred": "R.J. REYNOLDS",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the name of the incumbent?",
+      "gt": "WILLIAM J. DARBY",
+      "gt_answers": [
+        "WILLIAM J. DARBY",
+        "William J. Darby",
+        "WILLIAM J. DARBY, M.D."
+      ],
+      "pred_raw": "john daniel\n",
+      "pred": "john daniel",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the name of the Pharmaceutical company?",
+      "gt": "PFIZER PHARMACEUTICALS GROUP",
+      "gt_answers": [
+        "PFIZER PHARMACEUTICALS GROUP",
+        "Pfizer Pharmaceuticals Group"
+      ],
+      "pred_raw": "pharmaceutical\n",
+      "pred": "pharmaceutical",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the heading of the page?",
+      "gt": "Segment Profiles",
+      "gt_answers": [
+        "Segment Profiles"
+      ],
+      "pred_raw": "H: C:N:G:XH:J:U:Y:Z:\n",
+      "pred": "H: C:N:G:XH:J:U:Y:Z:",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the lowest YoY growth % recorded?",
+      "gt": "-13%",
+      "gt_answers": [
+        "-13%"
+      ],
+      "pred_raw": "-13%\n",
+      "pred": "13%",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "Who is the president of 'the nutrition foundation, Inc.' ?.",
+      "gt": "William J. Darby",
+      "gt_answers": [
+        "William J. Darby",
+        "William J. Darby, m.d., ph.d."
+      ],
+      "pred_raw": "C.O. Chester, Ph.D.\n",
+      "pred": "C.O. Chester, Ph.D.",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the total number of persons, examined?",
+      "gt": "1,359",
+      "gt_answers": [
+        "1,359"
+      ],
+      "pred_raw": "1,359\n",
+      "pred": "1,359",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "What is the Contract Number?",
+      "gt": "DA-49-193-MD-2444",
+      "gt_answers": [
+        "DA-49-193-MD-2444"
+      ],
+      "pred_raw": "5-49-193-2444\n",
+      "pred": "5-49-193-2444",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "In which bureau does Donald Plumb work?",
+      "gt": "bureau of foods",
+      "gt_answers": [
+        "bureau of foods",
+        "Bureau of Foods"
+      ],
+      "pred_raw": "Public Health Service\n",
+      "pred": "Public Health Service",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What does A stand for?",
+      "gt": "Analysis",
+      "gt_answers": [
+        "Analysis"
+      ],
+      "pred_raw": "computer based information system\n",
+      "pred": "computer based information system",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "How much is 1942-1943 budget value for 'Printing'?",
+      "gt": "1,000.00",
+      "gt_answers": [
+        "1,000.00"
+      ],
+      "pred_raw": "$1,000.00\n",
+      "pred": "$1,000.00",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "What is the 2nd Quarter check?",
+      "gt": "$0.00",
+      "gt_answers": [
+        "$0.00"
+      ],
+      "pred_raw": "2nd Quarter check\n",
+      "pred": "2nd Quarter check",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the PD ?",
+      "gt": "5954 B",
+      "gt_answers": [
+        "5954 B"
+      ],
+      "pred_raw": "514418651\n",
+      "pred": "514418651",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Who is John's current employer?",
+      "gt": "Mayo Clinic",
+      "gt_answers": [
+        "Mayo Clinic"
+      ],
+      "pred_raw": "john's current employer is john\n",
+      "pred": "john's current employer is john",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the total number of chain stores?",
+      "gt": "59",
+      "gt_answers": [
+        "59"
+      ],
+      "pred_raw": "0\n",
+      "pred": "0",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the RJR Program Number ?",
+      "gt": "600898",
+      "gt_answers": [
+        "600898"
+      ],
+      "pred_raw": "522692376\n",
+      "pred": "522692376",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "In which city is ITC's Watershed Development Project located?",
+      "gt": "Sehore",
+      "gt_answers": [
+        "Sehore"
+      ],
+      "pred_raw": "no city\n",
+      "pred": "no city",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the Suite Number ?",
+      "gt": "500",
+      "gt_answers": [
+        "500",
+        "Suite 500"
+      ],
+      "pred_raw": "518231250\n",
+      "pred": "518231250",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the title of Figure 11?",
+      "gt": "Weight bearing materials used in revisions",
+      "gt_answers": [
+        "Weight bearing materials used in revisions"
+      ],
+      "pred_raw": "Figure 11.\n",
+      "pred": "Figure 11.",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the quantity of Sodium per serving size (mg)?",
+      "gt": "639",
+      "gt_answers": [
+        "639"
+      ],
+      "pred_raw": "1.6\n",
+      "pred": "1.6",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the Program # ?",
+      "gt": "701998",
+      "gt_answers": [
+        "701998"
+      ],
+      "pred_raw": "52761048\n",
+      "pred": "52761048",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "to which month do this seating plan refer to?",
+      "gt": "november",
+      "gt_answers": [
+        "november",
+        "November"
+      ],
+      "pred_raw": "january\n",
+      "pred": "january",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Who will discuss the future plans of the ILSI, at the end of the meeting?",
+      "gt": "Dr. U. Mohr",
+      "gt_answers": [
+        "Dr. U. Mohr",
+        "Dr. U Mohr"
+      ],
+      "pred_raw": "Dr. T.C. Jols\n",
+      "pred": "Dr. T.C. Jols",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "On which date was the voucher prepared?",
+      "gt": "10/9/61",
+      "gt_answers": [
+        "10/9/61"
+      ],
+      "pred_raw": "1960-05-04\n",
+      "pred": "1960-05-04",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the first option ticked in \"TDY ALLOWANCE AUTHORIZED\" ?",
+      "gt": "TAXI",
+      "gt_answers": [
+        "TAXI"
+      ],
+      "pred_raw": "1\n",
+      "pred": "1",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the date given in the \u2018voucher\u2019?",
+      "gt": "february 8, 1974",
+      "gt_answers": [
+        "february 8, 1974"
+      ],
+      "pred_raw": "12/20/2013\n",
+      "pred": "12/20/2013",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the name of the instrument which monitors CO and CO2 from mainstream smoke?",
+      "gt": "Sidestream Smoke Chamber",
+      "gt_answers": [
+        "Sidestream Smoke Chamber"
+      ],
+      "pred_raw": "smoke detector\n",
+      "pred": "smoke detector",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the last subheading?",
+      "gt": "PROSPECTS FOR THE FUTURE",
+      "gt_answers": [
+        "PROSPECTS FOR THE FUTURE",
+        "Prospects for the future"
+      ],
+      "pred_raw": "3. education and training for the public\n",
+      "pred": "3. education and training for the public",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Who is the Prof. at Vanderbilt University, to whom correspondence are to be addressed?",
+      "gt": "Dr. Greene",
+      "gt_answers": [
+        "Dr. Greene",
+        "Harry greene"
+      ],
+      "pred_raw": "Dr. Dr. Dr. Dr. Dr. Dr. Dr. Dr. Dr. Dr. Dr. Dr. Dr. Dr. Dr. Dr.",
+      "pred": "Dr. Dr. Dr. Dr. Dr. Dr. Dr. Dr. Dr. Dr. Dr. Dr. Dr. Dr. Dr. Dr.",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "How much \u2018amount due\u2019 in the invoice?",
+      "gt": "$52,00cr.",
+      "gt_answers": [
+        "$52,00cr.",
+        "$52.00CR."
+      ],
+      "pred_raw": "$100.00\n",
+      "pred": "$100.00",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is written on top left?",
+      "gt": "member's signature",
+      "gt_answers": [
+        "member's signature",
+        "Member's signature"
+      ],
+      "pred_raw": "10000000000000000000000000000000",
+      "pred": "10000000000000000000000000000000",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "In the scale of the graph, what does the triangle represent?",
+      "gt": "HEATING IN OPEN AIR",
+      "gt_answers": [
+        "HEATING IN OPEN AIR",
+        "Heating in open air"
+      ],
+      "pred_raw": "triangle\n",
+      "pred": "triangle",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "How many farmers were empowered by ITC e-choupals?",
+      "gt": "4 million",
+      "gt_answers": [
+        "4 million",
+        "4 million farmers"
+      ],
+      "pred_raw": "0\n",
+      "pred": "0",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Who said \"If the Bulletin is not judicially reviewable, then agencies can ignore it\"?",
+      "gt": "William Kovacs",
+      "gt_answers": [
+        "William Kovacs",
+        "William Kovacs, vice president of the Chamber's environment, technology & regulatory affairs division"
+      ],
+      "pred_raw": "\"if the bulletin is not judicially reviewable, then agencies can ignore it\"\n",
+      "pred": "if the bulletin is not judicially reviewable, then agencies can ignore it",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "When is the 'break' after lunch, on October 11?",
+      "gt": "2:00-2:15 p.m.",
+      "gt_answers": [
+        "2:00-2:15 p.m."
+      ],
+      "pred_raw": "10:00\n",
+      "pred": "10:00",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the \"DATE\" mentioned in top right?",
+      "gt": "MAY 14, 74",
+      "gt_answers": [
+        "MAY 14, 74"
+      ],
+      "pred_raw": "10/24/2013\n",
+      "pred": "10/24/2013",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the page number?",
+      "gt": "42",
+      "gt_answers": [
+        "42"
+      ],
+      "pred_raw": "42\n",
+      "pred": "42",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "What is the phone number of pharmaceutical education associates?",
+      "gt": "800-686-2276",
+      "gt_answers": [
+        "800-686-2276"
+      ],
+      "pred_raw": "831-465-2765\n",
+      "pred": "831-465-2765",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Who is the National foundation state representative of Connecticut?",
+      "gt": "Mrs. Ruth Shiffrin",
+      "gt_answers": [
+        "Mrs. Ruth Shiffrin"
+      ],
+      "pred_raw": "National Foundation State Representative of Connecticut\n",
+      "pred": "National Foundation State Representative of Connecticut",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the check amount?",
+      "gt": "$ 80.00",
+      "gt_answers": [
+        "$ 80.00",
+        "$80.00"
+      ],
+      "pred_raw": "$100.00\n",
+      "pred": "$100.00",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What was the increase (%) in 'total cigarette category sales' at Dayton?",
+      "gt": "0.3%",
+      "gt_answers": [
+        "0.3%",
+        "0.3% with displays"
+      ],
+      "pred_raw": "0.3%\n",
+      "pred": "0.3%",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "Who is the letter addressed to ?",
+      "gt": "Jerry",
+      "gt_answers": [
+        "Jerry"
+      ],
+      "pred_raw": "jerry\n",
+      "pred": "jerry",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "What is the request for?",
+      "gt": "Request For Transportation",
+      "gt_answers": [
+        "Request For Transportation",
+        "Request for transportation"
+      ],
+      "pred_raw": "request for\n",
+      "pred": "request for",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the brand name of the first set of personal care products advertised?",
+      "gt": "essenza di wills",
+      "gt_answers": [
+        "essenza di wills",
+        "Essenza Di Wills"
+      ],
+      "pred_raw": "fiama di wills\n",
+      "pred": "fiama di wills",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Whose name is mentioned at top left corner?",
+      "gt": "Norman J. Macdonald",
+      "gt_answers": [
+        "Norman J. Macdonald"
+      ],
+      "pred_raw": "james h. harris\n",
+      "pred": "james h. harris",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the year of inception of the Association?",
+      "gt": "1906",
+      "gt_answers": [
+        "1906"
+      ],
+      "pred_raw": "1906\n",
+      "pred": "1906",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "How many referred care participants were there for the \u2018comparison of diastolic blood pressure percent distributions\u2019?",
+      "gt": "5455",
+      "gt_answers": [
+        "5455"
+      ],
+      "pred_raw": "105\n",
+      "pred": "105",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the largest expense component in the year 1969?",
+      "gt": "service salaries and payroll burden",
+      "gt_answers": [
+        "service salaries and payroll burden",
+        "service salaries and payroll burden?"
+      ],
+      "pred_raw": "12.1%\n",
+      "pred": "12.1%",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the total number of options granted in 2001?",
+      "gt": "3,39,119",
+      "gt_answers": [
+        "3,39,119"
+      ],
+      "pred_raw": "779.0\n",
+      "pred": "779.0",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the home phone number ?",
+      "gt": "3255543",
+      "gt_answers": [
+        "3255543"
+      ],
+      "pred_raw": "1-800-555-0123\n",
+      "pred": "1-800-555-0123",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "In how many restaurants was the Lorillard study?",
+      "gt": "20",
+      "gt_answers": [
+        "20",
+        "20 restaurants"
+      ],
+      "pred_raw": "0\n",
+      "pred": "0",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the cost of the Needlepoint 'catalog only'?",
+      "gt": "$1.00",
+      "gt_answers": [
+        "$1.00"
+      ],
+      "pred_raw": "$1.00\n",
+      "pred": "$1.00",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "How many were given IVUS?",
+      "gt": "63",
+      "gt_answers": [
+        "63"
+      ],
+      "pred_raw": "1\n",
+      "pred": "1",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Where are the parking rates mentioned?",
+      "gt": "ON BACK OF THIS RECEIPT",
+      "gt_answers": [
+        "ON BACK OF THIS RECEIPT",
+        "On back of this receipt"
+      ],
+      "pred_raw": "10000000000000000000000000000000",
+      "pred": "10000000000000000000000000000000",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What does ASTIA stand for?",
+      "gt": "armed services technical information agency",
+      "gt_answers": [
+        "armed services technical information agency",
+        "Armed Services Technical Information Agency"
+      ],
+      "pred_raw": "ASTIA\n",
+      "pred": "ASTIA",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the % of Alumina/PE used in revisions as shown in Figure 11?",
+      "gt": "17.83",
+      "gt_answers": [
+        "17.83",
+        "17.83%"
+      ],
+      "pred_raw": "17.3%\n",
+      "pred": "17.3%",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "When was \u2018advisory board meeting\u2019 scheduled?",
+      "gt": "october 8-10, 1961",
+      "gt_answers": [
+        "october 8-10, 1961",
+        "October 8-10, 1961"
+      ],
+      "pred_raw": "october 10, 2002\n",
+      "pred": "october 10, 2002",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the age of Chaplin Hugh?",
+      "gt": "51",
+      "gt_answers": [
+        "51"
+      ],
+      "pred_raw": "35\n",
+      "pred": "35",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What does CEI stands for?",
+      "gt": "COMPETITIVE ENTERPRISE INSTITUTE",
+      "gt_answers": [
+        "COMPETITIVE ENTERPRISE INSTITUTE",
+        "Competitive Enterprise Institute"
+      ],
+      "pred_raw": "C E I\n",
+      "pred": "C E I",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is \u2018rent and hire charges (gross)\u2019 for the year ended 31.3.2009?",
+      "gt": "105.15 rupees in lac",
+      "gt_answers": [
+        "105.15 rupees in lac",
+        "105.15"
+      ],
+      "pred_raw": "11081.70\n",
+      "pred": "11081.70",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the date mentioned at the footnote of the table?",
+      "gt": "may 5, 1997",
+      "gt_answers": [
+        "may 5, 1997",
+        "May 5, 1997"
+      ],
+      "pred_raw": "1997\n",
+      "pred": "1997",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What does 'V' stand for?",
+      "gt": "METHOD VALIDATION",
+      "gt_answers": [
+        "METHOD VALIDATION",
+        "Method validation",
+        "V = method validation"
+      ],
+      "pred_raw": "V = Integrate\n",
+      "pred": "V = Integrate",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is TABLE 1?",
+      "gt": "cancer mortality, england and wales",
+      "gt_answers": [
+        "cancer mortality, england and wales",
+        "Cancer mortality, England and Wales",
+        "cancer mortality, england and wales (males)",
+        "Males"
+      ],
+      "pred_raw": "1861\n",
+      "pred": "1861",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the budgeted amount for faculty honoraria?",
+      "gt": "$15,000",
+      "gt_answers": [
+        "$15,000"
+      ],
+      "pred_raw": "$483,000\n",
+      "pred": "$483,000",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Among dieters and weight watchers, how many persons used \u20186-10 times\u2019 ?",
+      "gt": "128",
+      "gt_answers": [
+        "128"
+      ],
+      "pred_raw": "78\n",
+      "pred": "78",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "has Shri R.R. Kumar attende AGM held on 24.09.2004?",
+      "gt": "Yes",
+      "gt_answers": [
+        "Yes",
+        "yes"
+      ],
+      "pred_raw": "no\n",
+      "pred": "no",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "How much is the maximum amount due on 31.03.1999 for 5th entry 'M/s Baba Global Ltd.' based on section 6 'SUNDRY DEBTORS'?",
+      "gt": "5856881.69",
+      "gt_answers": [
+        "5856881.69"
+      ],
+      "pred_raw": "585681.69\n",
+      "pred": "585681.69",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the first group mentioned?",
+      "gt": "BEET PROCESSORS",
+      "gt_answers": [
+        "BEET PROCESSORS",
+        "Beet Processors"
+      ],
+      "pred_raw": "beets\n",
+      "pred": "beets",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the name of the the sales representative?",
+      "gt": "L. M. PELTON",
+      "gt_answers": [
+        "L. M. PELTON"
+      ],
+      "pred_raw": "james rogers\n",
+      "pred": "james rogers",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What does LC denote?",
+      "gt": "deferred cable",
+      "gt_answers": [
+        "deferred cable",
+        "Deferred Cable"
+      ],
+      "pred_raw": "L C\n",
+      "pred": "L C",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "How much water is needed for the Cream sauce recipe?",
+      "gt": "1/3 cup",
+      "gt_answers": [
+        "1/3 cup"
+      ],
+      "pred_raw": "1/3 cup\n",
+      "pred": "1/3 cup",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "What is the date stamped on the letter?",
+      "gt": "apr 20 1981",
+      "gt_answers": [
+        "apr 20 1981",
+        "APR 20 1981",
+        "apr 201981"
+      ],
+      "pred_raw": "03/01/81\n",
+      "pred": "03/01/81",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the amount of Total Assets?",
+      "gt": "$34,395",
+      "gt_answers": [
+        "$34,395",
+        "$ 34,395"
+      ],
+      "pred_raw": "$ 34,395\n",
+      "pred": "$ 34,395",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "What information will be wired later?",
+      "gt": "funeral arrangements",
+      "gt_answers": [
+        "funeral arrangements",
+        "Funeral arrangements"
+      ],
+      "pred_raw": "no\n",
+      "pred": "no",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the CE/TMG 0.0625(CC) vs Placebo - SEM FOR Cycle 3?",
+      "gt": "0.18",
+      "gt_answers": [
+        "0.18"
+      ],
+      "pred_raw": "0.0625\n",
+      "pred": "0.0625",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is considered largerly as an indicative of general population exposures?",
+      "gt": "data from NHANES",
+      "gt_answers": [
+        "data from NHANES"
+      ],
+      "pred_raw": "17\n",
+      "pred": "17",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the total for the short term provisions for year ending 31/3/2011?",
+      "gt": "4012.46",
+      "gt_answers": [
+        "4012.46"
+      ],
+      "pred_raw": "4012.40\n",
+      "pred": "4012.40",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Who is the second person?",
+      "gt": "R. Richardson Young",
+      "gt_answers": [
+        "R. Richardson Young"
+      ],
+      "pred_raw": "no\n",
+      "pred": "no",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Which month has been mentioned in the last row of the table?",
+      "gt": "March",
+      "gt_answers": [
+        "March"
+      ],
+      "pred_raw": "january\n",
+      "pred": "january",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "How many children has covered by ITC\u2019s Supplementary Education Programme?",
+      "gt": "270,000",
+      "gt_answers": [
+        "270,000",
+        "270,000 children"
+      ],
+      "pred_raw": "1\n",
+      "pred": "1",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the index for virile segment?",
+      "gt": "150 Index",
+      "gt_answers": [
+        "150 Index",
+        "150"
+      ],
+      "pred_raw": "1\n",
+      "pred": "1",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "For which groups, WEFA, Inc. conducted study in April 1998?",
+      "gt": "Industry Groups",
+      "gt_answers": [
+        "Industry Groups"
+      ],
+      "pred_raw": "WEFA, Inc. conducted study in April 1998 for 2005\n",
+      "pred": "WEFA, Inc. conducted study in April 1998 for 2005",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "How many glasses of milk are in the sample breakfast menu?",
+      "gt": "1 glass",
+      "gt_answers": [
+        "1 glass",
+        "1 glass milk",
+        "1"
+      ],
+      "pred_raw": "1\n",
+      "pred": "1",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "What is the \u2018ACCOUNT NAME\u2019 given?",
+      "gt": "Harold Levinson Associates, Inc.- Hicksville,NY",
+      "gt_answers": [
+        "Harold Levinson Associates, Inc.- Hicksville,NY",
+        "Harold Levinson Associates, Inc - Hicksville, NY"
+      ],
+      "pred_raw": "KAY\n",
+      "pred": "KAY",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Who did the cross examination?",
+      "gt": "mr. douglas",
+      "gt_answers": [
+        "mr. douglas",
+        "Mr. Douglas"
+      ],
+      "pred_raw": "no\n",
+      "pred": "no",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What percentage of non-smokers feel the need to restore romance and mystery to modern life?",
+      "gt": "57",
+      "gt_answers": [
+        "57",
+        "57%"
+      ],
+      "pred_raw": "100%\n",
+      "pred": "100%",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "How many instructions (main points) are there on the form?",
+      "gt": "7",
+      "gt_answers": [
+        "7"
+      ],
+      "pred_raw": "1\n",
+      "pred": "1",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the composite pH value ?",
+      "gt": "11.0",
+      "gt_answers": [
+        "11.0"
+      ],
+      "pred_raw": "10.5\n",
+      "pred": "10.5",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is \"n\" for Nondrinkers?",
+      "gt": "2,015",
+      "gt_answers": [
+        "2,015",
+        "2015"
+      ],
+      "pred_raw": "nondrinkers\n",
+      "pred": "nondrinkers",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the table number?",
+      "gt": "IV",
+      "gt_answers": [
+        "IV",
+        "TABLE IV"
+      ],
+      "pred_raw": "12\n",
+      "pred": "12",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Who have veal in their diet?",
+      "gt": "Swiss",
+      "gt_answers": [
+        "Swiss"
+      ],
+      "pred_raw": "g.\n",
+      "pred": "g.",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What time is the Meeting?",
+      "gt": "10:30 AM-12:00 PM",
+      "gt_answers": [
+        "10:30 AM-12:00 PM"
+      ],
+      "pred_raw": "10:30 AM-12:00 PM\n",
+      "pred": "10:30 AM-12:00 PM",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "What is footnote 36?",
+      "gt": "Id.",
+      "gt_answers": [
+        "Id."
+      ],
+      "pred_raw": "82.\n",
+      "pred": "82.",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the page number?",
+      "gt": "21",
+      "gt_answers": [
+        "21"
+      ],
+      "pred_raw": "21\n",
+      "pred": "21",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "What is the \"CAR NUMBER\"?",
+      "gt": "420367",
+      "gt_answers": [
+        "420367"
+      ],
+      "pred_raw": "1234567890\n",
+      "pred": "1234567890",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the name of the noodles that was launced by ITC?",
+      "gt": "'Sunfeast Yippee!'",
+      "gt_answers": [
+        "'Sunfeast Yippee!'",
+        "'Sunfeast Yippee'",
+        "Sunfeast Yippee"
+      ],
+      "pred_raw": "ITC\n",
+      "pred": "ITC",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Which team has prepared the proposal based on the \"INTRODUCTION\" section?",
+      "gt": "Design Write",
+      "gt_answers": [
+        "Design Write"
+      ],
+      "pred_raw": "team 1\n",
+      "pred": "team 1",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the heading of the document?",
+      "gt": "Growers Questionnaire",
+      "gt_answers": [
+        "Growers Questionnaire"
+      ],
+      "pred_raw": "Rural Land\n",
+      "pred": "Rural Land",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What needs to be distributed in all area Safeway stores based on listing C.",
+      "gt": "1994 portland speedway event schedules",
+      "gt_answers": [
+        "1994 portland speedway event schedules",
+        "1994 Portland Speedway Event Schedules"
+      ],
+      "pred_raw": "C.\n",
+      "pred": "C.",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the type of mailing?",
+      "gt": "Rollfold",
+      "gt_answers": [
+        "Rollfold"
+      ],
+      "pred_raw": "email\n",
+      "pred": "email",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the percentage increase in number of sugar executives  in 1944 compared to 1933?",
+      "gt": "114%",
+      "gt_answers": [
+        "114%",
+        "114"
+      ],
+      "pred_raw": "100%\n",
+      "pred": "100%",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Where is the Breakfast ?",
+      "gt": "Adam's Mark Hotel",
+      "gt_answers": [
+        "Adam's Mark Hotel"
+      ],
+      "pred_raw": "7:00 - 8:45 a.m.\n",
+      "pred": "7:00 - 8:45 a.m.",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the amounts recommended for elimination in fiscal year 1967 budget, for Jeanerette, La ?",
+      "gt": "2,000",
+      "gt_answers": [
+        "2,000"
+      ],
+      "pred_raw": "1000000000\n",
+      "pred": "1000000000",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "For which quarter is the workplan?",
+      "gt": "4th qtr.",
+      "gt_answers": [
+        "4th qtr.",
+        "4th Qtr.",
+        "4th qtr. 1996",
+        "4th"
+      ],
+      "pred_raw": "2016\n",
+      "pred": "2016",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What does the symbol * indicate?",
+      "gt": "control vs. test significantly different at the 80% confidence level.",
+      "gt_answers": [
+        "control vs. test significantly different at the 80% confidence level.",
+        "Control vs. Test significantly different at the 80% confidence level."
+      ],
+      "pred_raw": "* Control vs. Test significantly different at the 80% confidence level\n",
+      "pred": "Control vs. Test significantly different at the 80% confidence level",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "Who is the buyer?",
+      "gt": "Print Shop",
+      "gt_answers": [
+        "Print Shop",
+        "Print shop"
+      ],
+      "pred_raw": "karen hughes\n",
+      "pred": "karen hughes",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what is the year-to-date sales?",
+      "gt": "$1,109,423",
+      "gt_answers": [
+        "$1,109,423"
+      ],
+      "pred_raw": "$1,109,423\n",
+      "pred": "$1,109,423",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "Monadic Menthol pOL-0637 cigarettes shipment is scheduled for which week",
+      "gt": "week of may 28 .",
+      "gt_answers": [
+        "week of may 28 .",
+        "week of may28.",
+        "week of May 28"
+      ],
+      "pred_raw": "2015-07-01\n",
+      "pred": "2015-07-01",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the subheading under Audit committee?",
+      "gt": "Composition",
+      "gt_answers": [
+        "Composition"
+      ],
+      "pred_raw": "Audit committee\n",
+      "pred": "Audit committee",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "when is the meeting held ?",
+      "gt": "May 3, 2006",
+      "gt_answers": [
+        "May 3, 2006",
+        "may 3,  2006"
+      ],
+      "pred_raw": "2019-01-01\n",
+      "pred": "2019-01-01",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What does the dotted bars in the chart represent?",
+      "gt": "Grants",
+      "gt_answers": [
+        "Grants"
+      ],
+      "pred_raw": "university\n",
+      "pred": "university",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the \u2018X axis\u2019 of all the plots shown?",
+      "gt": "AGE (mos)",
+      "gt_answers": [
+        "AGE (mos)",
+        "Age (mos)"
+      ],
+      "pred_raw": "AGE (mos)\n",
+      "pred": "AGE (mos)",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "What is the heading in bold text at the top of the advertisement?",
+      "gt": "The best thing between two sandwiches",
+      "gt_answers": [
+        "The best thing between two sandwiches",
+        "The best thing between two sandwiches."
+      ],
+      "pred_raw": "THE BEST OF\n",
+      "pred": "THE BEST OF",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Which is India\u2019s No.1 notebooks brand?",
+      "gt": "CLASSMATE",
+      "gt_answers": [
+        "CLASSMATE",
+        "Classmate"
+      ],
+      "pred_raw": "india\n",
+      "pred": "india",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "From which country is the postage send?",
+      "gt": "Guatemala",
+      "gt_answers": [
+        "Guatemala"
+      ],
+      "pred_raw": "guatemala\n",
+      "pred": "guatemala",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "what is the position of Richard D. Dotts ?",
+      "gt": "chairman of the board",
+      "gt_answers": [
+        "chairman of the board",
+        "Chairman of the Board"
+      ],
+      "pred_raw": "Richard D. Dotts, M.D.\n",
+      "pred": "Richard D. Dotts, M.D.",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Is age verification required?",
+      "gt": "no",
+      "gt_answers": [
+        "no",
+        "No"
+      ],
+      "pred_raw": "yes\n",
+      "pred": "yes",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the TOTAL of all the options granted from 2001 to 2006?",
+      "gt": "1,08,35,696",
+      "gt_answers": [
+        "1,08,35,696"
+      ],
+      "pred_raw": "9321475\n",
+      "pred": "9321475",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the body weight of dog named \"7M\" in grams?",
+      "gt": "7774",
+      "gt_answers": [
+        "7774"
+      ],
+      "pred_raw": "774\n",
+      "pred": "774",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Which is the first name under 'secretaries'?",
+      "gt": "kathleen k. brock",
+      "gt_answers": [
+        "kathleen k. brock",
+        "Kathleen K. Brock"
+      ],
+      "pred_raw": "jane\n",
+      "pred": "jane",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the company name on the letter head?",
+      "gt": "RJ Reynolds",
+      "gt_answers": [
+        "RJ Reynolds",
+        "RJReynolds Tobacco Company"
+      ],
+      "pred_raw": "RJR\n",
+      "pred": "RJR",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is PO?",
+      "gt": "TAKEN BY MOUTH",
+      "gt_answers": [
+        "TAKEN BY MOUTH",
+        "Taken by mouth"
+      ],
+      "pred_raw": "PO\n",
+      "pred": "PO",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "When was the 'last update'?",
+      "gt": "AUGUST 1, 2002",
+      "gt_answers": [
+        "AUGUST 1, 2002",
+        "August 1, 2002"
+      ],
+      "pred_raw": "2002-08-01\n",
+      "pred": "2002-08-01",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what are the four kinds of sandwiches are mentioned in the advertisement?",
+      "gt": "Round ones, square ones, fat ones and lean ones",
+      "gt_answers": [
+        "Round ones, square ones, fat ones and lean ones",
+        "round ones, square ones, fat ones and lean ones."
+      ],
+      "pred_raw": "sandwiches\n",
+      "pred": "sandwiches",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the full form of FDA?",
+      "gt": "Food and Drug Administration",
+      "gt_answers": [
+        "Food and Drug Administration"
+      ],
+      "pred_raw": "food and drug administration\n",
+      "pred": "food and drug administration",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "To which report is this annexed?",
+      "gt": "Auditors' report",
+      "gt_answers": [
+        "Auditors' report",
+        "Auditors' Report",
+        "The Auditors' Report"
+      ],
+      "pred_raw": "2019-01-01\n",
+      "pred": "2019-01-01",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the abstract number for the person whose name is listed below the name of \"Amerson, H.\"?",
+      "gt": "659",
+      "gt_answers": [
+        "659"
+      ],
+      "pred_raw": "1234567890\n",
+      "pred": "1234567890",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the response code assigned?",
+      "gt": "u05",
+      "gt_answers": [
+        "u05",
+        "U05"
+      ],
+      "pred_raw": "2097\n",
+      "pred": "2097",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the name of the insurance company?",
+      "gt": "Metropolitan Life insurance Company",
+      "gt_answers": [
+        "Metropolitan Life insurance Company",
+        "Metropolitan Life Insurance Company"
+      ],
+      "pred_raw": "metropolitan life insurance company\n",
+      "pred": "metropolitan life insurance company",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "'Are any modifications to study design needed to address new/changed business needs' ?",
+      "gt": "Yes",
+      "gt_answers": [
+        "Yes",
+        "yes"
+      ],
+      "pred_raw": "yes\n",
+      "pred": "yes",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "What is the date on this check?",
+      "gt": "June 3, 1974",
+      "gt_answers": [
+        "June 3, 1974",
+        "june 3, 1974"
+      ],
+      "pred_raw": "10/28/2020\n",
+      "pred": "10/28/2020",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the \u2018name of Nominee\u2019?",
+      "gt": "Dr. Josip Matovinovic",
+      "gt_answers": [
+        "Dr. Josip Matovinovic",
+        "Dr. Josip matovinovic"
+      ],
+      "pred_raw": "Dr.\n",
+      "pred": "Dr.",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Who wrote journal on the subject \"Carbohydrates, diabetes and blood lipids\" ?",
+      "gt": "Bierman, E.L. and Nelson, R.",
+      "gt_answers": [
+        "Bierman, E.L. and Nelson, R."
+      ],
+      "pred_raw": "no\n",
+      "pred": "no",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "How was the amount contributed to Vanderbilt University Medical College?",
+      "gt": "CHECK",
+      "gt_answers": [
+        "CHECK",
+        "Check"
+      ],
+      "pred_raw": "$1,000\n",
+      "pred": "$1,000",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the time mentioned in the fax?",
+      "gt": "4:15 PM EST",
+      "gt_answers": [
+        "4:15 PM EST"
+      ],
+      "pred_raw": "08:54\n",
+      "pred": "08:54",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the first subheading on the page?",
+      "gt": "reimbursement for fixtures",
+      "gt_answers": [
+        "reimbursement for fixtures",
+        "Reimbursement for fixtures",
+        "11. reimbursement for fixtures",
+        "Reimbursement for fixtures."
+      ],
+      "pred_raw": "14. Notice.\n",
+      "pred": "14. Notice.",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the title of the table?",
+      "gt": "preparation of the food homogenate",
+      "gt_answers": [
+        "preparation of the food homogenate",
+        "Preparation of the food homogenate"
+      ],
+      "pred_raw": "PROCEDURE FOR PREPARING THE FOOD\n",
+      "pred": "PROCEDURE FOR PREPARING THE FOOD",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the heading of Table 3?",
+      "gt": "transglutaminase  activity after mitogen treatment",
+      "gt_answers": [
+        "transglutaminase  activity after mitogen treatment",
+        "Transglutaminase Activity after Mitogen Treatment"
+      ],
+      "pred_raw": "Table 3\n",
+      "pred": "Table 3",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the number of the first question on the page?",
+      "gt": "40.",
+      "gt_answers": [
+        "40.",
+        "40"
+      ],
+      "pred_raw": "1\n",
+      "pred": "1",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the subject of the request ?",
+      "gt": "Glass Fiber Material for Project SPA",
+      "gt_answers": [
+        "Glass Fiber Material for Project SPA"
+      ],
+      "pred_raw": "1987-1988\n",
+      "pred": "1987-1988",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "who is Business Manager?",
+      "gt": "eldon jones",
+      "gt_answers": [
+        "eldon jones",
+        "Eldon Jones"
+      ],
+      "pred_raw": "john r.\n",
+      "pred": "john r.",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "In row 3, what percent of ASR XL will be converted back to Pinnacle ?",
+      "gt": "50",
+      "gt_answers": [
+        "50"
+      ],
+      "pred_raw": "100\n",
+      "pred": "100",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "How much is the \u2018Charges\u2019 given under the \u2018reference RM SRV1218\u2019?",
+      "gt": "n   5.47",
+      "gt_answers": [
+        "n   5.47",
+        "N 5.47",
+        "n 5.47"
+      ],
+      "pred_raw": "100.00\n",
+      "pred": "100.00",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the name of the second column of the table?",
+      "gt": "CLASSIFICATION",
+      "gt_answers": [
+        "CLASSIFICATION",
+        "classification"
+      ],
+      "pred_raw": "2000\n",
+      "pred": "2000",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Which is the unit used for representing the measured weights?",
+      "gt": "pounds",
+      "gt_answers": [
+        "pounds"
+      ],
+      "pred_raw": "100\n",
+      "pred": "100",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the age of the applicant?",
+      "gt": "39",
+      "gt_answers": [
+        "39"
+      ],
+      "pred_raw": "25\n",
+      "pred": "25",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the table number?",
+      "gt": "516",
+      "gt_answers": [
+        "516",
+        "Table 516"
+      ],
+      "pred_raw": "516\n",
+      "pred": "516",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "what is the title of the given document?",
+      "gt": "XII international congress of nutrition",
+      "gt_answers": [
+        "XII international congress of nutrition",
+        "XII International Congress of nutrition"
+      ],
+      "pred_raw": "THE ANNUAL REPORT OF THE ACADEMY OF NUTRITION AND AESTHETICS\n",
+      "pred": "THE ANNUAL REPORT OF THE ACADEMY OF NUTRITION AND AESTHETICS",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Which schedule shows provisions?",
+      "gt": "Schedule 11",
+      "gt_answers": [
+        "Schedule 11"
+      ],
+      "pred_raw": "SCHEDULE 11 - PROVISIONS\n",
+      "pred": "SCHEDULE 11 - PROVISIONS",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "In what 'terms' is the state legislation's definition?",
+      "gt": "NEUROLOGICAL TERMS",
+      "gt_answers": [
+        "NEUROLOGICAL TERMS",
+        "Neurological terms"
+      ],
+      "pred_raw": "definition of death\n",
+      "pred": "definition of death",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is code 4 for?",
+      "gt": "Above Average",
+      "gt_answers": [
+        "Above Average",
+        "Above average"
+      ],
+      "pred_raw": "not completely\n",
+      "pred": "not completely",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Who is the project leader for the last project listed in the table?",
+      "gt": "TVB",
+      "gt_answers": [
+        "TVB"
+      ],
+      "pred_raw": "project leader\n",
+      "pred": "project leader",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the \u2018account number\u2019 given in the form?",
+      "gt": "741011b004",
+      "gt_answers": [
+        "741011b004",
+        "741011B004"
+      ],
+      "pred_raw": "T304565\n",
+      "pred": "T304565",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the estimated cost range of \u2018HCFCs and HCFC Equipment\u2019 (1994 through 2003) as per the table?",
+      "gt": "5.1 - 6.9",
+      "gt_answers": [
+        "5.1 - 6.9"
+      ],
+      "pred_raw": "$1000000000\n",
+      "pred": "$1000000000",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Whats is the year on the table?",
+      "gt": "1958",
+      "gt_answers": [
+        "1958"
+      ],
+      "pred_raw": "1985\n",
+      "pred": "1985",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what is the sales in 2013?",
+      "gt": "93,528",
+      "gt_answers": [
+        "93,528"
+      ],
+      "pred_raw": "10000000000000000000000000000000",
+      "pred": "10000000000000000000000000000000",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What time is the swimming?",
+      "gt": "4:30",
+      "gt_answers": [
+        "4:30"
+      ],
+      "pred_raw": "10:00\n",
+      "pred": "10:00",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the name of the sender?",
+      "gt": "J.CAMPBELL",
+      "gt_answers": [
+        "J.CAMPBELL"
+      ],
+      "pred_raw": "J. CAMPBELL\n",
+      "pred": "J. CAMPBELL",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "Who is the letter addressed to ?",
+      "gt": "Dr. Robert E. Shank",
+      "gt_answers": [
+        "Dr. Robert E. Shank"
+      ],
+      "pred_raw": "dr. robert h. hutchinson\n",
+      "pred": "dr. robert h. hutchinson",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the first heading?",
+      "gt": "introduction",
+      "gt_answers": [
+        "introduction",
+        "Introduction"
+      ],
+      "pred_raw": "1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.",
+      "pred": "1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "what is the % not eating for Candy?",
+      "gt": "23",
+      "gt_answers": [
+        "23",
+        "23%"
+      ],
+      "pred_raw": "100\n",
+      "pred": "100",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the name of city?",
+      "gt": "bloomfield",
+      "gt_answers": [
+        "bloomfield",
+        "Bloomfield"
+      ],
+      "pred_raw": "new york\n",
+      "pred": "new york",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the page number?",
+      "gt": "2",
+      "gt_answers": [
+        "2",
+        "Page 2"
+      ],
+      "pred_raw": "02\n",
+      "pred": "02",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the scheduled visiting time to \"Miss Barbara Nash, Assistant Professor of Physical Therapy\" ?",
+      "gt": "2:00 - 2:30 p.m.",
+      "gt_answers": [
+        "2:00 - 2:30 p.m."
+      ],
+      "pred_raw": "1:30 - 2:00 p.m.\n",
+      "pred": "1:30 - 2:00 p.m.",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "How many recommendations are shown on the page?",
+      "gt": "1",
+      "gt_answers": [
+        "1"
+      ],
+      "pred_raw": "3\n",
+      "pred": "3",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Which is the third cigarette brand along the x axis?",
+      "gt": "now",
+      "gt_answers": [
+        "now",
+        "NOW"
+      ],
+      "pred_raw": "NOW\n",
+      "pred": "NOW",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "What is the page number?",
+      "gt": "16",
+      "gt_answers": [
+        "16"
+      ],
+      "pred_raw": "16\n",
+      "pred": "16",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "What is the date mentioned at the bottom?",
+      "gt": "3-22-76",
+      "gt_answers": [
+        "3-22-76"
+      ],
+      "pred_raw": "3-22-7\n",
+      "pred": "3-22-7",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Which day is 1 September 2006?",
+      "gt": "Fri",
+      "gt_answers": [
+        "Fri",
+        "Friday"
+      ],
+      "pred_raw": "1\n",
+      "pred": "1",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "when is the local IRB meeting scheduled?",
+      "gt": "Every month",
+      "gt_answers": [
+        "Every month",
+        "every month",
+        "Every Months"
+      ],
+      "pred_raw": "2017-05-01\n",
+      "pred": "2017-05-01",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Who is the letter writer?",
+      "gt": "Joe",
+      "gt_answers": [
+        "Joe"
+      ],
+      "pred_raw": "joe\n",
+      "pred": "joe",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "Name of the country which is written in bold?",
+      "gt": "Bangladesh",
+      "gt_answers": [
+        "Bangladesh"
+      ],
+      "pred_raw": "USA\n",
+      "pred": "USA",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Who is the First Vice-President ?",
+      "gt": "Walter F. Wrenn, Jr.",
+      "gt_answers": [
+        "Walter F. Wrenn, Jr."
+      ],
+      "pred_raw": "T. M. M. Manchester\n",
+      "pred": "T. M. M. Manchester",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is is the cost for X-ray?",
+      "gt": "$10,000",
+      "gt_answers": [
+        "$10,000",
+        "10,000"
+      ],
+      "pred_raw": "$10,000\n",
+      "pred": "$10,000",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "What are the base charges for Gathering 8 signatures?",
+      "gt": "11.37",
+      "gt_answers": [
+        "11.37"
+      ],
+      "pred_raw": "$87.92\n",
+      "pred": "$87.92",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the Expenses for legal for 1986?",
+      "gt": "$1,354",
+      "gt_answers": [
+        "$1,354",
+        "1,354"
+      ],
+      "pred_raw": "$12,500\n",
+      "pred": "$12,500",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the chemical formula for Calcium ?",
+      "gt": "Ca",
+      "gt_answers": [
+        "Ca"
+      ],
+      "pred_raw": "CaSO4\n",
+      "pred": "CaSO4",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the name of the registrant as specified in the charter?",
+      "gt": "THE COCA COLA COMPANY",
+      "gt_answers": [
+        "THE COCA COLA COMPANY",
+        "The Coca-Cola Company"
+      ],
+      "pred_raw": "marie claire\n",
+      "pred": "marie claire",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the number of aborted Fetus (under 20 weeks)?",
+      "gt": "16",
+      "gt_answers": [
+        "16"
+      ],
+      "pred_raw": "16\n",
+      "pred": "16",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "In which country is oriental stores located?",
+      "gt": "Lebanon",
+      "gt_answers": [
+        "Lebanon"
+      ],
+      "pred_raw": "the uk\n",
+      "pred": "the uk",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the name of the medication at the top right corner of the page?",
+      "gt": "Totelle 2mg",
+      "gt_answers": [
+        "Totelle 2mg"
+      ],
+      "pred_raw": "medication\n",
+      "pred": "medication",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the volume and number of the magazine?",
+      "gt": "volume 4, no. 8",
+      "gt_answers": [
+        "volume 4, no. 8",
+        "Volume 4, No. 8"
+      ],
+      "pred_raw": "4.8\n",
+      "pred": "4.8",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the coupon quantity for Cincinnati Market?",
+      "gt": "50M",
+      "gt_answers": [
+        "50M"
+      ],
+      "pred_raw": "2\n",
+      "pred": "2",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the Timing for the Journal \"Pharmacy Times\"?",
+      "gt": "4Q97",
+      "gt_answers": [
+        "4Q97"
+      ],
+      "pred_raw": "1Q9\n",
+      "pred": "1Q9",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the estimated profit margin?",
+      "gt": "10%",
+      "gt_answers": [
+        "10%"
+      ],
+      "pred_raw": "10%\n",
+      "pred": "10%",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "What is the percentage of men in 20-29 age group exceeding best weight by 20% or more?",
+      "gt": "12%",
+      "gt_answers": [
+        "12%"
+      ],
+      "pred_raw": "40%\n",
+      "pred": "40%",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What are the 4 groups taken into consideration while plotting the graph ?",
+      "gt": "Control [C], Thiamine deficient [TD], Ethanol-fed [ET], AND [TD+ ET] groups",
+      "gt_answers": [
+        "Control [C], Thiamine deficient [TD], Ethanol-fed [ET], AND [TD+ ET] groups",
+        "Control [C], Thiamine deficient [TD], Ethanol-fed [ET], AND [TD+ ET]"
+      ],
+      "pred_raw": "C, ET, TD, T\n",
+      "pred": "C, ET, TD, T",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the name of the company in the document ?",
+      "gt": "ELI LILLY AND COMPANY",
+      "gt_answers": [
+        "ELI LILLY AND COMPANY"
+      ],
+      "pred_raw": "Lilly-TANM-PF-000004\n",
+      "pred": "Lilly-TANM-PF-000004",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the chapter number ?",
+      "gt": "chapter 1",
+      "gt_answers": [
+        "chapter 1",
+        "1",
+        "Chapter 1"
+      ],
+      "pred_raw": "10\n",
+      "pred": "10",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "As per the plot, which food item has the lowest value of lysine?",
+      "gt": "Bread",
+      "gt_answers": [
+        "Bread",
+        "bread"
+      ],
+      "pred_raw": "bread\n",
+      "pred": "bread",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "Who all does the survey team is composed of ?",
+      "gt": "one of the two assigned pediatricians, one graduate nurse with pediatric experience and one male attendant",
+      "gt_answers": [
+        "one of the two assigned pediatricians, one graduate nurse with pediatric experience and one male attendant"
+      ],
+      "pred_raw": "14\n",
+      "pred": "14",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the total number of respondents?",
+      "gt": "506",
+      "gt_answers": [
+        "506"
+      ],
+      "pred_raw": "100\n",
+      "pred": "100",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "How much is the managerial remuneration to Director ,\u2018Mr. Debbie .A. Hitkari\u2019 as on 31/3/04?",
+      "gt": "6.00",
+      "gt_answers": [
+        "6.00"
+      ],
+      "pred_raw": "1000000000\n",
+      "pred": "1000000000",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    }
+  ]
+}

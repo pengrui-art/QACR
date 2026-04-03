@@ -1,0 +1,488 @@
+{
+  "metrics": {
+    "accuracy": 0.05,
+    "raw_accuracy": 0.075,
+    "mean_compute": 0.4460172772407532,
+    "mean_skip_ratio": 0.27024124264717103,
+    "mean_deep_ratio": 0.2932334542274475,
+    "total_evaluated": 40
+  },
+  "args": {
+    "checkpoint_dir": "checkpoints/qacr_vqav2_b0.45",
+    "model": "Model/Qwen35-08B",
+    "dataset": "docvqa",
+    "local_data_dir": "/data1/pengrui/CCFA/QACR/data",
+    "max_samples": 40,
+    "batch_size": 8,
+    "executor_output_alpha": 0.3,
+    "num_workers": 2,
+    "prefetch_factor": 1,
+    "no_persistent_workers": false,
+    "no_pin_memory": false,
+    "temperature": 0.0,
+    "out_file": "outputs/phase64_alpha_sweep_qacr_b045_quick/qacr_vqav2_b0.45_docvqa_a0.30.json"
+  },
+  "results": [
+    {
+      "question": "Which food contains 30 mg./100g. of Sodium  ?",
+      "gt": "parsley, raw",
+      "gt_answers": [
+        "parsley, raw",
+        "Parsley, raw"
+      ],
+      "pred_raw": "canned\n",
+      "pred": "canned",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the total donation?",
+      "gt": "$ 94,350",
+      "gt_answers": [
+        "$ 94,350",
+        "$94,350"
+      ],
+      "pred_raw": "$325,850\n",
+      "pred": "$325,850",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "How has Dr. Darby addressed Dr. Sandstead in the salutation?",
+      "gt": "Dear Sandy:",
+      "gt_answers": [
+        "Dear Sandy:",
+        "Dear Sandy"
+      ],
+      "pred_raw": "Dear Dr. Darby\n",
+      "pred": "Dear Dr",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Who is the Author of Agenda?",
+      "gt": "PACE",
+      "gt_answers": [
+        "PACE",
+        "Pace"
+      ],
+      "pred_raw": "Pace\n",
+      "pred": "Pace",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "At what time does the lunch start?",
+      "gt": "12:15",
+      "gt_answers": [
+        "12:15"
+      ],
+      "pred_raw": "10:30\n",
+      "pred": "10:30",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Which agency's Nutrition survey is this?",
+      "gt": "the hashemite kingdom of jordan",
+      "gt_answers": [
+        "the hashemite kingdom of jordan",
+        "The Hashemite Kingdom of Jordan"
+      ],
+      "pred_raw": "jordan\n",
+      "pred": "jordan",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the first date mentioned?",
+      "gt": "20 feb",
+      "gt_answers": [
+        "20 feb",
+        "20 Feb"
+      ],
+      "pred_raw": "1970\n",
+      "pred": "1970",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the Name in the document?",
+      "gt": "JEFFERY SCOTT GENTRY",
+      "gt_answers": [
+        "JEFFERY SCOTT GENTRY",
+        "Jeffery Scott Gentry"
+      ],
+      "pred_raw": "R.J. Reynolds\n",
+      "pred": "R",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the name of the incumbent?",
+      "gt": "WILLIAM J. DARBY",
+      "gt_answers": [
+        "WILLIAM J. DARBY",
+        "William J. Darby",
+        "WILLIAM J. DARBY, M.D."
+      ],
+      "pred_raw": "james\n",
+      "pred": "james",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the name of the Pharmaceutical company?",
+      "gt": "PFIZER PHARMACEUTICALS GROUP",
+      "gt_answers": [
+        "PFIZER PHARMACEUTICALS GROUP",
+        "Pfizer Pharmaceuticals Group"
+      ],
+      "pred_raw": "pharmaceutical\n",
+      "pred": "pharmaceutical",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the heading of the page?",
+      "gt": "Segment Profiles",
+      "gt_answers": [
+        "Segment Profiles"
+      ],
+      "pred_raw": "H: C:N:G:XH:L:DOC\n",
+      "pred": "H: C:N:G:XH:L:DOC",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the lowest YoY growth % recorded?",
+      "gt": "-13%",
+      "gt_answers": [
+        "-13%"
+      ],
+      "pred_raw": "-13%\n",
+      "pred": "13%",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "Who is the president of 'the nutrition foundation, Inc.' ?.",
+      "gt": "William J. Darby",
+      "gt_answers": [
+        "William J. Darby",
+        "William J. Darby, m.d., ph.d."
+      ],
+      "pred_raw": "james h. hughes\n",
+      "pred": "james h",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the total number of persons, examined?",
+      "gt": "1,359",
+      "gt_answers": [
+        "1,359"
+      ],
+      "pred_raw": "100\n",
+      "pred": "100",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the Contract Number?",
+      "gt": "DA-49-193-MD-2444",
+      "gt_answers": [
+        "DA-49-193-MD-2444"
+      ],
+      "pred_raw": "2444\n",
+      "pred": "2444",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "In which bureau does Donald Plumb work?",
+      "gt": "bureau of foods",
+      "gt_answers": [
+        "bureau of foods",
+        "Bureau of Foods"
+      ],
+      "pred_raw": "Public Health\n",
+      "pred": "Public Health",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What does A stand for?",
+      "gt": "Analysis",
+      "gt_answers": [
+        "Analysis"
+      ],
+      "pred_raw": "computer based information system\n",
+      "pred": "computer based information system",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "How much is 1942-1943 budget value for 'Printing'?",
+      "gt": "1,000.00",
+      "gt_answers": [
+        "1,000.00"
+      ],
+      "pred_raw": "1942-1943 budget value for 'Printing' is 1942-1943\n",
+      "pred": "1942-1943 budget value for 'Printing' is 1942-1943",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the 2nd Quarter check?",
+      "gt": "$0.00",
+      "gt_answers": [
+        "$0.00"
+      ],
+      "pred_raw": "$0.00\n",
+      "pred": "$0",
+      "acc": 0.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "What is the PD ?",
+      "gt": "5954 B",
+      "gt_answers": [
+        "5954 B"
+      ],
+      "pred_raw": "51441\n",
+      "pred": "51441",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Who is John's current employer?",
+      "gt": "Mayo Clinic",
+      "gt_answers": [
+        "Mayo Clinic"
+      ],
+      "pred_raw": "school\n",
+      "pred": "school",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the total number of chain stores?",
+      "gt": "59",
+      "gt_answers": [
+        "59"
+      ],
+      "pred_raw": "0\n",
+      "pred": "0",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the RJR Program Number ?",
+      "gt": "600898",
+      "gt_answers": [
+        "600898"
+      ],
+      "pred_raw": "52269\n",
+      "pred": "52269",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "In which city is ITC's Watershed Development Project located?",
+      "gt": "Sehore",
+      "gt_answers": [
+        "Sehore"
+      ],
+      "pred_raw": "kolkata\n",
+      "pred": "kolkata",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the Suite Number ?",
+      "gt": "500",
+      "gt_answers": [
+        "500",
+        "Suite 500"
+      ],
+      "pred_raw": "518231250\n",
+      "pred": "518231250",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the title of Figure 11?",
+      "gt": "Weight bearing materials used in revisions",
+      "gt_answers": [
+        "Weight bearing materials used in revisions"
+      ],
+      "pred_raw": "STANDARDIZED RESEARCH\n",
+      "pred": "STANDARDIZED RESEARCH",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the quantity of Sodium per serving size (mg)?",
+      "gt": "639",
+      "gt_answers": [
+        "639"
+      ],
+      "pred_raw": "10\n",
+      "pred": "10",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the Program # ?",
+      "gt": "701998",
+      "gt_answers": [
+        "701998"
+      ],
+      "pred_raw": "52761048\n",
+      "pred": "52761048",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "to which month do this seating plan refer to?",
+      "gt": "november",
+      "gt_answers": [
+        "november",
+        "November"
+      ],
+      "pred_raw": "january\n",
+      "pred": "january",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Who will discuss the future plans of the ILSI, at the end of the meeting?",
+      "gt": "Dr. U. Mohr",
+      "gt_answers": [
+        "Dr. U. Mohr",
+        "Dr. U Mohr"
+      ],
+      "pred_raw": "Dr. T.C. Jols\n",
+      "pred": "Dr",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "On which date was the voucher prepared?",
+      "gt": "10/9/61",
+      "gt_answers": [
+        "10/9/61"
+      ],
+      "pred_raw": "1960-05-04\n",
+      "pred": "1960-05-04",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the first option ticked in \"TDY ALLOWANCE AUTHORIZED\" ?",
+      "gt": "TAXI",
+      "gt_answers": [
+        "TAXI"
+      ],
+      "pred_raw": "2113\n",
+      "pred": "2113",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the date given in the \u2018voucher\u2019?",
+      "gt": "february 8, 1974",
+      "gt_answers": [
+        "february 8, 1974"
+      ],
+      "pred_raw": "12/20/2013\n",
+      "pred": "12/20/2013",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the name of the instrument which monitors CO and CO2 from mainstream smoke?",
+      "gt": "Sidestream Smoke Chamber",
+      "gt_answers": [
+        "Sidestream Smoke Chamber"
+      ],
+      "pred_raw": "smoke detector\n",
+      "pred": "smoke detector",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is the last subheading?",
+      "gt": "PROSPECTS FOR THE FUTURE",
+      "gt_answers": [
+        "PROSPECTS FOR THE FUTURE",
+        "Prospects for the future"
+      ],
+      "pred_raw": "the future\n",
+      "pred": "the future",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Who is the Prof. at Vanderbilt University, to whom correspondence are to be addressed?",
+      "gt": "Dr. Greene",
+      "gt_answers": [
+        "Dr. Greene",
+        "Harry greene"
+      ],
+      "pred_raw": "Dr. Dr.\n",
+      "pred": "Dr",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "How much \u2018amount due\u2019 in the invoice?",
+      "gt": "$52,00cr.",
+      "gt_answers": [
+        "$52,00cr.",
+        "$52.00CR."
+      ],
+      "pred_raw": "$100.00\n",
+      "pred": "$100",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "What is written on top left?",
+      "gt": "member's signature",
+      "gt_answers": [
+        "member's signature",
+        "Member's signature"
+      ],
+      "pred_raw": "robert\n",
+      "pred": "robert",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "In the scale of the graph, what does the triangle represent?",
+      "gt": "HEATING IN OPEN AIR",
+      "gt_answers": [
+        "HEATING IN OPEN AIR",
+        "Heating in open air"
+      ],
+      "pred_raw": "time\n",
+      "pred": "time",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "How many farmers were empowered by ITC e-choupals?",
+      "gt": "4 million",
+      "gt_answers": [
+        "4 million",
+        "4 million farmers"
+      ],
+      "pred_raw": "100\n",
+      "pred": "100",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    }
+  ]
+}

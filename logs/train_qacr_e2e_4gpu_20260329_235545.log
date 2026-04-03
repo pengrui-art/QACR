@@ -1,0 +1,82 @@
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+2026-03-29 23:55:51,356 INFO Runtime: distributed=True world_size=4 rank=0 local_rank=0 device=cuda:0
+2026-03-29 23:55:51,356 INFO Loading VLM from Model/Qwen35-08B ...
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:  63%|██████▎   | 299/473 [00:00<00:00, 2985.16it/s]Loading weights:  92%|█████████▏| 435/473 [00:00<00:00, 4345.67it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 4336.27it/s]
+Loading weights:  81%|████████  | 382/473 [00:00<00:00, 3803.13it/s]The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3730.65it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 2890.24it/s]
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:  74%|███████▍  | 351/473 [00:00<00:00, 3506.06it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3462.76it/s]
+2026-03-29 23:55:56,744 INFO Trainable params: Router + Executor = 2,909,187
+2026-03-29 23:55:56,746 INFO Loading dataset: vqav2 (max_samples=20000, streaming=False)
+2026-03-29 23:55:59,229 INFO Loaded 20000 samples from data/VQAv2/validation.
+2026-03-29 23:55:59,229 INFO Loaded 20000 samples from data/VQAv2/validation.
+2026-03-29 23:55:59,229 INFO Loaded 20000 samples from data/VQAv2/validation.
+2026-03-29 23:55:59,229 INFO Loaded 20000 samples from data/VQAv2/validation.
+/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/c10d_logger.py:83: UserWarning: barrier(): using the device under current context. You can specify `device_id` in `init_process_group` to mute this warning.
+  return func(*args, **kwargs)
+2026-03-29 23:55:59,234 INFO Starting training: 3 epochs, 1250 batches/epoch (per-rank), grad_accum=8, world_size=4
+2026-03-29 23:55:59,234 INFO Budget=0.45, lr=3.0e-04, temp=1.50->0.30
+Epoch 1/3:   0%|          | 0/1250 [00:00<?, ?it/s]W0329 23:56:01.752000 3635870 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 3635978 closing signal SIGTERM
+W0329 23:56:01.777000 3635870 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 3635979 closing signal SIGTERM
+W0329 23:56:01.782000 3635870 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 3635981 closing signal SIGTERM
+E0329 23:56:01.799000 3635870 site-packages/torch/distributed/elastic/multiprocessing/api.py:986] failed (exitcode: -9) local_rank: 2 (pid: 3635980) of binary: /home/pengr/.conda/envs/qacr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 994, in <module>
+    main()
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 362, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 990, in main
+    run(args)
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 981, in run
+    elastic_launch(
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 170, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 317, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+=========================================================
+scripts/train_qacr_e2e.py FAILED
+---------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-03-29_23:56:01
+  host      : ubuntu2404
+  rank      : 0 (local_rank: 0)
+  exitcode  : -15 (pid: 3635978)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 3635978
+[2]:
+  time      : 2026-03-29_23:56:01
+  host      : ubuntu2404
+  rank      : 1 (local_rank: 1)
+  exitcode  : -15 (pid: 3635979)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 3635979
+[3]:
+  time      : 2026-03-29_23:56:01
+  host      : ubuntu2404
+  rank      : 3 (local_rank: 3)
+  exitcode  : -15 (pid: 3635981)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 3635981
+---------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-03-29_23:56:01
+  host      : ubuntu2404
+  rank      : 2 (local_rank: 2)
+  exitcode  : -9 (pid: 3635980)
+  error_file: <N/A>
+  traceback : Signal 9 (SIGKILL) received by PID 3635980
+=========================================================
+ERROR conda.cli.main_run:execute(127): `conda run python -m torch.distributed.run --standalone --nnodes=1 --nproc_per_node=4 scripts/train_qacr_e2e.py --model Model/Qwen35-08B --dataset vqav2 --local-data-dir data/VQAv2 --max-samples 20000 --epochs 3 --num-workers 32 --budget 0.45` failed. (See above for error)

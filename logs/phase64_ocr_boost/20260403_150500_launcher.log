@@ -1,0 +1,3 @@
+[2026-04-03 16:08:12] launched 4-GPU OCR boost sweep: 20260403_150500
+out_dir=outputs/phase64_ocr_boost/20260403_150500
+Use: tail -f logs/phase64_ocr_boost/20260403_150500_base.log

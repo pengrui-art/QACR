@@ -1,0 +1,22 @@
+2026-04-04 00:20:31,132 INFO Loading VLM from Model/Qwen35-08B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:  17%|█▋        | 79/473 [00:00<00:00, 781.22it/s]Loading weights:  33%|███▎      | 158/473 [00:00<00:00, 508.40it/s]Loading weights:  45%|████▌     | 215/473 [00:00<00:00, 455.10it/s]Loading weights:  73%|███████▎  | 346/473 [00:00<00:00, 711.06it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 752.75it/s]
+2026-04-04 00:20:33,670 INFO Loading QACR components from checkpoints/qacr_vqav2_b0.45/best.pt ...
+2026-04-04 00:20:33,680 INFO Detected QACR Query-Adaptive model
+2026-04-04 00:20:33,680 INFO Loaded QACR with budget: 0.45
+2026-04-04 00:20:33,707 INFO Loading evaluation dataset ...
+2026-04-04 00:20:34,158 INFO Raw dataset loaded: data/textvqa/validation, total=5000
+2026-04-04 00:20:34,164 INFO Loaded 1 samples from data/textvqa/validation (split=eval).
+2026-04-04 00:20:34,164 INFO Starting Evaluation ...
+Eval:   0%|          | 0/1 [00:00<?, ?it/s]Eval: 100%|██████████| 1/1 [00:02<00:00,  2.39s/it]Eval: 100%|██████████| 1/1 [00:02<00:00,  2.39s/it]
+2026-04-04 00:20:36,556 INFO 
+========== Benchmark Results ==========
+accuracy: 0.0000
+raw_accuracy: 0.0000
+mean_compute: 0.4497
+mean_skip_ratio: 0.2760
+mean_deep_ratio: 0.3021
+total_evaluated: 1.0000
+=======================================
+2026-04-04 00:20:36,557 INFO Saved detailed results to outputs/phaseB3_stable_smoke/qacr_b045/eval_results_textvqa.json.tmp.phaseB3_smoke

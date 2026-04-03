@@ -1,0 +1,37 @@
+{
+  "stage": "full",
+  "baseline_name": "baseline",
+  "best_variant": "aux_v1",
+  "rows": [
+    {
+      "variant": "baseline",
+      "accuracy": 0.2646666666666667,
+      "raw_accuracy": 0.25639999999999996,
+      "mean_compute": 0.4481513639450073,
+      "total_evaluated": 5000,
+      "path": "checkpoints/qacr_vqav2_b0.45/eval_results_textvqa.json",
+      "delta_accuracy_vs_baseline": 0.0,
+      "delta_compute_vs_baseline": 0.0
+    },
+    {
+      "variant": "prior_v1",
+      "accuracy": 0.26353333333333345,
+      "raw_accuracy": 0.2565333333333334,
+      "mean_compute": 0.4473750544071198,
+      "total_evaluated": 5000,
+      "path": "outputs/phaseC_textvqa/prior_v1_full.json",
+      "delta_accuracy_vs_baseline": -0.001133333333333264,
+      "delta_compute_vs_baseline": -0.0007763095378875429
+    },
+    {
+      "variant": "aux_v1",
+      "accuracy": 0.39793333333333314,
+      "raw_accuracy": 0.39033333333333314,
+      "mean_compute": 0.39315066928863523,
+      "total_evaluated": 5000,
+      "path": "outputs/phaseC_textvqa/aux_v1_full.json",
+      "delta_accuracy_vs_baseline": 0.13326666666666642,
+      "delta_compute_vs_baseline": -0.055000694656372084
+    }
+  ]
+}

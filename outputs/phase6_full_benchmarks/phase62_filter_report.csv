@@ -1,0 +1,28 @@
+method,method_key,dataset,candidate_path,candidate_status,candidate_reason,candidate_total_evaluated,expected_total,fallback_used,fallback_source_path
+FastV,fastv,docvqa,checkpoints/sota_eval/fastv_docvqa_results.json,accepted,accepted,5349,5349,False,
+ImageOnly@0.45,image_only,docvqa,checkpoints/image_only_b0.45_vqav2/eval_results_docvqa.json,accepted,accepted,5349,5349,False,
+LVPruning,lvpruning,docvqa,checkpoints/sota_eval/lvpruning_docvqa_results.json,accepted,accepted,5349,5349,False,
+LowRes-9x9,low_res,docvqa,checkpoints/low_res_g9_vqav2/eval_results_docvqa.json,accepted,accepted,5349,5349,False,
+Original,original,docvqa,checkpoints/sota_eval/original_docvqa_results.json,accepted,accepted,5349,5349,False,
+QACR b0.35,qacr_b035,docvqa,checkpoints/qacr_vqav2_b0.35/eval_results_docvqa.json,accepted,accepted,5349,5349,False,
+QACR b0.45,qacr_b045,docvqa,checkpoints/qacr_vqav2_b0.45/eval_results_docvqa.json,accepted,accepted,5349,5349,False,
+QACR b0.60,qacr_b060,docvqa,checkpoints/qacr_vqav2_b0.60/eval_results_docvqa.json,accepted,accepted,5349,5349,False,
+TokenPruning@0.45,token_pruning,docvqa,checkpoints/token_pruning_kr0.45_vqav2/eval_results_docvqa.json,accepted,accepted,5349,5349,False,
+FastV,fastv,mmmu,checkpoints/sota_eval/fastv_mmmu_results.json,accepted,accepted,900,900,False,
+ImageOnly@0.45,image_only,mmmu,checkpoints/image_only_b0.45_vqav2/eval_results_mmmu.json,accepted,accepted,900,900,False,
+LVPruning,lvpruning,mmmu,checkpoints/sota_eval/lvpruning_mmmu_results.json,accepted,accepted,900,900,False,
+LowRes-9x9,low_res,mmmu,checkpoints/low_res_g9_vqav2/eval_results_mmmu.json,accepted,accepted,900,900,False,
+Original,original,mmmu,checkpoints/sota_eval/original_mmmu_results.json,accepted,accepted,900,900,False,
+QACR b0.35,qacr_b035,mmmu,checkpoints/qacr_vqav2_b0.35/eval_results_mmmu.json,accepted,accepted,900,900,False,
+QACR b0.45,qacr_b045,mmmu,checkpoints/qacr_vqav2_b0.45/eval_results_mmmu.json,accepted,accepted,900,900,False,
+QACR b0.60,qacr_b060,mmmu,checkpoints/qacr_vqav2_b0.60/eval_results_mmmu.json,accepted,accepted,900,900,False,
+TokenPruning@0.45,token_pruning,mmmu,checkpoints/token_pruning_kr0.45_vqav2/eval_results_mmmu.json,accepted,accepted,900,900,False,
+FastV,fastv,textvqa,checkpoints/sota_eval/fastv_textvqa_results.json,insufficient_coverage,coverage_below_0.95,1,5000,True,checkpoints/sota_eval/fastv_textvqa_results.json [from existing summary]
+ImageOnly@0.45,image_only,textvqa,checkpoints/image_only_b0.45_vqav2/eval_results_textvqa.json,insufficient_coverage,coverage_below_0.95,1,5000,True,checkpoints/image_only_b0.45_vqav2/eval_results_textvqa.json [from existing summary]
+LVPruning,lvpruning,textvqa,checkpoints/sota_eval/lvpruning_textvqa_results.json,insufficient_coverage,coverage_below_0.95,1,5000,True,checkpoints/sota_eval/lvpruning_textvqa_results.json [from existing summary]
+LowRes-9x9,low_res,textvqa,checkpoints/low_res_g9_vqav2/eval_results_textvqa.json,insufficient_coverage,coverage_below_0.95,1,5000,True,checkpoints/low_res_g9_vqav2/eval_results_textvqa.json [from existing summary]
+Original,original,textvqa,checkpoints/sota_eval/original_textvqa_results.json,insufficient_coverage,coverage_below_0.95,1,5000,True,checkpoints/sota_eval/original_textvqa_results.json [from existing summary]
+QACR b0.35,qacr_b035,textvqa,checkpoints/qacr_vqav2_b0.35/eval_results_textvqa.json,insufficient_coverage,coverage_below_0.95,1,5000,True,checkpoints/qacr_vqav2_b0.35/eval_results_textvqa.json [from existing summary]
+QACR b0.45,qacr_b045,textvqa,checkpoints/qacr_vqav2_b0.45/eval_results_textvqa.json,accepted,accepted,5000,5000,False,
+QACR b0.60,qacr_b060,textvqa,checkpoints/qacr_vqav2_b0.60/eval_results_textvqa.json,insufficient_coverage,coverage_below_0.95,1,5000,True,checkpoints/qacr_vqav2_b0.60/eval_results_textvqa.json [from existing summary]
+TokenPruning@0.45,token_pruning,textvqa,checkpoints/token_pruning_kr0.45_vqav2/eval_results_textvqa.json,insufficient_coverage,coverage_below_0.95,1,5000,True,checkpoints/token_pruning_kr0.45_vqav2/eval_results_textvqa.json [from existing summary]

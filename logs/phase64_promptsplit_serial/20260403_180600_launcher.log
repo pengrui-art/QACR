@@ -1,0 +1,12 @@
+[2026-04-03 18:03:26] serial rerun start
+[2026-04-03 18:03:26] backup checkpoints/qacr_vqav2_b0.45/eval_results_textvqa.json -> checkpoints/qacr_vqav2_b0.45/history/eval_results_textvqa.pre_serial_20260403_180600.json
+[2026-04-03 18:03:26] backup checkpoints/qacr_vqav2_b0.45/eval_results_docvqa.json -> checkpoints/qacr_vqav2_b0.45/history/eval_results_docvqa.pre_serial_20260403_180600.json
+[2026-04-03 18:03:26] START dataset=textvqa gpu=0 max_samples=5000 batch=8 workers=12 prefetch=2 alpha=0.30
+[2026-04-03 18:03:26] log_file=logs/phase64_promptsplit_serial/20260403_180600_textvqa.log
+[2026-04-03 18:03:26] out_file=checkpoints/qacr_vqav2_b0.45/eval_results_textvqa.json
+[2026-04-03 18:16:54] END dataset=textvqa
+[2026-04-03 18:16:54] START dataset=docvqa gpu=1 max_samples=10000 batch=8 workers=4 prefetch=1 alpha=0.30
+[2026-04-03 18:16:54] log_file=logs/phase64_promptsplit_serial/20260403_180600_docvqa.log
+[2026-04-03 18:16:54] out_file=checkpoints/qacr_vqav2_b0.45/eval_results_docvqa.json
+[2026-04-03 19:14:38] END dataset=docvqa
+[2026-04-03 19:14:38] serial rerun all done

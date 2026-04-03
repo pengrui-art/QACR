@@ -1,0 +1,527 @@
+==================================
+Starting Token Pruning (keep_ratio=0.45)
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+2026-03-30 15:23:11,410 INFO Runtime: distributed=True world_size=4 rank=0 local_rank=0 device=cuda:0
+2026-03-30 15:23:11,411 INFO Loading VLM from Model/Qwen35-08B ...
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:  78%|███████▊  | 371/473 [00:00<00:00, 3685.55it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3660.97it/s]
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:  76%|███████▋  | 361/473 [00:00<00:00, 3588.57it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3537.05it/s]
+Loading weights:  77%|███████▋  | 366/473 [00:00<00:00, 3650.17it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3620.35it/s]
+Loading weights:  72%|███████▏  | 342/473 [00:00<00:00, 3415.70it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3382.65it/s]
+2026-03-30 15:23:16,591 INFO Trainable params: Router + Executor = 2,629,888
+2026-03-30 15:23:16,592 INFO Loading dataset: vqav2 (max_samples=20000, streaming=False)
+'[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py
+2026-03-30 15:23:32,071 WARNING '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py
+Retrying in 1s [Retry 1/5].
+2026-03-30 15:23:32,072 WARNING Retrying in 1s [Retry 1/5].
+'[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py
+2026-03-30 15:23:32,088 WARNING '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py
+Retrying in 1s [Retry 1/5].
+2026-03-30 15:23:32,088 WARNING Retrying in 1s [Retry 1/5].
+'[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py
+2026-03-30 15:23:32,092 WARNING '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py
+Retrying in 1s [Retry 1/5].
+2026-03-30 15:23:32,092 WARNING Retrying in 1s [Retry 1/5].
+'[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py
+2026-03-30 15:23:32,134 WARNING '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py
+Retrying in 1s [Retry 1/5].
+2026-03-30 15:23:32,135 WARNING Retrying in 1s [Retry 1/5].
+Using the latest cached version of the dataset since lmms-lab/VQAv2 couldn't be found on the Hugging Face Hub
+2026-03-30 15:23:33,073 WARNING Using the latest cached version of the dataset since lmms-lab/VQAv2 couldn't be found on the Hugging Face Hub
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 728, in <module>
+[rank2]:     main()
+[rank2]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 362, in main
+[rank2]:     ds = VQADataset(
+[rank2]:          ^^^^^^^^^^^
+[rank2]:   File "/data1/pengrui/CCFA/QACR/qacr/data/vqa_dataset.py", line 117, in __init__
+[rank2]:     ds = load_dataset(source, split=hf_split, **load_kwargs)
+[rank2]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/load.py", line 1688, in load_dataset
+[rank2]:     builder_instance = load_dataset_builder(
+[rank2]:                        ^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/load.py", line 1353, in load_dataset_builder
+[rank2]:     builder_instance: DatasetBuilder = builder_cls(
+[rank2]:                                        ^^^^^^^^^^^^
+[rank2]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 125, in __init__
+[rank2]:     config_name, version, hash = _find_hash_in_cache(
+[rank2]:                                  ^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 52, in _find_hash_in_cache
+[rank2]:     or json.loads(Path(cached_directory_path, "dataset_info.json").read_text(encoding="utf-8"))["config_name"]
+[rank2]:                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/pathlib.py", line 1027, in read_text
+[rank2]:     with self.open(mode='r', encoding=encoding, errors=errors) as f:
+[rank2]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/pathlib.py", line 1013, in open
+[rank2]:     return io.open(self, mode, buffering, encoding, errors, newline)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]: FileNotFoundError: [Errno 2] No such file or directory: '/home/pengr/.cache/huggingface/datasets/lmms-lab___vq_av2/default/0.0.0/32665d35052eb4a6d4414851c3c829a72754915a.incomplete/dataset_info.json'
+Using the latest cached version of the dataset since lmms-lab/VQAv2 couldn't be found on the Hugging Face Hub
+2026-03-30 15:23:33,090 WARNING Using the latest cached version of the dataset since lmms-lab/VQAv2 couldn't be found on the Hugging Face Hub
+Using the latest cached version of the dataset since lmms-lab/VQAv2 couldn't be found on the Hugging Face Hub
+2026-03-30 15:23:33,094 WARNING Using the latest cached version of the dataset since lmms-lab/VQAv2 couldn't be found on the Hugging Face Hub
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 728, in <module>
+[rank3]:     main()
+[rank3]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 362, in main
+[rank3]:     ds = VQADataset(
+[rank3]:          ^^^^^^^^^^^
+[rank3]:   File "/data1/pengrui/CCFA/QACR/qacr/data/vqa_dataset.py", line 117, in __init__
+[rank3]:     ds = load_dataset(source, split=hf_split, **load_kwargs)
+[rank3]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/load.py", line 1688, in load_dataset
+[rank3]:     builder_instance = load_dataset_builder(
+[rank3]:                        ^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/load.py", line 1353, in load_dataset_builder
+[rank3]:     builder_instance: DatasetBuilder = builder_cls(
+[rank3]:                                        ^^^^^^^^^^^^
+[rank3]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 125, in __init__
+[rank3]:     config_name, version, hash = _find_hash_in_cache(
+[rank3]:                                  ^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 52, in _find_hash_in_cache
+[rank3]:     or json.loads(Path(cached_directory_path, "dataset_info.json").read_text(encoding="utf-8"))["config_name"]
+[rank3]:                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/pathlib.py", line 1027, in read_text
+[rank3]:     with self.open(mode='r', encoding=encoding, errors=errors) as f:
+[rank3]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/pathlib.py", line 1013, in open
+[rank3]:     return io.open(self, mode, buffering, encoding, errors, newline)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]: FileNotFoundError: [Errno 2] No such file or directory: '/home/pengr/.cache/huggingface/datasets/lmms-lab___vq_av2/default/0.0.0/32665d35052eb4a6d4414851c3c829a72754915a.incomplete/dataset_info.json'
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 728, in <module>
+[rank1]:     main()
+[rank1]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 362, in main
+[rank1]:     ds = VQADataset(
+[rank1]:          ^^^^^^^^^^^
+[rank1]:   File "/data1/pengrui/CCFA/QACR/qacr/data/vqa_dataset.py", line 117, in __init__
+[rank1]:     ds = load_dataset(source, split=hf_split, **load_kwargs)
+[rank1]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/load.py", line 1688, in load_dataset
+[rank1]:     builder_instance = load_dataset_builder(
+[rank1]:                        ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/load.py", line 1353, in load_dataset_builder
+[rank1]:     builder_instance: DatasetBuilder = builder_cls(
+[rank1]:                                        ^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 125, in __init__
+[rank1]:     config_name, version, hash = _find_hash_in_cache(
+[rank1]:                                  ^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 52, in _find_hash_in_cache
+[rank1]:     or json.loads(Path(cached_directory_path, "dataset_info.json").read_text(encoding="utf-8"))["config_name"]
+[rank1]:                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/pathlib.py", line 1027, in read_text
+[rank1]:     with self.open(mode='r', encoding=encoding, errors=errors) as f:
+[rank1]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/pathlib.py", line 1013, in open
+[rank1]:     return io.open(self, mode, buffering, encoding, errors, newline)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]: FileNotFoundError: [Errno 2] No such file or directory: '/home/pengr/.cache/huggingface/datasets/lmms-lab___vq_av2/default/0.0.0/32665d35052eb4a6d4414851c3c829a72754915a.incomplete/dataset_info.json'
+Using the latest cached version of the dataset since lmms-lab/VQAv2 couldn't be found on the Hugging Face Hub
+2026-03-30 15:23:33,136 WARNING Using the latest cached version of the dataset since lmms-lab/VQAv2 couldn't be found on the Hugging Face Hub
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 728, in <module>
+[rank0]:     main()
+[rank0]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 362, in main
+[rank0]:     ds = VQADataset(
+[rank0]:          ^^^^^^^^^^^
+[rank0]:   File "/data1/pengrui/CCFA/QACR/qacr/data/vqa_dataset.py", line 117, in __init__
+[rank0]:     ds = load_dataset(source, split=hf_split, **load_kwargs)
+[rank0]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/load.py", line 1688, in load_dataset
+[rank0]:     builder_instance = load_dataset_builder(
+[rank0]:                        ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/load.py", line 1353, in load_dataset_builder
+[rank0]:     builder_instance: DatasetBuilder = builder_cls(
+[rank0]:                                        ^^^^^^^^^^^^
+[rank0]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 125, in __init__
+[rank0]:     config_name, version, hash = _find_hash_in_cache(
+[rank0]:                                  ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 52, in _find_hash_in_cache
+[rank0]:     or json.loads(Path(cached_directory_path, "dataset_info.json").read_text(encoding="utf-8"))["config_name"]
+[rank0]:                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/pathlib.py", line 1027, in read_text
+[rank0]:     with self.open(mode='r', encoding=encoding, errors=errors) as f:
+[rank0]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/pathlib.py", line 1013, in open
+[rank0]:     return io.open(self, mode, buffering, encoding, errors, newline)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: FileNotFoundError: [Errno 2] No such file or directory: '/home/pengr/.cache/huggingface/datasets/lmms-lab___vq_av2/default/0.0.0/32665d35052eb4a6d4414851c3c829a72754915a.incomplete/dataset_info.json'
+[rank0]:[W330 15:23:33.223972473 ProcessGroupNCCL.cpp:1575] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W0330 15:23:34.592000 4092099 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4092189 closing signal SIGTERM
+W0330 15:23:34.593000 4092099 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4092191 closing signal SIGTERM
+W0330 15:23:34.594000 4092099 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4092192 closing signal SIGTERM
+E0330 15:23:34.959000 4092099 site-packages/torch/distributed/elastic/multiprocessing/api.py:986] failed (exitcode: 1) local_rank: 1 (pid: 4092190) of binary: /home/pengr/.conda/envs/qacr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 994, in <module>
+    main()
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 362, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 990, in main
+    run(args)
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 981, in run
+    elastic_launch(
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 170, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 317, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+scripts/train_baselines_e2e.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-03-30_15:23:34
+  host      : ubuntu2404
+  rank      : 0 (local_rank: 0)
+  exitcode  : -15 (pid: 4092189)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 4092189
+[2]:
+  time      : 2026-03-30_15:23:34
+  host      : ubuntu2404
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 4092191)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2026-03-30_15:23:34
+  host      : ubuntu2404
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 4092192)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-03-30_15:23:34
+  host      : ubuntu2404
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 4092190)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+==================================
+Starting Image Only (budget=0.45)
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+2026-03-30 15:23:39,244 INFO Runtime: distributed=True world_size=4 rank=0 local_rank=0 device=cuda:0
+2026-03-30 15:23:39,244 INFO Loading VLM from Model/Qwen35-08B ...
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:  77%|███████▋  | 362/473 [00:00<00:00, 3610.89it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3555.23it/s]
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:  75%|███████▌  | 357/473 [00:00<00:00, 3557.55it/s]Loading weights:  68%|██████▊   | 323/473 [00:00<00:00, 3194.66it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3495.81it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3174.42it/s]
+Loading weights:  81%|████████  | 381/473 [00:00<00:00, 3805.92it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3738.79it/s]
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 728, in <module>
+[rank3]:     main()
+[rank3]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 314, in main
+[rank3]:     router = ImageOnlyRouter(
+[rank3]:              ^^^^^^^^^^^^^^^^
+[rank3]: TypeError: ImageOnlyRouter.__init__() got an unexpected keyword argument 'token_dim'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 728, in <module>
+[rank0]:     main()
+[rank0]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 314, in main
+[rank0]:     router = ImageOnlyRouter(
+[rank0]:              ^^^^^^^^^^^^^^^^
+[rank0]: TypeError: ImageOnlyRouter.__init__() got an unexpected keyword argument 'token_dim'
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 728, in <module>
+[rank2]:     main()
+[rank2]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 314, in main
+[rank2]:     router = ImageOnlyRouter(
+[rank2]:              ^^^^^^^^^^^^^^^^
+[rank2]: TypeError: ImageOnlyRouter.__init__() got an unexpected keyword argument 'token_dim'
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 728, in <module>
+[rank1]:     main()
+[rank1]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 314, in main
+[rank1]:     router = ImageOnlyRouter(
+[rank1]:              ^^^^^^^^^^^^^^^^
+[rank1]: TypeError: ImageOnlyRouter.__init__() got an unexpected keyword argument 'token_dim'
+[rank0]:[W330 15:23:44.824317638 ProcessGroupNCCL.cpp:1575] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W0330 15:23:44.879000 4092374 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4092449 closing signal SIGTERM
+W0330 15:23:44.880000 4092374 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4092450 closing signal SIGTERM
+W0330 15:23:44.881000 4092374 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4092451 closing signal SIGTERM
+E0330 15:23:44.976000 4092374 site-packages/torch/distributed/elastic/multiprocessing/api.py:986] failed (exitcode: 1) local_rank: 3 (pid: 4092452) of binary: /home/pengr/.conda/envs/qacr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 994, in <module>
+    main()
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 362, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 990, in main
+    run(args)
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 981, in run
+    elastic_launch(
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 170, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 317, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+scripts/train_baselines_e2e.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-03-30_15:23:44
+  host      : ubuntu2404
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 4092449)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2026-03-30_15:23:44
+  host      : ubuntu2404
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 4092450)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2026-03-30_15:23:44
+  host      : ubuntu2404
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 4092451)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-03-30_15:23:44
+  host      : ubuntu2404
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 4092452)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+==================================
+Starting Low Res (grid=9)
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+2026-03-30 15:23:49,140 INFO Runtime: distributed=True world_size=4 rank=0 local_rank=0 device=cuda:0
+2026-03-30 15:23:49,140 INFO Loading VLM from Model/Qwen35-08B ...
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:  78%|███████▊  | 370/473 [00:00<00:00, 3685.02it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3681.24it/s]
+Loading weights:  92%|█████████▏| 434/473 [00:00<00:00, 4287.84it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 4320.74it/s]
+Loading weights:  68%|██████▊   | 323/473 [00:00<00:00, 3227.90it/s]Loading weights:  78%|███████▊  | 367/473 [00:00<00:00, 3648.20it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3312.45it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3563.43it/s]
+2026-03-30 15:23:54,126 INFO Trainable params: Router + Executor = 2,629,888
+2026-03-30 15:23:54,126 INFO Loading dataset: vqav2 (max_samples=20000, streaming=False)
+'[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py
+2026-03-30 15:24:09,619 WARNING '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py
+Retrying in 1s [Retry 1/5].
+2026-03-30 15:24:09,619 WARNING Retrying in 1s [Retry 1/5].
+'[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py
+2026-03-30 15:24:09,622 WARNING '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py
+Retrying in 1s [Retry 1/5].
+2026-03-30 15:24:09,622 WARNING Retrying in 1s [Retry 1/5].
+'[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py
+2026-03-30 15:24:09,622 WARNING '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py
+Retrying in 1s [Retry 1/5].
+2026-03-30 15:24:09,623 WARNING Retrying in 1s [Retry 1/5].
+'[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py
+2026-03-30 15:24:09,654 WARNING '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py
+Retrying in 1s [Retry 1/5].
+2026-03-30 15:24:09,654 WARNING Retrying in 1s [Retry 1/5].
+Using the latest cached version of the dataset since lmms-lab/VQAv2 couldn't be found on the Hugging Face Hub
+2026-03-30 15:24:10,621 WARNING Using the latest cached version of the dataset since lmms-lab/VQAv2 couldn't be found on the Hugging Face Hub
+Using the latest cached version of the dataset since lmms-lab/VQAv2 couldn't be found on the Hugging Face Hub
+2026-03-30 15:24:10,624 WARNING Using the latest cached version of the dataset since lmms-lab/VQAv2 couldn't be found on the Hugging Face Hub
+Using the latest cached version of the dataset since lmms-lab/VQAv2 couldn't be found on the Hugging Face Hub
+2026-03-30 15:24:10,624 WARNING Using the latest cached version of the dataset since lmms-lab/VQAv2 couldn't be found on the Hugging Face Hub
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 728, in <module>
+[rank0]:     main()
+[rank0]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 354, in main
+[rank0]:     ds = TransformedVQADataset(
+[rank0]:          ^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/data1/pengrui/CCFA/QACR/qacr/data/vqa_dataset.py", line 117, in __init__
+[rank0]:     ds = load_dataset(source, split=hf_split, **load_kwargs)
+[rank0]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/load.py", line 1688, in load_dataset
+[rank0]:     builder_instance = load_dataset_builder(
+[rank0]:                        ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/load.py", line 1353, in load_dataset_builder
+[rank0]:     builder_instance: DatasetBuilder = builder_cls(
+[rank0]:                                        ^^^^^^^^^^^^
+[rank0]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 125, in __init__
+[rank0]:     config_name, version, hash = _find_hash_in_cache(
+[rank0]:                                  ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 52, in _find_hash_in_cache
+[rank0]:     or json.loads(Path(cached_directory_path, "dataset_info.json").read_text(encoding="utf-8"))["config_name"]
+[rank0]:                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/pathlib.py", line 1027, in read_text
+[rank0]:     with self.open(mode='r', encoding=encoding, errors=errors) as f:
+[rank0]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/pathlib.py", line 1013, in open
+[rank0]:     return io.open(self, mode, buffering, encoding, errors, newline)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: FileNotFoundError: [Errno 2] No such file or directory: '/home/pengr/.cache/huggingface/datasets/lmms-lab___vq_av2/default/0.0.0/32665d35052eb4a6d4414851c3c829a72754915a.incomplete/dataset_info.json'
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 728, in <module>
+[rank3]:     main()
+[rank3]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 354, in main
+[rank3]:     ds = TransformedVQADataset(
+[rank3]:          ^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/data1/pengrui/CCFA/QACR/qacr/data/vqa_dataset.py", line 117, in __init__
+[rank3]:     ds = load_dataset(source, split=hf_split, **load_kwargs)
+[rank3]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/load.py", line 1688, in load_dataset
+[rank3]:     builder_instance = load_dataset_builder(
+[rank3]:                        ^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/load.py", line 1353, in load_dataset_builder
+[rank3]:     builder_instance: DatasetBuilder = builder_cls(
+[rank3]:                                        ^^^^^^^^^^^^
+[rank3]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 125, in __init__
+[rank3]:     config_name, version, hash = _find_hash_in_cache(
+[rank3]:                                  ^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 52, in _find_hash_in_cache
+[rank3]:     or json.loads(Path(cached_directory_path, "dataset_info.json").read_text(encoding="utf-8"))["config_name"]
+[rank3]:                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/pathlib.py", line 1027, in read_text
+[rank3]:     with self.open(mode='r', encoding=encoding, errors=errors) as f:
+[rank3]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/pathlib.py", line 1013, in open
+[rank3]:     return io.open(self, mode, buffering, encoding, errors, newline)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]: FileNotFoundError: [Errno 2] No such file or directory: '/home/pengr/.cache/huggingface/datasets/lmms-lab___vq_av2/default/0.0.0/32665d35052eb4a6d4414851c3c829a72754915a.incomplete/dataset_info.json'
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 728, in <module>
+[rank2]:     main()
+[rank2]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 354, in main
+[rank2]:     ds = TransformedVQADataset(
+[rank2]:          ^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/data1/pengrui/CCFA/QACR/qacr/data/vqa_dataset.py", line 117, in __init__
+[rank2]:     ds = load_dataset(source, split=hf_split, **load_kwargs)
+[rank2]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/load.py", line 1688, in load_dataset
+[rank2]:     builder_instance = load_dataset_builder(
+[rank2]:                        ^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/load.py", line 1353, in load_dataset_builder
+[rank2]:     builder_instance: DatasetBuilder = builder_cls(
+[rank2]:                                        ^^^^^^^^^^^^
+[rank2]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 125, in __init__
+[rank2]:     config_name, version, hash = _find_hash_in_cache(
+[rank2]:                                  ^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 52, in _find_hash_in_cache
+[rank2]:     or json.loads(Path(cached_directory_path, "dataset_info.json").read_text(encoding="utf-8"))["config_name"]
+[rank2]:                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/pathlib.py", line 1027, in read_text
+[rank2]:     with self.open(mode='r', encoding=encoding, errors=errors) as f:
+[rank2]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/pathlib.py", line 1013, in open
+[rank2]:     return io.open(self, mode, buffering, encoding, errors, newline)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]: FileNotFoundError: [Errno 2] No such file or directory: '/home/pengr/.cache/huggingface/datasets/lmms-lab___vq_av2/default/0.0.0/32665d35052eb4a6d4414851c3c829a72754915a.incomplete/dataset_info.json'
+Using the latest cached version of the dataset since lmms-lab/VQAv2 couldn't be found on the Hugging Face Hub
+2026-03-30 15:24:10,656 WARNING Using the latest cached version of the dataset since lmms-lab/VQAv2 couldn't be found on the Hugging Face Hub
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 728, in <module>
+[rank1]:     main()
+[rank1]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 354, in main
+[rank1]:     ds = TransformedVQADataset(
+[rank1]:          ^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/data1/pengrui/CCFA/QACR/qacr/data/vqa_dataset.py", line 117, in __init__
+[rank1]:     ds = load_dataset(source, split=hf_split, **load_kwargs)
+[rank1]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/load.py", line 1688, in load_dataset
+[rank1]:     builder_instance = load_dataset_builder(
+[rank1]:                        ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/load.py", line 1353, in load_dataset_builder
+[rank1]:     builder_instance: DatasetBuilder = builder_cls(
+[rank1]:                                        ^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 125, in __init__
+[rank1]:     config_name, version, hash = _find_hash_in_cache(
+[rank1]:                                  ^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 52, in _find_hash_in_cache
+[rank1]:     or json.loads(Path(cached_directory_path, "dataset_info.json").read_text(encoding="utf-8"))["config_name"]
+[rank1]:                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/pathlib.py", line 1027, in read_text
+[rank1]:     with self.open(mode='r', encoding=encoding, errors=errors) as f:
+[rank1]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/pathlib.py", line 1013, in open
+[rank1]:     return io.open(self, mode, buffering, encoding, errors, newline)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]: FileNotFoundError: [Errno 2] No such file or directory: '/home/pengr/.cache/huggingface/datasets/lmms-lab___vq_av2/default/0.0.0/32665d35052eb4a6d4414851c3c829a72754915a.incomplete/dataset_info.json'
+[rank0]:[W330 15:24:11.574672742 ProcessGroupNCCL.cpp:1575] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W0330 15:24:12.105000 4092530 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4092611 closing signal SIGTERM
+W0330 15:24:12.106000 4092530 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4092612 closing signal SIGTERM
+W0330 15:24:12.107000 4092530 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4092613 closing signal SIGTERM
+E0330 15:24:12.435000 4092530 site-packages/torch/distributed/elastic/multiprocessing/api.py:986] failed (exitcode: 1) local_rank: 3 (pid: 4092614) of binary: /home/pengr/.conda/envs/qacr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 994, in <module>
+    main()
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 362, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 990, in main
+    run(args)
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 981, in run
+    elastic_launch(
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 170, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 317, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+scripts/train_baselines_e2e.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-03-30_15:24:12
+  host      : ubuntu2404
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 4092611)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2026-03-30_15:24:12
+  host      : ubuntu2404
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 4092612)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2026-03-30_15:24:12
+  host      : ubuntu2404
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 4092613)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-03-30_15:24:12
+  host      : ubuntu2404
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 4092614)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+All baseline training finished!

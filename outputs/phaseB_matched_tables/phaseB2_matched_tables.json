@@ -1,0 +1,81 @@
+{
+  "dataset": "textvqa",
+  "selection_mode": "min_sample_latency",
+  "rows": [
+    {
+      "method": "QACR b0.45",
+      "method_key": "qacr_b045",
+      "dataset": "textvqa",
+      "accuracy": 0.2646666666666667,
+      "raw_accuracy": 0.25639999999999996,
+      "mean_compute": 0.4481513639450073,
+      "profile_batch_size": 2,
+      "profile_sample_latency_ms": 294.2802744607131,
+      "profile_batch_latency_ms": 588.5605489214262,
+      "profile_throughput_samples_per_s": 3.3981210661589953,
+      "profile_peak_gpu_memory_mb": 2027.42431640625,
+      "profile_peak_gpu_memory_delta_mb": 335.1923828125,
+      "profile_mean_compute": 0.4498640100161235
+    },
+    {
+      "method": "TokenPruning@0.45",
+      "method_key": "token_pruning",
+      "dataset": "textvqa",
+      "accuracy": 0.07139999999999998,
+      "raw_accuracy": 0.07159999999999998,
+      "mean_compute": 0.44999999999999474,
+      "profile_batch_size": 2,
+      "profile_sample_latency_ms": 264.1503874522944,
+      "profile_batch_latency_ms": 528.3007749045888,
+      "profile_throughput_samples_per_s": 3.7857222533152637,
+      "profile_peak_gpu_memory_mb": 2023.50927734375,
+      "profile_peak_gpu_memory_delta_mb": 334.830078125,
+      "profile_mean_compute": 0.45
+    },
+    {
+      "method": "ImageOnly@0.45",
+      "method_key": "image_only",
+      "dataset": "textvqa",
+      "accuracy": 0.059533333333333396,
+      "raw_accuracy": 0.059733333333333395,
+      "mean_compute": 0.40709128389358523,
+      "profile_batch_size": 2,
+      "profile_sample_latency_ms": 547.5534740835428,
+      "profile_batch_latency_ms": 1095.1069481670856,
+      "profile_throughput_samples_per_s": 1.8263056437980434,
+      "profile_peak_gpu_memory_mb": 2024.07568359375,
+      "profile_peak_gpu_memory_delta_mb": 334.830078125,
+      "profile_mean_compute": 0.3625214695930481
+    },
+    {
+      "method": "LowRes-9x9",
+      "method_key": "low_res",
+      "dataset": "textvqa",
+      "accuracy": 0.07293333333333334,
+      "raw_accuracy": 0.07313333333333334,
+      "mean_compute": 0.41326530612244594,
+      "profile_batch_size": 2,
+      "profile_sample_latency_ms": 267.63920330752927,
+      "profile_batch_latency_ms": 535.2784066150585,
+      "profile_throughput_samples_per_s": 3.736373399867566,
+      "profile_peak_gpu_memory_mb": 1752.888671875,
+      "profile_peak_gpu_memory_delta_mb": 97.25244140625,
+      "profile_mean_compute": 0.413265306122449
+    },
+    {
+      "method": "Original",
+      "method_key": "original",
+      "dataset": "textvqa",
+      "accuracy": 0.6688666666666669,
+      "raw_accuracy": 0.693066666666667,
+      "mean_compute": 1.0,
+      "profile_batch_size": 2,
+      "profile_sample_latency_ms": 425.3776832483709,
+      "profile_batch_latency_ms": 850.7553664967418,
+      "profile_throughput_samples_per_s": 2.3508520530827113,
+      "profile_peak_gpu_memory_mb": 2003.90087890625,
+      "profile_peak_gpu_memory_delta_mb": 330.12939453125,
+      "profile_mean_compute": 1.0
+    }
+  ]
+}

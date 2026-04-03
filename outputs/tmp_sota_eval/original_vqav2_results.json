@@ -1,0 +1,182 @@
+{
+  "metrics": {
+    "accuracy": 0.75,
+    "raw_accuracy": 0.75,
+    "mean_compute": 1.0,
+    "total_evaluated": 8
+  },
+  "args": {
+    "model": "Model/Qwen35-08B",
+    "dataset": "vqav2",
+    "local_data_dir": "/data1/pengrui/CCFA/QACR/data",
+    "max_samples": 8,
+    "batch_size": 2,
+    "temperature": 0.0,
+    "method": "original",
+    "keep_ratio": 0.45,
+    "k_layer": 3,
+    "out_dir": "outputs/tmp_sota_eval"
+  },
+  "results": [
+    {
+      "question": "How many people are in the boat?",
+      "gt": "1",
+      "gt_answers": [
+        "1",
+        "2",
+        "1",
+        "1",
+        "2",
+        "2",
+        "2",
+        "1",
+        "1",
+        "1"
+      ],
+      "pred_raw": "1\n",
+      "pred": "1",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "What material is the fork made of?",
+      "gt": "metal",
+      "gt_answers": [
+        "steel",
+        "metal",
+        "silver",
+        "metal",
+        "silver",
+        "metal",
+        "metal",
+        "silver",
+        "silver",
+        "steel"
+      ],
+      "pred_raw": "Metal\n",
+      "pred": "Metal",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "What is hanging off the bike handlebar?",
+      "gt": "helmet",
+      "gt_answers": [
+        "helmet",
+        "helmet",
+        "helmet",
+        "helmet",
+        "helmet",
+        "helmet",
+        "helmet",
+        "helmet",
+        "helmet",
+        "helmet"
+      ],
+      "pred_raw": "A helmet\n",
+      "pred": "A helmet",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "How many motorcycles are there?",
+      "gt": "1",
+      "gt_answers": [
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1"
+      ],
+      "pred_raw": "1\n",
+      "pred": "1",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "How many raspberries are here?",
+      "gt": "many",
+      "gt_answers": [
+        "70",
+        "40",
+        "60",
+        "30",
+        "several",
+        "40",
+        "34",
+        "many",
+        "many",
+        "50"
+      ],
+      "pred_raw": "10\n",
+      "pred": "10",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Can the lamb be sheared?",
+      "gt": "no",
+      "gt_answers": [
+        "yes",
+        "yes",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no"
+      ],
+      "pred_raw": "No\n",
+      "pred": "No",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    },
+    {
+      "question": "Are they facing the same direction?",
+      "gt": "no",
+      "gt_answers": [
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no"
+      ],
+      "pred_raw": "Yes\n",
+      "pred": "Yes",
+      "acc": 0.0,
+      "raw_acc": 0.0
+    },
+    {
+      "question": "Are there curtains on the windows?",
+      "gt": "no",
+      "gt_answers": [
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no",
+        "no"
+      ],
+      "pred_raw": "No\n",
+      "pred": "No",
+      "acc": 1.0,
+      "raw_acc": 1.0
+    }
+  ]
+}

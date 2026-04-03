@@ -1,0 +1,2 @@
+===== Phase 6.2 evaluation started at Thu Apr  2 13:17:08 CST 2026 =====
+DATASETS=textvqa,docvqa,mmmu  MAX_SAMPLES=10000  BATCH_SIZE=8

@@ -1,0 +1,13 @@
+2026-04-04 01:08:11,182 INFO Loading VLM from Model/Qwen35-08B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   2%|▏         | 9/473 [00:00<00:05, 84.59it/s]Loading weights:  27%|██▋       | 128/473 [00:00<00:00, 717.69it/s]Loading weights:  48%|████▊     | 226/473 [00:00<00:00, 827.16it/s]Loading weights:  74%|███████▍  | 350/473 [00:00<00:00, 986.18it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 993.02it/s]
+2026-04-04 01:08:13,974 INFO Loading QACR components from checkpoints/qacr_vqav2_b0.45/best.pt ...
+2026-04-04 01:08:13,985 INFO Detected QACR Query-Adaptive model
+2026-04-04 01:08:13,985 INFO Loaded QACR with budget: 0.45
+2026-04-04 01:08:14,014 INFO Loading evaluation dataset ...
+2026-04-04 01:08:14,459 INFO Raw dataset loaded: data/DocVQA/validation, total=5349
+2026-04-04 01:08:14,463 INFO Loaded 200 samples from data/DocVQA/validation (split=eval).
+2026-04-04 01:08:14,464 INFO Starting Evaluation ...
+Eval:   0%|          | 0/25 [00:00<?, ?it/s]Eval:   4%|▍         | 1/25 [00:14<05:50, 14.60s/it]/tmp/tmp6hc3dr8y: line 3: 1915525 Killed                  python scripts/eval_qacr_benchmark.py --checkpoint-dir checkpoints/qacr_vqav2_b0.45 --model Model/Qwen35-08B --dataset docvqa --local-data-dir data --max-samples 200 --batch-size 8 --num-workers 4 --prefetch-factor 1 --protection-mode none --out-file outputs/phaseC_transfer/baseline_docvqa_200.json
+ERROR conda.cli.main_run:execute(127): `conda run python scripts/eval_qacr_benchmark.py --checkpoint-dir checkpoints/qacr_vqav2_b0.45 --model Model/Qwen35-08B --dataset docvqa --local-data-dir data --max-samples 200 --batch-size 8 --num-workers 4 --prefetch-factor 1 --protection-mode none --out-file outputs/phaseC_transfer/baseline_docvqa_200.json` failed. (See above for error)

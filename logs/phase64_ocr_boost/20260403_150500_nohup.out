@@ -1,0 +1,11 @@
+[2026-04-03 16:08:12] START gpu=0 tag=base keep=0.00 deep=0.00
+[2026-04-03 16:08:12] START gpu=1 tag=keep008_deep002 keep=0.08 deep=0.02
+[2026-04-03 16:08:12] START gpu=2 tag=keep012_deep004 keep=0.12 deep=0.04
+[2026-04-03 16:08:12] START gpu=3 tag=keep016_deep006 keep=0.16 deep=0.06
+[2026-04-03 16:08:12] launched 4-GPU OCR boost sweep: 20260403_150500
+[2026-04-03 16:08:12] dataset=textvqa out=outputs/phase64_ocr_boost/20260403_150500/base_textvqa.json
+[2026-04-03 16:08:12] dataset=textvqa out=outputs/phase64_ocr_boost/20260403_150500/keep008_deep002_textvqa.json
+[2026-04-03 16:08:12] dataset=textvqa out=outputs/phase64_ocr_boost/20260403_150500/keep012_deep004_textvqa.json
+[2026-04-03 16:08:12] dataset=textvqa out=outputs/phase64_ocr_boost/20260403_150500/keep016_deep006_textvqa.json
+out_dir=outputs/phase64_ocr_boost/20260403_150500
+Use: tail -f logs/phase64_ocr_boost/20260403_150500_base.log

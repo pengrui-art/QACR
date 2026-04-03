@@ -1,0 +1,378 @@
+===== Phase 6.2 DocVQA missing rerun started at Thu Apr  2 18:29:00 CST 2026 =====
+BATCH_SIZE=8 NUM_WORKERS=12 DOCVQA_NUM_WORKERS=4
+--- Batch 1: QACR 0.35 / 0.45 / 0.60 / TokenPruning ---
+[GPU 0] ckpt=checkpoints/qacr_vqav2_b0.35
+[GPU 1] ckpt=checkpoints/qacr_vqav2_b0.45
+[GPU 2] ckpt=checkpoints/qacr_vqav2_b0.60
+[GPU 3] ckpt=checkpoints/token_pruning_kr0.45_vqav2
+2026-04-02 18:29:04,897 INFO Loading VLM from Model/Qwen35-08B ...
+2026-04-02 18:29:04,915 INFO Loading VLM from Model/Qwen35-08B ...
+2026-04-02 18:29:05,019 INFO Loading VLM from Model/Qwen35-08B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+2026-04-02 18:29:05,028 INFO Loading VLM from Model/Qwen35-08B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 1/473 [00:00<00:50,  9.36it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 1/473 [00:00<00:57,  8.26it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:  27%|██▋       | 129/473 [00:00<00:00, 696.35it/s]Loading weights:  27%|██▋       | 128/473 [00:00<00:00, 718.32it/s]Loading weights:   9%|▉         | 42/473 [00:00<00:01, 417.76it/s]Loading weights:   8%|▊         | 36/473 [00:00<00:01, 349.09it/s]Loading weights:  42%|████▏     | 201/473 [00:00<00:00, 722.53it/s]Loading weights:  21%|██        | 100/473 [00:00<00:00, 512.68it/s]Loading weights:  43%|████▎     | 205/473 [00:00<00:00, 686.23it/s]Loading weights:  22%|██▏       | 106/473 [00:00<00:00, 507.50it/s]Loading weights:  34%|███▎      | 159/473 [00:00<00:00, 547.25it/s]Loading weights:  58%|█████▊    | 274/473 [00:00<00:00, 707.09it/s]Loading weights:  59%|█████▊    | 277/473 [00:00<00:00, 681.31it/s]Loading weights:  39%|███▉      | 184/473 [00:00<00:00, 623.93it/s]Loading weights:  52%|█████▏    | 248/473 [00:00<00:00, 677.27it/s]Loading weights:  73%|███████▎  | 346/473 [00:00<00:00, 710.41it/s]Loading weights:  75%|███████▌  | 357/473 [00:00<00:00, 721.37it/s]Loading weights:  56%|█████▌    | 265/473 [00:00<00:00, 693.29it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 776.97it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 752.59it/s]
+Loading weights:  77%|███████▋  | 362/473 [00:00<00:00, 822.59it/s]Loading weights:  86%|████████▌ | 407/473 [00:00<00:00, 948.94it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 847.23it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 844.54it/s]
+2026-04-02 18:29:07,719 INFO Loading QACR components from checkpoints/qacr_vqav2_b0.45/best.pt ...
+2026-04-02 18:29:07,776 INFO Detected QACR Query-Adaptive model
+2026-04-02 18:29:07,776 INFO Loaded QACR with budget: 0.45
+2026-04-02 18:29:07,803 INFO Loading evaluation dataset ...
+2026-04-02 18:29:07,835 INFO Loading QACR components from checkpoints/qacr_vqav2_b0.35/best.pt ...
+2026-04-02 18:29:07,886 INFO Detected QACR Query-Adaptive model
+2026-04-02 18:29:07,886 INFO Loaded QACR with budget: 0.35
+2026-04-02 18:29:07,910 INFO Loading QACR components from checkpoints/token_pruning_kr0.45_vqav2/best.pt ...
+2026-04-02 18:29:07,912 INFO Loading evaluation dataset ...
+2026-04-02 18:29:07,916 INFO Loading QACR components from checkpoints/qacr_vqav2_b0.60/best.pt ...
+2026-04-02 18:29:07,938 INFO Detected Baseline model: token_pruning
+2026-04-02 18:29:07,948 INFO Detected QACR Query-Adaptive model
+2026-04-02 18:29:07,948 INFO Loaded QACR with budget: 0.6
+2026-04-02 18:29:07,963 INFO Parsed keep_ratio = 0.45
+2026-04-02 18:29:07,963 INFO Loading evaluation dataset ...
+2026-04-02 18:29:07,976 INFO Loading evaluation dataset ...
+2026-04-02 18:29:08,297 INFO Raw dataset loaded: /data1/pengrui/CCFA/QACR/data/DocVQA/validation, total=5349
+2026-04-02 18:29:08,297 INFO Loaded 5349 samples from /data1/pengrui/CCFA/QACR/data/DocVQA/validation (split=eval).
+2026-04-02 18:29:08,297 INFO Starting Evaluation ...
+Eval:   0%|          | 0/669 [00:00<?, ?it/s]2026-04-02 18:29:08,370 INFO Raw dataset loaded: /data1/pengrui/CCFA/QACR/data/DocVQA/validation, total=5349
+2026-04-02 18:29:08,370 INFO Loaded 5349 samples from /data1/pengrui/CCFA/QACR/data/DocVQA/validation (split=eval).
+2026-04-02 18:29:08,370 INFO Starting Evaluation ...
+Eval:   0%|          | 0/669 [00:00<?, ?it/s]2026-04-02 18:29:08,414 INFO Raw dataset loaded: /data1/pengrui/CCFA/QACR/data/DocVQA/validation, total=5349
+2026-04-02 18:29:08,414 INFO Loaded 5349 samples from /data1/pengrui/CCFA/QACR/data/DocVQA/validation (split=eval).
+2026-04-02 18:29:08,414 INFO Starting Evaluation ...
+Eval:   0%|          | 0/669 [00:00<?, ?it/s]2026-04-02 18:29:08,426 INFO Raw dataset loaded: /data1/pengrui/CCFA/QACR/data/DocVQA/validation, total=5349
+2026-04-02 18:29:08,426 INFO Loaded 5349 samples from /data1/pengrui/CCFA/QACR/data/DocVQA/validation (split=eval).
+2026-04-02 18:29:08,426 INFO Starting Evaluation ...
+Eval:   0%|          | 0/669 [00:00<?, ?it/s]--- Batch 1 complete ---
+--- Batch 2: ImageOnly / LVPruning ---
+[GPU 0] ckpt=checkpoints/image_only_b0.45_vqav2
+[GPU 1] sota=lvpruning
+2026-04-02 18:29:21,368 INFO Loading VLM from Model/Qwen35-08B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+2026-04-02 18:29:21,778 INFO Loading VLM from Model/Qwen35-08B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 1/473 [00:00<00:53,  8.86it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:  30%|███       | 142/473 [00:00<00:00, 765.23it/s]Loading weights:  10%|▉         | 46/473 [00:00<00:00, 439.53it/s]Loading weights:  55%|█████▌    | 262/473 [00:00<00:00, 954.42it/s]Loading weights:  32%|███▏      | 153/473 [00:00<00:00, 802.66it/s]Loading weights:  83%|████████▎ | 393/473 [00:00<00:00, 1087.98it/s]Loading weights:  58%|█████▊    | 272/473 [00:00<00:00, 973.31it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 1001.29it/s]
+Loading weights:  92%|█████████▏| 436/473 [00:00<00:00, 1231.17it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 1097.25it/s]
+2026-04-02 18:29:24,144 INFO Loading QACR components from checkpoints/image_only_b0.45_vqav2/best.pt ...
+2026-04-02 18:29:24,159 INFO Applying LVPruning patch with default multi-layer settings
+2026-04-02 18:29:24,160 INFO Loading evaluation dataset ...
+2026-04-02 18:29:24,172 INFO Detected Baseline model: image_only
+2026-04-02 18:29:24,359 INFO Parsed budget = 0.45
+2026-04-02 18:29:24,359 INFO Loading evaluation dataset ...
+2026-04-02 18:29:24,650 INFO Raw dataset loaded: /data1/pengrui/CCFA/QACR/data/DocVQA/validation, total=5349
+2026-04-02 18:29:24,650 INFO Loaded 5349 samples from /data1/pengrui/CCFA/QACR/data/DocVQA/validation (split=eval).
+2026-04-02 18:29:24,651 INFO Starting Evaluation ...
+PATCHING LLM of type: Qwen3_5TextModel
+Eval lvpruning:   0%|          | 0/669 [00:00<?, ?it/s]2026-04-02 18:29:24,833 INFO Raw dataset loaded: /data1/pengrui/CCFA/QACR/data/DocVQA/validation, total=5349
+2026-04-02 18:29:24,833 INFO Loaded 5349 samples from /data1/pengrui/CCFA/QACR/data/DocVQA/validation (split=eval).
+2026-04-02 18:29:24,833 INFO Starting Evaluation ...
+Eval:   0%|          | 0/669 [00:00<?, ?it/s]Eval:   0%|          | 1/669 [00:09<1:45:44,  9.50s/it]Eval lvpruning:   0%|          | 1/669 [00:10<1:52:32, 10.11s/it]Eval:   0%|          | 2/669 [00:12<1:01:41,  5.55s/it]Eval lvpruning:   0%|          | 2/669 [00:13<1:06:42,  6.00s/it]Eval:   0%|          | 3/669 [00:15<48:20,  4.36s/it]  Layer 0 forward: seq_len=3974
+Layer 1 forward: seq_len=3974
+Layer 2 forward: seq_len=3974
+Layer 3 forward: seq_len=3974
+Layer 4 forward: seq_len=3974
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=3973
+Layer 1 forward: seq_len=3973
+Layer 2 forward: seq_len=3973
+Layer 3 forward: seq_len=3973
+Layer 4 forward: seq_len=3973
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=3915
+Layer 1 forward: seq_len=3915
+Layer 2 forward: seq_len=3915
+Layer 3 forward: seq_len=3915
+Layer 4 forward: seq_len=3915
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1
+Layer 2 forward: seq_len=1
+Layer 3 forward: seq_len=1
+Layer 4 forward: seq_len=1
+Layer 0 forward: seq_len=1
+Layer 1 forward: seq_len=1Eval lvpruning:   0%|          | 3/669 [00:16<53:39,  4.83s/it]  Eval:   1%|          | 4/669 [00:18<42:35,  3.84s/it]Eval lvpruning:   1%|          | 4/669 [00:20<48:19,  4.36s/it]Eval:   1%|          | 5/669 [00:21<39:13,  3.54s/it]

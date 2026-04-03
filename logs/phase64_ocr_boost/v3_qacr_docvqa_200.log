@@ -1,0 +1,23 @@
+2026-04-03 16:59:23,793 INFO Loading VLM from Model/Qwen35-08B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   7%|▋         | 35/473 [00:00<00:01, 349.62it/s]Loading weights:  30%|███       | 142/473 [00:00<00:00, 755.22it/s]Loading weights:  54%|█████▍    | 256/473 [00:00<00:00, 928.06it/s]Loading weights:  74%|███████▍  | 349/473 [00:00<00:00, 574.53it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 743.91it/s]
+2026-04-03 16:59:26,435 INFO Loading QACR components from checkpoints/qacr_vqav2_b0.45/best.pt ...
+2026-04-03 16:59:26,445 INFO Detected QACR Query-Adaptive model
+2026-04-03 16:59:26,445 INFO Loaded QACR with budget: 0.45
+2026-04-03 16:59:26,471 INFO Override executor_output_alpha = 0.300
+2026-04-03 16:59:26,472 INFO Loading evaluation dataset ...
+2026-04-03 16:59:26,915 INFO Raw dataset loaded: data/DocVQA/validation, total=5349
+2026-04-03 16:59:26,920 INFO Loaded 200 samples from data/DocVQA/validation (split=eval).
+2026-04-03 16:59:26,920 INFO Starting Evaluation ...
+Eval:   0%|          | 0/50 [00:00<?, ?it/s]Eval:   2%|▏         | 1/50 [00:05<04:38,  5.69s/it]Eval:   4%|▍         | 2/50 [00:09<03:44,  4.67s/it]Eval:   6%|▌         | 3/50 [00:14<03:34,  4.55s/it]Eval:   8%|▊         | 4/50 [00:18<03:21,  4.39s/it]Eval:  10%|█         | 5/50 [00:21<03:01,  4.02s/it]Eval:  12%|█▏        | 6/50 [00:25<02:53,  3.95s/it]Eval:  14%|█▍        | 7/50 [00:28<02:43,  3.80s/it]Eval:  16%|█▌        | 8/50 [00:32<02:41,  3.84s/it]Eval:  18%|█▊        | 9/50 [00:36<02:33,  3.74s/it]Eval:  20%|██        | 10/50 [00:39<02:22,  3.55s/it]Eval:  22%|██▏       | 11/50 [00:48<03:21,  5.18s/it]Eval:  24%|██▍       | 12/50 [00:51<02:56,  4.65s/it]Eval:  26%|██▌       | 13/50 [00:54<02:31,  4.10s/it]Eval:  28%|██▊       | 14/50 [00:58<02:25,  4.04s/it]Eval:  30%|███       | 15/50 [01:01<02:14,  3.85s/it]Eval:  32%|███▏      | 16/50 [01:05<02:06,  3.73s/it]Eval:  34%|███▍      | 17/50 [01:09<02:03,  3.74s/it]Eval:  36%|███▌      | 18/50 [01:12<01:58,  3.72s/it]Eval:  38%|███▊      | 19/50 [01:16<01:51,  3.58s/it]Eval:  40%|████      | 20/50 [01:19<01:47,  3.57s/it]Eval:  42%|████▏     | 21/50 [01:23<01:46,  3.68s/it]Eval:  44%|████▍     | 22/50 [01:28<01:53,  4.06s/it]Eval:  46%|████▌     | 23/50 [01:32<01:45,  3.91s/it]Eval:  48%|████▊     | 24/50 [01:36<01:43,  4.00s/it]Eval:  50%|█████     | 25/50 [01:40<01:40,  4.03s/it]Eval:  52%|█████▏    | 26/50 [01:44<01:35,  3.97s/it]Eval:  54%|█████▍    | 27/50 [01:47<01:24,  3.67s/it]Eval:  56%|█████▌    | 28/50 [01:50<01:20,  3.64s/it]Eval:  58%|█████▊    | 29/50 [01:54<01:14,  3.55s/it]Eval:  60%|██████    | 30/50 [01:58<01:17,  3.87s/it]Eval:  62%|██████▏   | 31/50 [02:03<01:20,  4.23s/it]Eval:  64%|██████▍   | 32/50 [02:07<01:12,  4.04s/it]Eval:  66%|██████▌   | 33/50 [02:10<01:05,  3.85s/it]Eval:  68%|██████▊   | 34/50 [02:14<01:02,  3.89s/it]Eval:  70%|███████   | 35/50 [02:17<00:55,  3.70s/it]Eval:  72%|███████▏  | 36/50 [02:21<00:52,  3.72s/it]Eval:  74%|███████▍  | 37/50 [02:25<00:46,  3.60s/it]Eval:  76%|███████▌  | 38/50 [02:29<00:44,  3.71s/it]Eval:  78%|███████▊  | 39/50 [02:33<00:42,  3.82s/it]Eval:  80%|████████  | 40/50 [02:36<00:38,  3.80s/it]Eval:  82%|████████▏ | 41/50 [02:42<00:38,  4.26s/it]Eval:  84%|████████▍ | 42/50 [02:45<00:31,  3.89s/it]Eval:  86%|████████▌ | 43/50 [02:48<00:26,  3.83s/it]Eval:  88%|████████▊ | 44/50 [02:52<00:22,  3.67s/it]Eval:  90%|█████████ | 45/50 [02:55<00:17,  3.50s/it]Eval:  92%|█████████▏| 46/50 [02:58<00:14,  3.54s/it]Eval:  94%|█████████▍| 47/50 [03:02<00:10,  3.57s/it]Eval:  96%|█████████▌| 48/50 [03:06<00:07,  3.54s/it]Eval:  98%|█████████▊| 49/50 [03:09<00:03,  3.56s/it]Eval: 100%|██████████| 50/50 [03:15<00:00,  4.09s/it]Eval: 100%|██████████| 50/50 [03:15<00:00,  3.90s/it]
+2026-04-03 17:02:41,929 INFO 
+========== Benchmark Results ==========
+accuracy: 0.1450
+raw_accuracy: 0.1500
+mean_compute: 0.4409
+mean_skip_ratio: 0.2580
+mean_deep_ratio: 0.2788
+total_evaluated: 200.0000
+=======================================
+2026-04-03 17:02:41,932 INFO Saved detailed results to outputs/phase64_ocr_boost/v3_qacr_docvqa_200.json

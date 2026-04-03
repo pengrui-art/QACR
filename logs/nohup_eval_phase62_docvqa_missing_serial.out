@@ -1,0 +1,3 @@
+===== Serial DocVQA missing rerun started at Thu Apr  2 18:30:22 CST 2026 =====
+GPU_ID=0 BATCH_SIZE=8 DOCVQA_NUM_WORKERS=4
+[run] eval_qacr_benchmark ckpt=checkpoints/qacr_vqav2_b0.35 -> checkpoints/qacr_vqav2_b0.35/eval_results_docvqa.json

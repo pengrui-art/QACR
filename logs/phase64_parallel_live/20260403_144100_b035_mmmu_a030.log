@@ -1,0 +1,16 @@
+2026-04-03 14:40:59,563 INFO Loading VLM from Model/Qwen35-08B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:  11%|█         | 53/473 [00:00<00:00, 488.10it/s]Loading weights:  48%|████▊     | 226/473 [00:00<00:00, 1188.00it/s]Loading weights:  83%|████████▎ | 392/473 [00:00<00:00, 1396.05it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 1345.75it/s]
+2026-04-03 14:41:02,170 INFO Loading QACR components from checkpoints/qacr_vqav2_b0.35/best.pt ...
+2026-04-03 14:41:02,179 INFO Detected QACR Query-Adaptive model
+2026-04-03 14:41:02,179 INFO Loaded QACR with budget: 0.35
+2026-04-03 14:41:02,206 INFO Override executor_output_alpha = 0.300
+2026-04-03 14:41:02,206 INFO Loading evaluation dataset ...
+2026-04-03 14:41:02,676 INFO Raw dataset loaded: data/MMMU/validation, total=900
+2026-04-03 14:41:02,676 INFO Loaded 900 samples from data/MMMU/validation (split=eval).
+2026-04-03 14:41:02,677 INFO Starting Evaluation ...
+Eval:   0%|          | 0/113 [00:00<?, ?it/s]/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/PIL/Image.py:1034: UserWarning: Palette images with Transparency expressed in bytes should be converted to RGBA images
+  warnings.warn(
+/tmp/tmp7ilybb1o: line 3: 1578218 Killed                  python scripts/eval_qacr_benchmark.py --checkpoint-dir checkpoints/qacr_vqav2_b0.35 --model Model/Qwen35-08B --dataset mmmu --local-data-dir data --max-samples 900 --batch-size 8 --num-workers 12 --prefetch-factor 2 --executor-output-alpha 0.30 --out-file outputs/tmp_eval/phase64_parallel_live/20260403_144100_b035_mmmu_a030.json
+ERROR conda.cli.main_run:execute(127): `conda run python scripts/eval_qacr_benchmark.py --checkpoint-dir checkpoints/qacr_vqav2_b0.35 --model Model/Qwen35-08B --dataset mmmu --local-data-dir data --max-samples 900 --batch-size 8 --num-workers 12 --prefetch-factor 2 --executor-output-alpha 0.30 --out-file outputs/tmp_eval/phase64_parallel_live/20260403_144100_b035_mmmu_a030.json` failed. (See above for error)

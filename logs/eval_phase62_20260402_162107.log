@@ -1,0 +1,202 @@
+===== Phase 6.2 evaluation started at Thu Apr  2 04:21:07 PM CST 2026 =====
+DATASETS=docvqa  MAX_SAMPLES=10000  BATCH_SIZE=16  NUM_WORKERS=24  DOCVQA_NUM_WORKERS=8
+==========================================
+=== Dataset: docvqa ===
+==========================================
+--- Batch 1 (docvqa): QACR 0.35 / 0.45 / 0.60 / TokenPruning ---
+[GPU 0] dataset=docvqa ckpt=checkpoints/qacr_vqav2_b0.35
+[GPU 1] dataset=docvqa ckpt=checkpoints/qacr_vqav2_b0.45
+[GPU 2] dataset=docvqa ckpt=checkpoints/qacr_vqav2_b0.60
+[GPU 3] dataset=docvqa ckpt=checkpoints/token_pruning_kr0.45_vqav2
+2026-04-02 16:21:12,052 INFO Loading VLM from Model/Qwen35-08B ...
+2026-04-02 16:21:12,053 INFO Loading VLM from Model/Qwen35-08B ...
+2026-04-02 16:21:12,060 INFO Loading VLM from Model/Qwen35-08B ...
+2026-04-02 16:21:12,059 INFO Loading VLM from Model/Qwen35-08B ...
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+`torch_dtype` is deprecated! Use `dtype` instead!
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 1/473 [00:00<01:00,  7.74it/s]Loading weights:   5%|▍         | 22/473 [00:00<00:02, 214.36it/s]Loading weights:  10%|▉         | 46/473 [00:00<00:00, 455.72it/s]Loading weights:   2%|▏         | 8/473 [00:00<00:07, 63.19it/s]Loading weights:  22%|██▏       | 106/473 [00:00<00:00, 457.79it/s]Loading weights:  12%|█▏        | 59/473 [00:00<00:01, 304.75it/s]Loading weights:  27%|██▋       | 128/473 [00:00<00:00, 663.21it/s]Loading weights:  22%|██▏       | 103/473 [00:00<00:00, 532.72it/s]Loading weights:  40%|███▉      | 187/473 [00:00<00:00, 589.45it/s]Loading weights:  44%|████▎     | 206/473 [00:00<00:00, 711.64it/s]Loading weights:  22%|██▏       | 105/473 [00:00<00:01, 326.12it/s]Loading weights:  36%|███▌      | 171/473 [00:00<00:00, 590.99it/s]Loading weights:  55%|█████▌    | 262/473 [00:00<00:00, 635.90it/s]Loading weights:  59%|█████▉    | 278/473 [00:00<00:00, 705.87it/s]Loading weights:  40%|███▉      | 187/473 [00:00<00:00, 495.44it/s]Loading weights:  52%|█████▏    | 248/473 [00:00<00:00, 652.71it/s]Loading weights:  81%|████████  | 383/473 [00:00<00:00, 822.88it/s]Loading weights:  84%|████████▍ | 398/473 [00:00<00:00, 876.83it/s]Loading weights:  61%|██████▏   | 290/473 [00:00<00:00, 671.32it/s]Loading weights:  77%|███████▋  | 364/473 [00:00<00:00, 828.57it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 735.94it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 836.62it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 788.82it/s]
+Loading weights:  93%|█████████▎| 442/473 [00:00<00:00, 942.57it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 715.35it/s]
+2026-04-02 16:21:15,076 INFO Loading QACR components from checkpoints/qacr_vqav2_b0.35/best.pt ...
+2026-04-02 16:21:15,094 INFO Loading QACR components from checkpoints/qacr_vqav2_b0.60/best.pt ...
+2026-04-02 16:21:15,158 INFO Detected QACR Query-Adaptive model
+2026-04-02 16:21:15,158 INFO Loaded QACR with budget: 0.35
+2026-04-02 16:21:15,167 INFO Detected QACR Query-Adaptive model
+2026-04-02 16:21:15,167 INFO Loaded QACR with budget: 0.6
+2026-04-02 16:21:15,185 INFO Loading evaluation dataset ...
+2026-04-02 16:21:15,201 INFO Loading QACR components from checkpoints/qacr_vqav2_b0.45/best.pt ...
+2026-04-02 16:21:15,210 INFO Loading evaluation dataset ...
+2026-04-02 16:21:15,214 INFO Loading QACR components from checkpoints/token_pruning_kr0.45_vqav2/best.pt ...
+2026-04-02 16:21:15,240 INFO Detected Baseline model: token_pruning
+2026-04-02 16:21:15,252 INFO Detected QACR Query-Adaptive model
+2026-04-02 16:21:15,252 INFO Loaded QACR with budget: 0.45
+2026-04-02 16:21:15,269 INFO Parsed keep_ratio = 0.45
+2026-04-02 16:21:15,269 INFO Loading evaluation dataset ...
+2026-04-02 16:21:15,285 INFO Loading evaluation dataset ...
+2026-04-02 16:21:15,685 INFO Raw dataset loaded: /data1/pengrui/CCFA/QACR/data/DocVQA/validation, total=5349
+2026-04-02 16:21:15,685 INFO Loaded 5349 samples from /data1/pengrui/CCFA/QACR/data/DocVQA/validation (split=eval).
+2026-04-02 16:21:15,686 INFO Starting Evaluation ...
+Eval:   0%|          | 0/335 [00:00<?, ?it/s]2026-04-02 16:21:15,688 INFO Raw dataset loaded: /data1/pengrui/CCFA/QACR/data/DocVQA/validation, total=5349
+2026-04-02 16:21:15,688 INFO Loaded 5349 samples from /data1/pengrui/CCFA/QACR/data/DocVQA/validation (split=eval).
+2026-04-02 16:21:15,689 INFO Starting Evaluation ...
+Eval:   0%|          | 0/335 [00:00<?, ?it/s]2026-04-02 16:21:15,723 INFO Raw dataset loaded: /data1/pengrui/CCFA/QACR/data/DocVQA/validation, total=5349
+2026-04-02 16:21:15,723 INFO Loaded 5349 samples from /data1/pengrui/CCFA/QACR/data/DocVQA/validation (split=eval).
+2026-04-02 16:21:15,723 INFO Starting Evaluation ...
+Eval:   0%|          | 0/335 [00:00<?, ?it/s]2026-04-02 16:21:15,750 INFO Raw dataset loaded: /data1/pengrui/CCFA/QACR/data/DocVQA/validation, total=5349
+2026-04-02 16:21:15,750 INFO Loaded 5349 samples from /data1/pengrui/CCFA/QACR/data/DocVQA/validation (split=eval).
+2026-04-02 16:21:15,750 INFO Starting Evaluation ...
+Eval:   0%|          | 0/335 [00:00<?, ?it/s]Eval:   0%|          | 0/335 [00:03<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1310, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/queue.py", line 180, in get
+    self.not_empty.wait(remaining)
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/threading.py", line 359, in wait
+    gotit = waiter.acquire(True, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/_utils/signal_handling.py", line 73, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 1104486) is killed by signal: Killed. 
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data1/pengrui/CCFA/QACR/scripts/eval_qacr_benchmark.py", line 380, in <module>
+    main()
+  File "/data1/pengrui/CCFA/QACR/scripts/eval_qacr_benchmark.py", line 280, in main
+    for i, batch in enumerate(tqdm(loader, desc="Eval")):
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+               ^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 741, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1524, in _next_data
+    idx, data = self._get_data()
+                ^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1473, in _get_data
+    success, data = self._try_get_data()
+                    ^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1323, in _try_get_data
+    raise RuntimeError(
+RuntimeError: DataLoader worker (pid(s) 1104486) exited unexpectedly
+Eval:   0%|          | 0/335 [00:03<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1310, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/queue.py", line 180, in get
+    self.not_empty.wait(remaining)
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/threading.py", line 359, in wait
+    gotit = waiter.acquire(True, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/_utils/signal_handling.py", line 73, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 1104488) is killed by signal: Killed. 
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data1/pengrui/CCFA/QACR/scripts/eval_qacr_benchmark.py", line 380, in <module>
+    main()
+  File "/data1/pengrui/CCFA/QACR/scripts/eval_qacr_benchmark.py", line 280, in main
+    for i, batch in enumerate(tqdm(loader, desc="Eval")):
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+               ^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 741, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1524, in _next_data
+    idx, data = self._get_data()
+                ^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1473, in _get_data
+    success, data = self._try_get_data()
+                    ^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1323, in _try_get_data
+    raise RuntimeError(
+RuntimeError: DataLoader worker (pid(s) 1104488) exited unexpectedly
+Eval:   0%|          | 0/335 [00:04<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1310, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/queue.py", line 180, in get
+    self.not_empty.wait(remaining)
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/threading.py", line 359, in wait
+    gotit = waiter.acquire(True, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/_utils/signal_handling.py", line 73, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 1104462) is killed by signal: Killed. 
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data1/pengrui/CCFA/QACR/scripts/eval_qacr_benchmark.py", line 380, in <module>
+    main()
+  File "/data1/pengrui/CCFA/QACR/scripts/eval_qacr_benchmark.py", line 280, in main
+    for i, batch in enumerate(tqdm(loader, desc="Eval")):
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+               ^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 741, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1524, in _next_data
+    idx, data = self._get_data()
+                ^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1473, in _get_data
+    success, data = self._try_get_data()
+                    ^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1323, in _try_get_data
+    raise RuntimeError(
+RuntimeError: DataLoader worker (pid(s) 1104462) exited unexpectedly
+Eval:   0%|          | 0/335 [00:04<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1310, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/queue.py", line 180, in get
+    self.not_empty.wait(remaining)
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/threading.py", line 359, in wait
+    gotit = waiter.acquire(True, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/_utils/signal_handling.py", line 73, in handler
+    _error_if_any_worker_fails()
+RuntimeError: DataLoader worker (pid 1104484) is killed by signal: Killed. 
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data1/pengrui/CCFA/QACR/scripts/eval_qacr_benchmark.py", line 380, in <module>
+    main()
+  File "/data1/pengrui/CCFA/QACR/scripts/eval_qacr_benchmark.py", line 280, in main
+    for i, batch in enumerate(tqdm(loader, desc="Eval")):
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+               ^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 741, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1524, in _next_data
+    idx, data = self._get_data()
+                ^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1473, in _get_data
+    success, data = self._try_get_data()
+                    ^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 1323, in _try_get_data
+    raise RuntimeError(
+RuntimeError: DataLoader worker (pid(s) 1104484) exited unexpectedly

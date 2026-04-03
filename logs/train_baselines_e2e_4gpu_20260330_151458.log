@@ -1,0 +1,572 @@
+==================================
+Starting Token Pruning (keep_ratio=0.45)
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+2026-03-30 15:15:02,835 INFO Runtime: distributed=True world_size=4 rank=0 local_rank=0 device=cuda:0
+2026-03-30 15:15:02,835 INFO Loading VLM from Model/Qwen35-08B ...
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:  78%|███████▊  | 371/473 [00:00<00:00, 3677.31it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3727.43it/s]
+Loading weights:  76%|███████▌  | 360/473 [00:00<00:00, 3590.48it/s]Loading weights:  83%|████████▎ | 392/473 [00:00<00:00, 3900.68it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3459.65it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3812.75it/s]
+Loading weights:  75%|███████▍  | 354/473 [00:00<00:00, 3535.97it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3327.38it/s]
+2026-03-30 15:15:07,834 INFO Trainable params: Router + Executor = 2,629,888
+2026-03-30 15:15:07,835 INFO Loading dataset: vqav2 (max_samples=20000, streaming=False)
+2026-03-30 15:15:08,776 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-03-30 15:15:08,777 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-03-30 15:15:08,778 WARNING Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-03-30 15:15:08,780 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-03-30 15:15:08,828 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-03-30 15:15:08,885 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/lmms-lab/VQAv2/32665d35052eb4a6d4414851c3c829a72754915a/README.md "HTTP/1.1 200 OK"
+2026-03-30 15:15:08,887 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/lmms-lab/VQAv2/32665d35052eb4a6d4414851c3c829a72754915a/README.md "HTTP/1.1 200 OK"
+2026-03-30 15:15:08,887 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/lmms-lab/VQAv2/32665d35052eb4a6d4414851c3c829a72754915a/README.md "HTTP/1.1 200 OK"
+2026-03-30 15:15:08,917 INFO HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/lmms-lab/VQAv2/32665d35052eb4a6d4414851c3c829a72754915a/README.md "HTTP/1.1 200 OK"
+2026-03-30 15:15:09,148 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py "HTTP/1.1 404 Not Found"
+2026-03-30 15:15:09,151 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py "HTTP/1.1 404 Not Found"
+2026-03-30 15:15:09,170 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py "HTTP/1.1 404 Not Found"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-03-30 15:15:09,170 WARNING Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-03-30 15:15:09,178 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py "HTTP/1.1 404 Not Found"
+2026-03-30 15:15:09,969 INFO HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/lmms-lab/VQAv2/lmms-lab/VQAv2.py "HTTP/1.1 404 Not Found"
+2026-03-30 15:15:10,022 INFO HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/lmms-lab/VQAv2/lmms-lab/VQAv2.py "HTTP/1.1 404 Not Found"
+2026-03-30 15:15:10,040 INFO HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/lmms-lab/VQAv2/lmms-lab/VQAv2.py "HTTP/1.1 404 Not Found"
+2026-03-30 15:15:10,058 INFO HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/lmms-lab/VQAv2/lmms-lab/VQAv2.py "HTTP/1.1 404 Not Found"
+2026-03-30 15:15:10,247 INFO HTTP Request: GET https://huggingface.co/api/datasets/lmms-lab/VQAv2/revision/32665d35052eb4a6d4414851c3c829a72754915a "HTTP/1.1 200 OK"
+2026-03-30 15:15:10,306 INFO HTTP Request: GET https://huggingface.co/api/datasets/lmms-lab/VQAv2/revision/32665d35052eb4a6d4414851c3c829a72754915a "HTTP/1.1 200 OK"
+2026-03-30 15:15:10,318 INFO HTTP Request: GET https://huggingface.co/api/datasets/lmms-lab/VQAv2/revision/32665d35052eb4a6d4414851c3c829a72754915a "HTTP/1.1 200 OK"
+2026-03-30 15:15:10,476 INFO HTTP Request: GET https://huggingface.co/api/datasets/lmms-lab/VQAv2/revision/32665d35052eb4a6d4414851c3c829a72754915a "HTTP/1.1 200 OK"
+2026-03-30 15:15:10,516 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-03-30 15:15:10,581 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-03-30 15:15:10,586 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-03-30 15:15:10,743 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-03-30 15:15:11,019 INFO HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=lmms-lab/VQAv2 "HTTP/1.1 200 OK"
+2026-03-30 15:15:11,027 INFO HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=lmms-lab/VQAv2 "HTTP/1.1 200 OK"
+2026-03-30 15:15:11,031 INFO HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=lmms-lab/VQAv2 "HTTP/1.1 200 OK"
+2026-03-30 15:15:11,184 INFO HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=lmms-lab/VQAv2 "HTTP/1.1 200 OK"
+2026-03-30 15:15:11,300 INFO HTTP Request: GET https://huggingface.co/api/datasets/lmms-lab/VQAv2/tree/32665d35052eb4a6d4414851c3c829a72754915a/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-30 15:15:11,303 INFO HTTP Request: GET https://huggingface.co/api/datasets/lmms-lab/VQAv2/tree/32665d35052eb4a6d4414851c3c829a72754915a/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-30 15:15:11,303 INFO HTTP Request: GET https://huggingface.co/api/datasets/lmms-lab/VQAv2/tree/32665d35052eb4a6d4414851c3c829a72754915a/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-30 15:15:11,474 INFO HTTP Request: GET https://huggingface.co/api/datasets/lmms-lab/VQAv2/tree/32665d35052eb4a6d4414851c3c829a72754915a/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-30 15:15:11,690 INFO HTTP Request: GET https://huggingface.co/api/datasets/lmms-lab/VQAv2/tree/32665d35052eb4a6d4414851c3c829a72754915a?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-03-30 15:15:11,691 INFO HTTP Request: GET https://huggingface.co/api/datasets/lmms-lab/VQAv2/tree/32665d35052eb4a6d4414851c3c829a72754915a?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-03-30 15:15:11,705 INFO HTTP Request: GET https://huggingface.co/api/datasets/lmms-lab/VQAv2/tree/32665d35052eb4a6d4414851c3c829a72754915a?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-03-30 15:15:11,866 INFO HTTP Request: GET https://huggingface.co/api/datasets/lmms-lab/VQAv2/tree/32665d35052eb4a6d4414851c3c829a72754915a?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-03-30 15:15:12,056 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-03-30 15:15:12,056 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/dataset_infos.json "HTTP/1.1 404 Not Found"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-03-30 15:15:12,057 WARNING Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-03-30 15:15:12,071 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/dataset_infos.json "HTTP/1.1 404 Not Found"
+Downloading data:   0%|          | 0/68 [00:00<?, ?files/s]2026-03-30 15:15:12,206 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-03-30 15:15:12,405 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/validation-00052-of-00068.parquet "HTTP/1.1 302 Found"
+2026-03-30 15:15:12,681 INFO HTTP Request: GET https://huggingface.co/api/datasets/lmms-lab/VQAv2/xet-read-token/32665d35052eb4a6d4414851c3c829a72754915a "HTTP/1.1 200 OK"
+Downloading data:  78%|███████▊  | 53/68 [00:12<00:03,  4.13files/s]2026-03-30 15:15:25,350 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/validation-00053-of-00068.parquet "HTTP/1.1 302 Found"
+Downloading data:  79%|███████▉  | 54/68 [00:20<00:06,  2.26files/s]2026-03-30 15:15:33,507 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/validation-00054-of-00068.parquet "HTTP/1.1 302 Found"
+Downloading data:  81%|████████  | 55/68 [00:30<00:09,  1.31files/s]2026-03-30 15:15:42,581 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/validation-00055-of-00068.parquet "HTTP/1.1 302 Found"
+Downloading data:  82%|████████▏ | 56/68 [00:40<00:14,  1.24s/files]2026-03-30 15:15:53,046 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/validation-00056-of-00068.parquet "HTTP/1.1 302 Found"
+Downloading data:  84%|████████▍ | 57/68 [00:52<00:21,  1.95s/files]2026-03-30 15:16:05,096 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/validation-00057-of-00068.parquet "HTTP/1.1 302 Found"
+Downloading data:  85%|████████▌ | 58/68 [01:12<00:34,  3.47s/files]2026-03-30 15:16:24,759 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/validation-00058-of-00068.parquet "HTTP/1.1 302 Found"
+Downloading data:  87%|████████▋ | 59/68 [01:24<00:39,  4.42s/files]2026-03-30 15:16:37,033 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/validation-00059-of-00068.parquet "HTTP/1.1 302 Found"
+Downloading data:  88%|████████▊ | 60/68 [01:33<00:40,  5.10s/files]2026-03-30 15:16:46,490 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/validation-00060-of-00068.parquet "HTTP/1.1 302 Found"
+Downloading data:  90%|████████▉ | 61/68 [01:46<00:43,  6.26s/files]2026-03-30 15:16:58,762 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/validation-00061-of-00068.parquet "HTTP/1.1 302 Found"
+Downloading data:  91%|█████████ | 62/68 [01:54<00:39,  6.56s/files]2026-03-30 15:17:06,641 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/validation-00062-of-00068.parquet "HTTP/1.1 302 Found"
+Downloading data:  93%|█████████▎| 63/68 [02:03<00:35,  7.09s/files]2026-03-30 15:17:15,703 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/validation-00063-of-00068.parquet "HTTP/1.1 302 Found"
+Downloading data:  94%|█████████▍| 64/68 [02:11<00:29,  7.41s/files]2026-03-30 15:17:24,154 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/validation-00064-of-00068.parquet "HTTP/1.1 302 Found"
+Downloading data:  96%|█████████▌| 65/68 [02:25<00:27,  9.11s/files]2026-03-30 15:17:38,448 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/validation-00065-of-00068.parquet "HTTP/1.1 302 Found"
+Downloading data:  97%|█████████▋| 66/68 [02:36<00:18,  9.47s/files]2026-03-30 15:17:48,936 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/validation-00066-of-00068.parquet "HTTP/1.1 302 Found"
+Downloading data:  99%|█████████▊| 67/68 [02:47<00:09,  9.97s/files]2026-03-30 15:18:00,213 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/validation-00067-of-00068.parquet "HTTP/1.1 302 Found"
+Downloading data: 100%|██████████| 68/68 [02:55<00:00,  9.38s/files]Downloading data: 100%|██████████| 68/68 [02:55<00:00,  2.58s/files]
+Downloading data:   0%|          | 0/36 [00:00<?, ?files/s]2026-03-30 15:18:08,126 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/testdev-00000-of-00036.parquet "HTTP/1.1 302 Found"
+Downloading data:   3%|▎         | 1/36 [00:15<08:48, 15.11s/files]2026-03-30 15:18:23,257 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/testdev-00001-of-00036.parquet "HTTP/1.1 302 Found"
+Downloading data:   6%|▌         | 2/36 [00:31<09:06, 16.06s/files]2026-03-30 15:18:39,945 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/testdev-00002-of-00036.parquet "HTTP/1.1 302 Found"
+Downloading data:   8%|▊         | 3/36 [01:04<12:57, 23.56s/files]2026-03-30 15:19:12,500 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/testdev-00003-of-00036.parquet "HTTP/1.1 302 Found"
+Downloading data:  11%|█         | 4/36 [01:20<10:57, 20.56s/files]2026-03-30 15:19:28,389 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/testdev-00004-of-00036.parquet "HTTP/1.1 302 Found"
+Downloading data:  14%|█▍        | 5/36 [01:46<11:41, 22.63s/files]2026-03-30 15:19:54,723 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/testdev-00005-of-00036.parquet "HTTP/1.1 302 Found"
+Downloading data:  17%|█▋        | 6/36 [02:15<12:25, 24.84s/files]2026-03-30 15:20:23,926 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/testdev-00006-of-00036.parquet "HTTP/1.1 302 Found"
+Downloading data:  19%|█▉        | 7/36 [02:35<11:12, 23.19s/files]2026-03-30 15:20:43,593 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/testdev-00007-of-00036.parquet "HTTP/1.1 302 Found"
+Downloading data:  22%|██▏       | 8/36 [02:54<10:09, 21.75s/files]2026-03-30 15:21:02,313 INFO HTTP Request: HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/testdev-00008-of-00036.parquet "HTTP/1.1 302 Found"
+Downloading data:  25%|██▌       | 9/36 [03:22<10:41, 23.74s/files]'[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/testdev-00009-of-00036.parquet
+2026-03-30 15:21:39,950 WARNING '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/testdev-00009-of-00036.parquet
+Retrying in 1s [Retry 1/5].
+2026-03-30 15:21:39,951 WARNING Retrying in 1s [Retry 1/5].
+Downloading data:  25%|██▌       | 9/36 [03:33<10:39, 23.70s/files]
+'[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/testdev-00010-of-00036.parquet
+2026-03-30 15:21:50,984 WARNING '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/data/testdev-00010-of-00036.parquet
+Retrying in 1s [Retry 1/5].
+2026-03-30 15:21:50,984 WARNING Retrying in 1s [Retry 1/5].
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 728, in <module>
+[rank1]:     main()
+[rank1]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 362, in main
+[rank1]:     ds = VQADataset(
+[rank1]:          ^^^^^^^^^^^
+[rank1]:   File "/data1/pengrui/CCFA/QACR/qacr/data/vqa_dataset.py", line 117, in __init__
+[rank1]:     ds = load_dataset(source, split=hf_split, **load_kwargs)
+[rank1]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/load.py", line 1708, in load_dataset
+[rank1]:     builder_instance.download_and_prepare(
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/builder.py", line 884, in download_and_prepare
+[rank1]:     self._download_and_prepare(
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/builder.py", line 925, in _download_and_prepare
+[rank1]:     split_generators: list[SplitGenerator] = self._split_generators(dl_manager, **split_generators_kwargs)
+[rank1]:                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/packaged_modules/parquet/parquet.py", line 110, in _split_generators
+[rank1]:     data_files = dl_manager.download(self.config.data_files)
+[rank1]:                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/download/download_manager.py", line 159, in download
+[rank1]:     downloaded_path_or_paths = map_nested(
+[rank1]:                                ^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/utils/py_utils.py", line 503, in map_nested
+[rank1]:     map_nested(
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/utils/py_utils.py", line 520, in map_nested
+[rank1]:     _single_map_nested((function, obj, batched, batch_size, types, None, True, None))
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/utils/py_utils.py", line 388, in _single_map_nested
+[rank1]:     return [mapped_item for batch in iter_batched(data_struct, batch_size) for mapped_item in function(batch)]
+[rank1]:                                                                                               ^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/download/download_manager.py", line 206, in _download_batched
+[rank1]:     return thread_map(
+[rank1]:            ^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+[rank1]:     return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+[rank1]:     return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/tqdm/std.py", line 1181, in __iter__
+[rank1]:     for obj in iterable:
+[rank1]:                ^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+[rank1]:     yield _result_or_cancel(fs.pop())
+[rank1]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+[rank1]:     return fut.result(timeout)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+[rank1]:     return self.__get_result()
+[rank1]:            ^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+[rank1]:     raise self._exception
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+[rank1]:     result = self.fn(*self.args, **self.kwargs)
+[rank1]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/download/download_manager.py", line 229, in _download_single
+[rank1]:     out = cached_path(url_or_filename, download_config=download_config)
+[rank1]:           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/utils/file_utils.py", line 188, in cached_path
+[rank1]:     ).hf_hub_download(
+[rank1]:       ^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+[rank1]:     return fn(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/huggingface_hub/hf_api.py", line 5922, in hf_hub_download
+[rank1]:     return hf_hub_download(
+[rank1]:            ^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+[rank1]:     return fn(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 986, in hf_hub_download
+[rank1]:     return _hf_hub_download_to_cache_dir(
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1119, in _hf_hub_download_to_cache_dir
+[rank1]:     _get_metadata_or_catch_error(
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1653, in _get_metadata_or_catch_error
+[rank1]:     metadata = get_hf_file_metadata(
+[rank1]:                ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 89, in _inner_fn
+[rank1]:     return fn(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1576, in get_hf_file_metadata
+[rank1]:     response = _httpx_follow_relative_redirects_with_backoff(
+[rank1]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 685, in _httpx_follow_relative_redirects_with_backoff
+[rank1]:     response = http_backoff(
+[rank1]:                ^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 559, in http_backoff
+[rank1]:     return next(
+[rank1]:            ^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/huggingface_hub/utils/_http.py", line 467, in _http_backoff_base
+[rank1]:     response = client.request(method=method, url=url, **kwargs)
+[rank1]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/httpx/_client.py", line 825, in request
+[rank1]:     return self.send(request, auth=auth, follow_redirects=follow_redirects)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/httpx/_client.py", line 901, in send
+[rank1]:     raise RuntimeError("Cannot send a request, as the client has been closed.")
+[rank1]: RuntimeError: Cannot send a request, as the client has been closed.
+Downloading data:   0%|          | 0/68 [00:00<?, ?files/s]Downloading data: 100%|██████████| 68/68 [00:00<00:00, 1799.93files/s]
+Downloading data:   0%|          | 0/36 [00:00<?, ?files/s]W0330 15:21:53.610000 4089994 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4090090 closing signal SIGTERM
+W0330 15:21:53.612000 4089994 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4090092 closing signal SIGTERM
+W0330 15:21:53.612000 4089994 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4090093 closing signal SIGTERM
+E0330 15:21:54.041000 4089994 site-packages/torch/distributed/elastic/multiprocessing/api.py:986] failed (exitcode: 1) local_rank: 1 (pid: 4090091) of binary: /home/pengr/.conda/envs/qacr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 994, in <module>
+    main()
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 362, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 990, in main
+    run(args)
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 981, in run
+    elastic_launch(
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 170, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 317, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+scripts/train_baselines_e2e.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-03-30_15:21:54
+  host      : ubuntu2404
+  rank      : 0 (local_rank: 0)
+  exitcode  : -15 (pid: 4090090)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 4090090
+[2]:
+  time      : 2026-03-30_15:21:54
+  host      : ubuntu2404
+  rank      : 2 (local_rank: 2)
+  exitcode  : -15 (pid: 4090092)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 4090092
+[3]:
+  time      : 2026-03-30_15:21:54
+  host      : ubuntu2404
+  rank      : 3 (local_rank: 3)
+  exitcode  : -15 (pid: 4090093)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 4090093
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-03-30_15:21:53
+  host      : ubuntu2404
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 4090091)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+==================================
+Starting Image Only (budget=0.45)
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+2026-03-30 15:21:58,231 INFO Runtime: distributed=True world_size=4 rank=0 local_rank=0 device=cuda:0
+2026-03-30 15:21:58,232 INFO Loading VLM from Model/Qwen35-08B ...
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:  78%|███████▊  | 368/473 [00:00<00:00, 3617.65it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3627.93it/s]
+Loading weights:  78%|███████▊  | 368/473 [00:00<00:00, 3676.78it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3575.54it/s]
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:  79%|███████▉  | 374/473 [00:00<00:00, 3722.19it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3676.73it/s]
+Loading weights:  74%|███████▍  | 351/473 [00:00<00:00, 3483.52it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3343.66it/s]
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 728, in <module>
+[rank1]:     main()
+[rank1]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 314, in main
+[rank1]:     router = ImageOnlyRouter(
+[rank1]:              ^^^^^^^^^^^^^^^^
+[rank1]: TypeError: ImageOnlyRouter.__init__() got an unexpected keyword argument 'token_dim'
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 728, in <module>
+[rank2]:     main()
+[rank2]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 314, in main
+[rank2]:     router = ImageOnlyRouter(
+[rank2]:              ^^^^^^^^^^^^^^^^
+[rank2]: TypeError: ImageOnlyRouter.__init__() got an unexpected keyword argument 'token_dim'
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 728, in <module>
+[rank3]:     main()
+[rank3]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 314, in main
+[rank3]:     router = ImageOnlyRouter(
+[rank3]:              ^^^^^^^^^^^^^^^^
+[rank3]: TypeError: ImageOnlyRouter.__init__() got an unexpected keyword argument 'token_dim'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 728, in <module>
+[rank0]:     main()
+[rank0]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 314, in main
+[rank0]:     router = ImageOnlyRouter(
+[rank0]:              ^^^^^^^^^^^^^^^^
+[rank0]: TypeError: ImageOnlyRouter.__init__() got an unexpected keyword argument 'token_dim'
+[rank0]:[W330 15:22:03.929211368 ProcessGroupNCCL.cpp:1575] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W0330 15:22:03.684000 4091609 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4091684 closing signal SIGTERM
+W0330 15:22:03.686000 4091609 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4091686 closing signal SIGTERM
+W0330 15:22:03.686000 4091609 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4091687 closing signal SIGTERM
+E0330 15:22:03.882000 4091609 site-packages/torch/distributed/elastic/multiprocessing/api.py:986] failed (exitcode: 1) local_rank: 1 (pid: 4091685) of binary: /home/pengr/.conda/envs/qacr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 994, in <module>
+    main()
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 362, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 990, in main
+    run(args)
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 981, in run
+    elastic_launch(
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 170, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 317, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+scripts/train_baselines_e2e.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-03-30_15:22:03
+  host      : ubuntu2404
+  rank      : 0 (local_rank: 0)
+  exitcode  : -15 (pid: 4091684)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 4091684
+[2]:
+  time      : 2026-03-30_15:22:03
+  host      : ubuntu2404
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 4091686)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2026-03-30_15:22:03
+  host      : ubuntu2404
+  rank      : 3 (local_rank: 3)
+  exitcode  : -15 (pid: 4091687)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 4091687
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-03-30_15:22:03
+  host      : ubuntu2404
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 4091685)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+==================================
+Starting Low Res (grid=9)
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+2026-03-30 15:22:08,071 INFO Runtime: distributed=True world_size=4 rank=0 local_rank=0 device=cuda:0
+2026-03-30 15:22:08,071 INFO Loading VLM from Model/Qwen35-08B ...
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]The fast path is not available because one of the required library is not installed. Falling back to torch implementation. To install follow https://github.com/fla-org/flash-linear-attention#installation and https://github.com/Dao-AILab/causal-conv1d
+Loading weights:  75%|███████▍  | 354/473 [00:00<00:00, 3534.61it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3425.52it/s]
+Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:   0%|          | 0/473 [00:00<?, ?it/s]Loading weights:  78%|███████▊  | 369/473 [00:00<00:00, 3685.56it/s]Loading weights:  75%|███████▍  | 354/473 [00:00<00:00, 3485.37it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3655.00it/s]
+Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3406.54it/s]
+Loading weights:  78%|███████▊  | 368/473 [00:00<00:00, 3668.00it/s]Loading weights: 100%|██████████| 473/473 [00:00<00:00, 3622.64it/s]
+2026-03-30 15:22:13,404 INFO Trainable params: Router + Executor = 2,629,888
+2026-03-30 15:22:13,404 INFO Loading dataset: vqav2 (max_samples=20000, streaming=False)
+'[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py
+'[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py
+2026-03-30 15:22:28,897 WARNING '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py
+2026-03-30 15:22:28,897 WARNING '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py
+Retrying in 1s [Retry 1/5].
+2026-03-30 15:22:28,897 WARNING Retrying in 1s [Retry 1/5].
+Retrying in 1s [Retry 1/5].
+2026-03-30 15:22:28,897 WARNING Retrying in 1s [Retry 1/5].
+'[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py
+2026-03-30 15:22:28,919 WARNING '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py
+Retrying in 1s [Retry 1/5].
+2026-03-30 15:22:28,920 WARNING Retrying in 1s [Retry 1/5].
+'[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py
+2026-03-30 15:22:28,936 WARNING '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)' thrown while requesting HEAD https://huggingface.co/datasets/lmms-lab/VQAv2/resolve/32665d35052eb4a6d4414851c3c829a72754915a/VQAv2.py
+Retrying in 1s [Retry 1/5].
+2026-03-30 15:22:28,937 WARNING Retrying in 1s [Retry 1/5].
+Using the latest cached version of the dataset since lmms-lab/VQAv2 couldn't be found on the Hugging Face Hub
+2026-03-30 15:22:29,899 WARNING Using the latest cached version of the dataset since lmms-lab/VQAv2 couldn't be found on the Hugging Face Hub
+Using the latest cached version of the dataset since lmms-lab/VQAv2 couldn't be found on the Hugging Face Hub
+2026-03-30 15:22:29,899 WARNING Using the latest cached version of the dataset since lmms-lab/VQAv2 couldn't be found on the Hugging Face Hub
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 728, in <module>
+[rank3]:     main()
+[rank3]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 354, in main
+[rank3]:     ds = TransformedVQADataset(
+[rank3]:          ^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/data1/pengrui/CCFA/QACR/qacr/data/vqa_dataset.py", line 117, in __init__
+[rank3]:     ds = load_dataset(source, split=hf_split, **load_kwargs)
+[rank3]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/load.py", line 1688, in load_dataset
+[rank3]:     builder_instance = load_dataset_builder(
+[rank3]:                        ^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/load.py", line 1353, in load_dataset_builder
+[rank3]:     builder_instance: DatasetBuilder = builder_cls(
+[rank3]:                                        ^^^^^^^^^^^^
+[rank3]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 125, in __init__
+[rank3]:     config_name, version, hash = _find_hash_in_cache(
+[rank3]:                                  ^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 52, in _find_hash_in_cache
+[rank3]:     or json.loads(Path(cached_directory_path, "dataset_info.json").read_text(encoding="utf-8"))["config_name"]
+[rank3]:                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/pathlib.py", line 1027, in read_text
+[rank3]:     with self.open(mode='r', encoding=encoding, errors=errors) as f:
+[rank3]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/pathlib.py", line 1013, in open
+[rank3]:     return io.open(self, mode, buffering, encoding, errors, newline)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]: FileNotFoundError: [Errno 2] No such file or directory: '/home/pengr/.cache/huggingface/datasets/lmms-lab___vq_av2/default/0.0.0/32665d35052eb4a6d4414851c3c829a72754915a.incomplete/dataset_info.json'
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 728, in <module>
+[rank1]:     main()
+[rank1]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 354, in main
+[rank1]:     ds = TransformedVQADataset(
+[rank1]:          ^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/data1/pengrui/CCFA/QACR/qacr/data/vqa_dataset.py", line 117, in __init__
+[rank1]:     ds = load_dataset(source, split=hf_split, **load_kwargs)
+[rank1]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/load.py", line 1688, in load_dataset
+[rank1]:     builder_instance = load_dataset_builder(
+[rank1]:                        ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/load.py", line 1353, in load_dataset_builder
+[rank1]:     builder_instance: DatasetBuilder = builder_cls(
+[rank1]:                                        ^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 125, in __init__
+[rank1]:     config_name, version, hash = _find_hash_in_cache(
+[rank1]:                                  ^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 52, in _find_hash_in_cache
+[rank1]:     or json.loads(Path(cached_directory_path, "dataset_info.json").read_text(encoding="utf-8"))["config_name"]
+[rank1]:                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/pathlib.py", line 1027, in read_text
+[rank1]:     with self.open(mode='r', encoding=encoding, errors=errors) as f:
+[rank1]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/pathlib.py", line 1013, in open
+[rank1]:     return io.open(self, mode, buffering, encoding, errors, newline)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]: FileNotFoundError: [Errno 2] No such file or directory: '/home/pengr/.cache/huggingface/datasets/lmms-lab___vq_av2/default/0.0.0/32665d35052eb4a6d4414851c3c829a72754915a.incomplete/dataset_info.json'
+Using the latest cached version of the dataset since lmms-lab/VQAv2 couldn't be found on the Hugging Face Hub
+2026-03-30 15:22:29,922 WARNING Using the latest cached version of the dataset since lmms-lab/VQAv2 couldn't be found on the Hugging Face Hub
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 728, in <module>
+[rank0]:     main()
+[rank0]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 354, in main
+[rank0]:     ds = TransformedVQADataset(
+[rank0]:          ^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/data1/pengrui/CCFA/QACR/qacr/data/vqa_dataset.py", line 117, in __init__
+[rank0]:     ds = load_dataset(source, split=hf_split, **load_kwargs)
+[rank0]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/load.py", line 1688, in load_dataset
+[rank0]:     builder_instance = load_dataset_builder(
+[rank0]:                        ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/load.py", line 1353, in load_dataset_builder
+[rank0]:     builder_instance: DatasetBuilder = builder_cls(
+[rank0]:                                        ^^^^^^^^^^^^
+[rank0]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 125, in __init__
+[rank0]:     config_name, version, hash = _find_hash_in_cache(
+[rank0]:                                  ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 52, in _find_hash_in_cache
+[rank0]:     or json.loads(Path(cached_directory_path, "dataset_info.json").read_text(encoding="utf-8"))["config_name"]
+[rank0]:                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/pathlib.py", line 1027, in read_text
+[rank0]:     with self.open(mode='r', encoding=encoding, errors=errors) as f:
+[rank0]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/pathlib.py", line 1013, in open
+[rank0]:     return io.open(self, mode, buffering, encoding, errors, newline)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: FileNotFoundError: [Errno 2] No such file or directory: '/home/pengr/.cache/huggingface/datasets/lmms-lab___vq_av2/default/0.0.0/32665d35052eb4a6d4414851c3c829a72754915a.incomplete/dataset_info.json'
+Using the latest cached version of the dataset since lmms-lab/VQAv2 couldn't be found on the Hugging Face Hub
+2026-03-30 15:22:29,939 WARNING Using the latest cached version of the dataset since lmms-lab/VQAv2 couldn't be found on the Hugging Face Hub
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 728, in <module>
+[rank2]:     main()
+[rank2]:   File "/data1/pengrui/CCFA/QACR/scripts/train_baselines_e2e.py", line 354, in main
+[rank2]:     ds = TransformedVQADataset(
+[rank2]:          ^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/data1/pengrui/CCFA/QACR/qacr/data/vqa_dataset.py", line 117, in __init__
+[rank2]:     ds = load_dataset(source, split=hf_split, **load_kwargs)
+[rank2]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/load.py", line 1688, in load_dataset
+[rank2]:     builder_instance = load_dataset_builder(
+[rank2]:                        ^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/load.py", line 1353, in load_dataset_builder
+[rank2]:     builder_instance: DatasetBuilder = builder_cls(
+[rank2]:                                        ^^^^^^^^^^^^
+[rank2]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 125, in __init__
+[rank2]:     config_name, version, hash = _find_hash_in_cache(
+[rank2]:                                  ^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/datasets/packaged_modules/cache/cache.py", line 52, in _find_hash_in_cache
+[rank2]:     or json.loads(Path(cached_directory_path, "dataset_info.json").read_text(encoding="utf-8"))["config_name"]
+[rank2]:                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/pathlib.py", line 1027, in read_text
+[rank2]:     with self.open(mode='r', encoding=encoding, errors=errors) as f:
+[rank2]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/pengr/.conda/envs/qacr/lib/python3.12/pathlib.py", line 1013, in open
+[rank2]:     return io.open(self, mode, buffering, encoding, errors, newline)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]: FileNotFoundError: [Errno 2] No such file or directory: '/home/pengr/.cache/huggingface/datasets/lmms-lab___vq_av2/default/0.0.0/32665d35052eb4a6d4414851c3c829a72754915a.incomplete/dataset_info.json'
+[rank0]:[W330 15:22:30.160594689 ProcessGroupNCCL.cpp:1575] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W0330 15:22:31.386000 4091768 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4091842 closing signal SIGTERM
+W0330 15:22:31.388000 4091768 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4091843 closing signal SIGTERM
+W0330 15:22:31.388000 4091768 site-packages/torch/distributed/elastic/multiprocessing/api.py:1012] Sending process 4091844 closing signal SIGTERM
+E0330 15:22:31.653000 4091768 site-packages/torch/distributed/elastic/multiprocessing/api.py:986] failed (exitcode: 1) local_rank: 3 (pid: 4091845) of binary: /home/pengr/.conda/envs/qacr/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 994, in <module>
+    main()
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 362, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 990, in main
+    run(args)
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/run.py", line 981, in run
+    elastic_launch(
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 170, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pengr/.conda/envs/qacr/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 317, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+scripts/train_baselines_e2e.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-03-30_15:22:31
+  host      : ubuntu2404
+  rank      : 0 (local_rank: 0)
+  exitcode  : -15 (pid: 4091842)
+  error_file: <N/A>
+  traceback : Signal 15 (SIGTERM) received by PID 4091842
+[2]:
+  time      : 2026-03-30_15:22:31
+  host      : ubuntu2404
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 4091843)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2026-03-30_15:22:31
+  host      : ubuntu2404
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 4091844)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-03-30_15:22:31
+  host      : ubuntu2404
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 4091845)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+All baseline training finished!

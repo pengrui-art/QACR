@@ -1,0 +1,9 @@
+[2026-04-04 00:20:25] stable eval launcher start
+[2026-04-04 00:20:25] datasets=textvqa
+[2026-04-04 00:20:25] methods=qacr_b045
+[2026-04-04 00:20:25] gpu_id=0 batch_size=1 max_samples=1
+[2026-04-04 00:20:25] num_workers=0 docvqa_num_workers=0 prefetch=2 docvqa_prefetch=2
+[2026-04-04 00:20:25] result_root=outputs/phaseB3_stable_smoke
+[2026-04-04 00:20:25] START method=qacr_b045 dataset=textvqa gpu=0 out=outputs/phaseB3_stable_smoke/qacr_b045/eval_results_textvqa.json
+[2026-04-04 00:20:37] END method=qacr_b045 dataset=textvqa out=outputs/phaseB3_stable_smoke/qacr_b045/eval_results_textvqa.json
+[2026-04-04 00:20:37] stable eval launcher done

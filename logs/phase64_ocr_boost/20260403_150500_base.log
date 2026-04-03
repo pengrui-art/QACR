@@ -1,0 +1,2 @@
+[2026-04-03 16:08:12] START gpu=0 tag=base keep=0.00 deep=0.00
+[2026-04-03 16:08:12] dataset=textvqa out=outputs/phase64_ocr_boost/20260403_150500/base_textvqa.json

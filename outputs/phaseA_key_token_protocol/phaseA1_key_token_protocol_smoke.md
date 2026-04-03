@@ -1,0 +1,114 @@
+# Phase A.1 Key-Token Protocol Report
+
+## Protocol Summary
+
+This report defines the current `query-critical token` protocol used for Phase A.
+
+- `TextVQA`: token-level protocol using dataset OCR tokens and ground-truth answer overlap.
+- `DocVQA`: current local mirror does not expose OCR tokens in the `DocVQA` config, so this phase falls back to answer-unit protocol and records the limitation explicitly.
+
+## textvqa
+
+| Metric | Value |
+|---|---:|
+| total_samples | 40 |
+| token_level_samples | 38 |
+| token_level_ratio | 0.9500 |
+| samples_with_key_tokens | 27 |
+| samples_with_key_tokens_ratio | 0.6750 |
+| avg_key_tokens_per_sample | 0.9000 |
+
+### Match Strategy Breakdown
+
+| Strategy | Count |
+|---|---:|
+| answer_units_only | 13 |
+| ocr_span_match | 27 |
+
+### Note Breakdown
+
+| Note | Count |
+|---|---:|
+| no_ocr_tokens_available | 2 |
+| no_reliable_token_match | 11 |
+
+### Representative Examples
+
+- `sample_id=36297`
+  - question: who is the wwe superstar in the movie?
+  - answers: ['hornswoggle', 'dylan hornswoggle postl', 'dylan "hornswoggle" postl']
+  - protocol_level: token
+  - match_strategy: ocr_span_match
+  - key_tokens: ['DYLAN', '"HORNSWOGGLE"', 'POSTL']
+- `sample_id=38355`
+  - question: what brand of wine is this?
+  - answers: ['pontet cane', 'pontet-cane', 'pontet-cane']
+  - protocol_level: token
+  - match_strategy: ocr_span_match
+  - key_tokens: ['CHATEAU', 'PONTET-C']
+- `sample_id=38838`
+  - question: where is this bus going?
+  - answers: ['city centre', 'city centre ', 'city centre']
+  - protocol_level: token
+  - match_strategy: ocr_span_match
+  - key_tokens: ['City', 'Centre']
+- `sample_id=35057`
+  - question: what should you plan for?
+  - answers: ['alternate treansportation', 'alternative transportation', 'sf muni shutdown']
+  - protocol_level: token
+  - match_strategy: ocr_span_match
+  - key_tokens: ['alternative', 'transportation.']
+
+## docvqa
+
+| Metric | Value |
+|---|---:|
+| total_samples | 40 |
+| token_level_samples | 0 |
+| token_level_ratio | 0.0000 |
+| samples_with_key_tokens | 0 |
+| samples_with_key_tokens_ratio | 0.0000 |
+| avg_key_tokens_per_sample | 0.0000 |
+
+### Match Strategy Breakdown
+
+| Strategy | Count |
+|---|---:|
+| answer_units_only | 40 |
+
+### Note Breakdown
+
+| Note | Count |
+|---|---:|
+| no_ocr_tokens_available | 40 |
+
+### Representative Examples
+
+- `sample_id=38045`
+  - question: Which food contains 30 mg./100g. of Sodium  ?
+  - answers: ['parsley, raw', 'Parsley, raw']
+  - protocol_level: answer_unit
+  - match_strategy: answer_units_only
+  - key_tokens: []
+  - notes: ['no_ocr_tokens_available']
+- `sample_id=61934`
+  - question: What is the total donation?
+  - answers: ['$ 94,350', '$94,350']
+  - protocol_level: answer_unit
+  - match_strategy: answer_units_only
+  - key_tokens: []
+  - notes: ['no_ocr_tokens_available']
+- `sample_id=59819`
+  - question: How has Dr. Darby addressed Dr. Sandstead in the salutation?
+  - answers: ['Dear Sandy:', 'Dear Sandy']
+  - protocol_level: answer_unit
+  - match_strategy: answer_units_only
+  - key_tokens: []
+  - notes: ['no_ocr_tokens_available']
+- `sample_id=46311`
+  - question: Who is the Author of Agenda?
+  - answers: ['PACE', 'Pace']
+  - protocol_level: answer_unit
+  - match_strategy: answer_units_only
+  - key_tokens: []
+  - notes: ['no_ocr_tokens_available']

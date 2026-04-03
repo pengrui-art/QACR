@@ -28,6 +28,13 @@ venv.bak/
 checkpoints/
 Model/
 datasets/
+data/DocVQA/
+data/GQA/
+data/MMBench_dev/
+data/MMMU/
+data/POPE/
+data/textvqa/
+data/VQAv2/
 outputs/*.json
 outputs/*.png
 outputs/*.md

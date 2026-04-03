@@ -1,0 +1,96 @@
+{
+  "checkpoint_dir": "checkpoints/qacr_vqav2_b0.45",
+  "datasets": [
+    "textvqa",
+    "docvqa",
+    "mmmu"
+  ],
+  "alphas": [
+    1.0,
+    0.6,
+    0.3
+  ],
+  "rows": [
+    {
+      "alpha": 1.0,
+      "dataset": "textvqa",
+      "accuracy": 0.14166666666666666,
+      "raw_accuracy": 0.14166666666666666,
+      "mean_compute": 0.4489051580429077,
+      "total_evaluated": 40,
+      "result_file": "outputs/phase64_alpha_sweep_qacr_b045_quick/qacr_vqav2_b0.45_textvqa_a1.00.json"
+    },
+    {
+      "alpha": 1.0,
+      "dataset": "docvqa",
+      "accuracy": 0.0,
+      "raw_accuracy": 0.0,
+      "mean_compute": 0.4460172772407532,
+      "total_evaluated": 40,
+      "result_file": "outputs/phase64_alpha_sweep_qacr_b045_quick/qacr_vqav2_b0.45_docvqa_a1.00.json"
+    },
+    {
+      "alpha": 1.0,
+      "dataset": "mmmu",
+      "accuracy": 0.275,
+      "raw_accuracy": 0.275,
+      "mean_compute": 0.4132839500904083,
+      "total_evaluated": 40,
+      "result_file": "outputs/phase64_alpha_sweep_qacr_b045_quick/qacr_vqav2_b0.45_mmmu_a1.00.json"
+    },
+    {
+      "alpha": 0.6,
+      "dataset": "textvqa",
+      "accuracy": 0.14166666666666666,
+      "raw_accuracy": 0.14166666666666666,
+      "mean_compute": 0.4489051580429077,
+      "total_evaluated": 40,
+      "result_file": "outputs/phase64_alpha_sweep_qacr_b045_quick/qacr_vqav2_b0.45_textvqa_a0.60.json"
+    },
+    {
+      "alpha": 0.6,
+      "dataset": "docvqa",
+      "accuracy": 0.0,
+      "raw_accuracy": 0.0,
+      "mean_compute": 0.4460172772407532,
+      "total_evaluated": 40,
+      "result_file": "outputs/phase64_alpha_sweep_qacr_b045_quick/qacr_vqav2_b0.45_docvqa_a0.60.json"
+    },
+    {
+      "alpha": 0.6,
+      "dataset": "mmmu",
+      "accuracy": 0.325,
+      "raw_accuracy": 0.325,
+      "mean_compute": 0.4132839500904083,
+      "total_evaluated": 40,
+      "result_file": "outputs/phase64_alpha_sweep_qacr_b045_quick/qacr_vqav2_b0.45_mmmu_a0.60.json"
+    },
+    {
+      "alpha": 0.3,
+      "dataset": "textvqa",
+      "accuracy": 0.3,
+      "raw_accuracy": 0.3,
+      "mean_compute": 0.4489051580429077,
+      "total_evaluated": 40,
+      "result_file": "outputs/phase64_alpha_sweep_qacr_b045_quick/qacr_vqav2_b0.45_textvqa_a0.30.json"
+    },
+    {
+      "alpha": 0.3,
+      "dataset": "docvqa",
+      "accuracy": 0.05,
+      "raw_accuracy": 0.075,
+      "mean_compute": 0.4460172772407532,
+      "total_evaluated": 40,
+      "result_file": "outputs/phase64_alpha_sweep_qacr_b045_quick/qacr_vqav2_b0.45_docvqa_a0.30.json"
+    },
+    {
+      "alpha": 0.3,
+      "dataset": "mmmu",
+      "accuracy": 0.275,
+      "raw_accuracy": 0.275,
+      "mean_compute": 0.4132839500904083,
+      "total_evaluated": 40,
+      "result_file": "outputs/phase64_alpha_sweep_qacr_b045_quick/qacr_vqav2_b0.45_mmmu_a0.30.json"
+    }
+  ]
+}

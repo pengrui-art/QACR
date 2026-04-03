@@ -1,0 +1,3 @@
+===== Evaluation started at Wed Apr  1 22:58:12 CST 2026 =====
+MAX_SAMPLES=10000  BATCH_SIZE=8
+--- Batch 1: QACR 0.35 / 0.45 / 0.60 / TokenPruning ---

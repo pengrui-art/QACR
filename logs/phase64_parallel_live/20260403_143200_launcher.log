@@ -1,0 +1,21 @@
+[2026-04-03 14:29:34] launching safe multi-gpu evals ...
+[2026-04-03 14:29:34] START pid=1557861 gpu=1 tag=b045_docvqa_a030
+  ckpt=checkpoints/qacr_vqav2_b0.45 dataset=docvqa max_samples=10000
+  batch_size=8 num_workers=4 prefetch_factor=1 alpha=0.30
+  log=logs/phase64_parallel_live/20260403_143200_b045_docvqa_a030.log
+  out=outputs/tmp_eval/phase64_parallel_live/20260403_143200_b045_docvqa_a030.json
+[2026-04-03 14:30:09] START pid=1559002 gpu=0 tag=b035_textvqa_a030
+  ckpt=checkpoints/qacr_vqav2_b0.35 dataset=textvqa max_samples=5000
+  batch_size=8 num_workers=12 prefetch_factor=2 alpha=0.30
+  log=logs/phase64_parallel_live/20260403_143200_b035_textvqa_a030.log
+  out=outputs/tmp_eval/phase64_parallel_live/20260403_143200_b035_textvqa_a030.json
+[2026-04-03 14:30:44] START pid=1561071 gpu=2 tag=b060_textvqa_a030
+  ckpt=checkpoints/qacr_vqav2_b0.60 dataset=textvqa max_samples=5000
+  batch_size=8 num_workers=12 prefetch_factor=2 alpha=0.30
+  log=logs/phase64_parallel_live/20260403_143200_b060_textvqa_a030.log
+  out=outputs/tmp_eval/phase64_parallel_live/20260403_143200_b060_textvqa_a030.json
+[2026-04-03 14:31:19] START pid=1563151 gpu=3 tag=b035_mmmu_a030
+  ckpt=checkpoints/qacr_vqav2_b0.35 dataset=mmmu max_samples=900
+  batch_size=8 num_workers=12 prefetch_factor=2 alpha=0.30
+  log=logs/phase64_parallel_live/20260403_143200_b035_mmmu_a030.log
+  out=outputs/tmp_eval/phase64_parallel_live/20260403_143200_b035_mmmu_a030.json
